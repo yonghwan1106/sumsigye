@@ -9,6 +9,7 @@ import EventsPlot from "@/components/lab/EventsPlot";
 import L4Table from "@/components/lab/L4Table";
 import { L1, L2, L4, L1_MIN_REVIEWED } from "@/components/evalText";
 import { fmtMin } from "@/components/_fmt";
+import { ALLOC_MAX_TOKENS } from "@/lib/llm/allocPrompt";
 
 export const metadata: Metadata = { title: `${LAB_PAGE.title} · ${COMMON.logoFull}` };
 
@@ -192,6 +193,9 @@ export default function LabPage() {
             />
           ) : (
             <p className="text-[15px] text-[#475467]">{LAB_PAGE.llmPending}</p>
+          )}
+          {L4.llm && (
+            <p className="text-sm text-[#475467]">{fill(LAB_PAGE.llmFailNote, { t: ALLOC_MAX_TOKENS.toLocaleString("ko-KR") })}</p>
           )}
           <a href={`${GH}/blob/main/prompts/llm_alloc_baseline.md`} target="_blank" rel="noreferrer" className="text-sm text-[#1D4ED8] underline">
             {LAB_PAGE.promptLink}

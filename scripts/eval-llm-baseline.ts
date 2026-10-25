@@ -15,12 +15,12 @@ import { ROOT, LLM_SEEDS, baseWorld, buildScenario, loadContext, readJson, type 
 
 const MODELS = ["claude-haiku-5-5", "claude-sonnet-5"] as const;
 const OUT = "data/eval/llm_baseline_runs.json";
-const CONCURRENCY = 4;
+const CONCURRENCY = 2;
 const TIMEOUT_MS = 120000;
 
 interface Run {
   seed: number; kind: "small" | "wide"; model: (typeof MODELS)[number];
-  ok: boolean; parse_fail: boolean; attempts: number; call_errors: number;
+  ok: boolean; parse_fail: boolean; attempts: number; call_errors: number; error_kinds?: string[];
   response_len: number; response: string; assignment: { household: string; resource: string | null }[];
   at: string;
 }
@@ -61,20 +61,22 @@ export function promptInput(sc: EvalScenario): AllocPromptInput {
 async function runOne(sc: EvalScenario, model: Run["model"]): Promise<Run> {
   const user = allocUserMessage(promptInput(sc));
   let attempts = 0, callErrors = 0, last = "";
+  const errorKinds: string[] = []; // invalid_output = 빈 글 또는 max_tokens에서 끊김, llm_error = 호출 예외(한도·네트워크)
   for (let k = 0; k < 2; k++) {
     attempts++;
     const r = await callText({ model, system: ALLOC_SYSTEM_PROMPT, user, maxTokens: ALLOC_MAX_TOKENS, timeoutMs: TIMEOUT_MS });
     if (!r.ok) {
       callErrors++;
+      errorKinds.push(r.error);
       continue;
     }
     last = r.text;
     const parsed = parseAllocResponse(r.text);
     if (parsed) {
-      return { seed: sc.seed, kind: sc.kind, model, ok: true, parse_fail: false, attempts, call_errors: callErrors, response_len: r.text.length, response: r.text, assignment: parsed, at: toKstIso(Date.now()) };
+      return { seed: sc.seed, kind: sc.kind, model, ok: true, parse_fail: false, attempts, call_errors: callErrors, error_kinds: errorKinds, response_len: r.text.length, response: r.text, assignment: parsed, at: toKstIso(Date.now()) };
     }
   }
-  return { seed: sc.seed, kind: sc.kind, model, ok: false, parse_fail: true, attempts, call_errors: callErrors, response_len: last.length, response: last, assignment: [], at: toKstIso(Date.now()) };
+  return { seed: sc.seed, kind: sc.kind, model, ok: false, parse_fail: true, attempts, call_errors: callErrors, error_kinds: errorKinds, response_len: last.length, response: last, assignment: [], at: toKstIso(Date.now()) };
 }
 
 async function main() {
