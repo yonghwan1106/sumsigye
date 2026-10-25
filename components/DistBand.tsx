@@ -21,6 +21,8 @@ export interface DistBandProps {
   /** 임시 모형이면 「측정 중(임시 값)」 */
   provisional?: boolean;
   compact?: boolean;
+  /** 캡션 틀(없으면 OPS.distCaption) */
+  captionTpl?: string;
 }
 
 const BAND = "#1D4ED8";
@@ -46,7 +48,7 @@ export default function DistBand(props: DistBandProps) {
           </span>
         )}
       </div>
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={OPS.distCaption}>
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={props.captionTpl ?? OPS.distCaption}>
         <rect x={0} y={12} width={W} height={20} rx={4} fill="#F2F4F7" />
         <rect x={0} y={12} width={x(p90)} height={20} rx={4} fill={BAND} opacity={0.16} />
         <rect x={0} y={12} width={x(p80)} height={20} rx={4} fill={BAND} opacity={0.3} />
@@ -89,7 +91,7 @@ export default function DistBand(props: DistBandProps) {
       )}
       <p className="text-sm text-[#475467]">
         {props.counts
-          ? fill(OPS.distCaption, {
+          ? fill(props.captionTpl ?? OPS.distCaption, {
               n: props.counts.n,
               n_exact: props.counts.n_exact,
               n_int: props.counts.n_int,

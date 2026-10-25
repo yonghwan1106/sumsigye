@@ -79,8 +79,11 @@ export default function EventPanel(props: { bundle: ScenarioBundle; state: Scena
     etaProb = { p1: fmtProb(probBeyond(comp.dist.d, s.now, eta.eta_range[0])), p2: fmtProb(probBeyond(comp.dist.d, s.now, eta.eta_range[1])) };
   }
   const d = RM.data;
-  const nAll = d.n_exact + d.n_interval + d.n_right;
+  // E0(정확 사건 경험분포)은 진행 중(오른쪽 중도절단) 사건을 쓰지 않는다 → 캡션의 사건 수 = 정확 + 구간
+  const empirical = RM.selected === "E0";
+  const nAll = empirical ? d.n_exact + d.n_interval : d.n_exact + d.n_interval + d.n_right;
   const counts = nAll > 0 ? { n: nAll, n_exact: d.n_exact, n_int: d.n_interval, n_cens: d.n_right } : null;
+  const captionTpl = empirical ? OPS.distCaptionEmp : OPS.distCaption;
   const w = weatherAt(b, s.now);
 
   // 타임라인 점
@@ -165,7 +168,7 @@ export default function EventPanel(props: { bundle: ScenarioBundle; state: Scena
         </div>
       ) : (
         <DistBand p50_min={comp.p50} p80_min={comp.r80} p90_min={comp.p90} now={s.now} eta={etaProp} etaProb={etaProb}
-          counts={counts} small={comp.dist.small} provisional={RM.provisional || b.restore_model.source === "provisional"} compact />
+          counts={counts} captionTpl={captionTpl} small={comp.dist.small} provisional={RM.provisional || b.restore_model.source === "provisional"} compact />
       )}
 
       <p className="rounded-lg border border-[#EAECF0] bg-white p-2 text-sm text-[#344054]">
