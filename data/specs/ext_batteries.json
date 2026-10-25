@@ -1,0 +1,7 @@
+{
+  "note": "외장배터리 목록(구현명세 §6-7). 전부 가정값.",
+  "ext": [
+    { "id": "EXT_VENT_A", "label": "인공호흡기 A계열 전용 외장배터리(목록 등록)", "family": "VENT_A", "h_worst_min": 240, "source": "assumed" },
+    { "id": "EXT_O2_PORT", "label": "휴대용 산소발생기 전용 보조배터리(목록 등록)", "family": "O2_PORT", "h_worst_min": 120, "source": "assumed" }
+  ]
+}

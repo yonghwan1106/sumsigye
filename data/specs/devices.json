@@ -1,0 +1,64 @@
+{
+  "note": "사양 DB(구현명세 §6-7). 값 고정. 인공호흡기 A계열·B계열·거치형 산소발생기는 공개 설명서를 참고한 계열 사양이며 특정 제품 보증이 아니다. 휴대용 산소발생기·석션기·기침유발기는 가정값 사양.",
+  "devices": [
+    {
+      "id": "VENT_A", "label": "인공호흡기 A계열", "ref_label": "참고 사양: ResMed Astral 100/150 사용설명서",
+      "aliases": ["astral", "astral 100", "astral 150", "아스트랄", "레스메드 astral"],
+      "h_worst_min": 240, "h_std_min": 480, "p_rated_w": 90, "p_peak_w": 120,
+      "inputs": ["AC", "DC12_24"], "family": "VENT_A", "alarm_critical_min": 10, "heat_stop_c": 35,
+      "source": "manual",
+      "refs": [
+        { "url": "https://document.resmed.com/documents/products/machine/astral-series/user-guide/astral-100-150_user-guide_amer_eng.pdf", "page": 77, "quote": "Operating hours (worst case) > 4 hour run time" },
+        { "url": "https://document.resmed.com/documents/products/machine/astral-series/user-guide/astral-100-150_user-guide_amer_eng.pdf", "page": 77, "quote": "90 W 3.75 A continuous, 120 W / 5A peak" },
+        { "url": "https://document.resmed.com/documents/products/machine/astral-series/user-guide/astral-100-150_user-guide_amer_eng.pdf", "page": 77, "quote": "External DC Power Supply 12 - 24V DC 90 W" },
+        { "url": "https://document.resmed.com/documents/products/machine/astral-series/user-guide/astral-100-150_user-guide_amer_eng.pdf", "page": 60, "quote": "Critically low battery Approximately 10 minutes" },
+        { "url": "https://document.resmed.com/documents/products/machine/astral-series/user-guide/astral-100-150_user-guide_amer_eng.pdf", "page": 49, "quote": "may stop charging when ambient temperatures of 35°C" }
+      ],
+      "note": "설명서 URL은 브라우저 사용자 에이전트로만 열린다."
+    },
+    {
+      "id": "VENT_B", "label": "인공호흡기 B계열", "ref_label": "참고 사양: Philips Trilogy 100 사용설명서",
+      "aliases": ["trilogy", "trilogy 100", "트릴로지"],
+      "h_worst_min": 360, "h_std_min": 480, "p_rated_w": 100, "p_peak_w": null,
+      "inputs": ["AC"], "family": "VENT_B", "alarm_critical_min": 10, "heat_stop_c": null,
+      "source": "manual_unpaged",
+      "refs": [
+        { "url": "https://ltv.services/wp-content/uploads/2020/04/1.Trilogy-100-Ventilator-Information-and-User-Guide-for-Qualified-health-Professionals-v6.pdf", "quote": "approximately 4 hours each" }
+      ],
+      "note": "설명서 표기 「approximately 4 hours each」 × 2 = 480분. 최악 조건 값이 설명서에서 확인되지 않아 × 0.75 보수 가정(360분). 정격 전력 100W는 가정값."
+    },
+    {
+      "id": "O2_STAT", "label": "거치형 산소발생기", "ref_label": "참고 사양: Philips Respironics EverFlo 사용설명서",
+      "aliases": ["everflo", "에버플로"],
+      "h_worst_min": 0, "h_std_min": 0, "p_rated_w": 320, "p_peak_w": 640,
+      "inputs": ["AC"], "family": "O2", "alarm_critical_min": 0, "heat_stop_c": null,
+      "source": "manual",
+      "refs": [
+        { "url": "https://www.lincare.com/-/media/Project/Lincare/Files/Concentrators/Respironics-EverFlo-User-Manual.pdf", "page": 18, "quote": "220 VAC ±10%, 320 W, 60 Hz" },
+        { "url": "https://www.lincare.com/-/media/Project/Lincare/Files/Concentrators/Respironics-EverFlo-User-Manual.pdf", "page": 21, "quote": "it is recommended that the device be powered from an uninterruptible power supply or a battery" }
+      ],
+      "note": "내장 배터리 없음(정전 즉시 멈춤). 피크 640W는 정격 × 2 가정값."
+    },
+    {
+      "id": "O2_PORT", "label": "휴대용 산소발생기", "ref_label": "가정값 사양",
+      "aliases": [],
+      "h_worst_min": 120, "h_std_min": 240, "p_rated_w": 120, "p_peak_w": null,
+      "inputs": ["AC", "DC12_24"], "family": "O2_PORT", "alarm_critical_min": 10, "heat_stop_c": null,
+      "source": "assumed", "refs": [], "note": "일반 제품 범주 가정값(특정 제품 아님)."
+    },
+    {
+      "id": "SUCTION", "label": "석션기", "ref_label": "가정값 사양",
+      "aliases": [],
+      "h_worst_min": 45, "h_std_min": 90, "p_rated_w": 60, "p_peak_w": null,
+      "inputs": ["AC", "DC12_24"], "family": "SUCTION", "alarm_critical_min": 10, "heat_stop_c": null,
+      "source": "assumed", "refs": [], "note": "일반 제품 범주 가정값(특정 제품 아님)."
+    },
+    {
+      "id": "COUGH", "label": "기침유발기", "ref_label": "가정값 사양",
+      "aliases": [],
+      "h_worst_min": 60, "h_std_min": 120, "p_rated_w": 150, "p_peak_w": null,
+      "inputs": ["AC"], "family": "COUGH", "alarm_critical_min": 10, "heat_stop_c": null,
+      "source": "assumed", "refs": [], "note": "일반 제품 범주 가정값(특정 제품 아님)."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "note": "자원 유형(구현명세 §6-7). 전부 가정값(일반 제품 범주, 특정 제품 아님).",
+  "types": [
+    { "type": "PS_L", "label": "휴대용 전원(대)", "output": "AC_SINE", "cont_w": 1000, "energy_wh": 1000, "source": "assumed" },
+    { "type": "PS_S", "label": "휴대용 전원(소)", "output": "AC_SINE", "cont_w": 300, "energy_wh": 300, "source": "assumed" },
+    { "type": "ESS", "label": "이동형 ESS", "output": "AC_SINE", "cont_w": 3000, "energy_wh": 5000, "source": "assumed" },
+    { "type": "RB", "label": "대여업체 예비 배터리", "output": "FAMILY", "family": "VENT_A", "cont_w": null, "energy_wh": null, "rb_minutes": 240, "source": "assumed" },
+    { "type": "GEN", "label": "소방서 발전기", "output": "AC_UNKNOWN", "cont_w": null, "energy_wh": null, "source": "assumed" }
+  ]
+}
