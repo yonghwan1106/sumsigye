@@ -1,0 +1,218 @@
+{
+ "meta": {
+  "reviewed_n": 0,
+  "total_n": 26,
+  "ingested_at": "2026-10-25T19:19:56+09:00",
+  "csv_sha256": "2569b7b8ad49d89653685ee026883c0158a03096f2dd9b5fe87fab68178e1121"
+ },
+ "items": [
+  {
+   "event_id": "E-208659",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-212046",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-228530",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-243432",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-251638",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-251916",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-252264",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-254509",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-255142",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-256466",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-257640",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-259192",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-259259",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-259327",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-259594",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-260014",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-261137",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-261720",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-261764",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-263119",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-264465",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-266132",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-266510",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-266838",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-267003",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  },
+  {
+   "event_id": "E-269712",
+   "verdict": null,
+   "fix_start": null,
+   "fix_restored": null,
+   "fix_type": null,
+   "memo": ""
+  }
+ ]
+}

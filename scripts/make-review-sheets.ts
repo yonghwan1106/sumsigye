@@ -7,7 +7,8 @@ import { join } from "node:path";
 import type { EventsFile, L1ExtractFile, SmsRow } from "../lib/types";
 import { linkMessages, linkedPairs, pairKey, type LinkMsg } from "../lib/l1/link";
 import { isoToMs, msToIso } from "../lib/l1/dates";
-import { writeCsv } from "./_csv";
+import { readCsv, writeCsv } from "./_csv";
+import { EVENTS_HEADER, GOLD_HEADER, LINK_HEADER } from "./_review_headers";
 import { mulberry32 } from "./_rng";
 
 const ROOT = join(__dirname, "..");
@@ -24,15 +25,22 @@ function load() {
   return { corpus, split, rule };
 }
 
+/** 이미 사람이 칸을 채운 시트는 덮어쓰지 않는다(--force 없으면). */
+function safeWrite(path: string, header: string[], rows: unknown[][], reviewCol: string): boolean {
+  if (existsSync(path) && !process.argv.includes("--force")) {
+    const filled = readCsv(path).rows.filter((r) => (r[reviewCol] ?? "").trim()).length;
+    if (filled > 0) { console.log(`skip: ${path} 에 검수 칸 ${filled}개가 채워져 있어 덮어쓰지 않음(--force로만)`); return false; }
+  }
+  writeCsv(path, header, rows);
+  return true;
+}
+
 function shuffle<T>(a: T[], rnd: () => number): T[] {
   const x = a.slice();
   for (let i = x.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [x[i], x[j]] = [x[j], x[i]]; }
   return x;
 }
 
-export const GOLD_HEADER = ["order", "sn", "sent_at", "org", "text", "relevant(Y/N)", "kind", "occurred_clock", "eta_type(absolute/duration/none)", "eta_clock", "eta_minutes", "eta_base(occurrence/sent/unknown)", "restored_clock", "cause6", "areas(쉼표)", "검수(확인/수정)", "메모"];
-export const LINK_HEADER = ["pair_id", "sn_a", "sent_a", "text_a", "sn_b", "sent_b", "text_b", "같은사건(예/아니오)", "메모"];
-export const EVENTS_HEADER = ["event_id", "org", "outcome(exact/interval/right)", "start_at", "restored_at", "lower_h", "upper_h", "duration_h", "flags", "문자들(sn|발송|문안을 ⏎로 이음)", "판정(맞음/수정/제외)", "수정_발생(YYYY-MM-DD HH:MM)", "수정_복구(YYYY-MM-DD HH:MM)", "수정_유형", "메모"];
 
 function stageGold() {
   const { corpus, split, rule } = load();
@@ -48,7 +56,7 @@ function stageGold() {
       f.restored_clock ?? "", f.cause6, f.areas.join(","), "", ""];
   });
   mkdirSync(REVIEW, { recursive: true });
-  writeCsv(join(REVIEW, "gold_review.csv"), GOLD_HEADER, goldRows);
+  safeWrite(join(REVIEW, "gold_review.csv"), GOLD_HEADER, goldRows, GOLD_HEADER[15]);
 
   // 2) 연결 20쌍 — 같은 기관·30시간 안 후보 전체에서 규칙이 연결한 쌍 10 · 연결 안 한 쌍 10
   const msgs: LinkMsg[] = corpus.items.map((r) => ({ sn: r.sn, sent_at: r.sent_at, org: r.org, text: r.text, fields: ruleBySn.get(r.sn)!, source: "rule" }));
@@ -69,9 +77,9 @@ function stageGold() {
   if (pickNo.length < half) pickYes = yes.slice(0, LINK_N - pickNo.length);
   const picked = shuffle([...pickYes, ...pickNo], rnd);
   const linkRows = picked.map((c, i) => [`L${String(i + 1).padStart(2, "0")}`, c.a.sn, show(c.a.sent_at), oneLine(c.a.text), c.b.sn, show(c.b.sent_at), oneLine(c.b.text), "", ""]);
-  writeCsv(join(REVIEW, "link_review.csv"), LINK_HEADER, linkRows);
+  const linkWritten = safeWrite(join(REVIEW, "link_review.csv"), LINK_HEADER, linkRows, LINK_HEADER[7]);
   // 규칙이 연결했는지(예측)는 시트에 보이지 않게 따로 둔다 — 검수자가 규칙 판단에 끌리지 않도록
-  writeFileSync(join(REVIEW, "_link_candidates_meta.json"), JSON.stringify({
+  if (linkWritten) writeFileSync(join(REVIEW, "_link_candidates_meta.json"), JSON.stringify({
     seed: SEED, n_candidates: cands.length, n_linked_candidates: yes.length, n_unlinked_candidates: no.length,
     pairs: picked.map((c, i) => ({ pair_id: `L${String(i + 1).padStart(2, "0")}`, sn_a: c.a.sn, sn_b: c.b.sn, rule_linked: c.linked })),
   }, null, 1), "utf8");
@@ -90,7 +98,7 @@ function stageEvents() {
     const smsCell = e.sns.map((sn) => { const r = bySn.get(sn)!; return `${sn}|${show(r.sent_at)}|${oneLine(r.text)}`; }).join(" ⏎ ");
     return [e.event_id, e.org, e.outcome, show(e.start_at), restored, e.lower_h ?? "", e.upper_h ?? "", e.duration_h ?? "", e.flags.join(";"), smsCell, "", "", "", "", ""];
   });
-  writeCsv(join(REVIEW, "events_review.csv"), EVENTS_HEADER, rows);
+  safeWrite(join(REVIEW, "events_review.csv"), EVENTS_HEADER, rows, EVENTS_HEADER[10]);
   writeReadme(rows.length);
   console.log(`review sheets (events): events_review.csv ${rows.length} events (exact ${target.filter((e) => e.outcome === "exact").length}, interval ${target.filter((e) => e.outcome === "interval").length})`);
 }

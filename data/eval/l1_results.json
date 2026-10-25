@@ -1,10 +1,139 @@
 {
-  "status": "measuring",
-  "meta": { "reviewed_n": 0, "total_n": 0, "labeler": "none", "method": "none", "realtime_mode": "llm" },
+ "status": "final",
+ "meta": {
+  "reviewed_n": 0,
+  "total_n": 60,
+  "labeler": "none",
+  "method": "none",
+  "realtime_mode": "llm",
+  "reference": "none",
+  "min_reviewed": 40,
+  "label_line": "정답 라벨 검수 전 — 규칙 추출기 대비 일치율",
+  "link_reviewed_n": 0,
+  "gold_csv_sha256": "397ecbc9a7b60d02707683a119de18eb2975093db2650d8099e6fbc674abfc1e",
+  "built_at": "2026-10-25T19:21:09+09:00"
+ },
+ "rows": [
+  {
+   "system": "rule",
+   "relevant_f1": null,
+   "kind_acc": null,
+   "time_exact": {
+    "rate": null,
+    "n": 0
+   },
+   "null_correct": {
+    "rate": null,
+    "n": 0
+   },
+   "eta_base_acc": null,
+   "cause6_acc": null,
+   "cause3_acc": null,
+   "link_p": null,
+   "link_r": null
+  },
+  {
+   "system": "claude-haiku-5-5",
+   "relevant_f1": null,
+   "kind_acc": null,
+   "time_exact": {
+    "rate": null,
+    "n": 0
+   },
+   "null_correct": {
+    "rate": null,
+    "n": 0
+   },
+   "eta_base_acc": null,
+   "cause6_acc": null,
+   "cause3_acc": null,
+   "link_p": null,
+   "link_r": null
+  },
+  {
+   "system": "claude-sonnet-5",
+   "relevant_f1": null,
+   "kind_acc": null,
+   "time_exact": {
+    "rate": null,
+    "n": 0
+   },
+   "null_correct": {
+    "rate": null,
+    "n": 0
+   },
+   "eta_base_acc": null,
+   "cause6_acc": null,
+   "cause3_acc": null,
+   "link_p": null,
+   "link_r": null
+  }
+ ],
+ "auto_checks": [
+  {
+   "system": "rule",
+   "evidence_in_text": 1,
+   "time_format_ok": 1,
+   "n": 330,
+   "evidence_n": 908,
+   "time_n": 202
+  },
+  {
+   "system": "claude-haiku-5-5",
+   "evidence_in_text": 0.9756,
+   "time_format_ok": 1,
+   "n": 12,
+   "evidence_n": 41,
+   "time_n": 12
+  },
+  {
+   "system": "claude-sonnet-5",
+   "evidence_in_text": 0.9943,
+   "time_format_ok": 0.9878,
+   "n": 270,
+   "evidence_n": 704,
+   "time_n": 164
+  }
+ ],
+ "vs_rule": {
+  "label": "정답 라벨 검수 전 — 규칙 추출기 대비 일치율",
+  "set": "dev(골드 행 제외)",
+  "reference": "rule:r1",
   "rows": [
-    { "system": "rule", "relevant_f1": null, "kind_acc": null, "time_exact": { "rate": null, "n": 0 }, "null_correct": { "rate": null, "n": 0 }, "eta_base_acc": null, "cause6_acc": null, "cause3_acc": null, "link_p": null, "link_r": null },
-    { "system": "claude-haiku-5-5", "relevant_f1": null, "kind_acc": null, "time_exact": { "rate": null, "n": 0 }, "null_correct": { "rate": null, "n": 0 }, "eta_base_acc": null, "cause6_acc": null, "cause3_acc": null, "link_p": null, "link_r": null },
-    { "system": "claude-sonnet-5", "relevant_f1": null, "kind_acc": null, "time_exact": { "rate": null, "n": 0 }, "null_correct": { "rate": null, "n": 0 }, "eta_base_acc": null, "cause6_acc": null, "cause3_acc": null, "link_p": null, "link_r": null }
-  ],
-  "auto_checks": []
+   {
+    "system": "claude-sonnet-5",
+    "n": 270,
+    "relevant_agree_f1": 0.9789,
+    "kind_agree": 0.6266,
+    "time_agree": {
+     "rate": 0.9368,
+     "n": 190
+    },
+    "null_agree": {
+     "rate": 0.9887,
+     "n": 620
+    },
+    "eta_base_agree": 0.7917,
+    "cause6_agree": 0.9129,
+    "cause3_agree": 0.9585
+   },
+   {
+    "system": "claude-haiku-5-5",
+    "n": 12,
+    "relevant_agree_f1": 1,
+    "kind_agree": 0.8333,
+    "time_agree": {
+     "rate": 1,
+     "n": 13
+    },
+    "null_agree": {
+     "rate": 1,
+     "n": 23
+    },
+    "eta_base_agree": 1,
+    "cause6_agree": 1,
+    "cause3_agree": 1
+   }
+  ]
+ }
 }

@@ -1,0 +1,1223 @@
+{
+ "meta": {
+  "labeler": "none",
+  "method": "none",
+  "draft_source": "rule:r1",
+  "reviewed_n": 0,
+  "total_n": 60,
+  "ingested_at": "2026-10-25T19:19:56+09:00",
+  "csv_sha256": "397ecbc9a7b60d02707683a119de18eb2975093db2650d8099e6fbc674abfc1e"
+ },
+ "items": [
+  {
+   "sn": 259197,
+   "order": 1,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "부곡동",
+     "교동",
+     "삼동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 268720,
+   "order": 2,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [
+     "갈현동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 268833,
+   "order": 3,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "20:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 239764,
+   "order": 4,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "탄천면"
+    ],
+    "occurred_clock": "23:06",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 264963,
+   "order": 5,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "등촌동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 243116,
+   "order": 6,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "홍은동"
+    ],
+    "occurred_clock": "07:07",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 243676,
+   "order": 7,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 213266,
+   "order": 8,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "영등포동"
+    ],
+    "occurred_clock": "12:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 257646,
+   "order": 9,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "문원동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 268849,
+   "order": 10,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 266949,
+   "order": 11,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 229327,
+   "order": 12,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "이창동"
+    ],
+    "occurred_clock": "06:10",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 209917,
+   "order": 13,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "태화동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "19:34",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 249864,
+   "order": 14,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 260230,
+   "order": 15,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "무릉도원면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 269311,
+   "order": 16,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "덕산읍",
+     "두촌리"
+    ],
+    "occurred_clock": "15:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 237095,
+   "order": 17,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "23:00"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 210338,
+   "order": 18,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "용신동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "14:00"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 256394,
+   "order": 19,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "신곡동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 226598,
+   "order": 20,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "17:11",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 258794,
+   "order": 21,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "방산면"
+    ],
+    "occurred_clock": "19:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 265948,
+   "order": 22,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 232285,
+   "order": 23,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 258565,
+   "order": 24,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "화원읍",
+     "본리리"
+    ],
+    "occurred_clock": "13:17",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 243432,
+   "order": 25,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "운서동"
+    ],
+    "occurred_clock": "11:47",
+    "eta": null,
+    "restored_clock": "13:36",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 207255,
+   "order": 26,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "소제동",
+     "자양동",
+     "대동"
+    ],
+    "occurred_clock": "13:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 242493,
+   "order": 27,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 252863,
+   "order": 28,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "문봉동"
+    ],
+    "occurred_clock": "20:08",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 251916,
+   "order": 29,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "고성동",
+     "침산동"
+    ],
+    "occurred_clock": "18:38",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 207260,
+   "order": 30,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "대동"
+    ],
+    "occurred_clock": "16:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 244842,
+   "order": 31,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 257397,
+   "order": 32,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "화곡동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 257997,
+   "order": 33,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "고척1",
+     "개봉동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 265203,
+   "order": 34,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "영통동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 259195,
+   "order": 35,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "교동",
+     "부곡2동",
+     "부곡3동"
+    ],
+    "occurred_clock": "18:43",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 243415,
+   "order": 36,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [
+     "운서동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 205326,
+   "order": 37,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "대연동"
+    ],
+    "occurred_clock": "07:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 260014,
+   "order": 38,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "17:56",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 251057,
+   "order": 39,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "동면"
+    ],
+    "occurred_clock": "09:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 227311,
+   "order": 40,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "남한산성면",
+     "남종면",
+     "퇴촌면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 205708,
+   "order": 41,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "한솔동",
+     "새롬동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 120,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 266157,
+   "order": 42,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "구포동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 246089,
+   "order": 43,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "해제면",
+     "남풍리"
+    ],
+    "occurred_clock": "01:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 261139,
+   "order": 44,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "23:03",
+    "eta": null,
+    "restored_clock": "00:36",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 210595,
+   "order": 45,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "05:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 228458,
+   "order": 46,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "고잔동"
+    ],
+    "occurred_clock": "21:55",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 268081,
+   "order": 47,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": null,
+    "areas": [
+     "괴산읍",
+     "칠성면"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 90,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 263119,
+   "order": 48,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "서교동"
+    ],
+    "occurred_clock": "17:15",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 209998,
+   "order": 49,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "영흥면",
+     "보온관리"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 237096,
+   "order": 50,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 265942,
+   "order": 51,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "읍내동"
+    ],
+    "occurred_clock": "16:38",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 222858,
+   "order": 52,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "개금동"
+    ],
+    "occurred_clock": "11:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 268835,
+   "order": 53,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 211758,
+   "order": 54,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "수유2동"
+    ],
+    "occurred_clock": "16:41",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 213147,
+   "order": 55,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "월영동"
+    ],
+    "occurred_clock": "07:37",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 249877,
+   "order": 56,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 259337,
+   "order": 57,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "운수면",
+     "팔산리",
+     "유리"
+    ],
+    "occurred_clock": "10:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 266132,
+   "order": 58,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "감삼동"
+    ],
+    "occurred_clock": "13:28",
+    "eta": null,
+    "restored_clock": "14:53",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 226934,
+   "order": 59,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "05:41",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  },
+  {
+   "sn": 259196,
+   "order": 60,
+   "reviewed": false,
+   "changed": false,
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [
+     "부곡동",
+     "교동",
+     "삼동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {}
+   }
+  }
+ ]
+}
