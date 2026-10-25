@@ -1,38 +1,379 @@
 {
-  "provisional": true,
-  "reviewed": false,
-  "version": "provisional-c1",
-  "fitted_at": "2026-10-25T18:53:50+09:00",
-  "note": "임시 값(C1): 설계 v1 1차값 P50 1.9시간·P90 4.87시간에서 역산한 모수(mu=ln 1.9, sigma=(ln 4.87 - ln 1.9)/1.2816). 실제 적합값 아님 — A7(fit_restore.py)이 덮어쓴다.",
-  "data": {
-    "n_exact": 0,
-    "n_interval": 0,
-    "n_right": 0,
-    "n_excluded": 0,
-    "period": ["2026-10-25T18:53:50+09:00", "2026-10-25T18:53:50+09:00"],
-    "corpus_n": 0,
-    "collected_at": "2026-10-25T18:53:50+09:00"
-  },
-  "models": {
-    "M0": {
-      "coef": { "intercept": 0.6419, "night": 0, "G2": 0, "G3": 0 },
-      "sigma": 0.7344
-    }
-  },
-  "selected": "M0",
-  "lr_tests": [],
-  "cells": [
-    {
-      "group": "all",
-      "night": "all",
-      "n_cell": 0,
-      "small": true,
-      "mu": 0.6419,
-      "sigma": 0.7344,
-      "p50_h": 1.9001,
-      "p80_h": 3.5254,
-      "p90_h": 4.8699
-    }
+ "provisional": false,
+ "reviewed": false,
+ "version": "fit-2026-10-25T1918",
+ "fitted_at": "2026-10-25T19:18:32+09:00",
+ "data": {
+  "n_exact": 12,
+  "n_interval": 14,
+  "n_right": 111,
+  "n_excluded": 80,
+  "period": [
+   "2023-12-09T02:02:00+09:00",
+   "2026-10-23T17:40:00+09:00"
   ],
-  "loo": []
+  "corpus_n": 330,
+  "collected_at": "2026-10-25T18:59:28+09:00"
+ },
+ "models": {
+  "M0": {
+   "coef": {
+    "intercept": 1.057251,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.65369,
+   "loglik": -58.9766,
+   "k": 2
+  },
+  "M1": {
+   "coef": {
+    "intercept": 0.953454,
+    "night": 0.359034,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.626553,
+   "loglik": -57.7061,
+   "k": 3
+  },
+  "M2": {
+   "coef": {
+    "intercept": 1.046015,
+    "night": 0.36264,
+    "G2": 0.188421,
+    "G3": -0.178395
+   },
+   "sigma": 0.604462,
+   "loglik": -56.9548,
+   "k": 5
+  }
+ },
+ "selected": "M0",
+ "lr_tests": [
+  {
+   "model": "M1",
+   "vs": "M0",
+   "chi2": 2.541,
+   "df": 1,
+   "p": 0.1109
+  },
+  {
+   "model": "M2",
+   "vs": "M0",
+   "chi2": 4.0436,
+   "df": 3,
+   "p": 0.2568
+  },
+  {
+   "model": "M2",
+   "vs": "M1",
+   "chi2": 1.5026,
+   "df": 2,
+   "p": 0.4717
+  }
+ ],
+ "cells": [
+  {
+   "group": "all",
+   "night": "all",
+   "n_cell": 26,
+   "small": false,
+   "mu": 1.0573,
+   "sigma": 0.6537,
+   "p50_h": 2.8784,
+   "p80_h": 4.9899,
+   "p90_h": 6.6525
+  }
+ ],
+ "loo": [
+  {
+   "event_id": "E-208659",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.068133,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.666078
+  },
+  {
+   "event_id": "E-212046",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.071248,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.633182
+  },
+  {
+   "event_id": "E-228530",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.078107,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.653884
+  },
+  {
+   "event_id": "E-243432",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.07719,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.66603
+  },
+  {
+   "event_id": "E-251638",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.071294,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.665128
+  },
+  {
+   "event_id": "E-251916",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.070244,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.632043
+  },
+  {
+   "event_id": "E-252264",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.07259,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.636856
+  },
+  {
+   "event_id": "E-254509",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.066834,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.664996
+  },
+  {
+   "event_id": "E-255142",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.075713,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.645846
+  },
+  {
+   "event_id": "E-256466",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.069653,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.66603
+  },
+  {
+   "event_id": "E-257640",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.071541,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.662457
+  },
+  {
+   "event_id": "E-259192",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.076215,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.664288
+  },
+  {
+   "event_id": "E-259259",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.076578,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.666495
+  },
+  {
+   "event_id": "E-259327",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.068662,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.660812
+  },
+  {
+   "event_id": "E-259594",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.076679,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.660859
+  },
+  {
+   "event_id": "E-260014",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.078213,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.664647
+  },
+  {
+   "event_id": "E-261137",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.078659,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.663472
+  },
+  {
+   "event_id": "E-261720",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.072669,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.665584
+  },
+  {
+   "event_id": "E-261764",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.063094,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.614873
+  },
+  {
+   "event_id": "E-263119",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.068886,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.666344
+  },
+  {
+   "event_id": "E-264465",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.050049,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.655485
+  },
+  {
+   "event_id": "E-266132",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.079001,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.661402
+  },
+  {
+   "event_id": "E-266510",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.055696,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.659378
+  },
+  {
+   "event_id": "E-266838",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.050467,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.655763
+  },
+  {
+   "event_id": "E-267003",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.075185,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.66707
+  },
+  {
+   "event_id": "E-269712",
+   "model": "M0",
+   "coef": {
+    "intercept": 1.074017,
+    "night": 0.0,
+    "G2": 0.0,
+    "G3": 0.0
+   },
+   "sigma": 0.642364
+  }
+ ],
+ "note": "사건 검수 전 적합(자동 연결 사건표)"
 }

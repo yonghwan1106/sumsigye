@@ -1,11 +1,11 @@
 {
  "meta": {
-  "built_at": "2026-10-25T19:14:53+09:00",
+  "built_at": "2026-10-25T19:18:30+09:00",
   "n_by_outcome": {
    "exact": 12,
    "interval": 14,
-   "right": 115,
-   "excluded": 76
+   "right": 111,
+   "excluded": 80
   },
   "reviewed": false,
   "n_before_review": 26,
@@ -89,7 +89,7 @@
    ],
    "start_at": "2023-12-11T13:00:00+09:00",
    "start_sn": 207255,
-   "outcome": "right",
+   "outcome": "excluded",
    "duration_h": null,
    "lower_h": 25.622,
    "upper_h": null,
@@ -103,8 +103,10 @@
     "status": "auto"
    },
    "flags": [
-    "start_conflict_gt10m"
+    "start_conflict_gt10m",
+    "start_gt12h_before_first_sms"
    ],
+   "exclude_reason": "invalid",
    "eta": {
     "eta_at": "2023-12-12T10:00:00+09:00",
     "eta_range": null,
@@ -1231,7 +1233,7 @@
    ],
    "start_at": "2024-08-25T11:50:00+09:00",
    "start_sn": 222858,
-   "outcome": "right",
+   "outcome": "excluded",
    "duration_h": null,
    "lower_h": 12.601,
    "upper_h": null,
@@ -1244,7 +1246,10 @@
    "review": {
     "status": "auto"
    },
-   "flags": []
+   "flags": [
+    "start_gt12h_before_first_sms"
+   ],
+   "exclude_reason": "invalid"
   },
   {
    "event_id": "E-223348",
@@ -3577,7 +3582,7 @@
    ],
    "start_at": "2026-02-11T22:00:00+09:00",
    "start_sn": 255132,
-   "outcome": "right",
+   "outcome": "excluded",
    "duration_h": null,
    "lower_h": 23.832,
    "upper_h": null,
@@ -3590,7 +3595,10 @@
    "review": {
     "status": "auto"
    },
-   "flags": []
+   "flags": [
+    "start_gt12h_before_first_sms"
+   ],
+   "exclude_reason": "invalid"
   },
   {
    "event_id": "E-255142",
@@ -3976,7 +3984,7 @@
    ],
    "start_at": "2026-05-12T19:30:00+09:00",
    "start_sn": 258794,
-   "outcome": "right",
+   "outcome": "excluded",
    "duration_h": null,
    "lower_h": 22.989,
    "upper_h": null,
@@ -3989,7 +3997,10 @@
    "review": {
     "status": "auto"
    },
-   "flags": []
+   "flags": [
+    "start_gt12h_before_first_sms"
+   ],
+   "exclude_reason": "invalid"
   },
   {
    "event_id": "E-258923",

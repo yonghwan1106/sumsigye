@@ -8,6 +8,7 @@ export interface LinkMsg { sn: number; sent_at: ISO; org: string | null; text: s
 const H = 3600000;
 export const LINK_WINDOW_H = 30;
 export const LINK_EMPTY_AREA_H = 6;
+export const MAX_FIRST_SMS_DELAY_MIN = 720;
 
 /** 지역 이름 비교용: 끝의 동·읍·면·리를 떼고 공백 제거(「고삼」=「고삼면」) */
 export const areaKey = (a: string) => a.replace(/\s+/g, "").replace(/(동|읍|면|리)$/, "");
@@ -121,6 +122,10 @@ export function buildEvent(g: LinkMsg[]): OutageEvent {
   if (maxH !== null && maxH > 72) flags.push("over72h");
 
   const first_sms_delay_min = startMs !== null ? Math.round((isoToMs(msgs[0].sent_at) - startMs) / 60000) : null;
+  // 첫 문자가 발생보다 12시간 넘게 늦으면 날짜 보정 오류(예고된 미래 시각을 「하루 전 발생」으로 읽음)로 보고 제외한다.
+  if (first_sms_delay_min !== null && first_sms_delay_min > MAX_FIRST_SMS_DELAY_MIN && outcome !== "excluded") {
+    flags.push("start_gt12h_before_first_sms"); outcome = "excluded"; exclude_reason = "invalid";
+  }
   const etaMsg = msgs.find((m) => m.fields.eta_at || m.fields.eta_range);
   const srcs = [...new Set(msgs.map((m) => m.source))];
   const field_source: L1Source = srcs.length === 1 ? srcs[0] : srcs.sort((a, b) => SOURCE_RANK[b] - SOURCE_RANK[a])[0];
