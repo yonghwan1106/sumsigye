@@ -154,7 +154,7 @@ export function generate(cfg: SynthConfig, specs: SynthSpecs): { households: Hou
     households.forEach((h) => { if (isUnknownObs(h) || isConflictObs(h) || h.observed.device_id === "O2_STAT") special.add(h.id); });
     const pool = shuffled(r, households.filter((h) => !fixedIds.has(h.id) && !special.has(h.id)).map((h) => h.id));
     const need: Forced[] = [];
-    const count = (pred: (h: Household) => boolean) => households.filter(pred).length;
+    const count = (pred: (h: Household) => boolean) => households.filter((h) => !fixedIds.has(h.id) && pred(h)).length; // 각본 가구는 할당량에 세지 않는다
     for (let k = count(isUnknownObs); k < cfg.quotas.unknown; k++) need.push({ grade: "unknown" });
     for (let k = count(isConflictObs); k < cfg.quotas.conflict; k++) need.push({ grade: "conflict" });
     for (let k = count((h) => h.observed.device_id === "O2_STAT"); k < cfg.quotas.o2_stat; k++) need.push({ device: "O2_STAT", grade: "self" });
