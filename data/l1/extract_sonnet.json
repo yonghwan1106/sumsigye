@@ -1,0 +1,7692 @@
+{
+ "meta": {
+  "source": "claude-sonnet-5",
+  "model": "claude-sonnet-5",
+  "built_at": "2026-10-25T19:13:50+09:00",
+  "n": 270,
+  "failures": [],
+  "calls": 270
+ },
+ "items": [
+  {
+   "sn": 205322,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "우도면 일부지역",
+    "areas": [
+     "우도면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "우도면 일부지역",
+     "eta": "내일 오전 중으로 복구에 착수 할 예정",
+     "cause": "낙뢰로 인해 정전중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "a5e2122891d181e6fe84fcc64d7b3441cb7fd73d384fe8e2d6e5b3c15d90aac3"
+  },
+  {
+   "sn": 205706,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "한솔동, 새롬동 일부 지역",
+    "areas": [
+     "한솔동",
+     "새롬동"
+    ],
+    "occurred_clock": "19:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 발생으로 긴급복구 중",
+     "place": "한솔동,  새롬동 일부 지역",
+     "occurred": "19시 20분경"
+    },
+    "occurred_at": "2023-09-24T19:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "34ff52d829ec6ed0bf80dc8aa631aacb613b8e450a281888e56edc7613a4d14d"
+  },
+  {
+   "sn": 205707,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "한솔동, 새롬동 지역",
+    "areas": [
+     "한솔동",
+     "새롬동"
+    ],
+    "occurred_clock": "17:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로 비상발전기 가동으로 임시 작동 중이니 엘리베이트 사용을 금지하여 주시기 바랍니다.",
+     "place": "한솔동, 새롬동 지역",
+     "occurred": "오늘 17시 20경"
+    },
+    "occurred_at": "2023-09-24T17:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "2fc2b897ca7fbde343a196510cd10ca768af1863c3d9d47a448d07ade4604b82"
+  },
+  {
+   "sn": 205717,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "소사본동 101-1번지 서울신학대학교 정문",
+    "areas": [
+     "소사본동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 및 통신장애 발생",
+     "place": "소사본동 101-1번지 서울신학대학교 정문",
+     "cause": "전신주 전도"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "3d42837d1f35e2aa0e2a9a155cf4aacaad513ebf6f8e5ae071f3971b6169001e"
+  },
+  {
+   "sn": 207004,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "여주시 중앙동 일부지역",
+    "areas": [
+     "중앙동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전이 발생되어 한전에서 복구 중이니",
+     "place": "여주시 중앙동 일부지역"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d1aedc420f0e0809c5ab7d35005e29525fafd075cba1211406cf67017dc06ff9"
+  },
+  {
+   "sn": 207144,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "종촌동 일부 지역",
+    "areas": [
+     "종촌동"
+    ],
+    "occurred_clock": "9:02",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "place": "종촌동 일부 지역",
+     "occurred": "오늘 9시 2분경",
+     "cause": "한전 변압기 고장"
+    },
+    "occurred_at": "2023-12-05T09:02:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "96394cd8b1fc5e9ea056f3f4a3553a03a08de314937580cbbf0bc291da63c66b"
+  },
+  {
+   "sn": 207158,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "남구 옥동일대",
+    "areas": [
+     "옥동"
+    ],
+    "occurred_clock": "15:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전이 발생으로 인한 119신고전화가 폭중하고 있으니",
+     "place": "남구 옥동일대",
+     "occurred": "15시 40분경"
+    },
+    "occurred_at": "2023-12-06T15:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "b2b9ed012ab5d02220e4117586899813a8e597a88d7b1348d069271a3f47aeab"
+  },
+  {
+   "sn": 207198,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "대평동, 보람동, 집현동 일부 지역",
+    "areas": [
+     "대평동",
+     "보람동",
+     "집현동"
+    ],
+    "occurred_clock": "2:02",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "정전 발생으로 긴급복구 중",
+     "place": "대평동, 보람동, 집현동 일부 지역",
+     "occurred": "2시 2분경"
+    },
+    "occurred_at": "2023-12-09T02:02:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "6575ec0880c2f3f508d07fdc921343f930e399f4aed39440a7bab6c5a0ca4cd2"
+  },
+  {
+   "sn": 207249,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "동대전로 131번길 1",
+    "areas": [
+     "자양동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전발생 안내",
+     "place": "동대전로 131번길 1",
+     "cause": "전신주 충돌사고"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0fbbdf73c1221cf6af6b9bab288b3f1d8d43d9700604c85d88829e5e5f0e6719"
+  },
+  {
+   "sn": 207253,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "실전사거리 부근",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "10:00"
+    },
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "실전사거리 부근",
+     "eta": "오전 10시경 복구 예정",
+     "cause": "전신주 충돌사고"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2023-12-12T10:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c554580affc7c610347bf6cb3029877a0782e7ee59d5266bb1f27910cf93ef2e"
+  },
+  {
+   "sn": 208645,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "여주시 일부지역",
+    "areas": [],
+    "occurred_clock": "15:55",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "여주시 일부지역",
+     "occurred": "15:55경 여주시 일부지역 정전되어"
+    },
+    "occurred_at": "2024-01-03T15:55:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "b9831e66b8c0febb80241b56411e63308c0d3adb4a8264b31941b5327a591790"
+  },
+  {
+   "sn": 208659,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "광주시 능평동 일대",
+    "areas": [
+     "능평동"
+    ],
+    "occurred_clock": "01:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전되어 한국전력공사에서 복구 중",
+     "place": "광주시 능평동 일대",
+     "occurred": "01:15경"
+    },
+    "occurred_at": "2024-01-04T01:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0d12bfe9d49174275dae81de8393ca66805b75a4188774309eb3f702ed8194a3"
+  },
+  {
+   "sn": 208660,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "경기도 광주시 능평동 일대",
+    "areas": [
+     "능평동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "04:00",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "경기도 광주시 능평동 일대",
+     "restored": "04시경 경기도 광주시 능평동 일대 정전 복구가 완료되었습니다"
+    },
+    "occurred_at": null,
+    "restored_at": "2024-01-04T04:00:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "881f5db81645026f73a987e162b3f50a0cfac420ea7886412dbd1903a817ae67"
+  },
+  {
+   "sn": 209082,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "춘양면 소로리, 의양리 일부 지역",
+    "areas": [
+     "소로리",
+     "의양리"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "24:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "춘양면 소로리, 의양리 일부 지역",
+     "eta": "복구예정시각: 24시"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2024-01-15T00:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "de0be827a3b9e26a7907660217980b6d2c76fce3ec12fbfe135e16c20e7a2a2c"
+  },
+  {
+   "sn": 209432,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "가야대로 754 일대",
+    "areas": [],
+    "occurred_clock": "21:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전되어 복구 중",
+     "place": "가야대로 754 일대",
+     "occurred": "21시 30분경"
+    },
+    "occurred_at": "2024-01-22T21:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e9017fc37eef668c1ad7abc59b09a4836af7e6c4e067b706c8ba346522fa1b37"
+  },
+  {
+   "sn": 209792,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "사직롯데캐슬 부근",
+    "areas": [],
+    "occurred_clock": "19:22",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "사직롯데캐슬 부근 신호등이 정전되어",
+     "occurred": "19시 22분경"
+    },
+    "occurred_at": "2024-02-03T19:22:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "96aaff9fc157b638ca37b77a2de9a0fa475af1a31d3491170bc7f4cfa5771e63"
+  },
+  {
+   "sn": 209914,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "태화동 일대 (태화강국가정원길, 신기길, 신기2길, 오산2길, 오산3길 등)",
+    "areas": [
+     "태화동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "20:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "태화동 일대 (태화강국가정원길, 신기길, 신기2길, 오산2길, 오산3길 등)",
+     "occurred": "정전 발생",
+     "eta": "복구예정(20:00)"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2024-02-06T20:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ff6a6cd152b609bc9d6fe9688f4ea4e28b4084050cfa3d38d42787da8931463d"
+  },
+  {
+   "sn": 209999,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [
+     "영흥면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "오늘 새벽",
+     "cause": "전기화재로 인해"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": [
+     "evidence_not_in_text:place",
+     "place_not_in_text"
+    ]
+   },
+   "cache_key": "09c76d8f15d33eaedb2a4dca2722360743fdf1005d76bbcb11aae303033e41f5"
+  },
+  {
+   "sn": 210365,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "다사읍 대실역 일원",
+    "areas": [
+     "다사읍"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전사고 발생",
+     "place": "다사읍 대실역 일원"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "5ebe308851f15edb5f64a8a8c8bc3799121624c33e4c4cd95c45b913f45f4a4e"
+  },
+  {
+   "sn": 210513,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "강서로348일대(내발산동)",
+    "areas": [
+     "내발산동"
+    ],
+    "occurred_clock": "16:13",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "강서로348일대(내발산동)",
+     "occurred": "16:13경 강서로348일대(내발산동) 정전 발생"
+    },
+    "occurred_at": "2024-03-07T16:13:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "450f9d231b75de69ef0042af17c5dfb816773b0718d61e8046e6f0dd017b91da"
+  },
+  {
+   "sn": 210600,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "코레일 구간 일산선 3호선",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전차선 정전은 임시조치 후 열차가 운행중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "da852c50f151ced40d4a5e7682bc20d4dea79ace14de8500cbb00c54cdfbee5f"
+  },
+  {
+   "sn": 210764,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "여수시 화양면",
+    "areas": [
+     "화양면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전되어 복구 중이니, 지역 주민은 전기 기기의 전원을 모두 끄고 손전등을 사용하는 등 안전사고에 유의하세요",
+     "place": "여수시 화양면 지역이 정전되어 복구 중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8e5b6ae7e96271f9a8aa9d9d5fd54b3331fc45c9d6bce31b6266b7f4758c5623"
+  },
+  {
+   "sn": 211092,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "성남시 분당구 수내동",
+    "areas": [
+     "수내동"
+    ],
+    "occurred_clock": "21:47",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전이 발생되어 한국전력공사에서 복구 중",
+     "place": "성남시 분당구 수내동",
+     "occurred": "21:47"
+    },
+    "occurred_at": "2024-04-08T21:47:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c10336e51b4e45f8d15582512369ab1f9643a59356b85e56e862fda394f63807"
+  },
+  {
+   "sn": 211501,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "구래동,마산동 일부지역",
+    "areas": [
+     "구래동",
+     "마산동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전되어 복구 중",
+     "place": "구래동,마산동 일부지역"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "751e1d636b602c1159501a3e4e76bf0211570f5e53894604702e3328047391c9"
+  },
+  {
+   "sn": 211579,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "홍성읍 대교리 일대",
+    "areas": [
+     "대교리"
+    ],
+    "occurred_clock": "15:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "홍성읍 대교리 일대 지역이 정전되어 복구 중",
+     "occurred": "15:15경"
+    },
+    "occurred_at": "2024-05-05T15:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f624f2492542b7411d107894d10f7c854cc29e7bf98417ba242623537e080898"
+  },
+  {
+   "sn": 211580,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "홍성읍 대교리, 고암리, 남장리 일대",
+    "areas": [
+     "대교리",
+     "고암리",
+     "남장리"
+    ],
+    "occurred_clock": "15:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전되어 복구 중이니",
+     "place": "홍성읍 대교리, 고암리, 남장리 일대",
+     "occurred": "15:15경"
+    },
+    "occurred_at": "2024-05-05T15:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "7e4894a4251a014300982dc774773ccb1379f46263cd8d65134586109d7b8007"
+  },
+  {
+   "sn": 211592,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "홍성읍 일대",
+    "areas": [
+     "홍성읍"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "15:15",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "홍성읍 일대",
+     "restored": "복구 완료되었습니다"
+    },
+    "occurred_at": null,
+    "restored_at": "2024-05-05T15:15:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "caf40056fe5c0d481565a3da783c2eece4c683634173401267b2f89a319defca"
+  },
+  {
+   "sn": 211823,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "안동시 일부 지역",
+    "areas": [],
+    "occurred_clock": "23:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "정전 되어 복구 중",
+     "place": "안동시 일부 지역",
+     "occurred": "23:30분경"
+    },
+    "occurred_at": "2024-05-15T23:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "2089b495d35c401b170d8d8a5230c9a5a1d09ca416219449b1fdf2ff9a176f26"
+  },
+  {
+   "sn": 211958,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "충절오거리 교통사고 발생에 따른 구성동 일대",
+    "areas": [
+     "구성동"
+    ],
+    "occurred_clock": "13:20",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "구성동 일대",
+     "occurred": "금일13:20 충절오거리 교통사고 발생",
+     "eta": "3시간 소요예정",
+     "cause": "충절오거리 교통사고 발생"
+    },
+    "occurred_at": "2024-05-23T13:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2024-05-23T16:20:00+09:00",
+     "2024-05-23T16:55:04+09:00"
+    ],
+    "warnings": []
+   },
+   "cache_key": "280d72c8ad3ada5a77ca1d4e2e80af8f18321425f1088320d679295c5fab5df8"
+  },
+  {
+   "sn": 212018,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "안막동 일부지역",
+    "areas": [
+     "안막동"
+    ],
+    "occurred_clock": "18:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전되어 복구 중",
+     "place": "안막동 일부지역",
+     "occurred": "18시 30분경"
+    },
+    "occurred_at": "2024-05-26T18:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "2fb8b723f8a7ebac89914bf441c39e4069e2223fdb6cd7ec577544eae025a316"
+  },
+  {
+   "sn": 212026,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "풍동 성원아파트 1, 3단지 일대",
+    "areas": [
+     "풍동"
+    ],
+    "occurred_clock": "08:00",
+    "eta": {
+     "type": "absolute",
+     "clock": "14:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "풍동 성원아파트 1, 3단지 일대",
+     "occurred": "오늘 08:00",
+     "eta": "14시까지"
+    },
+    "occurred_at": "2024-05-27T08:00:00+09:00",
+    "restored_at": null,
+    "eta_at": "2024-05-27T14:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "03fc1f470463dd4fae54bb9eebddb91c4f728822424a4e8327193e20b2f292c0"
+  },
+  {
+   "sn": 212046,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "북아현동 1-538 일대",
+    "areas": [
+     "북아현동"
+    ],
+    "occurred_clock": "22:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "북아현동 1-538 일대",
+     "occurred": "22:40경",
+     "cause": "사다리차가 전선을 건드려서 일어난 사고로 정전"
+    },
+    "occurred_at": "2024-05-27T22:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "286a116526a929efb0b628beec0154304af979298b7495a2df0f41cf0df463a0"
+  },
+  {
+   "sn": 212047,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "북아현동 1-538",
+    "areas": [
+     "북아현동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "23:25",
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {
+     "place": "북아현동 1-538",
+     "restored": "23:25 북아현동 1-538 복전완료",
+     "cause": "이삿짐 사다리차 사고로 정전 발생"
+    },
+    "occurred_at": null,
+    "restored_at": "2024-05-27T23:25:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "fcfa82e1a37be9c17c15ce9e56a9619305f34b1a9f3288bf2da3e42cbac3dc67"
+  },
+  {
+   "sn": 212135,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "의정부동 136-40",
+    "areas": [
+     "의정부동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "22:00"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "인근 지역",
+    "evidence": {
+     "place": "의정부동 136-40",
+     "eta": "22시 경 복구 예정",
+     "cause": "전신주 복구로 인하여"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2024-05-31T22:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "82d00c7edf7876d8d114c9a705d6ff07acdc6bec9392e3d2cab835ec169bbbc6"
+  },
+  {
+   "sn": 212247,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "청담동 62-6 일대",
+    "areas": [
+     "청담동"
+    ],
+    "occurred_clock": "10:07",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전이 발생하여 복구 중",
+     "place": "청담동 62-6 일대",
+     "occurred": "10:07경"
+    },
+    "occurred_at": "2024-06-07T10:07:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e820ded982836d15f8c176a22a7734844038d32bdebfa45fae92d89174ba9474"
+  },
+  {
+   "sn": 212270,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "영등포구 여의동 50 일대",
+    "areas": [
+     "여의동"
+    ],
+    "occurred_clock": "14:35",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전이 발생되어 복구 중",
+     "place": "영등포구 여의동 50 일대",
+     "occurred": "14:35경"
+    },
+    "occurred_at": "2024-06-08T14:35:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "5892c4960b716339763a8bf4dfbb42458c1e35372f366fcec4e65b29f14dcffa"
+  },
+  {
+   "sn": 212404,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "관악구 봉천동41-869(중앙동)일대",
+    "areas": [
+     "봉천동",
+     "중앙동"
+    ],
+    "occurred_clock": "14:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생으로 복구중",
+     "place": "관악구 봉천동41-869(중앙동)일대",
+     "occurred": "14:30경부터"
+    },
+    "occurred_at": "2024-06-12T14:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "6c762d577766c093f6f77b4b3c7ce1cef46e8ee23f16b1618b4f1a7d76ca959e"
+  },
+  {
+   "sn": 215549,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "광양시 중동 일대(퀸보석~도깨비도로)",
+    "areas": [
+     "중동"
+    ],
+    "occurred_clock": "10:20",
+    "eta": {
+     "type": "duration",
+     "minutes": 60,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "광양시 중동 일대(퀸보석~도깨비도로)",
+     "occurred": "10:20경",
+     "eta": "1시간 정도 소요"
+    },
+    "occurred_at": "2024-07-18T10:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2024-07-18T11:20:00+09:00",
+     "2024-07-18T12:00:53+09:00"
+    ],
+    "warnings": []
+   },
+   "cache_key": "0f7565297d884a1566a98a98f03730cbe47894faeea67e52b719c981e286eeaf"
+  },
+  {
+   "sn": 215705,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수성동3가, 중동, 만촌동 일부 지역",
+    "areas": [
+     "수성동3가",
+     "중동",
+     "만촌동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "정전이 발생하여 한전에서 복구중임을 알려드립니다",
+     "place": "수성동3가, 중동, 만촌동 일부 지역",
+     "cause": "고압전선 노후 문제로"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "edf7b955d02c2476d8ff3c87c17b1fcb509bc7c3983e33c98ceb871a9956897a"
+  },
+  {
+   "sn": 215864,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "서동 일대",
+    "areas": [
+     "서동"
+    ],
+    "occurred_clock": "12:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전이 발생하여 복구 중",
+     "place": "서동 일대",
+     "occurred": "12시경"
+    },
+    "occurred_at": "2024-07-20T12:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "569aca32d3a727cb86853833ee6a46a5cd3560e35ee628f678045662c8a5a94b"
+  },
+  {
+   "sn": 216176,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "하동읍, 화개면, 악양면 일부 지역",
+    "areas": [
+     "하동읍",
+     "화개면",
+     "악양면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "place": "하동읍, 화개면, 악양면 일부 지역",
+     "cause": "단선 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "599ebf8b46af3762793bc595e72e2e79596049bdc73d969c59b50b25df2b0219"
+  },
+  {
+   "sn": 216703,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "범천1동 서면베르빌 지역 일대",
+    "areas": [
+     "범천1동"
+    ],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "범천1동 서면베르빌 지역 일대가 정전되어 복구 중",
+     "occurred": "오늘 03:20"
+    },
+    "occurred_at": "2024-07-28T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "bb511ac7fbfbfe985c5c9f1b7494c114baca4eb4b780eaa54edcd4a51dd14fe5"
+  },
+  {
+   "sn": 216821,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "북아현동 두산아파트 전체",
+    "areas": [
+     "북아현동"
+    ],
+    "occurred_clock": "06:33",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "북아현동 두산아파트 전체",
+     "occurred": "06:33경"
+    },
+    "occurred_at": "2024-07-29T06:33:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "b7cf65da2662a04e4110c48a10d0b70dc9f361526f5422ed0946cf919e8e9bfb"
+  },
+  {
+   "sn": 217301,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수영구 남천동 KBS방송국 앞",
+    "areas": [
+     "남천동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전발생",
+     "place": "수영구 남천동 KBS방송국 앞",
+     "cause": "변압기 터져"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "47b56e3d5223c84508c8018b0ac863a56e69bf68bd8f0c402be36065eb8a60a8"
+  },
+  {
+   "sn": 218303,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "북내면, 오학동, 세종대왕면 일부지역",
+    "areas": [
+     "북내면",
+     "오학동",
+     "세종대왕면"
+    ],
+    "occurred_clock": "21:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "북내면, 오학동, 세종대왕면 일부지역",
+     "occurred": "21:00경",
+     "cause": "낙뢰로 인한"
+    },
+    "occurred_at": "2024-08-05T21:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "eea4d1eeb7ed944cd80ff654cd934fd924ed9dc19f80d86dea2236d93708899d"
+  },
+  {
+   "sn": 219392,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "진해구 용원동 진해신항 일대",
+    "areas": [
+     "용원동"
+    ],
+    "occurred_clock": "18:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전발생하여 복구 중",
+     "place": "진해구 용원동 진해신항 일대",
+     "occurred": "18:00경"
+    },
+    "occurred_at": "2024-08-09T18:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "6dfe11b51ee7294a75f7c33790811d3d0aae9766860fb3d153843773842eeead"
+  },
+  {
+   "sn": 221887,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "세종소방서 옆 변전통",
+    "areas": [],
+    "occurred_clock": "06:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "place": "세종소방서 옆 변전통",
+     "occurred": "오늘 06:50",
+     "cause": "변전통 화재(불꽃)로 정전되어"
+    },
+    "occurred_at": "2024-08-19T06:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d0e9ba06ed1527f51409912313cfc7c620e3cda1087599a06bc663ab529254c2"
+  },
+  {
+   "sn": 222197,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "미조면 조도,호도 지역",
+    "areas": [
+     "조도",
+     "호도"
+    ],
+    "occurred_clock": "14:53",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": null,
+    "evidence": {
+     "place": "미조면 조도,호도 지역",
+     "occurred": "오늘14:53",
+     "cause": "태풍 종다리 북상에 따른 기상악화"
+    },
+    "occurred_at": "2024-08-20T14:53:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d7eb813ebed6306822c7154636b7de96b7ee9ad5307f199a66a867a3d71a091c"
+  },
+  {
+   "sn": 222278,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "관악구 신림역 일대 신림교 ~ 봉림교",
+    "areas": [
+     "신림동"
+    ],
+    "occurred_clock": "07:11",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전사고 발생되어 복구중",
+     "place": "관악구 신림역 일대 신림교 ~ 봉림교",
+     "occurred": "07:11경"
+    },
+    "occurred_at": "2024-08-21T07:11:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "80b3a14e32d65ca759c24dbb6320bc9489ddaf145edad917aa7361a63b09478e"
+  },
+  {
+   "sn": 223348,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "갈현동 415-18일대",
+    "areas": [
+     "갈현동"
+    ],
+    "occurred_clock": "04:42",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "갈현동 415-18일대",
+     "occurred": "오늘 04:42 갈현동 415-18일대에 정전 발생"
+    },
+    "occurred_at": "2024-09-02T04:42:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c93fd19f9b69a17e086c3247c8db10250f9860f0b72baec6e3bbfa8dd09a3f54"
+  },
+  {
+   "sn": 223349,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "갈현동 415-18일대",
+    "areas": [
+     "갈현동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "13:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "갈현동 415-18일대",
+     "eta": "복전 완료 예상 시각 13시"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2024-09-02T13:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "11e29e566ebfd29d76e9ea79bc9e87bbf2a510166de7fe4766305788152199d3"
+  },
+  {
+   "sn": 223483,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "갈현2동 주민센터",
+    "areas": [
+     "갈현2동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "갈현2동 주민센터"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1c6e04b92fc3760c9e86cf0ba115eb2df0c4e387d7bc19f306cc8e4dd64393b9"
+  },
+  {
+   "sn": 223485,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "restoration",
+    "place_text": "갈현2동주민센터",
+    "areas": [
+     "갈현2동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "신속하게 복구되어 정상운영 중",
+     "place": "갈현2동주민센터"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "5858248ac23fc51f9c0fb4bd42ce09a5ced2b3cd332096cb34f3db9973a54c5d"
+  },
+  {
+   "sn": 223875,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "장성동 일대",
+    "areas": [
+     "장성동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 설비교체 긴급복구",
+     "place": "장성동 일대",
+     "occurred": "09~10시",
+     "cause": "설비교체"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": [
+     "clock_not_in_text:occurred",
+     "clock_not_in_text:restored"
+    ]
+   },
+   "cache_key": "7bd610b3b496cf4bf7a0dab2c223a727dc9e5fbbfea881d59c38314a0efd1677"
+  },
+  {
+   "sn": 224209,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "진천군 광혜원 지역",
+    "areas": [
+     "광혜원"
+    ],
+    "occurred_clock": "09:06",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전되어 복구 중",
+     "place": "진천군 광혜원 지역",
+     "occurred": "09:06"
+    },
+    "occurred_at": "2024-09-16T09:06:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "b01bb0aa6016e6186e7a805f0219e91d0be4596ef127a24d049204f5693457fc"
+  },
+  {
+   "sn": 224263,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "부천시 상동시장",
+    "areas": [
+     "상동"
+    ],
+    "occurred_clock": "17:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전이 발생하였습니다",
+     "place": "부천시 상동시장",
+     "occurred": "오늘 17:40부터",
+     "cause": "전기시설 수리중"
+    },
+    "occurred_at": "2024-09-16T17:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ae5f5321292e4e23016b12177c0226dec6284acc1a30456b5ff278ba2354e645"
+  },
+  {
+   "sn": 224512,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "상당구 용암동, 영운동, 금천동 일대",
+    "areas": [
+     "용암동",
+     "영운동",
+     "금천동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "상당구 용암동, 영운동, 금천동 일대",
+     "occurred": "18:43분경"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d2be9b1dde96456dbb9aaf41acd59ccde0b89a92d304bfdb313205600e1f0889"
+  },
+  {
+   "sn": 224523,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "서원구 수곡동, 분평동, 산남동, 모충동 일대",
+    "areas": [
+     "수곡동",
+     "분평동",
+     "산남동",
+     "모충동"
+    ],
+    "occurred_clock": "18:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정수장 응급복구중",
+     "place": "서원구 수곡동, 분평동, 산남동, 모충동 일대",
+     "occurred": "18:30분경",
+     "cause": "낙뢰정전"
+    },
+    "occurred_at": "2024-09-18T18:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e072deec1a74898287276f0288774993044b534f3527efb7705ab43237d04015"
+  },
+  {
+   "sn": 224787,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "광양시 진상면, 옥곡면 일부지역",
+    "areas": [
+     "진상면",
+     "옥곡면"
+    ],
+    "occurred_clock": "19:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전 발생 복구 중",
+     "place": "광양시 진상면, 옥곡면 일부지역",
+     "occurred": "19:00경"
+    },
+    "occurred_at": "2024-09-20T19:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1f080927c1b222e1dd800146920da07b9a5cf1b13922bb33ad0f1c62e38cfeca"
+  },
+  {
+   "sn": 225516,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "금곡동"
+    ],
+    "occurred_clock": "13:12",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일원",
+    "evidence": {
+     "place": "금곡동 일원에 정전이 발생",
+     "occurred": "13:12경",
+     "cause": "전기설비 고장"
+    },
+    "occurred_at": "2024-09-25T13:12:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": [
+     "place_not_in_text"
+    ]
+   },
+   "cache_key": "06589dbbbdd2a63b70f205e7c5986ace7d20ff08d81c9ca3dacc11ee9f9243ac"
+  },
+  {
+   "sn": 225640,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "부천시 괴안동 188-15 일대",
+    "areas": [
+     "괴안동"
+    ],
+    "occurred_clock": "06:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "부천시 괴안동 188-15 일대",
+     "occurred": "06:20경",
+     "cause": "지상개폐기 사고"
+    },
+    "occurred_at": "2024-10-02T06:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "83bbedb387e233c25eb699bbaff9b60c7858f2978446f71e6ae1ce00995a277f"
+  },
+  {
+   "sn": 225807,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "태장2동 상록프라자 4동, 상가동 일부",
+    "areas": [
+     "태장2동"
+    ],
+    "occurred_clock": "18:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "정전 발생으로 복구 중",
+     "place": "태장2동 상록프라자 4동, 상가동 일부",
+     "occurred": "18:30경"
+    },
+    "occurred_at": "2024-10-09T18:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1a086779219cf4a9f29eac996c259a5d97ba532aa3bae17e9c5445dd6f21600b"
+  },
+  {
+   "sn": 226114,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수유3동 지역",
+    "areas": [
+     "수유3동"
+    ],
+    "occurred_clock": "16:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "긴급 복구 중",
+     "place": "수유3동 지역이 정전되어",
+     "occurred": "16:00시경"
+    },
+    "occurred_at": "2024-10-21T16:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "dbd26f6e44863e319c761cec8cebbd66a6f9b9dab79e98c316206c1d25056f17"
+  },
+  {
+   "sn": 226555,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "임고면 일부지역",
+    "areas": [
+     "임고면"
+    ],
+    "occurred_clock": "20:46",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "임고면 일부지역 정전중",
+     "occurred": "20:46경"
+    },
+    "occurred_at": "2024-11-11T20:46:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "db3de081435041146ab29bb49975d68a6dcb11f967f82a641cfd73a28de118c5"
+  },
+  {
+   "sn": 226920,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "남종면 지역 일대",
+    "areas": [
+     "남종면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 및 단수가 발생되어 신속히 복구 중",
+     "place": "남종면 지역 일대",
+     "cause": "전신주 전도"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e57d80fbcba84a3a91c2d572dca42819cd5a8154f75b424a40ddc0e4956d78a9"
+  },
+  {
+   "sn": 226947,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "퇴촌면 천진암로 일대",
+    "areas": [
+     "퇴촌면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "퇴촌면 천진암로 일대",
+     "occurred": "전신주 전도에 따른 정전이 발생되어",
+     "cause": "전신주 전도에 따른 정전"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f730f5eeb19ec99c356e519f913dff92c1f66bbc3aceb80905ff1b56c63e49c3"
+  },
+  {
+   "sn": 227009,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "증산로337 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 10,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "증산로337 일대",
+     "eta": "약 10분간 정전이 발생할 수 있으니",
+     "cause": "한전 고압선로 복구 작업"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2024-11-27T14:56:22+09:00",
+     "2024-11-27T14:56:22+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "c36124110a1df20650c9d5bd740e0848a62de0e335928ffa7eddc8c7fd328f11"
+  },
+  {
+   "sn": 227022,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "월영동 일부지역",
+    "areas": [
+     "월영동"
+    ],
+    "occurred_clock": "15:11",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전되어 복구 중",
+     "place": "월영동 일부지역",
+     "occurred": "15:11"
+    },
+    "occurred_at": "2024-11-27T15:11:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "05120fb4204eb2b711ee8f4a10bcc5bd2d2c1b05c3e420252f494301d4a28072"
+  },
+  {
+   "sn": 227100,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "천안시 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일대 곳곳",
+    "evidence": {
+     "place": "천안시 일대 곳곳",
+     "occurred": "정전이 발생하고 있습니다",
+     "cause": "대설로 인한 수목도괴,전선단선"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f528d6902cf241ffc1012bc81451bdfb62636582dd7f942475434253214008ea"
+  },
+  {
+   "sn": 227111,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "서신면 홍범리 일대",
+    "areas": [
+     "홍범리"
+    ],
+    "occurred_clock": "04:17",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "서신면 홍범리 일대가 정전되어 복구중",
+     "occurred": "04:17경"
+    },
+    "occurred_at": "2024-11-28T04:17:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1d98cd75c1924063332810d4746e494503b1e29d10890f8e9634977423bf4332"
+  },
+  {
+   "sn": 227112,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "봉담읍 내리 일대",
+    "areas": [
+     "내리"
+    ],
+    "occurred_clock": "02:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전되어 복구중",
+     "place": "봉담읍 내리 일대",
+     "occurred": "새벽 02:40경"
+    },
+    "occurred_at": "2024-11-28T02:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "07c45765a00e85924f721d606e38b2e7c03ebe989a3573fdcfbd8df4bbdafbe9"
+  },
+  {
+   "sn": 227195,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "마포구 공덕동,염리동,성산동 일대",
+    "areas": [
+     "공덕동",
+     "염리동",
+     "성산동"
+    ],
+    "occurred_clock": "07:00",
+    "eta": {
+     "type": "absolute",
+     "clock": "12:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "마포구 공덕동,염리동,성산동 일대",
+     "occurred": "07시경",
+     "eta": "12:00 정전 복구가 예상되오니"
+    },
+    "occurred_at": "2024-11-28T07:00:00+09:00",
+    "restored_at": null,
+    "eta_at": "2024-11-28T12:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "4492105464f77273f24fb27e62afb07c0d06be51473efcdcfc2b4455f7cf88bc"
+  },
+  {
+   "sn": 227200,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "광주시 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일대 곳곳",
+    "evidence": {
+     "kind": "정전이 발생하고 있습니다",
+     "place": "광주시 일대 곳곳",
+     "cause": "대설로 인한 전선주 전도 등으로"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1a591d7991a4f65afac573523127782e7e4197529eb591d015ba4a41775a68e4"
+  },
+  {
+   "sn": 227207,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "용인시 일부지역",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "용인시 일부지역이 정전되어 복구 중",
+     "cause": "대설로 인해"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "57182b9ffd07ac6c35b2d04b7ae8112e5d88b63c0be05b4e6cd6b82a1dd87e3b"
+  },
+  {
+   "sn": 227308,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "범어네거리 주변지역",
+    "areas": [],
+    "occurred_clock": "12:59",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전이 발생되어 복구중",
+     "place": "범어네거리 주변지역",
+     "occurred": "12:59경"
+    },
+    "occurred_at": "2024-12-05T12:59:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "181cec81854c4e826fb76f5c68a147cd44f549c252170479d7b5ad60c9999d42"
+  },
+  {
+   "sn": 227348,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "도래미시장 화재 진압 후 만두 골목 거리 일대",
+    "areas": [],
+    "occurred_clock": "22:19",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "만두 골목 거리 일대가 정전되어 복구 중",
+     "occurred": "22:19 도래미시장 화재",
+     "cause": "화재"
+    },
+    "occurred_at": "2024-12-11T22:19:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f243ab750f8d87ff2e9563e9dda035ffaaf1269a035be6b385aae6179018c0de"
+  },
+  {
+   "sn": 228504,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "여주시 관내 일부 지역",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "화재로 인해 정전 발생",
+     "place": "여주시 관내 일부 지역",
+     "cause": "화재로 인해 정전 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8bfd1ff176c2048ee91a92336b7d29a109eaa275398c4cce06d3befeedeabbd2"
+  },
+  {
+   "sn": 228530,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "우정선경아파트 사거리 명륜로~태화루 사거리 일대",
+    "areas": [],
+    "occurred_clock": "10:19",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "우정선경아파트 사거리 명륜로~태화루 사거리 일대",
+     "occurred": "10:19경",
+     "cause": "현재 원인 파악 중"
+    },
+    "occurred_at": "2025-01-18T10:19:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "cfed8f3f8a3dcbcaf5b3afbdadf66e8eef00c13a68c375de4d143cec15bab863"
+  },
+  {
+   "sn": 228531,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "우정선경아파트 사거리 명륜로 ~ 태화루 사거리 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "우정선경아파트 사거리 명륜로 ~ 태화루 사거리 일대",
+     "restored": "정전 복구가 완료되었습니다"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "650a11600ca87ff62b0b8e623d46ed0af925e6c2ac83b0f5919014c53f4ef934"
+  },
+  {
+   "sn": 228583,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "양구군 동면 및 해안면 지역",
+    "areas": [
+     "동면",
+     "해안면"
+    ],
+    "occurred_clock": "14:25",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "양구군 동면 및 해안면 지역이 정전으로 복구중",
+     "occurred": "14:25"
+    },
+    "occurred_at": "2025-01-22T14:25:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1592a0bd32f7828e72a8a3182ae775ac6019cc32a6fdab4a76e57a3844e2eda2"
+  },
+  {
+   "sn": 228587,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "청원구 일대",
+    "areas": [],
+    "occurred_clock": "20:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생으로 한전에서 신속히 조치중",
+     "place": "청원구 일대",
+     "occurred": "20:40경"
+    },
+    "occurred_at": "2025-01-23T20:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "507ec5a749b0b31e12405a7327d0a8045942e0eecf4bdfb176c5b4acce0e6a5b"
+  },
+  {
+   "sn": 229319,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "노량진1동 강남교회 앞",
+    "areas": [
+     "노량진1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "인근 7개동 36세대",
+    "evidence": {
+     "kind": "36세대 정전",
+     "place": "노량진1동 강남교회 앞",
+     "cause": "변압기 고장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "9e72f18a68541f1bc6b325bf531c2686cfea7d898bbd7eee59ca68a554f6a89a"
+  },
+  {
+   "sn": 230205,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "청주시 청원구 오창읍 일대",
+    "areas": [
+     "오창읍"
+    ],
+    "occurred_clock": "15:51",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생으로 복구중",
+     "place": "청주시 청원구 오창읍 일대",
+     "occurred": "15:51경부터"
+    },
+    "occurred_at": "2025-02-09T15:51:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0ee271b36f7d54a62fbf5be9bcc698866ea25f98d5e49e47ab0d0abc41706338"
+  },
+  {
+   "sn": 230775,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "신현동 새말길 111번지 금릉마트 일대",
+    "areas": [
+     "신현동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전으로 한국전력공사에서 복구 중",
+     "place": "신현동 새말길 111번지 금릉마트 일대"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "931351d8a5a3578c6a5de7730b30a47cfa0a0713ffa03f80251eaaf025aa84d3"
+  },
+  {
+   "sn": 230790,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "중구 종가로 250 일대(동원로얄듀크1차, 유곡푸르지오 등)",
+    "areas": [],
+    "occurred_clock": "00:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전으로 한국전력공사에서 복구 중",
+     "place": "중구 종가로 250 일대(동원로얄듀크1차, 유곡푸르지오 등)",
+     "occurred": "오늘 00시경"
+    },
+    "occurred_at": "2025-03-03T00:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "822a308ff19e70e1e0a392701975c31a8e33769df64bb7333f017c56fa0e796d"
+  },
+  {
+   "sn": 230943,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "도계읍 흥전리 일대",
+    "areas": [
+     "흥전리"
+    ],
+    "occurred_clock": "19:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전발생",
+     "place": "도계읍 흥전리 일대",
+     "occurred": "19:40 분경"
+    },
+    "occurred_at": "2025-03-04T19:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ef979ae8ec7de102950de600cb5d74d608f3f0dda85785e160a653b823736543"
+  },
+  {
+   "sn": 231692,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "길안면 금곡리, 백자리 일원",
+    "areas": [
+     "금곡리",
+     "백자리"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일원",
+    "evidence": {
+     "kind": "산불로 인해 정전(단전)예정",
+     "place": "길안면 금곡리, 백자리 일원",
+     "cause": "산불"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "60eb17c10f0c62ada7e2b6c17c6e0caea4ee4bb3d5981544d32c101f3fae96dd"
+  },
+  {
+   "sn": 231781,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "길안면 백자리, 금곡리",
+    "areas": [
+     "백자리",
+     "금곡리"
+    ],
+    "occurred_clock": "14:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "길안면 백자리, 금곡리",
+     "occurred": "금일 14시부로 길안면 백자리, 금곡리에 단전(정전)이 되오니"
+    },
+    "occurred_at": "2025-03-25T14:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e3c9a97e830c1ff278ccf3227b66119be1d3465787306b1dc9f03cb25655c21a"
+  },
+  {
+   "sn": 232056,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "영양군 전역",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "전역",
+    "evidence": {
+     "place": "영양군 전역",
+     "cause": "산불 확산으로"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0454074f08e48a517b2083e28a30760c2abe87d87307792fc3ed8586b45ef90d"
+  },
+  {
+   "sn": 232057,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "일부 마을(일직, 남선, 길안, 임하, 임동, 남후)",
+    "areas": [
+     "일직",
+     "남선",
+     "길안",
+     "임하",
+     "임동",
+     "남후"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "가압장이 정전(단전)되어",
+     "place": "일부 마을(일직, 남선, 길안, 임하, 임동, 남후)",
+     "cause": "산불 발생으로 인해"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "4f55658cb90e49c160f06efb9e94a6de667e3894a90b4d95d5ff1102d66ec6b4"
+  },
+  {
+   "sn": 232146,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "임하,남후,일직,남선,임동,풍천,길안",
+    "areas": [
+     "임하",
+     "남후",
+     "일직",
+     "남선",
+     "임동",
+     "풍천",
+     "길안"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "산불로 가압장이 정전(단전)되어 일부 고지대지역 단수발생",
+     "place": "임하,남후,일직,남선,임동,풍천,길안",
+     "cause": "산불"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8d6d5cb3e851bf849e8b455f7747827e905b8d2d24e9e01f36db048dbaa0e2d1"
+  },
+  {
+   "sn": 232304,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "임하(고곡,추목,오대),일직(용각,국곡,평팔,명진),풍천(어담,인금,금계),길안(현하,묵계)[안동시]",
+    "areas": [
+     "고곡",
+     "추목",
+     "오대",
+     "용각",
+     "국곡",
+     "평팔",
+     "명진",
+     "어담",
+     "인금",
+     "금계",
+     "현하",
+     "묵계"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "산불발생 피해, 정전 및 가압장 정비로 일시적 단수발생 안내",
+     "place": "임하(고곡,추목,오대),일직(용각,국곡,평팔,명진),풍천(어담,인금,금계),길안(현하,묵계)[안동시]",
+     "cause": "산불발생 피해"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f0058eaf138b59cafb4c7a8aca224fc71ea112247a5e7c921493f23369323e92"
+  },
+  {
+   "sn": 232341,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "소무의도 일대",
+    "areas": [
+     "소무의도"
+    ],
+    "occurred_clock": "11:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "소무의도 일대",
+     "occurred": "오늘 11:30",
+     "cause": "전신주 전도사고"
+    },
+    "occurred_at": "2025-03-27T11:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "9868a077e4667777bb68dd048b159ff8c295042f5ab87892570a54b3d65dc9f7"
+  },
+  {
+   "sn": 232482,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "청송군 관내 전체",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "관내 전체",
+    "evidence": {
+     "place": "청송군 관내 전체",
+     "cause": "산불화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "3919918d14489c3b2aa9f5146f00b12546c408fc2e7fe872d7537ec4cb34730a"
+  },
+  {
+   "sn": 233317,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "청량리동 199-118(롯데캐슬하이루체아파트 공사장) 일대",
+    "areas": [
+     "청량리동"
+    ],
+    "occurred_clock": "08:35",
+    "eta": {
+     "type": "duration",
+     "minutes": 720,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "청량리동 199-118(롯데캐슬하이루체아파트 공사장) 일대",
+     "occurred": "오늘 08:35경 청량리동 199-118(롯데캐슬하이루체아파트 공사장) 일대 정전 발생",
+     "eta": "금일 반나절 복구 소요 예정"
+    },
+    "occurred_at": "2025-04-05T08:35:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2025-04-05T20:35:00+09:00",
+     "2025-04-05T21:55:44+09:00"
+    ],
+    "warnings": []
+   },
+   "cache_key": "e8fb12fec83c0df31fe14b8f6ae76ba9fd37e63056ad6aa10d8fee5b81a82dd1"
+  },
+  {
+   "sn": 233380,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "남한산성면 산성리 일대",
+    "areas": [
+     "산성리"
+    ],
+    "occurred_clock": "17:10",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "남한산성면 산성리 일대",
+     "occurred": "17:10분경"
+    },
+    "occurred_at": "2025-04-05T17:10:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "9dc7a4848f6cf55e8c69e7ade911aad8c587e6fa82d17ab725956d3bb040610e"
+  },
+  {
+   "sn": 234241,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "영신로219 인근 전신주 전도로 영등포동, 당산동 일대",
+    "areas": [
+     "영등포동",
+     "당산동"
+    ],
+    "occurred_clock": "15:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "영신로219 인근",
+     "occurred": "오늘 15시경",
+     "cause": "전신주 전도로"
+    },
+    "occurred_at": "2025-04-11T15:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e3c05ab6ca3e4b3f0bf0141c49b234ff2c155f57e8fd73dbf114617a271de888"
+  },
+  {
+   "sn": 234300,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "양달로 4 도로붕괴로 인해 일직동, 소하동 일부 지역",
+    "areas": [
+     "일직동",
+     "소하동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "place": "일직동, 소하동 일부 지역",
+     "cause": "양달로 4 도로붕괴"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "cf29a1ff461a5d536c1195ab13e889a20f0d0930f41bcc6d25b1045803ae2cd6"
+  },
+  {
+   "sn": 234563,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "삼남읍 신안2길 17 일원",
+    "areas": [
+     "삼남읍"
+    ],
+    "occurred_clock": "07:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "삼남읍 신안2길 17 일원",
+     "occurred": "오전 07:15분경",
+     "cause": "강풍으로 인한"
+    },
+    "occurred_at": "2025-04-13T07:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "a27938af574d9894d8a049f7780354428f9db111997ea63663d2d3d21abe9dd6"
+  },
+  {
+   "sn": 234614,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "테크노폴리스 일원",
+    "areas": [
+     "현풍",
+     "유가"
+    ],
+    "occurred_clock": "11:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "place": "테크노폴리스 일원",
+     "occurred": "오늘 11:00 테크노폴리스 일원이 정전되어 복구 중"
+    },
+    "occurred_at": "2025-04-13T11:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "be16b15a69115a1aa20aead06f7fb09c203bb017a10a7c61e6eff1f39f61e54a"
+  },
+  {
+   "sn": 235212,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "소도동 일부지역",
+    "areas": [
+     "소도동"
+    ],
+    "occurred_clock": "08:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "소도동 일부지역",
+     "occurred": "오늘 08:00경부터 소도동 일부지역이 정전되어 복구 중"
+    },
+    "occurred_at": "2025-04-26T08:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0793bd0910c56873e6471108c10ab35b028948996fd2d474c37bc5588a631ce2"
+  },
+  {
+   "sn": 235644,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "휘경동 308-144 일대",
+    "areas": [
+     "휘경동"
+    ],
+    "occurred_clock": "11:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전사고가 발생되어 복구 중",
+     "place": "휘경동 308-144 일대",
+     "occurred": "11:50경",
+     "cause": "고압선이 끊어져"
+    },
+    "occurred_at": "2025-04-29T11:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "2755021484b15052a253866155b014bd9b3ba310750e2326207628c14a529529"
+  },
+  {
+   "sn": 236246,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "홍은2동과 연희동, 문화체육회관 인근 일대",
+    "areas": [
+     "홍은2동",
+     "연희동"
+    ],
+    "occurred_clock": "14:07",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "홍은2동과 연희동, 문화체육회관 인근 일대",
+     "occurred": "14:07경",
+     "cause": "교통사고로 인한 정전"
+    },
+    "occurred_at": "2025-05-21T14:07:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "359425684c4b7e3184b9f6ac1e5b94383a01d2231dfb437662e19dc1741603e3"
+  },
+  {
+   "sn": 236356,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "일부지역(계양동,대동,대정동 등)",
+    "areas": [
+     "계양동",
+     "대동",
+     "대정동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "승강기 이용을 자제하고 정전에 의한 피해가 발생하지 않도록 안전에 유의바랍니다.",
+     "place": "일부지역(계양동,대동,대정동 등)",
+     "cause": "낙뢰로 인한"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "977a7d6ffca15243717e3b28ba9d32b9b677d1b0ef0b763dfb468f92c5f06623"
+  },
+  {
+   "sn": 236357,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수성구 일부지역",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "수성구 일부지역",
+     "occurred": "정전 발생하였습니다",
+     "cause": "낙뢰로 인한"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "5bf32bf3e9f1c4207d1a647d1494fcd5599100db0d3f5c09655533f9002673f4"
+  },
+  {
+   "sn": 237078,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "산내면, 단장면 일부지역",
+    "areas": [
+     "산내면",
+     "단장면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전되어 복구 중이니",
+     "place": "산내면, 단장면 일부지역"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "4ffdd76ab01396ce62ff9bde23ce80169b3eabfa7678b4f432ed8bac5ad47e85"
+  },
+  {
+   "sn": 237103,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "용문면 일원",
+    "areas": [
+     "용문면"
+    ],
+    "occurred_clock": "14:21",
+    "eta": {
+     "type": "absolute",
+     "clock": "16:00"
+    },
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일원",
+    "evidence": {
+     "place": "용문면 일원",
+     "occurred": "오늘 14:21 용문터널 입구 화재로 인해",
+     "eta": "16시 정전 복구 예정",
+     "cause": "용문터널 입구 화재"
+    },
+    "occurred_at": "2025-06-23T14:21:00+09:00",
+    "restored_at": null,
+    "eta_at": "2025-06-23T16:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "43babc6b5499c002abe408aa9a17d1f4769c75f8afad86322e44f1c80e5d9493"
+  },
+  {
+   "sn": 237641,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "동작구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "[동작구]",
+     "restored": "현재 복구 완료되었습니다",
+     "cause": "원인불명의 정전"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "385cf27abfda92b0386d2d2fb36a07f7d5b9b3da7daaf7eae33ca75be8184aa4"
+  },
+  {
+   "sn": 237644,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "동작구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "완전 복구되었습니다",
+     "place": "구청 및 동주민센터 전산망"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d615d7172271a789f2dfecfdbfbedec79bcdbeeb609453a5ba235df747d5f203"
+  },
+  {
+   "sn": 241355,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "신안면, 신등면 일부",
+    "areas": [
+     "신안면",
+     "신등면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": null,
+    "evidence": {
+     "place": "신안면, 신등면 일부",
+     "occurred": "정전 발생 중",
+     "cause": "호우로 인한"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ea13ac235e00110a9ae92469e3871b70584fa615b99aa1803b61380068770436"
+  },
+  {
+   "sn": 241542,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "단성면, 신안면, 신등면, 금서면 일부",
+    "areas": [
+     "단성면",
+     "신안면",
+     "신등면",
+     "금서면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 및 통신장애 발생 중",
+     "place": "단성면, 신안면, 신등면, 금서면 일부",
+     "restored": "현재 복구 중",
+     "cause": "호우로 인한"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1632ac8cf4200ad59520bbbf3b5885ac499fde8dd010c013167f310ecec171e2"
+  },
+  {
+   "sn": 241927,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "가평군",
+    "areas": [
+     "가평군"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "촛불 사용 시 안전에 유의하여 주시기 바랍니다",
+     "occurred": "현재 정전 상황에서 촛불 사용 중 화재가 발생하고 있습니다"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "6c42187ceafd968e56921fff637aa681f3a9eacfd032e7588d780a28700bff0d"
+  },
+  {
+   "sn": 242715,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "에어컨 실외기 화재 및 정전에 대비"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "26540b99a2760b776f2dc8f9397fe41a68fa2eb271cfe0744ce814ef86995d71"
+  },
+  {
+   "sn": 242893,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "에어컨 실외기 화재 및 정전에 대비"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ac68d868a01ea1c72870b9d5980bbb30f5efde970b4b1feb9dc4361642694831"
+  },
+  {
+   "sn": 243273,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "에어컨 실외기 화재 및 정전에 대비"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "fd6c2dca29bc1597a3588dd21a08558c4583c5cc95fa97764c6f7f6f9567eac3"
+  },
+  {
+   "sn": 243678,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "상도로15다길 일대(상도3동)",
+    "areas": [
+     "상도3동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 60,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "상도로15다길 일대(상도3동)",
+     "occurred": "100여세대 정전 발생",
+     "eta": "복구까지 약 1시간 소요 예상"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2025-07-30T22:05:25+09:00",
+     "2025-07-30T22:05:25+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "2e727a895defe042513cb378f600b4a2fa794b40e8708613ea8a163cd4e64eb2"
+  },
+  {
+   "sn": 243679,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "상도로15다길 일대(상도3동)",
+    "areas": [
+     "상도3동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전, 한전의 복구지연",
+     "place": "상도로15다길 일대(상도3동)"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "2500cf2ba4b56648c4909d813ecb9e5014088ed2512dcb734c0862ec9599b38d"
+  },
+  {
+   "sn": 245513,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "당동 425-3",
+    "areas": [
+     "당동"
+    ],
+    "occurred_clock": "22:35",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {
+     "place": "당동 425-3",
+     "occurred": "22:35 당동 425-3 전신주와 버스 충돌사고",
+     "cause": "전신주와 버스 충돌사고"
+    },
+    "occurred_at": "2025-08-11T22:35:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8f3a1b52f5d3f9277241968aeb324129c6ff0ff63ac602d0ee4fef0016fab38b"
+  },
+  {
+   "sn": 245908,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "부천시 원미1동~춘의동 지역",
+    "areas": [
+     "원미1동",
+     "춘의동"
+    ],
+    "occurred_clock": "18:29",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "일부 정전되어 순차적으로 통전 중",
+     "place": "부천시 원미1동~춘의동 지역",
+     "occurred": "18:29분경"
+    },
+    "occurred_at": "2025-08-13T18:29:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "85fd609315a3d92fb1fb1944a2f8fde6c017757312ca1997f9abb8c7564448a0"
+  },
+  {
+   "sn": 246090,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "해제면 만풍리 지역",
+    "areas": [
+     "만풍리"
+    ],
+    "occurred_clock": "01:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전되어 복구 중",
+     "place": "해제면 만풍리 지역",
+     "occurred": "오늘 01:50",
+     "cause": "전압기 폭발"
+    },
+    "occurred_at": "2025-08-15T01:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "5b11dbb4bad5a83868de41069a7131877b8e094a53ff71625b8b5cfe3a5be559"
+  },
+  {
+   "sn": 248427,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "새롬동 일원",
+    "areas": [
+     "새롬동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "kind": "정전되어 복구 중이니 주민 여러분께서는 엘레베이터 이용 자제 등 안전에 유의바랍니다",
+     "place": "새롬동 일원"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f402f9b72520746df5095c76dfbd1bb85f3380a62177e9947810f8976c616bc7"
+  },
+  {
+   "sn": 249029,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "광산구 선암동 일대",
+    "areas": [
+     "선암동"
+    ],
+    "occurred_clock": "13:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전발생으로 복구중",
+     "place": "광산구 선암동 일대",
+     "occurred": "13:50경"
+    },
+    "occurred_at": "2025-09-06T13:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e735cdcb165c2190f33a78011b483521b29560071413364d513600a86bee3f50"
+  },
+  {
+   "sn": 249074,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "장군면 일대",
+    "areas": [
+     "장군면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "장군면 일대 정전 중",
+     "place": "장군면 일대"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "2c44438928f1ca8e04da16d47483056d2a20025c5c31a5a6bbc6baacf786f152"
+  },
+  {
+   "sn": 249876,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "상도로 56길, 58길 일대",
+    "areas": [
+     "상도동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "상도로 56길, 58길 일대",
+     "eta": "복구 3시간 예상"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2025-09-23T14:00:18+09:00",
+     "2025-09-23T14:00:18+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "c5f5b7dedd4e559e36c7866a48198799a452fd89c684ef34f8dc3ff74992e9f1"
+  },
+  {
+   "sn": 250227,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "인제군 남면 일부 지역",
+    "areas": [
+     "남면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "정전 사태 발생",
+     "place": "인제군 남면 일부 지역"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "dd81c523c4e76cd3c49fb7040605ef5c1a060909645e5c1fdaf3ca49370d9648"
+  },
+  {
+   "sn": 250386,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "장림2동 부근 일대 지역",
+    "areas": [
+     "장림2동"
+    ],
+    "occurred_clock": "07:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전되어 복구 중",
+     "place": "장림2동 부근 일대 지역",
+     "occurred": "오늘 07:00경"
+    },
+    "occurred_at": "2025-11-18T07:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "abbc9dff4ec5f8cc1f58bc4b0aee8175e520c2d85f4730a7bb86a93127bd35c3"
+  },
+  {
+   "sn": 250936,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "노량진2동 223-2일대",
+    "areas": [
+     "노량진2동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "3:00"
+    },
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "120가구",
+    "evidence": {
+     "place": "노량진2동 223-2일대",
+     "eta": "3시까지",
+     "cause": "교통사고로 인한 전신주파손"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2025-12-12T15:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ab1eb22da354fec40856550b5b793426b76e1b279fb41c24cf9b0d33872829ae"
+  },
+  {
+   "sn": 251638,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "연무동 및 영화동 일대",
+    "areas": [
+     "연무동",
+     "영화동"
+    ],
+    "occurred_clock": "12:23",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "연무동 및 영화동 일대 일부 정전되어 복구 중",
+     "occurred": "12:23경"
+    },
+    "occurred_at": "2025-12-31T12:23:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "dee6d4eef7a2ecb161fd068524fe055fbaf34d5f38aa1a4e0e1395031ffa10c1"
+  },
+  {
+   "sn": 251653,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "연무동 및 영화동 일대",
+    "areas": [
+     "연무동",
+     "영화동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전복구가 완료되었습니다",
+     "place": "연무동 및 영화동 일대"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "66d8339e737032e8af17e578ec69dab0fc54f5385dd59aa2f5accf4f3e71c11f"
+  },
+  {
+   "sn": 251913,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "고성동, 침산동 일대",
+    "areas": [
+     "고성동",
+     "침산동"
+    ],
+    "occurred_clock": "18:38",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "대규모",
+    "evidence": {
+     "kind": "정전이 발생되어",
+     "place": "고성동, 침산동 일대",
+     "occurred": "18:38경",
+     "cause": "원인 미상"
+    },
+    "occurred_at": "2026-01-02T18:38:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8f7689c1472e5c84c65da0df353ae23c5ddb445c236d23451cb9b0e737a894a8"
+  },
+  {
+   "sn": 252264,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "음성군 감곡면 일대",
+    "areas": [
+     "감곡면"
+    ],
+    "occurred_clock": "13:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "대규모",
+    "evidence": {
+     "kind": "정전이 발생되어",
+     "place": "음성군 감곡면 일대",
+     "occurred": "13:40경",
+     "cause": "원인 미상의 정전"
+    },
+    "occurred_at": "2026-01-10T13:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0bbf2560f50e677aa06fd23160f06489df29b226a943c9c386f831761a77f40c"
+  },
+  {
+   "sn": 252271,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "감곡면 일대",
+    "areas": [
+     "감곡면"
+    ],
+    "occurred_clock": "13:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "감곡면 일대",
+     "occurred": "13:40경 발생한",
+     "restored": "복구 완료되었습니다"
+    },
+    "occurred_at": "2026-01-10T13:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1584f77c8aef2f61fd2f7f5f9a194015ad342839332d6af22dc1a6f57b7afe12"
+  },
+  {
+   "sn": 252866,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "고양 문봉동 167-1번지 인근",
+    "areas": [
+     "문봉동"
+    ],
+    "occurred_clock": "20:08",
+    "eta": {
+     "type": "absolute",
+     "clock": "01:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "고양 문봉동 167-1번지 인근",
+     "occurred": "20:08 고양 문봉동 167-1번지 인근 정전 발생",
+     "eta": "복구 완료 예정시간 1.16. 01:00입니다"
+    },
+    "occurred_at": "2026-01-15T20:08:00+09:00",
+    "restored_at": null,
+    "eta_at": "2026-01-16T01:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c7c060247bade1798537a402c1ed400e88cd472bc14096af2400e52ea138ae04"
+  },
+  {
+   "sn": 252917,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "구래동 6871-47 일원",
+    "areas": [
+     "구래동"
+    ],
+    "occurred_clock": "11:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전되어 복구 중",
+     "place": "구래동 6871-47 일원",
+     "occurred": "금일 11:00"
+    },
+    "occurred_at": "2026-01-18T11:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "eebccef33fe0b267d3b8a4f6afee58c418137e1273aeea3e1a5dbb91b51a0ec5"
+  },
+  {
+   "sn": 253347,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "반곡동1373-22 국과수사거리",
+    "areas": [
+     "반곡동",
+     "개운동",
+     "행구동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "반곡동1373-22 국과수사거리",
+     "occurred": "반곡동, 개운동, 행구동 일부지역 정전 발생되어",
+     "cause": "교통사고로 인한 전력 단선"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "a2849026b7d89dd3c23854ae661a56f4d36d3b9228cd71209708317fb7385d27"
+  },
+  {
+   "sn": 253348,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "반곡동1373-22 국과수사거리",
+    "areas": [
+     "반곡동",
+     "개운동",
+     "행구동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "반곡동1373-22 국과수사거리",
+     "occurred": "반곡동, 개운동, 행구동 일부지역 정전 발생되어 복구 중",
+     "cause": "국과수사거리 교통사고로 인한 전력 단선"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "db22d912f78608c887ef38a5f92984d1e5ef52573093f16b030013d0065e9e50"
+  },
+  {
+   "sn": 253540,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "진도읍 관내",
+    "areas": [
+     "진도읍"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "전기 기기와 엘리베이터 이용 등을 자제하시기 바랍니다",
+     "place": "진도읍 관내 일부 전력라인계통 정전 알림"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "565cfb3d2ce6c357717717b4357edf4abfb7d9fb71b4d6e07a54008526990de3"
+  },
+  {
+   "sn": 253545,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "진도읍 일원",
+    "areas": [
+     "진도읍"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 복구가 완료되었음을 알려드립니다",
+     "place": "진도읍 일원"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "50dd53ca30b47e94822ad3c2248e47d9ef6670b5dd0f39e836b6750de377a2eb"
+  },
+  {
+   "sn": 253576,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "구로1동 sk허브수",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "구로1동 sk허브수 정전사고와 관련하여 거주민 중 긴급한 도움(응급환자 등)이 필요한 분은",
+     "place": "구로1동 sk허브수"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "2e52284985ad5a817d998e642845632ed5a56206b1b55d63c3cdb9b56f42e659"
+  },
+  {
+   "sn": 253577,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "구로1동 sk허브수 지하2층",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전사고가 발생하였으며",
+     "place": "구로1동 sk허브수 지하2층"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d40eb50225e3d356cd1057b24877bac21c4f87d96722ad49014dd56ad4205c03"
+  },
+  {
+   "sn": 253633,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "SK허브수 오피스텔",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "SK허브수 오피스텔 정전 한파 대피소"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0989b9bc1dd44994f9aba54f502441cbb43bb8ba15f2392b2ef3e6ee14339c9b"
+  },
+  {
+   "sn": 253681,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "구로1동 sk 허브수",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "16:54",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "구로1동 sk 허브수",
+     "restored": "16:54분 구로1동 sk 허브수 세대 정전 복구가 모두 완료 되었습니다."
+    },
+    "occurred_at": null,
+    "restored_at": "2026-01-24T16:54:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "896e316ca53d40ae90c5682f6126ce3a4d7b0fe6cf57c51f43dd5422e5e3d4e8"
+  },
+  {
+   "sn": 254074,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [
+     "시흥동"
+    ],
+    "occurred_clock": "11:27",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "전체",
+    "evidence": {
+     "kind": "벽산아파트 3단지 전체 정전발생",
+     "place": "시흥동 산100-46",
+     "occurred": "오늘 11:27",
+     "cause": "차량 전복사고"
+    },
+    "occurred_at": "2026-01-30T11:27:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": [
+     "place_not_in_text"
+    ]
+   },
+   "cache_key": "4a50e833f86bcfab300edf8575a67cbf8793cc56712d1fab1625b61439233d1e"
+  },
+  {
+   "sn": 254509,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "고삼,대덕,양성면 지역",
+    "areas": [
+     "고삼면",
+     "대덕면",
+     "양성면"
+    ],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "고삼,대덕,양성면 지역",
+     "occurred": "오늘 03:20 고삼,대덕,양성면 지역이 정전되어 복구 중"
+    },
+    "occurred_at": "2026-02-05T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "6d3bd9a9bb6f148ed4992773db4fb8812f96be69fd08063d19d4a9d28c3bd8ac"
+  },
+  {
+   "sn": 254510,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "고삼,대덕,양성 일부지역",
+    "areas": [
+     "고삼",
+     "대덕",
+     "양성"
+    ],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전되어 복구 중이니, 지역주민은 전기기기의 전원을 모두 끄고 손전등을 사용하는 등 안전사고에 유의하세요",
+     "place": "고삼,대덕,양성 일부지역",
+     "occurred": "오늘 03:20"
+    },
+    "occurred_at": "2026-02-05T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0c15cf456f786ef5b5db61363b557d044eae8e65879b80985f7624ed84209fd1"
+  },
+  {
+   "sn": 254516,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고삼면,대덕면,양성면 일부 지역",
+    "areas": [
+     "고삼면",
+     "대덕면",
+     "양성면"
+    ],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "고삼면,대덕면,양성면 일부 지역",
+     "occurred": "03시 20분경",
+     "restored": "복구되었음을 알려드립니다"
+    },
+    "occurred_at": "2026-02-05T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "18a5d35e2aa3aac441268fe33906b0bb145db1ddbddd31970c72ec6e18014048"
+  },
+  {
+   "sn": 254517,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고삼면,대덕면,양성면 일부 지역",
+    "areas": [
+     "고삼면",
+     "대덕면",
+     "양성면"
+    ],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "고삼면,대덕면,양성면 일부 지역",
+     "occurred": "03시 20분경",
+     "restored": "정전은 복구되었음"
+    },
+    "occurred_at": "2026-02-05T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "334c6e6b0dc64b66e526624bb75c56ab161f2857a8fb0d63d6bd030db7805448"
+  },
+  {
+   "sn": 254922,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "삼척시 원당동~등봉동 일대",
+    "areas": [
+     "원당동",
+     "등봉동"
+    ],
+    "occurred_clock": "14:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전이 발생하여",
+     "place": "삼척시 원당동~등봉동 일대",
+     "occurred": "14시경"
+    },
+    "occurred_at": "2026-02-08T14:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "fe3885fb1adf131f0a3bbc30b11f9d48368ac5cfc706a95b5951503ec52e068c"
+  },
+  {
+   "sn": 255132,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "성산동 533-1, 대흥동 12-41, 공덕동 255-16 일대",
+    "areas": [
+     "성산동",
+     "대흥동",
+     "공덕동"
+    ],
+    "occurred_clock": "22:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "성산동 533-1, 대흥동 12-41, 공덕동 255-16 일대",
+     "occurred": "금일 22시~06시",
+     "cause": "전력설비 교체"
+    },
+    "occurred_at": "2026-02-11T22:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "5cc3214219d428827646f6ea3fc5de55cc6122b92b40d46228ef5e3d20a060d6"
+  },
+  {
+   "sn": 255142,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "조원동 일대",
+    "areas": [
+     "조원동"
+    ],
+    "occurred_clock": "09:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "조원동 일대",
+     "occurred": "09시20분경 조원동 일대가 정전되어 복구 중"
+    },
+    "occurred_at": "2026-02-13T09:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "3d3c28a23335814e49cabda5bf0d6c4a4adbf13fbbf296824d458495f5cf28e2"
+  },
+  {
+   "sn": 255150,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "조원동 일대",
+    "areas": [
+     "조원동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구완료 되었음을 알려드립니다",
+     "place": "조원동 일대"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "660545b28abe99beb33f65650331d66725feb23a21c2784c228ea8453a6a5dcc"
+  },
+  {
+   "sn": 255186,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "하안동 11단지 내",
+    "areas": [
+     "하안동"
+    ],
+    "occurred_clock": "22:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 및 단수 중입니다",
+     "place": "하안동 11단지 내",
+     "occurred": "22:30경",
+     "cause": "변압기 파손으로 인한"
+    },
+    "occurred_at": "2026-02-13T22:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8f1eec7a3e5ca470484e581dbf698779ec471a681eb21830b66c9046f04c9f1d"
+  },
+  {
+   "sn": 256440,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "하사미 예수원 인근 전주 전도로 상사미 일대",
+    "areas": [
+     "하사미",
+     "상사미"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "하사미 예수원 인근 전주 전도로 상사미 일대",
+     "eta": "약 3시간 소요 예정",
+     "cause": "폭설로"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-03-03T09:50:39+09:00",
+     "2026-03-03T09:50:39+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "b8d2d72e89e31007d191ca36b3407a46cd9125d1c8e31b69f0ea0e0dc38dd477"
+  },
+  {
+   "sn": 256466,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "문원동 일대",
+    "areas": [
+     "문원동"
+    ],
+    "occurred_clock": "17:00",
+    "eta": {
+     "type": "absolute",
+     "clock": "19:00"
+    },
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "문원동 일대",
+     "occurred": "17시경",
+     "eta": "19시경 정전예정",
+     "cause": "문원동 맨홀 화재발생"
+    },
+    "occurred_at": "2026-03-03T17:00:00+09:00",
+    "restored_at": null,
+    "eta_at": "2026-03-03T19:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e0f11fa6c2a0d4f54ce1b565c8dfb315ef36bfd39e33d6b6cd4d867dffd765fa"
+  },
+  {
+   "sn": 256468,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "문원동",
+    "areas": [
+     "문원동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "place": "문원동",
+     "restored": "현재 정상화 되었습니다"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "76ee38291c2ffcabc4f8740c6fef95272442bc8943d33349af1546b7a55e113d"
+  },
+  {
+   "sn": 257313,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "덕진구 전북대 인근 일부 지역",
+    "areas": [],
+    "occurred_clock": "21:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "place": "덕진구 전북대 인근 일부 지역",
+     "occurred": "21:00 덕진구 전북대 인근 일부 지역 정전 발생"
+    },
+    "occurred_at": "2026-03-28T21:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e28af872eef4744a5a67ce017382d219d0f14a1f47dd99482f737ad2c56ca8cd"
+  },
+  {
+   "sn": 257401,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "화곡동 1159 우장산아이파크이편한세상",
+    "areas": [
+     "화곡동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "화곡동 1159 우장산아이파크이편한세상",
+     "restored": "정전 복구가 완료되었습니다"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "9175ac9f8b8a3b1b0525c041c0e9faa66a9dc3883796fead16bc62a48523eb77"
+  },
+  {
+   "sn": 257453,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "광도면 죽림리",
+    "areas": [
+     "죽림리"
+    ],
+    "occurred_clock": "11:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "인근 지역",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "광도면 죽림리",
+     "occurred": "11:50경",
+     "cause": "변압기 화재"
+    },
+    "occurred_at": "2026-04-02T11:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c5adab2e84dfb243d77cc3e8961d48c16e0cc10d2eff47f9a42eb699ce927fb0"
+  },
+  {
+   "sn": 257639,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "단구, 관설동 일부지역",
+    "areas": [
+     "단구동",
+     "관설동"
+    ],
+    "occurred_clock": "11:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "전기 기기의 전원을 모두 끄고 손전등을 사용하는 등 안전사고에 유의하세요",
+     "place": "단구, 관설동 일부지역이 정전",
+     "occurred": "오늘 11:15"
+    },
+    "occurred_at": "2026-04-06T11:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "a085078a0c3b15b487925f38b4822e2e9e6c2a642fb56713a8591e74201275e7"
+  },
+  {
+   "sn": 257640,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "문원동 일부 지역",
+    "areas": [
+     "문원동"
+    ],
+    "occurred_clock": "11:30",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "place": "문원동 일부 지역",
+     "occurred": "11:30분경",
+     "eta": "약 2~3시간 이상 소요 예정",
+     "cause": "고압선 손상"
+    },
+    "occurred_at": "2026-04-06T11:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-04-06T14:30:00+09:00",
+     "2026-04-06T15:09:37+09:00"
+    ],
+    "warnings": []
+   },
+   "cache_key": "27ce3614b857541c2c8da91f5d423d9cd3d26f3ffae8235ec4d41137db69de1c"
+  },
+  {
+   "sn": 257650,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "김포한강로 시네폴리스IC부터 신곡IC까지 양방향",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "가로등 단선으로 인한 정전",
+     "place": "김포한강로 시네폴리스IC부터 신곡IC까지"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "7473b51b1327849f4e4f853f6a68891122613d165571bbb036f9307de6fb9911"
+  },
+  {
+   "sn": 257994,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "고척1.2동,개봉1동",
+    "areas": [
+     "고척1동",
+     "고척2동",
+     "개봉1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전발생하였으며 현재 미복구 59세대로 복구중입니다",
+     "place": "고척1.2동,개봉1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f546605118c777eea65e03ebaed4a0e3c637d057f789982249999aa6617cdbf5"
+  },
+  {
+   "sn": 257995,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "고척1,2동,개봉동",
+    "areas": [
+     "고척1동",
+     "고척2동",
+     "개봉동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전발생하였으며 현재 미복구59세대로 빠르게 복구중입니다",
+     "place": "고척1,2동,개봉동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "6d18504512d93f61bb02dda48386918925b3293926e43bb87e631e8112b95455"
+  },
+  {
+   "sn": 257996,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고척1,2동,개봉동 일대",
+    "areas": [
+     "고척1동",
+     "고척2동",
+     "개봉동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "고척1,2동,개봉동 일대",
+     "restored": "복구완료되었습니다"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ffda849d35180fbbd38ab7a7f1e22291a02add20bd2aaa7954ab06be84e565f1"
+  },
+  {
+   "sn": 258643,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "장한로 54 우리은행 사거리",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일부 건물",
+    "evidence": {
+     "kind": "정전이 발생했습니다",
+     "place": "장한로 54 우리은행 사거리",
+     "cause": "차량이 전신주와 충돌하는 사고"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0c2f610c46b2c0bc406c5339660b39ba8c46f2888294f93b917d51f056a89963"
+  },
+  {
+   "sn": 258923,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "철원군 서면 자등리 일부 지역",
+    "areas": [
+     "자등리"
+    ],
+    "occurred_clock": "13:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "철원군 서면 자등리  일부 지역",
+     "occurred": "13:00경"
+    },
+    "occurred_at": "2026-05-20T13:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "81b79ebb7901a06036fa421839691aac08b00a2bb8e371e3c9cb129a1d99f3b0"
+  },
+  {
+   "sn": 258951,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "백련어린이공원 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 40,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "백련어린이공원 일대",
+     "eta": "소요시간 30~40분 예정",
+     "cause": "한전 고압전선 긴급복구작업"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-05-21T00:12:29+09:00",
+     "2026-05-21T00:12:29+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "f1937d3a62883574cffa2b74332103de73454eef0ae4070096927098a4730d5a"
+  },
+  {
+   "sn": 258952,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "백련어린이공원 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 40,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "백련어린이공원 일대",
+     "eta": "소요시간 30~40분 예정",
+     "cause": "한전 고압전선 긴급복구작업"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-05-21T00:13:33+09:00",
+     "2026-05-21T00:13:33+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "1bed898cf014d1698d1d4e430456b912beaa350ecb6a521f2911bf0a0b3eadc8"
+  },
+  {
+   "sn": 259061,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "능평동 261-3번지 일대",
+    "areas": [
+     "능평동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "능평동 261-3번지 일대",
+     "cause": "반사경 설치 작업 중 고압선 손상으로 정전 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "aab1c39b8e6c2a745b1a2d56508e55f1404fbbe8e223cd38b902b79360ebebd0"
+  },
+  {
+   "sn": 259192,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "교동 부곡2동 부곡3동",
+    "areas": [
+     "교동",
+     "부곡2동",
+     "부곡3동"
+    ],
+    "occurred_clock": "18:43",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "교동 부곡2동 부곡3동",
+     "occurred": "18:43 교동 부곡2동 부곡3동 정전 및 단수"
+    },
+    "occurred_at": "2026-06-04T18:43:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "68040e5216ec24a76e4df6a13aad2ba02b384dc0b88e7a6af7b8e864f6cdb4ad"
+  },
+  {
+   "sn": 259202,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "진전면 일대",
+    "areas": [
+     "진전면"
+    ],
+    "occurred_clock": "20:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전이 발생되어",
+     "place": "진전면 일대",
+     "occurred": "20시30분경"
+    },
+    "occurred_at": "2026-06-05T20:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "444e558362247b27ad87f3e56dc5aa02d0ed9b80778c12083b3012fba52cf1f9"
+  },
+  {
+   "sn": 259222,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수색동 314-1일대",
+    "areas": [
+     "수색동"
+    ],
+    "occurred_clock": "04:22",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "수색동 314-1일대",
+     "occurred": "04:22 차량이 전신주 추돌로",
+     "cause": "차량이 전신주 추돌로"
+    },
+    "occurred_at": "2026-06-07T04:22:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "b1e0214437d7039e3d34759dc4048b7ad744ad0f84f176248f2ae61663aa2913"
+  },
+  {
+   "sn": 259259,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "후평동 일부지역",
+    "areas": [
+     "후평동"
+    ],
+    "occurred_clock": "15:06",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전 중으로",
+     "place": "후평동 일부지역",
+     "occurred": "15:06",
+     "cause": "원인 파악중"
+    },
+    "occurred_at": "2026-06-09T15:06:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "3ac3467e0da014872a0a71bbf3ac77510cc5f7674edfb510631c078add884801"
+  },
+  {
+   "sn": 259260,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "후평동 일대",
+    "areas": [
+     "후평동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "17:00",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "후평동 일대",
+     "restored": "17시 복구 완료"
+    },
+    "occurred_at": null,
+    "restored_at": "2026-06-09T17:00:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "04e7c8c26d6112cbee2f543e6ed4c39ee69e0d0122292824bd329480b239133c"
+  },
+  {
+   "sn": 259286,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "청원구 내덕2동 일대",
+    "areas": [
+     "내덕2동"
+    ],
+    "occurred_clock": "17:19",
+    "eta": {
+     "type": "duration",
+     "minutes": 120,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "청원구 내덕2동 일대",
+     "occurred": "17:19경",
+     "eta": "2시간 소요예정"
+    },
+    "occurred_at": "2026-06-11T17:19:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-06-11T19:19:00+09:00",
+     "2026-06-11T20:27:09+09:00"
+    ],
+    "warnings": []
+   },
+   "cache_key": "0a058548e9360cb69cf750f2ce3b0f786d374df345f4e1177d6e5076e5f810c5"
+  },
+  {
+   "sn": 259327,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "고령군 운수면 팔산리 499-2",
+    "areas": [
+     "팔산리",
+     "유리"
+    ],
+    "occurred_clock": "10:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "고령군 운수면 팔산리 499-2",
+     "occurred": "10:30경",
+     "cause": "전신주 화재로 인하여"
+    },
+    "occurred_at": "2026-06-13T10:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "9f01a873f61df8f478e1378c0f6933f89d6cde3324cdbae0fb94d9e904732ed7"
+  },
+  {
+   "sn": 259328,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "운수면 팔산리499-2",
+    "areas": [
+     "팔산리"
+    ],
+    "occurred_clock": "10:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "place": "운수면 팔산리499-2",
+     "occurred": "금일10:30경",
+     "cause": "전신주 화재로 정전이 발생"
+    },
+    "occurred_at": "2026-06-13T10:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0244940d5500f4ace03ed66bda4bbdabf2cba4c4356f2f8f32bf1c6073775b86"
+  },
+  {
+   "sn": 259375,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "화원,옥포 지역 일부",
+    "areas": [
+     "화원",
+     "옥포"
+    ],
+    "occurred_clock": "08:02",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "place": "화원,옥포 지역 일부",
+     "occurred": "08:02 화원,옥포 지역 일부가 정전되어 복구 중"
+    },
+    "occurred_at": "2026-06-15T08:02:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "b21f2f9e705d8f3f3355aa5b7548bd69affd2b125e608ca4884150752aff3702"
+  },
+  {
+   "sn": 259432,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "천천동 일대",
+    "areas": [
+     "천천동"
+    ],
+    "occurred_clock": "08:22",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "천천동 일대",
+     "occurred": "08:22경",
+     "cause": "교통사고"
+    },
+    "occurred_at": "2026-06-19T08:22:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d90450e9982fe2eefe9a8a7ad24c02933aa241275cc89671d58b55de31f7e2bd"
+  },
+  {
+   "sn": 259468,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "연천읍 상리, 옥산리 지역",
+    "areas": [
+     "상리",
+     "옥산리"
+    ],
+    "occurred_clock": "17:50",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "연천읍 상리, 옥산리 지역",
+     "occurred": "17:50경 연천읍 상리, 옥산리 지역에 정전이 발생했습니다",
+     "eta": "완료까지 약 3시간 소요될 예정입니다"
+    },
+    "occurred_at": "2026-06-19T17:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-06-19T20:50:00+09:00",
+     "2026-06-19T22:23:26+09:00"
+    ],
+    "warnings": []
+   },
+   "cache_key": "4727512d848b2beae921393992fa7df814f8b7c629ee5206dfca93c9e3dfb2c7"
+  },
+  {
+   "sn": 259476,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "서문대로 (동성고 버스정류장 ~ 광주대사거리)",
+    "areas": [],
+    "occurred_clock": "02:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전이 발생하여 복구 중",
+     "place": "서문대로 (동성고 버스정류장 ~ 광주대사거리)",
+     "occurred": "오늘 02:30경"
+    },
+    "occurred_at": "2026-06-20T02:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c3b8132cc28deac01424f4f501db315152cadcadd2b20d58f896a57b4221bfcb"
+  },
+  {
+   "sn": 259594,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "고산동~신곡1동 도로변일대",
+    "areas": [
+     "고산동",
+     "신곡1동"
+    ],
+    "occurred_clock": "10:43",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "고산동~신곡1동 도로변일대가 정전되어 복구 중",
+     "occurred": "10:43경"
+    },
+    "occurred_at": "2026-06-23T10:43:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ec0fe2e6f84a030aa9d4075b486392336c964a521dd5223663b09dbf2752174a"
+  },
+  {
+   "sn": 259597,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고산동~신곡1동 도로변 일대",
+    "areas": [
+     "고산동",
+     "신곡1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "고산동~신곡1동 도로변 일대",
+     "restored": "정전 임시 복구 완료되어 전력 공급이 정상화"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "4a6b7166a4df12d6e8b468aea23f07564e4ae68025b651a607925d0e78f09320"
+  },
+  {
+   "sn": 259622,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "안산시 일부 지역",
+    "areas": [],
+    "occurred_clock": "11:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "place": "안산시 일부 지역",
+     "occurred": "11시30분 안산시 일부 지역이 정전되어 복구 중"
+    },
+    "occurred_at": "2026-06-25T11:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "2abed97e72ebd9f1fbfe5e427f97cbf9867a368288687adf37e49093103abb6b"
+  },
+  {
+   "sn": 259623,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "안산시 선부동 131-1, 원곡동 993-7 일대 등",
+    "areas": [
+     "선부동",
+     "원곡동"
+    ],
+    "occurred_clock": "11:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "안산시 선부동 131-1, 원곡동 993-7 일대 등이 정전되어 복구 중",
+     "occurred": "오늘 11시30분"
+    },
+    "occurred_at": "2026-06-25T11:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "30c25ffa1d0b6e66124b0771c15bb0cca1f7f4026a7458db788ed099e185a5d4"
+  },
+  {
+   "sn": 259820,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "삼문동 일대",
+    "areas": [
+     "삼문동"
+    ],
+    "occurred_clock": "08:10",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "삼문동 일대",
+     "occurred": "08:10경 삼문동 일대 정전 발생으로 복구중이며"
+    },
+    "occurred_at": "2026-07-06T08:10:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c4d45cbfbb8e40378a1da05b20205da10ec5465965f233bdc54a14b9c940286e"
+  },
+  {
+   "sn": 260028,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "숭문길 35 일대",
+    "areas": [],
+    "occurred_clock": "17:56",
+    "eta": null,
+    "restored_clock": "19:35",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "숭문길 35 일대",
+     "occurred": "17:56경",
+     "restored": "19:35경 복구완료"
+    },
+    "occurred_at": "2026-07-08T17:56:00+09:00",
+    "restored_at": "2026-07-08T19:35:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8f725b421451c440d83020265c808ffc0b468d6173db8288292482f7e36f369e"
+  },
+  {
+   "sn": 260255,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "단계동, 학성동 인근지역",
+    "areas": [
+     "단계동",
+     "학성동"
+    ],
+    "occurred_clock": "11:10",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "단계동, 학성동 인근지역",
+     "occurred": "11:10경"
+    },
+    "occurred_at": "2026-07-09T11:10:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "fc42cf8679f2918052cc498187487dfbabb457da4063a2f59ea5e9ccb90e5bb0"
+  },
+  {
+   "sn": 260812,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "갈현로33가길 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "갈현로33가길 일대",
+     "cause": "한전 변압기 고장으로 정전 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8c1429c9531c45d5153af6a24c51aa3feeba6323d1c2cd534bca906ad74420ee"
+  },
+  {
+   "sn": 260954,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "중산동 지역일부",
+    "areas": [
+     "중산동"
+    ],
+    "occurred_clock": "17:25",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "지역일부",
+    "evidence": {
+     "place": "중산동 지역일부",
+     "occurred": "17:25 경"
+    },
+    "occurred_at": "2026-07-13T17:25:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "74e7dec87d78b4e561a5c353020ab736676674fbf9be89d2387bcda5d19a2070"
+  },
+  {
+   "sn": 260955,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "영종도 중구일대",
+    "areas": [],
+    "occurred_clock": "17:16",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "전기 기기의 전원을 모두 끄고 손전등을 사용하는 등 안전사고에 유의하세요",
+     "place": "영종도 중구일대",
+     "occurred": "17:16 영종도 중구일대 정전되어 복구 중"
+    },
+    "occurred_at": "2026-07-13T17:16:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8ab5254cf975c6fbe104002b4169b1b263b42cf82e1ab1675c533bdb3d0dcfa7"
+  },
+  {
+   "sn": 260962,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "인천 영종구",
+    "areas": [
+     "영종구"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "인천 영종구",
+     "cause": "오늘 정전으로 인해 전력사용 급증 시 복구가 지연될 수 있습니다"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0aa8a8c880c6ddabdd439a3d9680a3c0ec627d18b158ffaa5fc2b52e25dc295a"
+  },
+  {
+   "sn": 260969,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "영종구 일원",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "place": "영종구 일원",
+     "eta": "완전 복구까지 2~3일 소요될 예정"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T09:00:48+09:00",
+     "2026-07-17T09:00:48+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "8759e27f2d3c98df1d895883c6b8e2abe451cb18c9a8c2bcc0916c40782f4895"
+  },
+  {
+   "sn": 260976,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 임시 복구중으로 완전 복구까지 2~3일 소요 예정",
+     "eta": "완전 복구까지 2~3일 소요 예정"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T09:19:38+09:00",
+     "2026-07-17T09:19:38+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "6bfbfd1f8b4277669aec2da39f1a113927dbdd424923c96e67a8578dea419eea"
+  },
+  {
+   "sn": 261040,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "영종구 일원",
+    "areas": [
+     "영종구"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "kind": "정전 임시 복구됐으며, 완전복구까지 2-3일 소요",
+     "place": "영종구 일원"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "5ee477c613c61f22b7f245e37c8da9e5964909864273a691de77ad283f7aee24"
+  },
+  {
+   "sn": 261047,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "cause": "낮시간 전기사용이 증가"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "b4d41f9b520e59a5866e8f648d6b66876e60d870cef6aeea23fffd00115fd938"
+  },
+  {
+   "sn": 261083,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "영종구 일원",
+    "areas": [
+     "영종구"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "place": "영종구 일원",
+     "restored": "영종구 일원 정전 임시 복구됐으며, 완전복구까지 2-3일 소요"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "099f86ed47cdf6de4d382fb9e0522f8ee3724c2895a7ff971400e53eee79f50e"
+  },
+  {
+   "sn": 261115,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "영종구 일원",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "place": "영종구 일원",
+     "eta": "완전복구까지 2-3일 소요"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T19:02:07+09:00",
+     "2026-07-17T19:02:07+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "620a751d360651846abac59ec66b88ca8157f10ee6f03f920646d6e82613358a"
+  },
+  {
+   "sn": 261122,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "영종구 일원",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "place": "영종구 일원",
+     "eta": "완전복구까지 2-3일 소요"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T20:00:21+09:00",
+     "2026-07-17T20:00:21+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "81ff660e6e0ac0686f2427da79f51dfe3a9f76805e55916b4474e390be61c7d4"
+  },
+  {
+   "sn": 261137,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "신포로46번길",
+    "areas": [],
+    "occurred_clock": "23:03",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "신포로46번길",
+     "occurred": "23:03 신포로46번길 정전되어 복구 중"
+    },
+    "occurred_at": "2026-07-14T23:03:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "3f123e368b887929a0d3bdb7b819f0a22a7412fcf0284149499d58271b8a9c79"
+  },
+  {
+   "sn": 261147,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "영종구 일원",
+    "areas": [
+     "영종구"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "place": "영종구 일원",
+     "restored": "정전 임시 복구됐으며, 완전복구까지 2-3일 소요"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "22d4f61f3844c40ee30b71617686df3018a32e220435bd5d77b36f37c4937080"
+  },
+  {
+   "sn": 261318,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "마장면 이평리 368-7",
+    "areas": [
+     "이평리"
+    ],
+    "occurred_clock": "10:55",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전발생으로 인한 복구중",
+     "place": "마장면 이평리 368-7",
+     "occurred": "10:55경",
+     "cause": "교통사고 전신주 전도로 인한 정전발생"
+    },
+    "occurred_at": "2026-07-17T10:55:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "5b0b1fddafc47fedbc0c651d10828b2ae727a7444fef63d0835fa529829e72fe"
+  },
+  {
+   "sn": 261720,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "흥덕구 현암동 100-32 인근 지역",
+    "areas": [
+     "현암동"
+    ],
+    "occurred_clock": "05:23",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "흥덕구 현암동 100-32 인근 지역",
+     "occurred": "05:23"
+    },
+    "occurred_at": "2026-07-19T05:23:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "eb9c72a21ca98158ffa69a961e5c0f3238b01d2e9f95cb95c11f07a87aa4bdab"
+  },
+  {
+   "sn": 261727,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "흥덕구 현암동 100-32 인근",
+    "areas": [
+     "현암동"
+    ],
+    "occurred_clock": "05:23",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "흥덕구 현암동 100-32 인근",
+     "occurred": "오늘 05:23",
+     "restored": "복구 완료되었음을 알려드립니다"
+    },
+    "occurred_at": "2026-07-19T05:23:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "17e5901eed27851698478f6271fcfd719edfde78c411f274e33fa06166594058"
+  },
+  {
+   "sn": 261764,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "당하동 청마로 일대",
+    "areas": [
+     "당하동"
+    ],
+    "occurred_clock": "12:35",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "당하동 청마로 일대",
+     "occurred": "12:35경",
+     "cause": "변압기 고장"
+    },
+    "occurred_at": "2026-07-19T12:35:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "89e6db148de481b0f599a512bb2e461c9cc55ff31b5d0f1afa6cc0225c4057a5"
+  },
+  {
+   "sn": 261772,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "당하동 청마로 일대",
+    "areas": [
+     "당하동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "13:10",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전이 복구되어 전력 공급이 정상화되었습니다",
+     "place": "당하동 청마로 일대",
+     "restored": "13:10"
+    },
+    "occurred_at": null,
+    "restored_at": "2026-07-19T13:10:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "784fa6befd52969af31830ba55c56a37901fb10974bcfae05eaa87790386eeb1"
+  },
+  {
+   "sn": 262021,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "군남면 일부, 왕징면, 미산면",
+    "areas": [
+     "군남면",
+     "왕징면",
+     "미산면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": null,
+    "evidence": {
+     "place": "군남면 일부, 왕징면, 미산면 정전 발생",
+     "cause": "호우로 인한 수목전도로 전깃줄 손상되어"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "a8c633e3c4c0381b2ea1f08808ee3a143983e093e02411cb754dbca4c2cead87"
+  },
+  {
+   "sn": 262022,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "연천군",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 30,
+     "base": "sent"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "현재 정전 임시 복구중",
+     "eta": "30분 이내 완료 예정"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2026-07-21T22:58:32+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c83178e12c47aee4555e59fe0337fd204de3f24fb8de4a27c8a481bfc35bc16a"
+  },
+  {
+   "sn": 262023,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "군남면 일부, 왕징면, 미산면",
+    "areas": [
+     "군남면",
+     "왕징면",
+     "미산면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 발생 임시 복구완료",
+     "place": "군남면 일부, 왕징면, 미산면",
+     "restored": "임시 복구완료"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ea21b839e3f3454e2fd4086e1d789f68dd1d490609caad12c66949660483e7ca"
+  },
+  {
+   "sn": 262025,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "충주시 호암동, 용산동, 직동, 대소원면, 수안보면 일대",
+    "areas": [
+     "호암동",
+     "용산동",
+     "직동",
+     "대소원면",
+     "수안보면"
+    ],
+    "occurred_clock": "22:06",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 및 단수 발생. 현재 복구작업 진행 및 원인 파악중입니다.",
+     "place": "충주시 호암동, 용산동, 직동, 대소원면, 수안보면 일대",
+     "occurred": "22:06경"
+    },
+    "occurred_at": "2026-07-21T22:06:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "042913a84f02f847b3500b8a4ccd425e5b9de6c30f397f5f505605477402fb7a"
+  },
+  {
+   "sn": 262336,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "군북면 국원리 일대",
+    "areas": [
+     "국원리"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 300,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "군북면 국원리 일대",
+     "eta": "복구까지 약 4~5시간이 소요될 예정"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-24T02:20:45+09:00",
+     "2026-07-24T02:20:45+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "6a498715c4db9ec612f5ccf3845d975e5f2a0228cc50e59f81012db1a68030db"
+  },
+  {
+   "sn": 263136,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "서교동 473-12 주변",
+    "areas": [
+     "서교동"
+    ],
+    "occurred_clock": "17:15",
+    "eta": null,
+    "restored_clock": "19:56",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "서교동 473-12 주변",
+     "occurred": "17:15경",
+     "restored": "19:56경 복구완료되었습니다"
+    },
+    "occurred_at": "2026-07-27T17:15:00+09:00",
+    "restored_at": "2026-07-27T19:56:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "3da18b6bfa8dfb4e61d2b1b33522fb18b8ca515fa56b58bd6f3ec3f6e1985adf"
+  },
+  {
+   "sn": 263730,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "웅남4길 일대",
+    "areas": [
+     "웅남4길"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 60,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "웅남4길 일대",
+     "eta": "1시간 정도 복구시간 소요됩니다",
+     "cause": "지상변압기 고장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-30T22:06:54+09:00",
+     "2026-07-30T22:06:54+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "d1599b57c82a71a1bba2f45a2ef95c772a1f384e8cd35ab8360a6ff856081c34"
+  },
+  {
+   "sn": 263845,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "신관동 658(국민은행 인근)",
+    "areas": [
+     "신관동"
+    ],
+    "occurred_clock": "13:17",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전이 발생하여 한전에서 원인파악중",
+     "place": "신관동 658(국민은행 인근)",
+     "occurred": "13:17경"
+    },
+    "occurred_at": "2026-07-31T13:17:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f103836e068271ad24d190dc82768b05dedca718a96fd546cea512419235662d"
+  },
+  {
+   "sn": 263847,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "신관동 658(국민은행 인근)",
+    "areas": [
+     "신관동"
+    ],
+    "occurred_clock": "13:17",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "신관동 658(국민은행 인근)",
+     "occurred": "13:17경 신관동 658(국민은행 인근) 정전이 발생하여"
+    },
+    "occurred_at": "2026-07-31T13:17:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d9f31a001d230feca87b8bbf9f561fc079a439baec812e3c3527769b00860072"
+  },
+  {
+   "sn": 263938,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "옹진군",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 60,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일부",
+    "evidence": {
+     "place": "옹진군",
+     "eta": "1시간 내 복구 예정",
+     "cause": "발전기 과열로 일부 정전 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-31T19:32:06+09:00",
+     "2026-07-31T19:32:06+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "332668cb8162219c46f497920fbed7da6068bb77caf75b86c7aa57358cf41866"
+  },
+  {
+   "sn": 263945,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "옹진군",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 복구를 위해 최선을 다하고 있으나 지연되고 있습니다",
+     "place": "옹진군"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ed8fab17cb7bb615f70acb3abc735d7836cbece60f3e463e41ad29c1ffb50ac6"
+  },
+  {
+   "sn": 263946,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "택시부광장 인근",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 20,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": null,
+    "evidence": {
+     "place": "택시부광장 인근",
+     "eta": "10~20분 정도 정전될 예정",
+     "cause": "한전 작업으로 인해"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-31T21:04:35+09:00",
+     "2026-07-31T21:04:35+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   },
+   "cache_key": "d20639f4ea4f39767df5fbdcc5f71827c99ed5d736dac3f6094be28085a3ee48"
+  },
+  {
+   "sn": 263957,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "남동구 간석동 173-6 주변",
+    "areas": [
+     "간석동"
+    ],
+    "occurred_clock": "09:04",
+    "eta": {
+     "type": "duration",
+     "minutes": 120,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "남동구 간석동 173-6 주변",
+     "occurred": "09:04경",
+     "eta": "복구까지 2시간 소요예상"
+    },
+    "occurred_at": "2026-08-01T09:04:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-08-01T11:04:00+09:00",
+     "2026-08-01T11:34:42+09:00"
+    ],
+    "warnings": []
+   },
+   "cache_key": "cbf1b9fa6cbc63f91607aa818d5f5565830ddfd13c021346a36abbab86d48f36"
+  },
+  {
+   "sn": 264465,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "등촌동 690 주공4단지 아파트",
+    "areas": [
+     "등촌동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로 복구 중",
+     "place": "등촌동 690 주공4단지 아파트"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "74c7aef204d33eb2b7fcd0dd9745ce5b57852c26de775ac8df41db34cc34d01a"
+  },
+  {
+   "sn": 264466,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "등촌동 690 주공4단지아파트",
+    "areas": [
+     "등촌동"
+    ],
+    "occurred_clock": "18:16",
+    "eta": null,
+    "restored_clock": "22:32",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "등촌동 690 주공4단지아파트",
+     "occurred": "18:16경",
+     "restored": "22:32경 복구완료되었습니다"
+    },
+    "occurred_at": "2026-08-02T18:16:00+09:00",
+    "restored_at": "2026-08-02T22:32:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "209d177d820dbb9578a526c3f27ee0f45325e91172daa14e9cd430bd00a49dd5"
+  },
+  {
+   "sn": 264715,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "경남아너스빌",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "아파트 내 정전으로 어두우니 안전사고 예방을 위해 이동을 자제하시고 식수를 확보하시기 바랍니다.",
+     "place": "경남아너스빌",
+     "cause": "화재 관련 전기 복구작업 지연"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1e5a1886ba9f33bedf695dbaf88c9932dd39a41b5cb1217b81910931986536c9"
+  },
+  {
+   "sn": 264964,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "계양구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로 일시대피 중인 주민들께서는 계양여성회관, 효성도서관, 청소년문화의집 등 안전한 장소로 이동하시어 폭염에 유의하세요"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "99d7a83b77edde17664d154290589e5b6ac1346ec4c27d7bd88114f218f8c816"
+  },
+  {
+   "sn": 264965,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "계양구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로 일시대피 중인 주민들께서는 계양여성회관, 효성도서관, 청소년문화의집 등 안전한 장소로 이동하시어 폭염에 유의하세요"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "4bd3d078873d57ca386ccb5b821133cafeb34d6e189cd2271819c00205aee5cc"
+  },
+  {
+   "sn": 265189,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "중랑구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "cause": "전기 사용 집중으로 정전사고가 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c26912f66d15a22b73c312c0808ae3c9e952f1f0bc764a1e3d7c77ab2dd3a2a5"
+  },
+  {
+   "sn": 265432,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "중랑구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "cause": "전기 사용 집중으로 정전사고가 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d43cde99409c3009ec7315893be8add7936ec499580c48f398a620fb1426af94"
+  },
+  {
+   "sn": 265458,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "도봉구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "place": "도봉구",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "b3ac9d07fb5e30110af1b9a93b23a73a693733e3c120351531b15cb5cb6678c0"
+  },
+  {
+   "sn": 265683,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "[중랑구]",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "cause": "전기 사용 집중으로 정전사고가 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f4e7677f0e300e9d134884baafb47c31bb7ca513cbae5d33b078586d0457c6e5"
+  },
+  {
+   "sn": 265696,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "화서문로42번길 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "화서문로42번길 일대 정전이 발생하여 복구중에 있으니",
+     "place": "화서문로42번길 일대"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "aa05bc6653e8eba1c14379c0184e78af04c74a77a79c571cf39e4513dc238980"
+  },
+  {
+   "sn": 265707,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "수성구 매호동 일부지역",
+    "areas": [
+     "매호동"
+    ],
+    "occurred_clock": "23:34",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "수성구 매호동 일부지역",
+     "occurred": "23:34 수성구 매호동 일부지역이 정전되어 복구 중"
+    },
+    "occurred_at": "2026-08-07T23:34:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "35c6e66b8c1174e8dd21170f1af80b045e720b39a0c195bc67185dc648cbff7c"
+  },
+  {
+   "sn": 265929,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "중랑구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "cause": "전기 사용 집중으로 정전사고가 자주 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "041d1781bfaafffc90e61c6d26d47e75771b84ef0e21b8b04349162484930d5d"
+  },
+  {
+   "sn": 265945,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "당진 일부지역",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "당진 일부지역",
+     "cause": "돌풍으로 정전 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "9c5987f429dab20d5c2318968ec131f0acc6f3293b34fa6244a38e316a88f8cf"
+  },
+  {
+   "sn": 266034,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "세종 전 지역",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "세종 전 지역"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "cbedf47c67753773b4647b98995aa09a80c55b9bd668109270ba4ea5baa13994"
+  },
+  {
+   "sn": 266135,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "중랑구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "cause": "전기 사용 집중으로 정전사고가 자주 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0c18bc66e7096a7b6e3ccc9148806b3b88703d41526e1504edf03fdf92283963"
+  },
+  {
+   "sn": 266155,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "덕포 일부지역",
+    "areas": [
+     "덕포"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "덕포 일부지역",
+     "occurred": "현재 덕포 일부지역 정전 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "c90cb8d5cd3e778a580e7cb24e978c12439675eb4718ddee932aa1fdba6c19f1"
+  },
+  {
+   "sn": 266156,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "구푸동 일부지역",
+    "areas": [
+     "구푸동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "구푸동 일부지역"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "caaf44c62d3ca72367132dda009f7882754d6da8674477d7578e0b7d78ada0ea"
+  },
+  {
+   "sn": 266265,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "중랑구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "place": "중랑구",
+     "cause": "전기 사용 집중으로 정전사고가 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "4a4d0d1d691fb8d17dc4bd66c99c4a8e450186a0dc6a45c8f096b932d055070d"
+  },
+  {
+   "sn": 266318,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "중랑구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "place": "중랑구",
+     "cause": "전기 사용 집중으로 정전사고가 발생하고 있습니다"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "41eb3d3963279a213dc61d392b08bdaf92b29cd682f29346b0753a56587c150d"
+  },
+  {
+   "sn": 266329,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "태안읍 동문리 일원",
+    "areas": [
+     "동문리"
+    ],
+    "occurred_clock": "09:01",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "place": "태안읍 동문리 일원 정전되어 한전에서 신속 복구중",
+     "occurred": "금일 09:01"
+    },
+    "occurred_at": "2026-08-12T09:01:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "fd078766861ce498ffbd9f941c91fd638839172a85bdae562db91a5f2dcdfb71"
+  },
+  {
+   "sn": 266359,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "대산읍 화곡리 일원",
+    "areas": [
+     "화곡리"
+    ],
+    "occurred_clock": "16:03",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전이 발생하여",
+     "place": "대산읍 화곡리 일원",
+     "occurred": "16:03",
+     "cause": "고압선 단락으로 인한"
+    },
+    "occurred_at": "2026-08-12T16:03:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e24459a6881b8d21eddea0a6361cd904968dd526d33bd7fe901b81980053c29e"
+  },
+  {
+   "sn": 266361,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "[중랑구]",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "cause": "전기 사용 집중으로 정전사고가 발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "823d8335e4a3a33653748673a4ba6c682c96bf6c754aae4769924fce09af68fc"
+  },
+  {
+   "sn": 266443,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": "중랑구",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "place": "중랑구",
+     "cause": "전기 사용 집중으로 정전사고가 발생하고 있습니다"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "349993927d5e3a5880326c07f332f67dca928290165e5682ee858db48fc19f8a"
+  },
+  {
+   "sn": 266510,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "서교동 325-25 주변",
+    "areas": [
+     "서교동"
+    ],
+    "occurred_clock": "18:52",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "place": "서교동 325-25 주변",
+     "occurred": "18:52경",
+     "eta": "복구까지 3시간 소요예상",
+     "cause": "고압선 단절"
+    },
+    "occurred_at": "2026-08-14T18:52:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-08-14T21:52:00+09:00",
+     "2026-08-14T23:18:52+09:00"
+    ],
+    "warnings": []
+   },
+   "cache_key": "98f17a1ee1ee1da4acc39a3f3fa5434c2cba4343d3cef2fa18f9d455a6a2a31b"
+  },
+  {
+   "sn": 266511,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "서교동 325-25 일대",
+    "areas": [
+     "서교동"
+    ],
+    "occurred_clock": "18:50",
+    "eta": null,
+    "restored_clock": "22:40",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "서교동 325-25 일대",
+     "occurred": "18:50경",
+     "restored": "22:40경 복구완료"
+    },
+    "occurred_at": "2026-08-14T18:50:00+09:00",
+    "restored_at": "2026-08-14T22:40:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "6a9f1fddfb25d266923cfdfbdf5bd57b5980bc0910d42e0c84ef13708073d316"
+  },
+  {
+   "sn": 266838,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "복용동 일대",
+    "areas": [
+     "복용동"
+    ],
+    "occurred_clock": "14:31",
+    "eta": {
+     "type": "absolute",
+     "clock": "18:00"
+    },
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "복용동 일대",
+     "occurred": "14:31 화재",
+     "eta": "예상 복구 시간 18:00 예정",
+     "cause": "화재"
+    },
+    "occurred_at": "2026-08-18T14:31:00+09:00",
+    "restored_at": null,
+    "eta_at": "2026-08-18T18:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "52dbe4f9f26709b220a9c9d4be77b186d4fc96966deec914dfa70a78384a5a59"
+  },
+  {
+   "sn": 266843,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "복용동",
+    "areas": [
+     "복용동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "19:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "복용동",
+     "eta": "복구 예정 시간 19:00 예상 됩니다"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2026-08-18T19:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "371dcbd82d960d6c5d9daa19d07b169dd19ff38aa85c0c4551d620c8a357cc17"
+  },
+  {
+   "sn": 266844,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "복용동 일대",
+    "areas": [
+     "복용동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "복용동 일대",
+     "restored": "정전 복구 완료되었음을 안내드립니다."
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "87f49507c4de043374e77f197b87143542a3d9a2d37ace00be6dcfd11476a160"
+  },
+  {
+   "sn": 267003,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "다정동 새롬동 일대",
+    "areas": [
+     "다정동",
+     "새롬동"
+    ],
+    "occurred_clock": "18:33",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "다정동 새롬동 일대",
+     "occurred": "18:33경"
+    },
+    "occurred_at": "2026-08-20T18:33:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "1e8a6ce8e1cebcfc8f6d73ebf913c1b59541a1b80d2912504fee9275b887069a"
+  },
+  {
+   "sn": 267008,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "다정동, 새롬동 공동주택",
+    "areas": [
+     "다정동",
+     "새롬동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "20:37",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 복구 완료(20:37)",
+     "place": "다정동, 새롬동 공동주택",
+     "restored": "20:37"
+    },
+    "occurred_at": null,
+    "restored_at": "2026-08-20T20:37:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "94e42f7f64da726d1755329de6fd2b8e002b986281c565a51d2da1843a8981d3"
+  },
+  {
+   "sn": 267219,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "영천시 일부지역",
+    "areas": [],
+    "occurred_clock": "19:26",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "전기기기의 전원을 모두 끄고 손전등을 사용하는 등 안전에 유의바랍니다",
+     "place": "영천시 일부지역",
+     "occurred": "19:26경",
+     "cause": "낙뢰로 정전되어"
+    },
+    "occurred_at": "2026-08-22T19:26:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f1099b44733bf2c92cbce60e0a5e744229f3297b692b6dfba024c8b263fec0c9"
+  },
+  {
+   "sn": 267936,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "수성구 수성 2.3가동 일부지역",
+    "areas": [
+     "수성2.3가동"
+    ],
+    "occurred_clock": "17:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "place": "수성구 수성 2.3가동 일부지역",
+     "occurred": "17:00 낙뢰로 인하여",
+     "restored": "정전되어 복구 중",
+     "cause": "낙뢰로 인하여"
+    },
+    "occurred_at": "2026-08-27T17:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "a4f2626ca5962d85b2ba018e24314199b00f1b0c83b7b4807f34b06db4dda817"
+  },
+  {
+   "sn": 268455,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "연동, 노형동, 이호이동 일대",
+    "areas": [
+     "연동",
+     "노형동",
+     "이호이동"
+    ],
+    "occurred_clock": "08:46",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전발생",
+     "place": "연동, 노형동, 이호이동 일대",
+     "occurred": "08시46분"
+    },
+    "occurred_at": "2026-09-01T08:46:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "72b6bcc1552a1fe6f07fd808b3b4720d8637bed4b43dcc9a7eb759d292771b55"
+  },
+  {
+   "sn": 268533,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "영동읍 계산리, 설계리 및 양강면 묘동리, 묵정리 일대",
+    "areas": [
+     "계산리",
+     "설계리",
+     "묘동리",
+     "묵정리"
+    ],
+    "occurred_clock": "19:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "영동읍 계산리, 설계리 및 양강면 묘동리, 묵정리 일대",
+     "occurred": "19:20"
+    },
+    "occurred_at": "2026-09-01T19:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "e7841d7b7f664f8ad2656949d890cfc2eee40b8f4f463a0608adb1ee8cab53ac"
+  },
+  {
+   "sn": 268604,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "보령시 남포면 및 웅천읍 일대",
+    "areas": [
+     "남포면",
+     "웅천읍"
+    ],
+    "occurred_clock": "23:47",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "place": "보령시 남포면 및 웅천읍 일대",
+     "occurred": "23:47 보령시 남포면 및 웅천읍 일대 정전 발생"
+    },
+    "occurred_at": "2026-09-03T23:47:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8d99c7aa6bf2c846a57a9bbf82eccbd47fdf05478ac2e53830eba31b61c7db36"
+  },
+  {
+   "sn": 268680,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "사등면 사곡리 일대",
+    "areas": [
+     "사곡리"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "사등면 사곡리 일대"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "5a0b3eb83519e38dd9e53513b2da790efe68a965ed2640e59ee83a4feec0227e"
+  },
+  {
+   "sn": 268828,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "수자원공사 사천정수장",
+    "areas": [
+     "지수",
+     "사봉",
+     "진성",
+     "일반성",
+     "이반성",
+     "금곡면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "사천정수장정전으로 인해 일부지역 단수중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0a797a3bf4ced7552c60d870ead9eb9dacea7bd5a294ee4ee7ddf98a32475f5e"
+  },
+  {
+   "sn": 268829,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "수자원공사 사천정수장",
+    "areas": [
+     "정촌면",
+     "충무공동",
+     "가호동",
+     "문산읍"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로",
+     "place": "수자원공사 사천정수장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "b7ba95606d287598d3198e10b8c54266be586724218b4c8cb8f1227b28feaa34"
+  },
+  {
+   "sn": 268836,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "사천정수장",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "사천정수장 정전사고 복구 완료하여 20시부터 순차적으로 상수도 공급 중에 있습니다.",
+     "place": "사천정수장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f46955b83162bcdad74a070877ef98b2a55a4fdecc51178005df814c0996ce67"
+  },
+  {
+   "sn": 268837,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "restoration",
+    "place_text": "K-water사천정수장",
+    "areas": [
+     "금남",
+     "금성",
+     "고전",
+     "양보",
+     "횡천",
+     "적량",
+     "진교"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 복구완료",
+     "place": "K-water사천정수장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "0758a180dbe8754507e0060f0bd1a0c69bf8bff218fa21640bdfcebbf5c04b9a"
+  },
+  {
+   "sn": 268840,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "restoration",
+    "place_text": "사천정수장",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "사천정수장 정전사고 복구 완료하여 순차적으로 상수도 공급 중에 있습니다.",
+     "place": "사천정수장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "d93471ccebc83d12ec001106d9f5d72cae8baee803302d97b08bc1c77026c327"
+  },
+  {
+   "sn": 268841,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "사천정수장",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "사천정수장 정전사고 복구 완료",
+     "place": "사천정수장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "92adcf1e1ba59a6784d9dcbeec2b007fe891042d94e49c8d3ca388397e24091f"
+  },
+  {
+   "sn": 268847,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "거제지역",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "사천정수장 전기설비 정전사고복구는 완료됨",
+     "place": "거제지역"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "2b156a006165327af9f26334b03c955a1568d8d4700b55d5d066dcf44160d960"
+  },
+  {
+   "sn": 269288,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "대산읍 화곡리 일부 지역",
+    "areas": [
+     "화곡리"
+    ],
+    "occurred_clock": "14:14",
+    "eta": {
+     "type": "duration",
+     "minutes": 120,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "대산읍 화곡리 일부 지역",
+     "occurred": "14:14경",
+     "eta": "복구까지 최대 2시간이 소요될 예정"
+    },
+    "occurred_at": "2026-10-06T14:14:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-10-06T16:14:00+09:00",
+     "2026-10-06T17:00:55+09:00"
+    ],
+    "warnings": []
+   },
+   "cache_key": "a224a21dc705d832c9c1f3b7beb87a1a2ca3c7de0d02da88ab30eb67d30754c6"
+  },
+  {
+   "sn": 269310,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "음성군 맹동면 동성리 일대(센트레빌, 영무 3차 등)",
+    "areas": [
+     "동성리"
+    ],
+    "occurred_clock": "15:27",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "음성군 맹동면 동성리 일대(센트레빌, 영무 3차 등)",
+     "occurred": "오늘 15:27 경"
+    },
+    "occurred_at": "2026-10-08T15:27:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "8e766f66a649f29ffca7641f41de8222659c63e92550164837affa85cfd20a4c"
+  },
+  {
+   "sn": 269312,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "진천군 두촌리 일대(우미린스테이, 모아엘가등)",
+    "areas": [
+     "두촌리"
+    ],
+    "occurred_clock": "15:27",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 발생",
+     "place": "진천군 두촌리 일대(우미린스테이, 모아엘가등)",
+     "occurred": "15:27경"
+    },
+    "occurred_at": "2026-10-08T15:27:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "a06bd786ffd6035e1cd68ce0f2c6c8716d8cdf8860c72a1629ba35db64d8f0ee"
+  },
+  {
+   "sn": 269545,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "대산읍 대죽리 일부 지역",
+    "areas": [
+     "대죽리"
+    ],
+    "occurred_clock": "13:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "정전이 발생하여",
+     "place": "대산읍 대죽리 일부 지역",
+     "occurred": "13:00경"
+    },
+    "occurred_at": "2026-10-18T13:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "7e43c5d5a61828133c3757471a8413ad90dfbce10063d1b7c6be2e0bfd34c495"
+  },
+  {
+   "sn": 269564,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "사동 1420-17번지 일대",
+    "areas": [
+     "사동"
+    ],
+    "occurred_clock": "14:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "일부 정전 발생, 긴급 복구 중",
+     "place": "사동 1420-17번지 일대",
+     "occurred": "14:30경"
+    },
+    "occurred_at": "2026-10-18T14:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "348ebaef9de9ec1de140c2dba0a5a524ba38f2acb1477a7fdc5428f828b4ef32"
+  },
+  {
+   "sn": 269705,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "통일로 767 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "대규모",
+    "evidence": {
+     "kind": "대규모 정전 발생",
+     "place": "통일로 767 일대"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "ad552f66c39b964fe70acb6ee1ae82623945a1b0fe016c14b9f75bb9c3dd120d"
+  },
+  {
+   "sn": 269706,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "통일로 767 일대",
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "15:39",
+    "cause6": "unknown",
+    "scale_hint": "대규모",
+    "evidence": {
+     "kind": "대규모 정전은 15:39부로 복전 완료되었습니다",
+     "place": "통일로 767 일대",
+     "restored": "15:39부로 복전 완료"
+    },
+    "occurred_at": null,
+    "restored_at": "2026-10-23T15:39:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "a5392558e97ebd8857e1f5b3791b8193ef0d55c6126653deb3a09b14eaf32ecd"
+  },
+  {
+   "sn": 269712,
+   "source": "claude-sonnet-5",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "삼동 산50-2 일원",
+    "areas": [
+     "삼동"
+    ],
+    "occurred_clock": "17:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "삼동 산50-2 일원",
+     "occurred": "17:40경",
+     "restored": "정전 복구 완료"
+    },
+    "occurred_at": "2026-10-23T17:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   },
+   "cache_key": "f74ac1f1376611bbfa8e0ad8170dfa4584a9017ba0cd629601e6fd32da05998a"
+  }
+ ]
+}
