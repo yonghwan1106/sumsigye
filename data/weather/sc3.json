@@ -1,0 +1,72 @@
+{
+ "source": "open-meteo-archive",
+ "attribution": "Open-Meteo.com (CC BY 4.0)",
+ "note": "재분석 자료 — 기상청 관측 아님",
+ "fetched_at": "2026-10-25T19:13:14+09:00",
+ "lat": 36.362,
+ "lon": 127.356,
+ "event_at": "2026-08-18T14:31:00+09:00",
+ "request": "https://archive-api.open-meteo.com/v1/archive?latitude=36.362&longitude=127.356&start_date=2026-08-18&end_date=2026-08-19&hourly=temperature_2m%2Cprecipitation%2Cwind_speed_10m&timezone=Asia%2FSeoul",
+ "hourly": [
+  {
+   "at": "2026-08-18T13:00:00+09:00",
+   "temp_c": 30.5,
+   "precip_mm": 0.1,
+   "wind_ms": 1.53
+  },
+  {
+   "at": "2026-08-18T14:00:00+09:00",
+   "temp_c": 30.6,
+   "precip_mm": 0.0,
+   "wind_ms": 1.89
+  },
+  {
+   "at": "2026-08-18T15:00:00+09:00",
+   "temp_c": 31.1,
+   "precip_mm": 0.0,
+   "wind_ms": 2.42
+  },
+  {
+   "at": "2026-08-18T16:00:00+09:00",
+   "temp_c": 30.5,
+   "precip_mm": 0.0,
+   "wind_ms": 2.67
+  },
+  {
+   "at": "2026-08-18T17:00:00+09:00",
+   "temp_c": 29.9,
+   "precip_mm": 0.0,
+   "wind_ms": 2.42
+  },
+  {
+   "at": "2026-08-18T18:00:00+09:00",
+   "temp_c": 29.2,
+   "precip_mm": 0.0,
+   "wind_ms": 2.0
+  },
+  {
+   "at": "2026-08-18T19:00:00+09:00",
+   "temp_c": 27.1,
+   "precip_mm": 0.0,
+   "wind_ms": 1.78
+  },
+  {
+   "at": "2026-08-18T20:00:00+09:00",
+   "temp_c": 25.4,
+   "precip_mm": 0.0,
+   "wind_ms": 1.11
+  },
+  {
+   "at": "2026-08-18T21:00:00+09:00",
+   "temp_c": 25.4,
+   "precip_mm": 0.0,
+   "wind_ms": 0.92
+  },
+  {
+   "at": "2026-08-18T22:00:00+09:00",
+   "temp_c": 24.2,
+   "precip_mm": 0.0,
+   "wind_ms": 0.83
+  }
+ ]
+}
