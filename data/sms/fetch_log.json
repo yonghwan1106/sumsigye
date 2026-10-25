@@ -1,0 +1,41 @@
+{
+ "fetched_at": "2026-10-25T18:59:28+09:00",
+ "url_template": "https://www.safetydata.go.kr/disaster-data/disasterNotification?searchStartDttm=2021-01-01&searchEndDttm=2026-10-25&keyword=%EC%A0%95%EC%A0%84&currentPage={page}&cntPerPage=300&pageSize=10",
+ "search_end": "2026-10-25",
+ "pages": [
+  {
+   "page": 1,
+   "rows": 300,
+   "tags": 300,
+   "dates": 300,
+   "new": 300
+  },
+  {
+   "page": 2,
+   "rows": 31,
+   "tags": 31,
+   "dates": 31,
+   "new": 31
+  },
+  {
+   "page": 3,
+   "rows": 31,
+   "tags": 31,
+   "dates": 31,
+   "new": 0
+  }
+ ],
+ "n_raw_rows": 362,
+ "n_pii_excluded": 1,
+ "n_unique_listed": 331,
+ "n_unique": 330,
+ "first_sent": "2023-09-17T22:55:04+09:00",
+ "last_sent": "2026-10-23T18:53:12+09:00",
+ "by_year": {
+  "2023": 14,
+  "2024": 77,
+  "2025": 69,
+  "2026": 170
+ },
+ "n_org_null": 9
+}
