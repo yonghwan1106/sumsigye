@@ -1,0 +1,223 @@
+{
+ "subsets": [
+  {
+   "subset": "exact",
+   "n": 12,
+   "mu": 0.6008,
+   "sigma": 0.5618,
+   "p50_h": 1.824,
+   "p80_h": 2.926,
+   "p90_h": 3.746
+  },
+  {
+   "subset": "exact+interval",
+   "n": 26,
+   "mu": 0.5,
+   "sigma": 0.5708,
+   "p50_h": 1.649,
+   "p80_h": 2.665,
+   "p90_h": 3.426
+  },
+  {
+   "subset": "exact+interval+right",
+   "n": 137,
+   "mu": 1.0573,
+   "sigma": 0.6537,
+   "p50_h": 2.878,
+   "p80_h": 4.99,
+   "p90_h": 6.652
+  }
+ ],
+ "loo_calibration": {
+  "M0": {
+   "loo_sigma_min": 0.6149,
+   "loo_sigma_max": 0.6671,
+   "rows": [
+    {
+     "tau": 0.5,
+     "exact_cov": {
+      "a": 10,
+      "n": 12,
+      "lo": 0.552,
+      "hi": 0.953
+     },
+     "exact_pinball": 0.6012,
+     "mean_q_h": 2.916,
+     "empirical_q_h": 1.858,
+     "interval": {
+      "hit": 7,
+      "miss": 1,
+      "undetermined": 6
+     }
+    },
+    {
+     "tau": 0.8,
+     "exact_cov": {
+      "a": 12,
+      "n": 12,
+      "lo": 0.7575,
+      "hi": 1.0
+     },
+     "exact_pinball": 0.5934,
+     "mean_q_h": 5.07,
+     "empirical_q_h": 2.737,
+     "interval": {
+      "hit": 14,
+      "miss": 0,
+      "undetermined": 0
+     }
+    },
+    {
+     "tau": 0.9,
+     "exact_cov": {
+      "a": 12,
+      "n": 12,
+      "lo": 0.7575,
+      "hi": 1.0
+     },
+     "exact_pinball": 0.4667,
+     "mean_q_h": 6.77,
+     "empirical_q_h": 3.695,
+     "interval": {
+      "hit": 14,
+      "miss": 0,
+      "undetermined": 0
+     }
+    }
+   ]
+  },
+  "M1": {
+   "loo_sigma_min": 0.5783,
+   "loo_sigma_max": 0.6395,
+   "rows": [
+    {
+     "tau": 0.5,
+     "exact_cov": {
+      "a": 9,
+      "n": 12,
+      "lo": 0.4677,
+      "hi": 0.9111
+     },
+     "exact_pinball": 0.6972,
+     "mean_q_h": 2.995,
+     "empirical_q_h": 1.858,
+     "interval": {
+      "hit": 9,
+      "miss": 1,
+      "undetermined": 4
+     }
+    },
+    {
+     "tau": 0.8,
+     "exact_cov": {
+      "a": 12,
+      "n": 12,
+      "lo": 0.7575,
+      "hi": 1.0
+     },
+     "exact_pinball": 0.5929,
+     "mean_q_h": 5.067,
+     "empirical_q_h": 2.737,
+     "interval": {
+      "hit": 12,
+      "miss": 0,
+      "undetermined": 2
+     }
+    },
+    {
+     "tau": 0.9,
+     "exact_cov": {
+      "a": 12,
+      "n": 12,
+      "lo": 0.7575,
+      "hi": 1.0
+     },
+     "exact_pinball": 0.4569,
+     "mean_q_h": 6.672,
+     "empirical_q_h": 3.695,
+     "interval": {
+      "hit": 14,
+      "miss": 0,
+      "undetermined": 0
+     }
+    }
+   ]
+  },
+  "M2": {
+   "loo_sigma_min": 0.5333,
+   "loo_sigma_max": 0.6175,
+   "rows": [
+    {
+     "tau": 0.5,
+     "exact_cov": {
+      "a": 10,
+      "n": 12,
+      "lo": 0.552,
+      "hi": 0.953
+     },
+     "exact_pinball": 0.7178,
+     "mean_q_h": 3.038,
+     "empirical_q_h": 1.858,
+     "interval": {
+      "hit": 8,
+      "miss": 1,
+      "undetermined": 5
+     }
+    },
+    {
+     "tau": 0.8,
+     "exact_cov": {
+      "a": 11,
+      "n": 12,
+      "lo": 0.6461,
+      "hi": 0.9851
+     },
+     "exact_pinball": 0.6198,
+     "mean_q_h": 5.015,
+     "empirical_q_h": 2.737,
+     "interval": {
+      "hit": 14,
+      "miss": 0,
+      "undetermined": 0
+     }
+    },
+    {
+     "tau": 0.9,
+     "exact_cov": {
+      "a": 12,
+      "n": 12,
+      "lo": 0.7575,
+      "hi": 1.0
+     },
+     "exact_pinball": 0.4416,
+     "mean_q_h": 6.519,
+     "empirical_q_h": 3.695,
+     "interval": {
+      "hit": 14,
+      "miss": 0,
+      "undetermined": 0
+     }
+    }
+   ]
+  }
+ },
+ "tail": {
+  "exact_max_h": 4.267,
+  "interval_upper_max_h": 4.615,
+  "right_n": 111,
+  "right_lo_quantiles_h": [
+   0.538,
+   0.848,
+   1.353,
+   2.146
+  ],
+  "right_lo_max_h": 9.089,
+  "right_lo_above_exact_max": 1,
+  "right_lo_above_4_6h": 1,
+  "n_by_kind": {
+   "exact": 12,
+   "interval": 14,
+   "right": 111
+  }
+ }
+}
