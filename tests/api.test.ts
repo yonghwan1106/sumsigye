@@ -206,3 +206,11 @@ describe("라우트 (키 없이)", () => {
     expect(bad.status).toBe(400);
   });
 });
+
+describe("guard: 영어 칸 이름", () => {
+  it("brief에 manual 같은 칸 이름이 나오면 폐기, 표시 문자열 속 라틴 낱말(ESS 등)은 허용", () => {
+    const f: BriefFacts = { rows: [{ alias: "H02", device: "인공호흡기 A계열", safe: "31분", prob: "80% 안팎", margin: "19분", resource: "이동형 ESS(구청(가상 위치))", arrival: "12분", lane: "manual", excluded: [] }], changed: [], now: "20:19" };
+    expect(briefOk(["H02: 31분 버팀.", "이동형 ESS가 12분 뒤 도착.", "전화 확인 필요."], f)).toBe(true);
+    expect(briefOk(["H02: 31분 버팀.", "이동형 ESS가 12분 뒤 도착.", "manual 경로입니다."], f)).toBe(false);
+  });
+});

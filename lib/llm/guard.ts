@@ -3,7 +3,8 @@
 /** 숫자가 든 토막(§7-3 정규식). */
 export const NUMBER_TOKEN = /\d[\d.,]*\s*(분|시간|%|곳|대|km|W)?/g;
 
-export const FORBIDDEN_BRIEF = /승인하세요|승인을 권|반드시 보내|확실히/;
+// §7-3의 금지 표현 + 승인 부탁·확정 서술(실측에서 나온 표현)
+export const FORBIDDEN_BRIEF = /승인하세요|승인을 권|승인해 주|승인 바랍|승인을 부탁|반드시 보내|확실히|배정되었습니다/;
 export const FORBIDDEN_GUIDE = /처방|투약|용량을 늘|유량을 바꾸|설정을 바꾸|진단/;
 
 export function numberTokens(text: string): string[] {
@@ -33,10 +34,23 @@ export function collectStrings(v: unknown, out: string[] = []): string[] {
   return out;
 }
 
+/** 라틴 글자 낱말(2자 이상)은 허용 문자열 안에 있는 것만(화면에 영어 문구 금지 — §8-0). */
+export function latinGrounded(lines: string[], allowed: string[]): boolean {
+  const hay = allowed.join("\n");
+  return lines.every((l) => (l.match(/[A-Za-z]{2,}/g) ?? []).every((w) => hay.includes(w)));
+}
+
 export function briefOk(lines: string[], facts: unknown, n = 3): boolean {
   if (lines.length !== n) return false;
   if (lines.some((l) => FORBIDDEN_BRIEF.test(l))) return false;
-  return numbersGrounded(lines, collectStrings(facts));
+  const all = collectStrings(facts);
+  // lane 코드(119·manual·main)는 화면 문장에 쓰지 않는다 → 라틴 낱말 허용 목록에서 뺀다.
+  const noLane = collectStrings(
+    facts && typeof facts === "object" && Array.isArray((facts as { rows?: unknown[] }).rows)
+      ? { ...(facts as object), rows: (facts as { rows: Record<string, unknown>[] }).rows.map(({ lane: _lane, ...rest }) => rest) }
+      : facts,
+  );
+  return numbersGrounded(lines, all) && latinGrounded(lines, noLane);
 }
 
 /** 체크리스트 항목별 핵심 낱말(모두 들어 있어야 한다). 5번째 줄은 원문과 같아야 한다. */
@@ -47,5 +61,5 @@ export function guideOk(lines: string[], checklist: string[], keywords: string[]
   for (let i = 0; i < 5; i++) {
     if (!keywords[i].every((k) => lines[i].includes(k))) return false;
   }
-  return numbersGrounded(lines, [...checklist, ...context]);
+  return numbersGrounded(lines, [...checklist, ...context]) && latinGrounded(lines, [...checklist, ...context]);
 }

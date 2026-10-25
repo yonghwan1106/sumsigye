@@ -58,7 +58,9 @@ export async function POST(req: Request) {
     if (!facts) return Response.json({ ok: false, error: "bad_request" }, { status: 400 });
     const stateHash = isStr(b.state_hash) ? b.state_hash : "";
 
-    const pre = stateHash ? API_CACHE.briefs[stateHash] : undefined;
+    // 사전계산: 한 가구 펼침이면 「상태 해시:가명」, 여러 가구면 상태 해시
+    const preKey = facts.rows.length === 1 ? `${stateHash}:${facts.rows[0].alias}` : stateHash;
+    const pre = stateHash ? API_CACHE.briefs[preKey] : undefined;
     if (pre) return Response.json({ ok: true, source: "precomputed", lines: pre.lines, model: pre.model, fallback_reason: null });
 
     const key = shortHash(facts);

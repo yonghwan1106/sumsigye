@@ -1,6 +1,7 @@
 // LLM 호출 계층 (구현명세 §2·§7-6) — never-throw.
 // - 키는 process.env.ANTHROPIC_API_KEY에서만 읽는다. 값·길이·앞자리를 응답·로그에 넣지 않는다.
 // - temperature는 어떤 호출에도 넣지 않는다(sonnet-5는 400).
+// - thinking은 끈다(haiku-5-5는 기본으로 생각 토큰을 써서 max_tokens 300 안에서 글이 잘린다 — 2026-10-25 실측).
 // - 요청 옵션 { timeout: 12000, maxRetries: 0 }. 모델 폴백은 withFallback이 1회만.
 // - 요청·응답 본문을 로그에 남기지 않는다.
 import Anthropic from "@anthropic-ai/sdk";
@@ -74,6 +75,7 @@ export async function callTool(opts: {
         max_tokens: opts.maxTokens,
         system: opts.system,
         messages: [{ role: "user", content: opts.user }],
+        thinking: { type: "disabled" },
         tools: [
           {
             name: opts.tool.name,
@@ -113,6 +115,7 @@ export async function callText(opts: {
         max_tokens: opts.maxTokens,
         system: opts.system,
         messages: [{ role: "user", content: opts.user }],
+        thinking: { type: "disabled" },
       },
       { timeout: opts.timeoutMs ?? CALL_TIMEOUT_MS, maxRetries: 0 },
     );
@@ -121,7 +124,8 @@ export async function callText(opts: {
       .map((b) => (b.type === "text" ? b.text : ""))
       .join("")
       .trim();
-    if (!text) return { ok: false, model: opts.model, error: "invalid_output", latency_ms: Date.now() - t0 };
+    // max_tokens에서 끊긴 글은 문장이 잘려 있으므로 쓰지 않는다.
+    if (!text || msg.stop_reason === "max_tokens") return { ok: false, model: opts.model, error: "invalid_output", latency_ms: Date.now() - t0 };
     return { ok: true, model: opts.model, text, latency_ms: Date.now() - t0 };
   } catch {
     return { ok: false, model: opts.model, error: "llm_error", latency_ms: Date.now() - t0 };

@@ -78,6 +78,17 @@ export const HOME = {
   endBig: "AI는 계산하고, 사람이 결정합니다",
   endLimit: "가구·전원은 가상 데이터 · 복구시간은 한전 예측이 아닌 재난문자 기반 추정",
   url: "sumsigye.vercel.app",
+  urlFull: "https://sumsigye.vercel.app",
+  doksanUrl: "https://www.gcinnews.com/news/articleView.html?idxno=14675",
+  sourceLabel: "출처",
+  mapoSmsLabel: "재난문자 원문",
+  scenariosTitle: "실제 재난문자 위에서 돌려 보기",
+  evalTitle: "AI 성능 — 평가 결과 파일에서 읽은 값",
+  githubLabel: "GitHub 저장소(코드·평가 자료)",
+  githubUrl: "https://github.com/yonghwan1106/sumsigye",
+  qrAlt: "sumsigye.vercel.app으로 가는 QR 코드",
+  labLink: "AI 성능 자세히 보기",
+  aboutLink: "데이터·원칙",
 } as const;
 
 // ───────── §8-2 운영자 `/ops` (B가 사용) ─────────
@@ -143,8 +154,19 @@ export const OPS = {
 export const BRIEF = {
   withResource: "{alias}: 배터리 {safe}, 복구가 늦어질 가능성 {prob} → {resource} {arrival} 도착 제안",
   noResource: "{alias}: 배터리 {safe}, 복구가 늦어질 가능성 {prob} → 배정 가능한 전원 없음 — 119 연계 검토",
-  manual: "{alias}: {safe} — 전화 확인 먼저(확인 전에는 즉시 필요로 계산)",
+  manual: "{alias}: 값 확인 필요 — 전화 확인 먼저(확인 전에는 즉시 필요로 계산)",
+  noNeed: "{alias}: 배터리 {safe}, 복구가 늦어질 가능성 {prob} → 지금은 배정 안 함",
+  manualTail: " · 값 확인 필요(전화 확인)",
   none: "표시할 가구가 없습니다",
+  // 한 가구 펼침(「왜 이 배정인가」 3줄)
+  rowSafe: "{alias}: 배터리로 버틸 시간 {safe} · 배터리가 먼저 끝날 가능성 {prob} · 여유 시간 {margin}",
+  rowResource: "추천 전원: {resource} · {arrival} 뒤 도착",
+  rowNoResource: "배정 가능한 전원 없음 — 119 연계 검토",
+  rowNoNeed: "지금은 배정 안 함 — 배터리가 먼저 끝날 가능성이 낮음",
+  rowManual: "모르거나 서로 다른 값 — 전화 확인 먼저(확인 전에는 즉시 필요로 계산)",
+  rowExcluded: "제외: {list}",
+  rowNoExcluded: "제외된 전원 없음",
+  rowChanged: "새 재난문자로 제안이 바뀜",
 } as const;
 
 // ───────── §8-3 보호자 `/home/[hid]` (B가 사용) ─────────
