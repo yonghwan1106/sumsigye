@@ -8,13 +8,13 @@
   "boot": 2000,
   "truth_source": "events_loo",
   "pool_n": 26,
-  "model_selected": "M0",
-  "model_version": "fit-2026-10-25T2000",
+  "model_selected": "E0",
+  "model_version": "fit-2026-10-25T2109",
   "quick": false,
   "n_small_run": 200,
   "n_wide_run": 200,
   "boot_run": 2000,
-  "built_at": "2026-10-25T20:44:52+09:00"
+  "built_at": "2026-10-25T21:17:19+09:00"
  },
  "methods": [
   {
@@ -169,37 +169,37 @@
    "id": "ours",
    "label": "숨시계",
    "small": {
-    "interrupted_mean": 1.265,
+    "interrupted_mean": 1.21,
     "ci": [
-     1.105,
-     1.425
+     1.06,
+     1.365
     ],
-    "ei_mean": 100.287,
+    "ei_mean": 88.215,
     "violations_mean": 0,
-    "energy_short_mean": 0.03,
-    "unknown_share": 0.028
+    "energy_short_mean": 0.05,
+    "unknown_share": 0.045
    },
    "wide": {
-    "interrupted_mean": 8.41,
+    "interrupted_mean": 8.21,
     "ci": [
-     7.615,
-     9.295
+     7.405,
+     9.08
     ],
-    "ei_mean": 564.128,
+    "ei_mean": 554.81,
     "violations_mean": 0,
-    "energy_short_mean": 0.045,
-    "unknown_share": 0
+    "energy_short_mean": 0.06,
+    "unknown_share": 0.003
    },
    "all": {
-    "interrupted_mean": 4.838,
+    "interrupted_mean": 4.71,
     "ci": [
-     4.322,
-     5.395
+     4.202,
+     5.265
     ],
-    "ei_mean": 332.208,
+    "ei_mean": 321.512,
     "violations_mean": 0,
-    "energy_short_mean": 0.038,
-    "unknown_share": 0.007
+    "energy_short_mean": 0.055,
+    "unknown_share": 0.014
    }
   },
   {
@@ -245,90 +245,90 @@
    "a": "R1",
    "b": "ours",
    "scope": "small",
-   "mean": -0.01,
+   "mean": 0.045,
    "ci": [
-    -0.09,
-    0.07
+    -0.035,
+    0.125
    ]
   },
   {
    "a": "R1",
    "b": "ours",
    "scope": "wide",
-   "mean": 0.76,
+   "mean": 0.96,
    "ci": [
-    0.51,
-    1.02
+    0.705,
+    1.23
    ]
   },
   {
    "a": "R1",
    "b": "ours",
    "scope": "all",
-   "mean": 0.375,
+   "mean": 0.502,
    "ci": [
-    0.243,
-    0.513
+    0.368,
+    0.65
    ]
   },
   {
    "a": "A1",
    "b": "ours",
    "scope": "small",
-   "mean": -0.075,
+   "mean": -0.02,
    "ci": [
-    -0.13,
-    -0.02
+    -0.07,
+    0.03
    ]
   },
   {
    "a": "A1",
    "b": "ours",
    "scope": "wide",
-   "mean": -0.25,
+   "mean": -0.05,
    "ci": [
-    -0.345,
-    -0.16
+    -0.11,
+    0.005
    ]
   },
   {
    "a": "A1",
    "b": "ours",
    "scope": "all",
-   "mean": -0.162,
+   "mean": -0.035,
    "ci": [
-    -0.22,
-    -0.107
+    -0.072,
+    0.005
    ]
   },
   {
    "a": "ours",
    "b": "ORACLE",
    "scope": "small",
-   "mean": 0.15,
+   "mean": 0.095,
    "ci": [
-    0.095,
-    0.21
+    0.045,
+    0.145
    ]
   },
   {
    "a": "ours",
    "b": "ORACLE",
    "scope": "wide",
-   "mean": 0.54,
+   "mean": 0.34,
    "ci": [
-    0.43,
-    0.655
+    0.25,
+    0.44
    ]
   },
   {
    "a": "ours",
    "b": "ORACLE",
    "scope": "all",
-   "mean": 0.345,
+   "mean": 0.218,
    "ci": [
-    0.283,
-    0.413
+    0.163,
+    0.275
    ]
   }
  ],
@@ -370,10 +370,10 @@
     "id": "ours",
     "n": 30,
     "parse_fail": 0,
-    "interrupted_mean": 4.867,
+    "interrupted_mean": 4.8,
     "ci": [
-     2.933,
-     7.233
+     2.9,
+     7.2
     ],
     "violations_total": 0
    },
@@ -392,21 +392,21 @@
     "id": "LLM_HAIKU",
     "n": 30,
     "parse_fail": 0,
-    "interrupted_mean": 5.733,
+    "interrupted_mean": 5.867,
     "ci": [
-     3.467,
-     8.367
+     3.5,
+     8.735
     ],
-    "violations_total": 91
+    "violations_total": 100
    },
    {
     "id": "LLM_SONNET",
     "n": 30,
-    "parse_fail": 17,
-    "interrupted_mean": 6.033,
+    "parse_fail": 18,
+    "interrupted_mean": 6.267,
     "ci": [
-     3.532,
-     9.001
+     3.7,
+     9.301
     ],
     "violations_total": 0
    }
@@ -415,18 +415,18 @@
    {
     "id": "LLM_HAIKU",
     "n": 30,
-    "llm": 5.733,
-    "ours": 4.867,
+    "llm": 5.867,
+    "ours": 4.8,
     "r1": 5.2
    },
    {
     "id": "LLM_SONNET",
-    "n": 13,
-    "llm": 2.231,
-    "ours": 2.231,
-    "r1": 2.462
+    "n": 12,
+    "llm": 1.583,
+    "ours": 1.583,
+    "r1": 1.667
    }
   ]
  },
- "compute_ms_wide": 0.739
+ "compute_ms_wide": 0.839
 }

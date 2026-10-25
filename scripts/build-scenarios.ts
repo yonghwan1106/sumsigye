@@ -172,9 +172,15 @@ function restoreModelFor(eventId: string, night: boolean): ScenarioBundle["resto
     const cell = model.cells.find((c) => (c.group === "all" || !usesGroup || c.group === g) && (c.night === "all" || c.night === night));
     cells_small[`${g}|${n}`] = cell?.small ?? false;
   }
-  if (loo && !model.provisional) return { source: "loo", model: loo.model, coef: loo.coef, sigma: loo.sigma, cells_small };
+  if (loo && !model.provisional) {
+    return loo.segs
+      ? { source: "loo", model: loo.model, segs: loo.segs, cells_small }
+      : { source: "loo", model: loo.model, coef: loo.coef, sigma: loo.sigma, cells_small };
+  }
   const sel = model.models[model.selected] ?? model.models.M0;
-  return { source: model.provisional ? "provisional" : "full", model: model.selected, coef: sel.coef, sigma: sel.sigma, cells_small };
+  const source = model.provisional ? "provisional" : "full";
+  if ("segs" in sel) return { source, model: model.selected, segs: sel.segs, cells_small };
+  return { source, model: model.selected, coef: sel.coef, sigma: sel.sigma, cells_small };
 }
 
 function isNight(t: ISO): boolean {

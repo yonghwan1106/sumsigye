@@ -70,7 +70,20 @@ export default function LabPage() {
   const bl = (id: string) => L2.loo.find((r) => r.id === id);
   const b0 = bl("B0"), b1 = bl("B1"), b2 = bl("B2");
   const baseMin = Math.min(...[b0, b1, b2].filter((x) => !!x).map((x) => x!.pinball.mean));
-  const l2Interpret = sel && b0 && b1 && b2 && sel.cov80 && sel.p80_mean_h != null && sel.pinball.mean > baseMin
+  const m0 = bl("M0");
+  const cmp = (a: number, b: number) => (Math.abs(a - b) < 1e-9 ? LAB.cmpSame : a < b ? LAB.cmpLess : LAB.cmpMore);
+  const revised = !!L2.revision;
+  const l2Interpret = revised && sel && b0 && b1 && b2 && m0 && sel.cov80 && sel.p80_mean_h != null && m0.p80_mean_h != null
+    ? fill(LAB.l2InterpretRev, {
+        m: LAB_PAGE.l2Labels[sel.id] ?? sel.id, mv: fmtMin(sel.pinball.mean * 60),
+        b0: fmtMin(b0.pinball.mean * 60), vsB0: cmp(sel.pinball.mean, b0.pinball.mean),
+        b1: fmtMin(b1.pinball.mean * 60),
+        vsB1: sel.id === "E0" && Math.abs(sel.pinball.mean - b1.pinball.mean) < 1e-9 ? LAB.e0SameB1 : cmp(sel.pinball.mean, b1.pinball.mean),
+        b2: fmtMin(b2.pinball.mean * 60), n2: b2.n, vsB2: cmp(sel.pinball.mean, b2.pinball.mean),
+        w: fmtMin(sel.p80_mean_h * 60), a: sel.cov80.a, n: sel.cov80.n, lo: Math.round(sel.cov80.lo * 100), hi: Math.round(sel.cov80.hi * 100),
+        m0v: fmtMin(m0.pinball.mean * 60), m0w: fmtMin(m0.p80_mean_h * 60),
+      })
+    : !revised && sel && b0 && b1 && b2 && sel.cov80 && sel.p80_mean_h != null && sel.pinball.mean > baseMin
     ? fill(LAB.l2Interpret, {
         m: LAB_PAGE.l2Labels[sel.id] ?? sel.id, mv: fmtMin(sel.pinball.mean * 60),
         b0: fmtMin(b0.pinball.mean * 60), b1: fmtMin(b1.pinball.mean * 60), b2: fmtMin(b2.pinball.mean * 60), n2: b2.n,
@@ -89,6 +102,8 @@ export default function LabPage() {
   const l4Interpret: string[] = [];
   if (scopeNote) l4Interpret.push(fill(LAB.l4Scope, { scope: scopeNote }));
   if (ladder && ladder.ci[1] < 0) l4Interpret.push(fill(LAB.l4Ladder, { d: n2(-ladder.mean) }));
+  else if (ladder && ladder.ci[0] > 0) l4Interpret.push(fill(LAB.l4LadderBetter, { d: n2(ladder.mean), lo: n2(ladder.ci[0]), hi: n2(ladder.ci[1]) }));
+  else if (ladder) l4Interpret.push(fill(LAB.l4LadderNone, { d: n2(ladder.mean), lo: n2(ladder.ci[0]), hi: n2(ladder.ci[1]) }));
   if (oursM && r1M && oursM.all.ei_mean > r1M.all.ei_mean) l4Interpret.push(fill(LAB.l4Lex, { o: fmtMin(oursM.all.ei_mean), r: fmtMin(r1M.all.ei_mean) }));
   if (oursM && lowestAll("energy_short_mean") && lowestAll("unknown_share")) {
     l4Interpret.push(fill(LAB.l4Conservative, { e: n2(oursM.all.energy_short_mean), u: pct(oursM.all.unknown_share) }));
@@ -162,6 +177,16 @@ export default function LabPage() {
               ])}
             />
             <p className="text-[15px] font-semibold text-[#101828]">{fill(LAB.selectedModel, { M: LAB_PAGE.l2Labels[L2.selected] ?? L2.selected })}</p>
+            {L2.revision && (
+              <p data-testid="lab-l2-revision" className="text-sm text-[#475467]">
+                {LAB.revisionLine}
+                <a className="underline" href={`${GH}/blob/${L2.revision.prereg_commit}/docs/L2_revision.md`} target="_blank" rel="noreferrer">{LAB.revisionLinks.prereg}</a>
+                {" · "}
+                <a className="underline" href={`${GH}/commit/${L2.revision.prereg_commit}`} target="_blank" rel="noreferrer">{`${LAB.revisionLinks.commit} ${L2.revision.prereg_commit}`}</a>
+                {" · "}
+                <a className="underline" href={`${GH}/blob/main/docs/L2_diagnosis.md`} target="_blank" rel="noreferrer">{LAB.revisionLinks.diag}</a>
+              </p>
+            )}
             <p className="text-[15px] text-[#101828]">
               {fill(LAB.lrLine, {
                 c1: lrNight ? n2(lrNight.chi2) : "—", p1: lrNight ? n2(lrNight.p) : "—",

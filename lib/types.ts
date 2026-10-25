@@ -66,14 +66,19 @@ export interface EventsFile {
 
 // ───────────────────────── §6-5 복구시간 모형 (Python → TS) data/model/restore_model.json ─────────────────────────
 export interface LnModel { coef: Record<"intercept"|"night"|"G2"|"G3", number>; sigma: number; loglik?: number; k?: number; }
+/** 조각 균등 분포 한 칸 [a_h, b_h, 질량] — a == b면 점질량(E0·NP, docs/L2_revision.md). */
+export type PwSeg = [number, number, number];
+export interface PwModel { segs: PwSeg[]; k: number; loglik?: number; iters?: number; }
+export type RestoreModelId = "M0"|"M1"|"M2"|"E0"|"NP";
 export interface RestoreModelFile {
   provisional: boolean; reviewed: boolean; version: string; fitted_at: ISO;
   data: { n_exact: number; n_interval: number; n_right: number; n_excluded: number; period: [ISO, ISO]; corpus_n: number; collected_at: ISO };
-  models: { M0: LnModel; M1?: LnModel; M2?: LnModel };
-  selected: "M0"|"M1"|"M2";
+  models: { M0: LnModel; M1?: LnModel; M2?: LnModel; E0?: PwModel; NP?: PwModel };
+  selected: RestoreModelId;
   lr_tests: { model: string; vs: string; chi2: number; df: number; p: number }[];
-  cells: { group: CauseGroup|"all"; night: boolean|"all"; n_cell: number; small: boolean; mu: number; sigma: number; p50_h: number; p80_h: number; p90_h: number }[];
-  loo: { event_id: string; model: "M0"|"M1"|"M2"; coef: LnModel["coef"]; sigma: number }[];
+  cells: { group: CauseGroup|"all"; night: boolean|"all"; n_cell: number; small: boolean; mu: number|null; sigma: number|null; p50_h: number; p80_h: number; p90_h: number }[];
+  // 로그정규(M0~M2)면 coef·sigma, 비모수(E0·NP)면 segs
+  loo: { event_id: string; model: RestoreModelId; coef?: LnModel["coef"]; sigma?: number; segs?: PwSeg[] }[];
 }
 // μ(x) = intercept + (night?coef.night:0) + (group==="G2"?coef.G2:0) + (group==="G3"?coef.G3:0)  — 모형에 없는 계수는 0
 
@@ -106,6 +111,7 @@ export interface SafeTime { status: "value"|"zero_confirmed"|"unknown"; s_low_mi
   flags: ("conflict"|"ext_excluded"|"heat"|"assumed_spec"|"age_unknown")[]; }
 export type RestoreDist =
   | { kind: "lognormal"; mu: number; sigma: number; elapsed_min: number; small_cell: boolean }
+  | { kind: "piecewise"; segs: PwSeg[]; elapsed_min: number; small_cell: boolean }   // E0·NP(시간 단위 칸)
   | { kind: "fixed"; remaining_min: number }      // A1
   | { kind: "oracle"; remaining_min: number };    // ORACLE
 export type ExclusionReason = "unavailable"|"low_soc"|"waveform_unknown"|"connector"|"input_mismatch"|"power_short";
@@ -155,7 +161,7 @@ export interface ScenarioBundle {
   id: "sc1"|"sc2"|"sc3"; title: string; card_line: string; region: { sido: string; sigungu: string; areas: string[]; urban: boolean; area_km: number };
   outage_start: ISO; event_id: string;
   actual: { kind: "exact"; restored_at: ISO } | { kind: "interval"; lower_at: ISO; upper_at: ISO };
-  restore_model: { source: "loo"|"full"|"provisional"; model: "M0"|"M1"|"M2"; coef: LnModel["coef"]; sigma: number; cells_small: Record<string, boolean> };
+  restore_model: { source: "loo"|"full"|"provisional"; model: RestoreModelId; coef?: LnModel["coef"]; sigma?: number; segs?: PwSeg[]; cells_small: Record<string, boolean> };
   weather: { attribution: string; note: string; hourly: { at: ISO; temp_c: number; precip_mm: number; wind_ms: number }[] } | null;
   households: Household[]; resources: Resource[]; seed: number;
   timeline: ({ at: ISO; type: "report"; hid: string; screen?: HouseholdObserved["screen"] }
@@ -193,7 +199,8 @@ export interface L1Results {
 export interface L2Results {
   status: EvalStatus; reviewed: boolean; review: { n_before: number; n_after: number; excluded: number };
   data: RestoreModelFile["data"]; selected: string; lr_tests: RestoreModelFile["lr_tests"];
-  loo: { id: "M0"|"M1"|"M2"|"B0"|"B1"|"B2"; label: string; n: number;
+  loo: { id: "M0"|"M1"|"M2"|"E0"|"NP"|"B0"|"B1"|"B2"; label: string; n: number; candidate?: boolean;
+         interval_p80?: { hit: number; miss: number; undetermined: number };
          pinball: { t50: number; t80: number; t90: number; mean: number }; p80_mean_h: number|null;
          cov80: WilsonCov|null; cov90: WilsonCov|null;
          alt?: { label: string; n: number; pinball: { t50: number; t80: number; t90: number; mean: number }; p80_mean_h: number|null; cov80: WilsonCov|null; cov90: WilsonCov|null } }[];
@@ -201,6 +208,8 @@ export interface L2Results {
   time_split: { train_n: number; test_n: number; rows: { id: string; pinball_mean: number; cov80: WilsonCov|null }[]; split_at?: ISO };
   events_plot: { event_id: string; outcome: string; t_h?: number; lower_h?: number; upper_h?: number; org: string; date: string }[];
   curve: { t_h: number; s: number }[];       // 선택 모형 전체 칸(경과 0) 0~12시간 0.1 간격
+  /** 후보 확장(2026-10-26, docs/L2_revision.md) — 사전 등록 커밋 */
+  revision?: { prereg: string; prereg_commit: string; candidates: string[]; simplicity: string[]; rule: string };
 }
 
 // l4_results.json

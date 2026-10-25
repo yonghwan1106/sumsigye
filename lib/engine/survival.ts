@@ -1,6 +1,6 @@
-// 남은 복구시간 T_rem(분)의 생존·분위수·부분기대값(구현명세 §6-6 로그정규 해석식).
+// 남은 복구시간 T_rem(분)의 생존·분위수·부분기대값(구현명세 §6-6 로그정규 해석식 + 조각 균등 분포 E0·NP, docs/L2_revision.md).
 // 로그정규는 시간 단위로 계산한 뒤 분으로 바꾼다. fixed·oracle은 계단(결정적 남은 시간).
-import type { RestoreDist } from "../types";
+import type { PwSeg, RestoreDist } from "../types";
 
 /** 표준정규 CDF Φ(x). Hart(1968) 5666 유리근사 — West(2005) 배정밀도판, 절대오차 약 1e-14. */
 export function normCdf(x: number): number {
@@ -77,40 +77,88 @@ export function lnCondQuantile(mu: number, sigma: number, e: number, p: number):
   return Math.max(0, Math.exp(mu + sigma * normInv(1 - (1 - p) * se)) - e);
 }
 
+// ── 시간 단위 조각 균등 분포(E0·NP): [a, b, w] 칸, a == b면 점질량 (pipeline/fit_restore.py pw_* 와 같은 식) ──
+/** S(u) = P(T > u). */
+export function pwSurv(segs: PwSeg[], u: number): number {
+  let s = 0;
+  for (const [a, b, w] of segs) {
+    if (a > u) s += w;
+    else if (b > u) s += w * (b - u) / (b - a);
+  }
+  return s;
+}
+/** inf{t: F(t) ≥ p}, 균등 칸 안은 선형. */
+export function pwQuantile(segs: PwSeg[], p: number): number {
+  if (p <= 0) return segs[0][0];
+  let cum = 0;
+  for (const [a, b, w] of segs) {
+    if (cum + w >= p - 1e-15) {
+      if (b === a || w <= 0) return a;
+      return a + Math.min(1, Math.max(0, (p - cum) / w)) * (b - a);
+    }
+    cum += w;
+  }
+  return segs[segs.length - 1][1];
+}
+/** G(x) = E[(T − x)⁺]. */
+export function pwPartialExp(segs: PwSeg[], x: number): number {
+  let g = 0;
+  for (const [a, b, w] of segs) {
+    if (b === a) g += w * Math.max(0, a - x);
+    else if (x <= a) g += w * ((a + b) / 2 - x);
+    else if (x < b) g += w * (b - x) ** 2 / (2 * (b - a));
+  }
+  return g;
+}
+/** 경과 e 조건부 분위수(남은 시간, 시간). */
+export function pwCondQuantile(segs: PwSeg[], e: number, p: number): number {
+  const se = pwSurv(segs, e);
+  return Math.max(0, pwQuantile(segs, 1 - (1 - p) * se) - e);
+}
+
 export const TAIL_EPS = 1e-12;
 
+type ModelDist = Extract<RestoreDist, { kind: "lognormal" | "piecewise" }>;
+function surv0(d: ModelDist, u: number): number {
+  return d.kind === "lognormal" ? lnSurv(d.mu, d.sigma, u) : pwSurv(d.segs, u);
+}
+function partial0(d: ModelDist, x: number): number {
+  return d.kind === "lognormal" ? lnPartialExp(d.mu, d.sigma, x) : pwPartialExp(d.segs, x);
+}
+
 /** 경과 시간(시간). S(e)가 1e-12 아래면(표본 범위 밖) 경과 0으로 되돌려 전체 분포(보수값)를 쓴다. */
-function effElapsedH(d: Extract<RestoreDist, { kind: "lognormal" }>): number {
+function effElapsedH(d: ModelDist): number {
   const e = Math.max(0, d.elapsed_min) / 60;
-  return lnSurv(d.mu, d.sigma, e) < TAIL_EPS ? 0 : e;
+  return surv0(d, e) < TAIL_EPS ? 0 : e;
 }
 
 /** 남은 복구 경과가 분포 꼬리 끝(표본 범위 밖)인가. */
 export function isOutOfRange(d: RestoreDist): boolean {
-  return d.kind === "lognormal" && lnSurv(d.mu, d.sigma, Math.max(0, d.elapsed_min) / 60) < TAIL_EPS;
+  return (d.kind === "lognormal" || d.kind === "piecewise") && surv0(d, Math.max(0, d.elapsed_min) / 60) < TAIL_EPS;
 }
 
 /** P(T_rem > t), t는 분. */
 export function survRemaining(d: RestoreDist, t: number): number {
-  if (d.kind !== "lognormal") return t < d.remaining_min ? 1 : 0;
+  if (d.kind === "fixed" || d.kind === "oracle") return t < d.remaining_min ? 1 : 0;
   if (t <= 0) return 1;
   const e = effElapsedH(d);
-  return lnSurv(d.mu, d.sigma, e + t / 60) / lnSurv(d.mu, d.sigma, e);
+  return surv0(d, e + t / 60) / surv0(d, e);
 }
 
 /** T_rem의 p 분위수(분). */
 export function quantileRemaining(d: RestoreDist, p: number): number {
-  if (d.kind !== "lognormal") return d.remaining_min;
-  return lnCondQuantile(d.mu, d.sigma, effElapsedH(d), p) * 60;
+  if (d.kind === "fixed" || d.kind === "oracle") return d.remaining_min;
+  const e = effElapsedH(d);
+  return (d.kind === "lognormal" ? lnCondQuantile(d.mu, d.sigma, e, p) : pwCondQuantile(d.segs, e, p)) * 60;
 }
 
 /** E[(T_rem − x)⁺](분), x는 분. x < 0이면 E[T_rem] − x. */
 export function partialExpRemaining(d: RestoreDist, x: number): number {
-  if (d.kind !== "lognormal") return Math.max(0, d.remaining_min - x);
+  if (d.kind === "fixed" || d.kind === "oracle") return Math.max(0, d.remaining_min - x);
   const e = effElapsedH(d);
-  const se = lnSurv(d.mu, d.sigma, e);
-  if (x < 0) return lnPartialExp(d.mu, d.sigma, e) / se * 60 - x;
-  return lnPartialExp(d.mu, d.sigma, e + x / 60) / se * 60;
+  const se = surv0(d, e);
+  if (x < 0) return partial0(d, e) / se * 60 - x;
+  return partial0(d, e + x / 60) / se * 60;
 }
 
 /** μ(x) = intercept + night·coef.night + G2·coef.G2 + G3·coef.G3 (구현명세 §6-5). */

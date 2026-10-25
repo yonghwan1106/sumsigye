@@ -86,3 +86,32 @@ describe("survival — A 묶음 fixture 대조(_fixture_survival.json)", () => {
     expect(fx!.flatMap(checkRow)).toEqual([]);
   });
 });
+
+// 조각 균등 분포(E0·NP, docs/L2_revision.md): Python pw_* 계산값(_fixture_survival.json pw_cases)과 대조.
+describe("survival — 조각 균등 분포(E0·NP) Python 대조", () => {
+  const f = path.resolve(__dirname, "../data/model/_fixture_survival.json");
+  const j = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf-8")) : {};
+  const cases = (j.pw_cases ?? []) as { segs: [number, number, number][]; points: Ref[] }[];
+  it.runIf(cases.length > 0)("pw_cases 모든 점 허용오차 안", () => {
+    const errs: string[] = [];
+    for (const c of cases) {
+      for (const r of c.points) {
+        const d = { kind: "piecewise" as const, segs: c.segs, elapsed_min: r.e_h * 60, small_cell: false };
+        if (r.t_h != null && r.S != null && Math.abs(survRemaining(d, r.t_h * 60) - r.S) > 1e-9) errs.push(`S e=${r.e_h} t=${r.t_h}`);
+        if (r.t_h != null && r.pe_h != null && Math.abs(partialExpRemaining(d, r.t_h * 60) / 60 - r.pe_h) > 1e-9) errs.push(`PE e=${r.e_h} t=${r.t_h}`);
+        if (r.p != null && r.q_h != null && Math.abs(quantileRemaining(d, r.p) / 60 - r.q_h) > 1e-9) errs.push(`Q e=${r.e_h} p=${r.p}`);
+      }
+    }
+    expect(errs).toEqual([]);
+  });
+  it("경과가 분포 끝을 넘으면 전체 분포로 되돌림 · 단조성", () => {
+    const segs: [number, number, number][] = [[0.5, 1, 0.5], [2, 2, 0.25], [3, 4, 0.25]];
+    const past = { kind: "piecewise" as const, segs, elapsed_min: 300, small_cell: false };
+    const zero = { ...past, elapsed_min: 0 };
+    expect(quantileRemaining(past, 0.8)).toBeCloseTo(quantileRemaining(zero, 0.8), 12);
+    expect(quantileRemaining(zero, 0.5)).toBeCloseTo(60, 9);            // F(1) = 0.5
+    expect(quantileRemaining(zero, 0.6)).toBeCloseTo(120, 9);           // 점질량 2시간
+    expect(survRemaining(zero, 150)).toBeCloseTo(0.25, 12);
+    expect(partialExpRemaining(zero, -10)).toBeCloseTo((0.5 * 0.75 + 0.25 * 2 + 0.25 * 3.5) * 60 + 10, 9);
+  });
+});

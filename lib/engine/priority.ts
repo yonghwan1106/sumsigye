@@ -5,7 +5,7 @@ import { quantileRemaining, survRemaining } from "./survival";
 
 /** R_q: 남은 복구 P80(칸 표본 적음이면 P90). */
 export function rqMin(d: RestoreDist, p: EngineParams): number {
-  const q = d.kind === "lognormal" && d.small_cell ? p.q_small : p.q_main;
+  const q = (d.kind === "lognormal" || d.kind === "piecewise") && d.small_cell ? p.q_small : p.q_main;
   return quantileRemaining(d, q);
 }
 

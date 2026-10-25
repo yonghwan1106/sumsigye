@@ -10,7 +10,8 @@
 | P4 검수 시트 | `npm run data:review-sheets -- --stage gold` | `data/review/gold_review.csv` · `link_review.csv` · `README_검수안내.md` |
 | P5 LLM(개발용) | `node scripts/with-key.mjs --key-file <키 파일> -- npm run data:llm -- --model claude-sonnet-5 --split dev` | `data/l1/extract_sonnet.json` (골드 sn 0건 검사) |
 | P6 사건표 | `npm run data:events` → `npm run data:review-sheets -- --stage events` | `data/events/events.json` · `data/review/events_review.csv` |
-| P10 L2 | `npm run data:fit` (자체 시험 `python pipeline/fit_restore.py --selftest`) | `data/model/restore_model.json` · `data/eval/l2_results.json` · `data/model/_fixture_survival.json` |
+| P10 L2 | `npm run data:fit` (자체 시험 `python pipeline/fit_restore.py --selftest`) — 후보 M0·M1·M2(로그정규) + E0(정확 사건 경험분포)·NP(Turnbull EM), 사전 등록 `docs/L2_revision.md` | `data/model/restore_model.json` · `data/eval/l2_results.json` · `data/model/_fixture_survival.json` |
+| L2 진단 | `python pipeline/diagnose_restore.py --events data/events/events.json --out data/eval/l2_diagnosis.json` | `data/eval/l2_diagnosis.json` (`docs/L2_diagnosis.md`의 표) |
 | P11 기상 | `npm run data:weather` | `data/weather/sc1·sc2·sc3.json` (Open-Meteo 재분석, CC BY 4.0) |
 
 ## 응모자 검수 CSV가 왔을 때

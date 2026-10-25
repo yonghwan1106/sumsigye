@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-25T20:44:52+09:00",
+ "built_at": "2026-10-25T21:17:19+09:00",
  "truth_source": "events_loo",
  "provisional": false,
  "pool_n": 26,
@@ -37,7 +37,7 @@
   "hid": "H05",
   "alias": "H05",
   "safe_min": 12.338,
-  "r80_min": 245.348,
+  "r80_min": 95.334,
   "arrival_rule_min": null,
   "arrival_ours_min": 10.736
  },

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-10-25T20:13:38+09:00",
+  "built_at": "2026-10-25T21:16:54+09:00",
   "seeds": [
    1,
    2,
@@ -41,7 +41,7 @@
   "prompt": "prompts/llm_alloc_baseline.md",
   "provisional": false,
   "truth_source": "events_loo",
-  "model_version": "fit-2026-10-25T2000"
+  "model_version": "fit-2026-10-25T2105"
  },
  "runs": [
   {
@@ -52,6 +52,7 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
+   "error_kinds": [],
    "response_len": 257,
    "response": "[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R04\"},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null}]",
    "assignment": [
@@ -84,24 +85,50 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:00:42+09:00"
+   "at": "2026-10-25T21:08:05+09:00"
   },
   {
    "seed": 1,
    "kind": "small",
    "model": "claude-sonnet-5",
-   "ok": false,
-   "parse_fail": true,
-   "attempts": 2,
-   "call_errors": 2,
-   "error_kinds": [
-    "invalid_output",
-    "invalid_output"
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 1225,
+   "response": "각 가구의 필요 전력과 제약을 분석하겠습니다.\n\n**기기별 필요 연속출력:**\n- H01, H03 (거치형 산소발생기): 피크 640W, AC 필수\n- H02 (인공호흡기 B계열): 피크 미상 → 정격×1.25=125W, AC 필수\n- H04, H06, H07 (인공호흡기 A계열): 피크 120W, AC 또는 VENT_A 전용(DC12_24)\n- H05 (기침유발기): 피크 미상 → 정격×1.25=187.5W, AC 필수\n\n**자원 상태:**\n- R01: 정현파AC, 1000W, 53% (가용, 20% 초과 OK)\n- R02: 정현파AC, 300W, 84% (가용)\n- R03: 정현파AC, 3000W, 56% (가용)\n- R04: VENT_A 전용배터리, 240분분, 76% (가용) → H04/H06/H07에만 사용 가능\n\n**긴급도(잔여안전시간) 순위:** H01=0, H03=0(최우선, 의료기기 중 0분) → H05=12 → H04=24 → H07=72 → H02=282 → H06=모름\n\n**배정 로직 (의료기기 우선, 산소발생기 생명유지 최우선):**\n- H01, H03: 640W 필요 → R01(1000W) 또는 R03(3000W) 가능. 둘 다 0분 하한이므로 둘 다 긴급. R03을 H01에, R01을 H03에 배정(둘 다 도착 13분대로 유사).\n- H05: 기침유발기 187.5W, AC 필요, R02(300W) 적합. 도착 12분.\n- H04: VENT_A, 120W. R04(전용배터리, VENT_A 계열 적합) 배정. 도착 15분.\n- H07: VENT_A, 120W. 남은 자원 없음(R01,R02,R03 소진) → null\n- H02: VENT_B, 125W. AC만 가능하나 자원 소진 → null\n- H06: VENT_A, 모름이므로 640W 기준 적용 필요(기기 모름 아님, 피크값 있음=120W). 자원 소진 → null\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R03\"},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":\"R01\"},\n  {\"household\":\"H04\",\"resource\":\"R04\"},\n  {\"household\":\"H05\",\"resource\":\"R02\"},\n  {\"household\":\"H06\",\"resource\":null},\n  {\"household\":\"H07\",\"resource\":null}\n]\n```",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R03"
+    },
+    {
+     "household": "H02",
+     "resource": null
+    },
+    {
+     "household": "H03",
+     "resource": "R01"
+    },
+    {
+     "household": "H04",
+     "resource": "R04"
+    },
+    {
+     "household": "H05",
+     "resource": "R02"
+    },
+    {
+     "household": "H06",
+     "resource": null
+    },
+    {
+     "household": "H07",
+     "resource": null
+    }
    ],
-   "response_len": 0,
-   "response": "",
-   "assignment": [],
-   "at": "2026-10-25T20:07:21+09:00"
+   "at": "2026-10-25T21:08:13+09:00"
   },
   {
    "seed": 2,
@@ -111,8 +138,9 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
+   "error_kinds": [],
    "response_len": 183,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R02\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null}]",
+   "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
@@ -120,7 +148,7 @@
     },
     {
      "household": "H02",
-     "resource": "R02"
+     "resource": "R01"
     },
     {
      "household": "H03",
@@ -135,7 +163,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:00:42+09:00"
+   "at": "2026-10-25T21:08:07+09:00"
   },
   {
    "seed": 2,
@@ -145,12 +173,13 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 870,
-   "response": "각 가구별로 분석하겠습니다.\n\n**H01 (거치형 산소발생기, 피크 640W, AC 필요)**\n- R01: 정현파 AC, 1000W 연속출력 ≥ 640W 충족, 잔량 60% 가용 → 가능\n- R02: VENT_A 전용 배터리라 O2계열에는 사용 불가\n- R03: 출력 파형 미확인이라 사용 불가\n- → R01 배정\n\n**H02 (휴대용 산소발생기, 피크 미상 → 정격×1.25=150W, AC 필요)**\n- R01: 이미 H01에 배정됨(자원 1대=가구 1곳), 사용 불가\n- R02: VENT_A 전용이라 O2_PORT에는 사용 불가\n- R03: 파형 미확인으로 사용 불가\n- → 배정 불가 (null)\n\n**H03 (기침유발기, 피크 미상 → 정격×1.25=187.5W, AC 필요)**\n- R01: 이미 소진됨\n- R02: VENT_A 전용, COUGH 계열 아님 → 사용 불가\n- R03: 파형 미확인 → 사용 불가\n- → 배정 불가 (null)\n\n**H04 (기침유발기, 동일 조건)**\n- 모든 자원 소진/부적합\n- → 배정 불가 (null)\n\n**H05 (기기 모름 → 640W 기준 적용)**\n- R01: 이미 소진됨\n- R02: 전용배터리이며 계열 불명 매칭 불가\n- R03: 파형 미확인 → 사용 불가\n- → 배정 불가 (null)\n\n```json\n[\n  {\"household\": \"H01\", \"resource\": \"R01\"},\n  {\"household\": \"H02\", \"resource\": null},\n  {\"household\": \"H03\", \"resource\": null},\n  {\"household\": \"H04\", \"resource\": null},\n  {\"household\": \"H05\", \"resource\": null}\n]\n```",
+   "error_kinds": [],
+   "response_len": 1056,
+   "response": "각 가구를 분석하겠습니다.\n\n**R02**: VENT_A 계열 전용 배터리 → VENT_A 기기에만 사용 가능. 어느 가구도 인공호흡기 A계열이 아니므로 R02는 사용 불가.\n\n**R03**: 출력 파형 미확인 발전기 → 제약(2)에 의해 사용 금지.\n\n**R01**: 정현파 AC, 연속출력 1000W, 잔량 60% (20% 초과로 가용) → 사용 가능. 단 1대뿐이므로 1가구만 배정 가능.\n\n**가구별 필요 전력 확인**:\n- H01 거치형 산소발생기: 피크 640W → R01(1000W) 충족, 입력 AC 가능\n- H02 휴대용 산소발생기: 피크 미상 → 정격×1.25 = 150W → R01 충족\n- H03 기침유발기: 피크 미상 → 정격×1.25 = 187.5W → R01 충족\n- H04 기침유발기: 동일, 187.5W\n- H05 기기 모름 → 640W 필요 → R01(1000W) 충족\n\n**우선순위 결정** (R01은 1대만 가용, 나머지는 자원 없음):\n- 안전시간 하한이 가장 급박한 가구 우선, 같은 조건이면 정보신뢰도/도착시간 고려\n- H04: 25분 (보호자 입력, 기기 화면 아님)\n- H03: 49분 (기기 화면 값, 신뢰도 높음)\n- H02: 84분\n- H01: 115분\n- H05: 모름 (가장 불확실 → 우선순위 낮춤, 640W 가정)\n\n가장 임박한 H04(25분)가 R01 대상. R03 도착시간이 R01보다 느리거나 사용 불가하므로 R01만 고려.\n\nH04의 R01 도착시간: 19분 (안전시간 25분 이내 도착 가능) → H04에 R01 배정.\n\n나머지 가구(H01, H02, H03, H05)는 배정 가능한 자원 없음(R02는 계열 불일치, R03은 파형 미확인).\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":null},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R01\"},\n  {\"household\":\"H05\",\"resource\":null}\n]\n```",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H02",
@@ -162,14 +191,14 @@
     },
     {
      "household": "H04",
-     "resource": null
+     "resource": "R01"
     },
     {
      "household": "H05",
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:00:47+09:00"
+   "at": "2026-10-25T21:08:16+09:00"
   },
   {
    "seed": 3,
@@ -179,6 +208,7 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
+   "error_kinds": [],
    "response_len": 182,
    "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":null},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null}]",
    "assignment": [
@@ -203,7 +233,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:00:43+09:00"
+   "at": "2026-10-25T21:08:15+09:00"
   },
   {
    "seed": 3,
@@ -213,8 +243,9 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1089,
-   "response": "각 가구와 자원을 분석하겠습니다.\n\n**제약 조건 확인:**\n- R02: 출력 파형 미확인 → 사용 불가 (제약 2)\n- R01: 정현파 AC, 1000W 연속출력, 77% 잔량(20% 초과이므로 가능)\n\n**가구별 분석:**\n\n- **H01**: 거치형 산소발생기, 의료기기. 정현파 AC 필요 → R01(정현파 AC) 적합. 필요 출력: 피크 640W. R01의 1000W ≥ 640W 충족. 잔여안전시간 0분이지만 도착시간 20분 → 이미 위험하지만 그나마 배정 가능한 유일 자원.\n\n- **H02**: 인공호흡기 A계열, 의료기기. 입력형식 AC·DC12_24, 정현파 AC 필요 → R01 적합. 피크 120W ≤ 1000W. 하지만 R01은 1대만 존재하며 이미 H01에 배정 검토 필요.\n\n- **H03, H04**: 기기 모름 → 640W 기준 적용. 의료기기 여부 불명확하므로 일반 자원 가능하나, 사용 가능한 자원은 R01뿐(R02 불가). 역시 R01 필요.\n\n- **H05**: 인공호흡기 B계열, 의료기기, AC 전용. 피크 미상 → 정격×1.25 = 125W. R01 필요.\n\n**자원 배정 (1자원=1가구, R01만 가용):**\n\n모든 가구가 R01을 필요로 하지만 R01은 1대뿐 → 가장 효과적인 배정 선택 필요.\n\n우선순위: 멈추는 가구 수 최소화 → 1곳이라도 살리는 게 유리. 그 다음 멈추는 시간 합 최소화 → 잔여안전시간이 가장 짧고 위험한 곳(H01, 0분)을 살리는 것이 전체 다운타임 합을 최소화.\n\nH01에 R01 배정 시, 도착 20분으로 안전시간(0분) 이미 초과했지만 그 외 가구는 자원이 없으므로 어차피 중단. H01을 살리면 1가구라도 정상 작동.\n\n나머지(H02~H05)는 배정 가능한 자원 없음 → null.\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R01\"},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":null},\n  {\"household\":\"H05\",\"resource\":null}\n]\n```",
+   "error_kinds": [],
+   "response_len": 1096,
+   "response": "분석해보겠습니다.\n\n**제약 조건 적용:**\n- R02(소방서 발전기): 출력 파형 미확인 → 사용 불가(제약 2)\n- R01(휴대용 전원 대): 정현파 AC, 1000W, 잔량 77%(>20%, 가용) → 사용 가능\n\n**가구별 요구사항:**\n- H01: 거치형 산소발생기, 피크 640W, AC 필요, 잔여시간 0분(긴급)\n- H02: 인공호흡기 A계열, 피크 120W, AC 또는 동일계열 DC 필요, 잔여 87분\n- H03: 기기 모름 → 640W 적용, 입력형식 불명확(의료기기 여부 불명)\n- H04: 기기 모름 → 640W 적용, 동일\n- H05: 인공호흡기 B계열, 피크 미상→정격100×1.25=125W, AC 필요, 잔여 168분\n\n**자원 매칭 (R01만 가용, 1대):**\n- R01은 정현파 AC, 1000W로 모든 기기의 전력 요구는 충족 가능(의료기기 조건 충족: 정현파 AC는 허용됨)\n- 자원은 1대뿐이므로 1가구만 배정 가능\n\n**우선순위 결정:**\n- H01: 잔여안전시간 0분 → 가장 긴급, 즉시 정전 위험\n- H02: 87분\n- H05: 168분\n- H03, H04: 정보 자체가 모름 → 의료기기 여부도 불명확, 안전 최우선 원칙상 확정된 의료기기 긴급 가구(H01)에 우선 배정\n\n**R01을 H01에 배정 시 검증:**\n- 기기: 거치형 산소발생기, 피크 640W → R01 연속출력 1000W ≥ 640W 충족\n- 입력형식 AC, R01은 정현파 AC → 제약(1) 충족\n- 도착시간 20분 vs 잔여안전시간 0분 → 이미 위험하지만, 가용자원 중 유일하게 조건 충족하며 정전 기구 수 최소화 목표에 부합(미배정 시 즉시 정지)\n\n나머지 가구(H02, H03, H04, H05)는 가용자원 없음 → null\n\n```json\n[\n  {\"household\": \"H01\", \"resource\": \"R01\"},\n  {\"household\": \"H02\", \"resource\": null},\n  {\"household\": \"H03\", \"resource\": null},\n  {\"household\": \"H04\", \"resource\": null},\n  {\"household\": \"H05\", \"resource\": null}\n]\n```",
    "assignment": [
     {
      "household": "H01",
@@ -237,7 +268,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:00:52+09:00"
+   "at": "2026-10-25T21:08:25+09:00"
   },
   {
    "seed": 4,
@@ -247,6 +278,7 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
+   "error_kinds": [],
    "response_len": 291,
    "response": "[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null}]",
    "assignment": [
@@ -283,7 +315,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:00:44+09:00"
+   "at": "2026-10-25T21:08:18+09:00"
   },
   {
    "seed": 4,
@@ -300,7 +332,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:07:23+09:00"
+   "at": "2026-10-25T21:09:01+09:00"
   },
   {
    "seed": 5,
@@ -310,6 +342,7 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
+   "error_kinds": [],
    "response_len": 254,
    "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":null},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null}]",
    "assignment": [
@@ -342,7 +375,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:00:48+09:00"
+   "at": "2026-10-25T21:08:26+09:00"
   },
   {
    "seed": 5,
@@ -352,8 +385,9 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1989,
-   "response": "분석해보겠습니다.\n\n**자원 R01**: 정현파 AC, 연속출력 1000W, 잔량 68%(가용), 의료기기 전용 사용 가능.\n\n**가구별 검토**:\n\n- **H01**: 거치형 산소발생기, 피크 640W → 1000W 충족. 잔여 134분. 도착 11분.\n- **H02**: 인공호흡기 A계열, 피크 120W → 충족. 잔여 40분, 도착 12분 → 도착 전에 소진 위험(40분 < 12분은 아니지만 여유 적음). 그러나 멈추는 가구 수 최소화가 우선이므로 배정 가능하면 배정.\n- **H03**: 인공호흡기 A계열, 피크 120W → 충족. 잔여 314분(여유 많음).\n- **H04**: 기기 모름 → 640W 적용. 입력형식/계열 불명 → 의료기기 여부도 불명. 정보 등급 '모름'으로 안전 규칙 적용 불가 판단, 그러나 출력 형식은 정현파 AC로 모든 기기에 호환 가능. 피크 640W 적용 시 R01(1000W)로 충족 가능. 다만 기기 종류 자체가 불명이라 의료기기 여부 확인 불가 → 안전상 자원 배정 보류.\n- **H05**: 석션기, 피크 미상 → 정격×1.25=75W → 충족. 잔여 26분, 도착 11분 → 가능.\n- **H06**: 거치형 산소발생기, 잔여 0분 → 이미 기기 정지 상태로 간주, 배정해도 의미 없음(멈춤 이미 발생). 하지만 \"멈추는 가구 수 최소화\"가 목표이므로, 이미 멈춘 가구는 배정 대상에서 제외하고 다른 자원을 살릴 수 있는 가구에 우선 배정해야 함.\n- **H07**: 휴대용 산소발생기, 피크 미상 → 정격×1.25=150W → 충족. 잔여 78분, 도착 14분 → 가능.\n\n**자원은 R01 1대뿐** → 가구 1곳에만 배정 가능.\n\n**우선순위 결정**: 목표는 \"멈추는 가구 수 최소화, 동률 시 멈추는 시간 합 최소화\".\n\n자원이 1대뿐이므로 나머지는 모두 미배정(멈춤) 상태가 됩니다. 따라서 1곳을 살려서 \"멈추는 시간 합\"을 최소화하는 효과를 극대화해야 합니다.\n\n- H06은 이미 잔여 0분 → 배정해도 이미 멈춘 것으로 간주(구원 효과 없음).\n- H02는 잔여 40분, 도착 12분 → 배정 시 도착 후 40-12=28분 추가 연장 가능하지만 곧 다시 멈춤 위험.\n- H05는 잔여 26분, 도착 11분 → 유사.\n- H01은 잔여 134분, 도착 11분 → 배정 시 상당 시간 연장.\n- H03은 잔여 314분으로 가장 여유 있음 → 배정하지 않아도 가장 늦게 멈춤(즉 \"멈추는 시간\" 관점에서 이미 가장 손해가 적은 가구) → 자원을 주지 않아도 영향 적음.\n- H07은 78분, 도착 14분.\n\n\"멈추는 시간 합\"을 최소화하려면, 자원을 배정하지 않을 때 가장 빨리 멈추는(잔여안전시간이 가장 짧은) 가구에 자원을 줘서 그 가구의 정지를 막는 것이 전체 손실 최소화에 유리합니다. 단, H06은 이미 0분(이미 멈춤 상태)이므로 구제 불가.\n\n남은 후보 중 잔여시간이 가장 짧은 것은 H05(26분) → 그다음 H02(40분) → H07(78분) → H01(134분) → H03(314분).\n\n**결론**: 가장 위급한 H05(석션기, 잔여 26분)에 R01 배정 → 가장 빨리 멈출 가구를 구제하여 \"멈추는 시간 합\" 최소화에 기여.\n\n(H05: 석션기, DC12_24/AC 입력, 의료기기 분류 아님 — 하지만 정현파 AC는 모든 기기에 사용 가능하므로 제약 (1) 위반 없음. 피크 75W ≤ 1000W 충족, 도착 11분 < 잔여 26분으로 생존 가능)\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":null},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":null},\n  {\"household\":\"H05\",\"resource\":\"R01\"},\n  {\"household\":\"H06\",\"resource\":null},\n  {\"household\":\"H07\",\"resource\":null}\n]\n```",
+   "error_kinds": [],
+   "response_len": 1506,
+   "response": "분석해보겠습니다.\n\n**자원 R01**: 정현파 AC, 연속 1000W, 68% 잔량(가용), 1대만 존재 → 1가구에만 배정 가능\n\n**각 가구 필요 전력 확인**\n- H01: 거치형 산소발생기, 피크 640W → 필요 ≥640W\n- H02: 인공호흡기 A계열, 피크 120W → 필요 ≥120W, 잔여안전시간 40분(가장 긴급)\n- H03: 인공호흡기 A계열, 피크 120W → 필요 ≥120W, 잔여 314분(여유 있음)\n- H04: 기기/정보 모두 모름 → 기기 모름이면 640W 적용, 필요 ≥640W\n- H05: 석션기, 피크 미상 → 정격×1.25=75W, 잔여 26분(매우 긴급)\n- H06: 거치형 산소발생기, 잔여 0분(이미 소진) → 배정해도 의미 없음(이미 멈춤 상태로 간주)\n- H07: 휴대용 산소발생기, 피크 미상 → 정격×1.25=150W, 잔여 78분\n\n**R01 적합성(정현파 AC, 1000W는 모든 기기 조건 충족)**\n\n**우선순위 판단**\n- 목표: 멈추는 가구 수 최소화 → 같으면 멈추는 시간 합 최소화\n- R01은 1대뿐이므로 1가구만 구제 가능, 나머지는 모두 \"정지\" 상태\n- H06은 잔여안전시간이 이미 0분 → 이미 정지된 것으로 간주, 자원 배정해도 가구 수 개선 효과 없음(이미 멈춘 상태)\n- 따라서 실질적으로 구제 가능한 대상은 H01~H05, H07 중 도착 전에 끊기지 않을 가구\n\n**도착시간 vs 잔여안전시간 비교**\n- H01: 도착 11분 < 134분 → 도착 전 안 끊김, 구제 가능\n- H02: 도착 12분 < 40분 → 구제 가능\n- H03: 도착 16분 < 314분 → 구제 가능\n- H04: 기기 모름, 안전시간 모름 → 판단 불가, 보수적으로 배정 제외(정보 신뢰도 낮음)\n- H05: 도착 11분 < 26분 → 구제 가능하나 매우 타이트\n- H07: 도착 14분 < 78분 → 구제 가능\n\n**1대만 배정 가능 → 가장 긴급한(멈춤까지 가장 임박한) 가구 우선**\n- H05: 26분 - 11분 = 15분 여유 (가장 긴급)\n- H02: 40분 - 12분 = 28분 여유\n- H07: 78 - 14 = 64분 여유\n- H01: 134 - 11 = 123분 여유\n- H03: 314 - 16 = 298분 여유\n\n**H05(석션기)가 가장 긴급** → R01 배정 시 SUCTION 계열, AC·DC 지원, 정현파 AC 가능 → 적합\n\n최종적으로 H05에 R01 배정, 나머지는 모두 null.\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":null},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":null},\n  {\"household\":\"H05\",\"resource\":\"R01\"},\n  {\"household\":\"H06\",\"resource\":null},\n  {\"household\":\"H07\",\"resource\":null}\n]\n```",
    "assignment": [
     {
      "household": "H01",
@@ -384,7 +418,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:01:08+09:00"
+   "at": "2026-10-25T21:08:38+09:00"
   },
   {
    "seed": 6,
@@ -394,8 +428,9 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
+   "error_kinds": [],
    "response_len": 257,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R04\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R03\"},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null}]",
+   "response": "[{\"household\":\"H01\",\"resource\":\"R04\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":\"R02\"},{\"household\":\"H05\",\"resource\":\"R03\"},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
@@ -407,15 +442,15 @@
     },
     {
      "household": "H03",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H04",
-     "resource": "R03"
+     "resource": "R02"
     },
     {
      "household": "H05",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H06",
@@ -426,7 +461,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:00:53+09:00"
+   "at": "2026-10-25T21:08:39+09:00"
   },
   {
    "seed": 6,
@@ -437,8 +472,8 @@
    "attempts": 1,
    "call_errors": 0,
    "error_kinds": [],
-   "response_len": 2100,
-   "response": "<think>\n각 가구와 기기, 필요 전력을 분석하겠습니다.\n\n**기기별 필요 연속 출력 (피크 전력 또는 정격×1.25):**\n- 인공호흡기 A계열: 피크 120W → 필요 120W, 입력형식 AC·DC12_24, 계열 VENT_A\n- 거치형 산소발생기: 피크 640W → 필요 640W, 입력형식 AC\n\n**제약 조건 체크:**\n- R06: 출력 파형 미확인 → 사용 불가 (제약 2)\n- R05: 사용 불가 상태 (가용 란에 \"사용 불가\") → 제외 (제약 4), 또한 VENT_A 전용이라 H02,H03,H05에만 해당 가능했음\n\n**가용 자원 (파형 확인됨, 가용, 잔량 >20%):**\n- R01: 정현파 AC, 1000W, 71%\n- R02: 정현파 AC, 1000W, 87%\n- R03: 정현파 AC, 300W, 50%\n- R04: 정현파 AC, 3000W, 53%\n\n**가구별 필요 전력:**\n- H01: 거치형 산소발생기 → 640W 필요 → R01, R02, R04 가능 (R03은 300W 부족)\n- H02: 인공호흡기 A계열 → 120W 필요, AC 가능 → R01,R02,R03,R04 모두 가능 (의료기기이므로 정현파 AC 필요 - 충족)\n- H03: 인공호흡기 A계열 → 120W 필요 → 동일\n- H04: 거치형 산소발생기 → 640W 필요 → R01,R02,R04\n- H05: 인공호흡기 A계열 → 120W 필요 → R01,R02,R03,R04\n- H06: 거치형 산소발생기 → 640W 필요, 잔여안전시간 0분(이미 위험) → R01,R02,R04\n- H07: 거치형 산소발생기 → 640W 필요 → R01,R02,R04\n\n**자원은 1대당 가구 1곳, 총 4개 가용 자원 (R01,R02,R03,R04)으로 7가구 중 4곳만 배정 가능.**\n\n**우선순위 결정: 멈추는 가구 수 최소화 → 가장 긴급한(안전시간 짧은) 가구부터 배정**\n\n안전시간 하한:\n- H06: 0분 (최긴급)\n- H04: 62분\n- H05: 81분\n- H01: 95분\n- H02: 112분\n- H07: 145분\n- H03: 165분\n\n**가장 긴급한 4곳에 배정: H06, H04, H05, H01**\n\n이제 자원-가구 매칭 (640W 필요 가구: H06,H04,H01 / 120W 필요: H05):\n\n- H06(640W 필요, 가장 긴급) \n- H04(640W 필요)\n- H01(640W 필요)\n- H05(120W 필요) → R03(300W)도 충분\n\n640W 필요한 3곳(H06,H04,H01)에는 R01,R02,R04 배정 (모두 ≥640W)\n120W 필요한 H05에는 R03 배정 (300W≥120W, 충분)\n\n**도착시간 고려해 배정 최적화 (멈추는 시간 합 최소화는 이미 4곳 선정했으므로, 이 4곳 내에서 도착 빠른 자원 우선 배정):**\n\nH06 도착시간: R01=13,R02=11,R03=13,R04=11\nH04 도착시간: R01=13,R02=11,R03=13,R04=11\nH01 도착시간: R01=14,R02=16,R03=14,R04=16\nH05 도착시간: R01=14,R02=14,R03=14,R04=14\n\n640W 필요 가구(H06,H04,H01)에 R01,R02,R04 배정, H05에 R03 배정\n\n- H06: R02(11분) 또는 R04(11분) - 둘다 빠름\n- H04: R02(11분) 또는 R04(11분)\n- H01: R01(14분)\n\nH06, H04 둘 다 R02,R04 둘 다 11분으로 가장 빠름. H01은 R01(14분)만 남음.\n\n배정: H06→R02, H04→R04, H01→R01, H05→R03\n\n**나머지 H02,H03,H07은 자원 없음 → null**\n</think>\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R01\"},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R04\"},\n  {\"household\":\"H05\",\"resource\":\"R03\"},\n  {\"household\":\"H06\",\"resource\":\"R02\"},\n  {\"household\":\"H07\",\"resource\":null}\n]\n```",
+   "response_len": 2211,
+   "response": "<think>\n각 가구별 필요 전력과 제약을 분석하겠습니다.\n\n**기기별 필요 연속 출력:**\n- 거치형 산소발생기: 피크 640W → 필요 ≥640W\n- 인공호흡기 A계열: 피크 120W → 필요 ≥120W\n\n**자원 가용성 확인:**\n- R01: 1000W, 71%, 가용 ✓\n- R02: 1000W, 87%, 가용 ✓\n- R03: 300W, 50%, 가용 (하지만 300W < 640W, 산소발생기엔 부족)\n- R04: 3000W, 53%, 가용 ✓\n- R05: 전용배터리 VENT_A, 71%, **사용 불가** → 제외\n- R06: 출력 파형 미확인 → **사용 금지** (제약 2)\n\n**가구별 요구사항:**\n- H01: 산소발생기(640W 필요) - AC 필요\n- H02: 인공호흡기 A(120W 필요) - AC 또는 VENT_A 전용배터리\n- H03: 인공호흡기 A(120W 필요)\n- H04: 산소발생기(640W 필요)\n- H05: 인공호흡기 A(120W 필요)\n- H06: 산소발생기(640W 필요), 잔여시간 0분 - **이미 멈춤 상태로 간주, 배정 불필요 또는 최우선**\n- H07: 산소발생기(640W 필요)\n\n**산소발생기(640W 이상 필요) 가구: H01, H04, H06, H07**\n→ R01(1000W), R02(1000W), R04(3000W)만 가능 (R03은 300W로 부족)\n\n**인공호흡기 A(120W 필요) 가구: H02, H03, H05**\n→ R01, R02, R03(300W), R04 모두 가능, R05는 사용불가\n\n**자원은 4개만 가용(R01,R02,R03,R04), 가구는 7개 → 3가구는 미배정**\n\n**우선순위 결정 (잔여안전시간 하한이 낮을수록 긴급):**\n- H06: 0분 (이미 소진, 즉시 필요 시급)\n- H04: 62분\n- H05: 81분\n- H01: 95분\n- H02: 112분\n- H07: 145분\n- H03: 165분\n\n**목표: 멈추는 가구 수 최소화, 동률이면 멈추는 시간 합 최소화**\n\n자원 4개를 가장 긴급한 4가구에 배정하는 것이 유리.\n산소발생기(640W필요)는 R01,R02,R04만 가능. 인공호흡기는 R01,R02,R03,R04 가능.\n\n**긴급도 순: H06(0) > H04(62) > H05(81) > H01(95) > H02(112) > H07(145) > H03(165)**\n\n4개 자원으로 4가구 구제 목표. 산소발생기 3대(H06,H04,H01,H07 중 3개 커버 가능)와 인공호흡기용 R03 활용.\n\n산소발생기용 자원 3개(R01,R02,R04) + 인공호흡기용 R03 = 4자원, 4가구 커버 가능.\n\n**배정 전략:**\n- 산소발생기 긴급 가구: H06(0), H04(62), H01(95), H07(145) 중 상위 3개 → H06, H04, H01\n- 인공호흡기 가구: H05(81), H02(112), H03(165) 중 R03으로 1개 → H05\n\n**도착시간 고려 - 동일 자원 유형 내 배정 매칭 (최소 도착시간 우선):**\n\n산소발생기 그룹(H06,H04,H01)에 R01,R02,R04 배정:\n- H06 도착시간: R01=13,R02=11,R04=11\n- H04 도착시간: R01=13,R02=11,R04=11\n- H01 도착시간: R01=14,R02=16,R04=16\n\n도착 빠른 자원을 가장 긴급한(H06)에 우선 배정:\n- H06 ← R02(11분) 또는 R04(11분)\n- H04 ← 나머지 중 빠른 것\n- H01 ← 나머지\n\nH06: R04=11, R02=11 (동일) → R02 선택\nH04: R04=11 (더 빠름) → R04\nH01: R01=14 → R01\n\n인공호흡기 H05 ← R03 (도착 14분)\n\n**최종 배정:**\n- H01: R01\n- H02: null\n- H03: null\n- H04: R04\n- H05: R03\n- H06: R02\n- H07: null\n</think>\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R01\"},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R04\"},\n  {\"household\":\"H05\",\"resource\":\"R03\"},\n  {\"household\":\"H06\",\"resource\":\"R02\"},\n  {\"household\":\"H07\",\"resource\":null}\n]\n```",
    "assignment": [
     {
      "household": "H01",
@@ -469,7 +504,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:07:37+09:00"
+   "at": "2026-10-25T21:08:56+09:00"
   },
   {
    "seed": 7,
@@ -479,8 +514,9 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 268,
-   "response": "```json\n[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null}]\n```",
+   "error_kinds": [],
+   "response_len": 257,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":\"R04\"},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
@@ -500,7 +536,7 @@
     },
     {
      "household": "H05",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H06",
@@ -511,7 +547,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:01:09+09:00"
+   "at": "2026-10-25T21:08:57+09:00"
   },
   {
    "seed": 7,
@@ -528,7 +564,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:08:07+09:00"
+   "at": "2026-10-25T21:09:38+09:00"
   },
   {
    "seed": 8,
@@ -538,8 +574,9 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 293,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":\"R02\"},{\"household\":\"H05\",\"resource\":\"R03\"},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null}]",
+   "error_kinds": [],
+   "response_len": 294,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":\"R02\"},{\"household\":\"H05\",\"resource\":\"R03\"},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":\"R05\"},{\"household\":\"H08\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
@@ -567,297 +604,17 @@
     },
     {
      "household": "H07",
-     "resource": null
+     "resource": "R05"
     },
     {
      "household": "H08",
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:01:28+09:00"
+   "at": "2026-10-25T21:09:02+09:00"
   },
   {
    "seed": 8,
-   "kind": "small",
-   "model": "claude-sonnet-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 1510,
-   "response": "분석해보겠습니다.\n\n**제약 조건 확인:**\n- R05: 출력 파형 미확인 → 사용 불가 (제약 2)\n- 의료기기는 정현파 AC 또는 동일 계열 전용 배터리만 (제약 1) → R01~R04 모두 정현파 AC이므로 가능\n- 잔량 20% 이하 금지 → 모든 R01~R04는 20% 초과로 사용 가능\n\n**기기별 필요 전력 (연속 출력 ≥ 피크, 피크 미상 시 정격×1.25, 기기 모름 시 640W):**\n- H01 (인공호흡기 A): 피크 120W → 필요 120W\n- H02 (인공호흡기 A): 필요 120W\n- H03 (기기 모름): 필요 640W\n- H04 (인공호흡기 A): 필요 120W\n- H05 (인공호흡기 B): 피크 미상 → 100×1.25=125W\n- H06 (인공호흡기 B): 필요 125W\n- H07 (인공호흡기 A): 필요 120W\n- H08 (거치형 산소발생기): 피크 640W → 필요 640W\n\n**자원 용량:** R01=1000W, R02=1000W, R03=300W, R04=3000W (모두 요구 전력 충족 가능)\n\n**가용 자원 4개(R01~R04), 가구 8개 → 최대 4가구만 전원 공급 가능. 나머지는 null.**\n\n**우선순위 판단 (잔여안전시간 하한이 짧을수록 긴급):**\n- H01: 79분 (가장 긴급)\n- H04: 104분\n- H02: 133분\n- H08: 143분\n- H07: 163분\n- H05: 269분\n- H06: 338분\n- H03: 모름 (판단 보류 → 긴급도 낮게, 정보 신뢰도도 낮음)\n\n**목표: 멈추는 가구 수 최소화, 동률 시 멈추는 시간 합 최소화**\n\n4대 자원으로 4가구 구제 가능. 가장 긴급한 4곳(H01, H04, H02, H08)을 우선 배정하여 \"멈추는 시간\"을 최소화합니다.\n\n**배정 매칭 (도착시간 고려, 용량 충족):**\n- H01(필요120W, 안전시간79분, 가장 긴급) → 도착 가장 빠른 자원 배정: R03(18분, 300W 충분)\n- H04(필요120W, 104분) → R02(14분) 또는 R05(불가) → R02(14분, 1000W)\n- H02(필요120W, 133분) → R01(14분, 1000W)\n- H08(필요640W, 143분) → R04(15분, 3000W, 충분)\n\n나머지 H03, H05, H06, H07은 자원 소진으로 배정 불가(null).\n\n```json\n[\n  {\"household\": \"H01\", \"resource\": \"R03\"},\n  {\"household\": \"H02\", \"resource\": \"R01\"},\n  {\"household\": \"H03\", \"resource\": null},\n  {\"household\": \"H04\", \"resource\": \"R02\"},\n  {\"household\": \"H05\", \"resource\": null},\n  {\"household\": \"H06\", \"resource\": null},\n  {\"household\": \"H07\", \"resource\": null},\n  {\"household\": \"H08\", \"resource\": \"R04\"}\n]\n```",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": "R03"
-    },
-    {
-     "household": "H02",
-     "resource": "R01"
-    },
-    {
-     "household": "H03",
-     "resource": null
-    },
-    {
-     "household": "H04",
-     "resource": "R02"
-    },
-    {
-     "household": "H05",
-     "resource": null
-    },
-    {
-     "household": "H06",
-     "resource": null
-    },
-    {
-     "household": "H07",
-     "resource": null
-    },
-    {
-     "household": "H08",
-     "resource": "R04"
-    }
-   ],
-   "at": "2026-10-25T20:01:39+09:00"
-  },
-  {
-   "seed": 9,
-   "kind": "small",
-   "model": "claude-haiku-5-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 184,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R02\"},{\"household\":\"H02\",\"resource\":\"R03\"},{\"household\":\"H03\",\"resource\":\"R01\"},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null}]",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": "R02"
-    },
-    {
-     "household": "H02",
-     "resource": "R03"
-    },
-    {
-     "household": "H03",
-     "resource": "R01"
-    },
-    {
-     "household": "H04",
-     "resource": null
-    },
-    {
-     "household": "H05",
-     "resource": null
-    }
-   ],
-   "at": "2026-10-25T20:01:29+09:00"
-  },
-  {
-   "seed": 9,
-   "kind": "small",
-   "model": "claude-sonnet-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 1568,
-   "response": "# 분석\n\n**자원 필터링**\n- R04: 출력 파형 미확인 → 제약(2)에 의해 전면 사용 불가\n- R01, R02: 정현파 AC, 잔량 90%/88% (>20%) → 사용 가능\n- R03: VENT_A 전용 배터리, 잔량 86% (>20%) → 사용 가능 (VENT_A 계열에만)\n\n**기기별 요구 출력**\n- 인공호흡기 A계열: 피크 120W 명시 → 연속출력 ≥120W 필요 (제약1: 정현파AC 또는 VENT_A 전용배터리만 가능)\n- 기침유발기: 피크 미상 → 정격×1.25 = 150×1.25 = 187.5W, AC만 가능\n\n**가구별 매칭 검토**\n\n의료기기(인공호흡기 A계열)는 (1) 정현파 AC 또는 (2) VENT_A 전용배터리(R03)만 가능 → R01, R02, R03 모두 후보.\n기침유발기(H04)는 의료기기 조항 대상이 아니며 AC만 지원 → R01, R02 가능, R03(VENT_A 전용)은 계열 불일치로 불가.\n\n자원은 1대=1가구이므로, 5개 가구(H01,H02,H03,H05가 인공호흡기, H04가 기침유발기)에 비해 가용자원은 R01,R02,R03 3개뿐 → 2개 가구는 배정 불가.\n\n**우선순위 결정 (정지시간 최소화 기준)**\n- 잔여안전시간 하한이 짧을수록(= 먼저 멈출 위험 높음) 우선 배정\n  - H04: 24분 (가장 급함, 그러나 R03은 계열 불일치)\n  - H05: 55분\n  - H02: 112분\n  - H01, H03: 모름 → 정보 등급 '모름'은 보수적으로 \"이미 위험 또는 임박\" 간주, 최우선급으로 취급하되 수치 비교 불가하므로 하한 명시된 쪽(H04)을 더 긴급하게 처리\n\n**배정 전략**\n- R03(VENT_A 전용)은 인공호흡기 A계열 가구에만 투입 가능 → H01/H02/H03/H05 중 택1\n- R01, R02(정현파 AC)는 인공호흡기 또는 기침유발기 모두 가능\n\n멈추는 가구 수를 최소화해야 하므로 3대 자원으로 3가구를 살리고, 2가구는 부득이 제외.\n'모름' 등급(H01, H03)은 이미 멈췄을 가능성을 배제할 수 없으나 수치 비교 불가 → 명시적 하한이 있는 가구(H04=24, H05=55, H02=112)를 우선 구제 대상으로 산정(멈추는 시간 합 최소화 관점에서 더 확실한 리스크 제거).\n\n- 가장 긴급: H04(24분) → R01 또는 R02 (도착 13/15분, R01이 더 빠름) → **R01**\n- 다음: H05(55분) → 남은 R02 또는 R03 중 R03(VENT_A)이 전용이므로 H05에 R03 배정(도착 16분) → **R03**\n- 다음: H02(112분) → 남은 R02(도착 16분) → **R02**\n- H01, H03(모름, 자원 소진): 배정 불가 → null\n\n```json\n[\n  {\"household\": \"H01\", \"resource\": null},\n  {\"household\": \"H02\", \"resource\": \"R02\"},\n  {\"household\": \"H03\", \"resource\": null},\n  {\"household\": \"H04\", \"resource\": \"R01\"},\n  {\"household\": \"H05\", \"resource\": \"R03\"}\n]\n```",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": null
-    },
-    {
-     "household": "H02",
-     "resource": "R02"
-    },
-    {
-     "household": "H03",
-     "resource": null
-    },
-    {
-     "household": "H04",
-     "resource": "R01"
-    },
-    {
-     "household": "H05",
-     "resource": "R03"
-    }
-   ],
-   "at": "2026-10-25T20:01:43+09:00"
-  },
-  {
-   "seed": 10,
-   "kind": "small",
-   "model": "claude-haiku-5-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 184,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null}]",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": "R03"
-    },
-    {
-     "household": "H02",
-     "resource": "R01"
-    },
-    {
-     "household": "H03",
-     "resource": "R02"
-    },
-    {
-     "household": "H04",
-     "resource": null
-    },
-    {
-     "household": "H05",
-     "resource": null
-    }
-   ],
-   "at": "2026-10-25T20:01:39+09:00"
-  },
-  {
-   "seed": 10,
-   "kind": "small",
-   "model": "claude-sonnet-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 1210,
-   "response": "각 가구별로 분석하겠습니다.\n\n**자원 상태 확인:**\n- R01: 정현파 AC, 1000W, 93% 가용 ✅\n- R02: 정현파 AC, 1000W, 66% 가용 ✅\n- R03: 정현파 AC, 1000W, 65% 가용 ✅\n- R04: 사용 불가 → 제외\n\n**가구별 필요 전력 및 도착시간 대비 안전시간:**\n\n- **H01**: 휴대용 산소발생기, 피크 미상 → 정격×1.25 = 150W. 안전시간 26분. R01(16분)/R03(16분) 도착 가능, 26>16 충족\n- **H02**: 석션기, 피크 미상 → 60×1.25=75W. 안전시간 17분. R01(24분)/R03(24분) 모두 17분 초과 → 도착 전 정지 위험. **배정 불가**\n- **H03**: 인공호흡기 A계열, 피크 120W, AC·DC 가능. 안전시간 458분으로 여유 큼. R01(18분)/R03(18분) 가능\n- **H04**: 기기 모름 → 640W 필요. 안전시간 모름(최악 가정, 즉시 위험 가능성). 도착시간 R01=23, R03=23 → 안전 하한 불명확하여 신뢰 불가. 우선순위 낮음\n- **H05**: 인공호흡기 B계열, AC 전용, 피크 미상→100×1.25=125W. 안전시간 199분. R01(17)/R03(17) 가능\n\n**배정 전략 (자원 3대, 가구 5곳 중 멈추는 가구 최소화):**\n\n우선순위: 안전시간 임박 + 도착 가능 여부\n- H01(26분, 도착16) - 긴급하지만 충족 가능\n- H05(199분, 도착17) - 여유 있음, 충족 가능\n- H03(458분, 도착18) - 여유 많음, 충족 가능\n- H02(17분, 도착24) - 도착 전 소진 확실 → 배정해도 의미 없음\n- H04(정보 전무, 640W 고용량) - 1000W 자원 가능하나 안전시간 모름으로 리스크 최고, 정보 신뢰도 '모름' → 최후순위\n\n자원 3대를 H01, H03, H05에 배정 시 모두 안전시간 충족. H02는 물리적으로 도착 전 정지(배정 무의미), H04는 자원 부족으로 배정 불가.\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R01\"},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":\"R03\"},\n  {\"household\":\"H04\",\"resource\":null},\n  {\"household\":\"H05\",\"resource\":\"R02\"}\n]\n```",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": "R01"
-    },
-    {
-     "household": "H02",
-     "resource": null
-    },
-    {
-     "household": "H03",
-     "resource": "R03"
-    },
-    {
-     "household": "H04",
-     "resource": null
-    },
-    {
-     "household": "H05",
-     "resource": "R02"
-    }
-   ],
-   "at": "2026-10-25T20:01:50+09:00"
-  },
-  {
-   "seed": 11,
-   "kind": "small",
-   "model": "claude-haiku-5-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 149,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R04\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R03\"}]",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": "R04"
-    },
-    {
-     "household": "H02",
-     "resource": "R01"
-    },
-    {
-     "household": "H03",
-     "resource": "R02"
-    },
-    {
-     "household": "H04",
-     "resource": "R03"
-    }
-   ],
-   "at": "2026-10-25T20:01:40+09:00"
-  },
-  {
-   "seed": 11,
-   "kind": "small",
-   "model": "claude-sonnet-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 1355,
-   "response": "분석해보겠습니다.\n\n**기기 요구사항**\n- H01, H02, H04: 거치형 산소발생기 (320W 정격, 640W 피크, AC, O2계열)\n  - 필요 연속출력 ≥ 640W\n- H03: 기기 모름 → 640W 적용, 입력형식/계열 불명 → 전용배터리 불가, AC 정현파만 가능\n\n**제약 조건 체크**\n- (2) 파형 미확인 발전기 없음 (모든 자원이 정현파 AC로 명시됨)\n- (4) 잔량 20% 이하 금지 → 모두 20% 초과이므로 통과\n- (1) 의료기기는 정현파 AC 또는 동일 계열 전용 배터리만\n  - R05는 VENT_A 전용 배터리 → 산소발생기(O2 계열)나 기기모름(H03)에는 사용 불가\n\n**자원별 연속출력 확인 (≥640W 필요)**\n- R01: 1000W ✓\n- R02: 1000W ✓\n- R03: 300W ✗ (640W 미달)\n- R04: 3000W ✓\n- R05: 전용배터리(VENT_A) → O2계열/모름 기기에 사용 불가 ✗\n\n→ 사용 가능한 자원: R01, R02, R04 (3대), 필요 가구: H01, H02, H03, H04 (4가구)\n\n**우선순위 결정 (멈추는 가구 최소화 → 그 다음 멈추는 시간 합 최소화)**\n\n잔여안전시간 하한:\n- H01: 85분\n- H02: 0분 (이미 위험/임박)\n- H03: 모름\n- H04: 49분\n\n4가구 중 3개 자원만 가능하므로 1가구는 배정 불가. 가장 긴급한 순서로 배정하여 \"멈추는 시간\"을 최소화해야 함 (여유시간이 적을수록 먼저 배정해야 정지시간 손해가 적음).\n\n- H02: 0분 → 가장 시급 → 배정 필요\n- H04: 49분 → 다음 시급\n- H01: 85분 → 그 다음\n- H03: 모름 → 정보 등급 '모름', 안전시간도 모름 → 가장 불확실하나, 숫자 비교 불가능한 경우 보수적으로 낮은 우선순위 처리(수치화된 위험도가 없어 확정 피해 산정 어려움) → 배정 제외 대상으로 판단\n\n→ R01, R02, R04를 H02, H04, H01에 배정, H03은 미배정\n\n**도착시간 고려한 세부 배정 (동률 시 시간 최소화)**\n- H01,H02,H04 도착시간 R01=R02=R04=13분으로 동일 → 임의 매핑 가능, 에너지량 큰 자원을 안전시간 짧은 곳에 배정해도 무방(모두 연속출력 조건 충족)\n- H02(0분)→R04(3000W,5000Wh, 가장 넉넉), H04(49분)→R01, H01(85분)→R02\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R02\"},\n  {\"household\":\"H02\",\"resource\":\"R04\"},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R01\"}\n]\n```",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": "R02"
-    },
-    {
-     "household": "H02",
-     "resource": "R04"
-    },
-    {
-     "household": "H03",
-     "resource": null
-    },
-    {
-     "household": "H04",
-     "resource": "R01"
-    }
-   ],
-   "at": "2026-10-25T20:01:53+09:00"
-  },
-  {
-   "seed": 12,
-   "kind": "small",
-   "model": "claude-haiku-5-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 231,
-   "response": "```json\n[{\"household\":\"H01\",\"resource\":\"R04\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null}]\n```",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": "R04"
-    },
-    {
-     "household": "H02",
-     "resource": "R01"
-    },
-    {
-     "household": "H03",
-     "resource": null
-    },
-    {
-     "household": "H04",
-     "resource": null
-    },
-    {
-     "household": "H05",
-     "resource": null
-    },
-    {
-     "household": "H06",
-     "resource": null
-    }
-   ],
-   "at": "2026-10-25T20:01:44+09:00"
-  },
-  {
-   "seed": 12,
    "kind": "small",
    "model": "claude-sonnet-5",
    "ok": true,
@@ -865,8 +622,259 @@
    "attempts": 1,
    "call_errors": 0,
    "error_kinds": [],
-   "response_len": 2011,
-   "response": "<think>\n각 가구별로 분석해보겠습니다.\n\n**사용 가능한 자원**: R01(가용), R04(가용), R05(가용). R02, R03은 사용 불가 제외.\n\n**기기별 필요 출력**:\n- 인공호흡기 A계열: 피크 120W, AC 또는 DC12_24, VENT_A 전용 배터리 가능\n- 인공호흡기 B계열: 정격 100×1.25=125W, AC만\n- 거치형 산소발생기: 피크 640W, AC만\n- 휴대용 산소발생기: 정격 120×1.25=150W, AC·DC12_24\n\n**가구별 분석**:\n\n**H01**: 인공호흡기 A계열, 243분 하한\n- R05(VENT_A 전용 배터리, 60%>20%, 가용) 도착 17분, 240분분 에너지. 243분 필요시간보다 240분이 약간 부족하지만 도착 후 사용 가능시간 계산 필요. 도착 17분 + 240분 = 257분 > 243분 하한이므로 커버 가능.\n- R01도 가능(AC, 1000W, 56%). 도착 21분.\n- R05가 더 빠르고 전용배터리 우선 적절. R05 선택.\n\n**H02**: 거치형 산소발생기, 피크 640W, 63분 하한\n- AC 필요. R01(1000W, AC) 도착 21분, R04(3000W, AC) 도착 13분.\n- R04가 더 빠름. R04 선택.\n\n**H03**: 인공호흡기 B계열, 피크 125W, AC만, 166분\n- R01(AC,1000W) 도착 12분. R04 도착 22분.\n- R01이 빠름. R01 선택.\n\n**H04**: 휴대용 산소발생기, 피크 150W, AC·DC12_24, 154분\n- R01, R04 모두 AC 가능. R05는 VENT_A 전용이라 안됨.\n- 이미 R01은 H03에 배정, R04는 H02에 배정. 자원 1대=가구1곳이므로 중복 불가.\n- 가용 자원 소진: R01→H03, R04→H02, R05→H01. 남은 자원 없음.\n- H04는 할당 불가. resource: null\n\n**H05**: 인공호흡기 A계열, 82분, VENT_A\n- R05는 이미 H01에 배정. 남은 자원 없음.\n- null\n\n**H06**: 거치형 산소발생기, 163분\n- 남은 자원 없음. null\n\n최종 확인: 자원별로 가장 긴급한(짧은 하한시간) 가구에 배정하는 것이 맞는지 재검토.\n\n하한시간 짧은 순: H02(63) > H05(82) > H03(166) > H04(154) > H06(163) > H01(243)\n→ 정렬: H02(63), H05(82), H04(154), H06(163), H03(166), H01(243)\n\nH02(63분, 거치형산소, AC필요, 640W) - R04(3000W,AC) 적합, R01도 가능\nH05(82분, A계열, VENT_A 또는 AC) - R05(VENT_A) 적합, R01도 가능\nH04(154분, 휴대용산소, AC/DC) - R01 가능\nH06(163분, 거치형산소, AC) - R04 또는 R01\nH03(166분, B계열, AC) - R01\nH01(243분, A계열) - R05\n\n자원 3개(R01,R04,R05)로 5개 가구 커버 불가, 3곳만 가능. 멈추는 가구 최소화 위해 긴급도 높은 곳 우선 배정.\n\nH02(63): R04 배정 (도착13분, 충분한 출력)\nH05(82): R05 배정 (도착11분, VENT_A 적합) - 240분분 에너지로 충분\nH04(154): R01 배정 (도착16분, AC 1000W)\n\n남은 H06, H03, H01은 자원 없음 → null\n\n이렇게 하면 짧은 하한시간 가구부터 구제되어 \"멈추는 시간 합\"이 최소화됨.\n</think>\n\n```json\n[\n  {\"household\": \"H01\", \"resource\": null},\n  {\"household\": \"H02\", \"resource\": \"R04\"},\n  {\"household\": \"H03\", \"resource\": null},\n  {\"household\": \"H04\", \"resource\": \"R01\"},\n  {\"household\": \"H05\", \"resource\": \"R05\"},\n  {\"household\": \"H06\", \"resource\": null}\n]\n```",
+   "response_len": 1681,
+   "response": "필요한 분석을 정리하겠습니다.\n\n**기기별 필요 전력 (연속 출력 ≥ 피크, 피크 미상이면 정격×1.25):**\n- 인공호흡기 A계열: 피크 120W → 필요 120W (AC 또는 DC12_24 가능, 단 의료기기는 정현파 AC만 허용)\n- 인공호흡기 B계열: 피크 미상 → 100×1.25=125W, AC만\n- 거치형 산소발생기: 피크 640W, AC만\n- H03: 기기 모름 → 640W 필요, 입력형식 불명 → 매칭 불가\n\n**자원 가용성 체크 (잔량 20% 이하 제외, R05는 파형 미확인이므로 전체 제외):**\n- R01(72%), R02(63%), R03(77%), R04(55%) 모두 20% 초과로 사용 가능\n- R05는 출력 파형 미확인 → 사용 금지 (전 가구 매칭 불가)\n\n**의료기기 → 정현파 AC 전용 배터리만 가능** → R01~R04 모두 정현파 AC이므로 조건 충족, 단 연속출력 조건 필요.\n\n**가구별 필요 출력 및 매칭 가능 자원 (도착시간 빠른 순 우선, 1자원=1가구):**\n\n- H01 (A계열, 120W): R01,R02,R03,R04 모두 가능. 도착 가장 빠른 건 R03(18)\n- H02 (A계열, 120W): 도착 R01=14,R02=14,R03=14,R04=14 모두 동일\n- H03 (모름, 640W, 입력형식 모름): 어떤 자원도 '모름' 입력형식과 매칭 안됨 → null\n- H04 (A계열,120W): R05 제외, 가장 빠른 R02/R04=14\n- H05 (B계열,125W): 가장 빠른 R01/R03=13\n- H06 (B계열,125W): 가장 빠른 R01/R03=18\n- H07 (A계열,120W): 가장 빠른 R02/R04=14\n- H08 (산소발생기,640W): R04(3000W)만 충분, 또는 R01/R02(1000W)도 충분. 가장 빠른 R02=15\n\n**최적 배정 (멈추는 가구 최소화 → 모든 자원 가능 가구에 배정, 자원 4개를 8가구 중 우선순위 높은 곳에):**\n\n안전시간 하한이 짧고 위험한 가구 우선, 도착시간 고려:\n- H01(79분, 매우 급함) → 필요 즉시 자원\n- H04(104분)\n- H08(143분, 640W 큰 전력)\n- H05(269분, 상대적 여유)\n\n자원 4개(R01~R04)를 가장 위험한 4가구에 배정:\n\n1. **H01** (79분, 최우선) → R03 (도착 18분, 300W 충분)\n2. **H04** (104분) → R02 (도착 14분, 1000W 충분)\n3. **H08** (143분, 640W 필요) → R04 (도착 15분, 3000W 충분)\n4. **H02** (133분) → R01 (도착 14분, 1000W 충분)\n\n나머지 H03, H05, H06, H07은 자원 소진으로 null\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R03\"},\n  {\"household\":\"H02\",\"resource\":\"R01\"},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R02\"},\n  {\"household\":\"H05\",\"resource\":null},\n  {\"household\":\"H06\",\"resource\":null},\n  {\"household\":\"H07\",\"resource\":null},\n  {\"household\":\"H08\",\"resource\":\"R04\"}\n]\n```",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R03"
+    },
+    {
+     "household": "H02",
+     "resource": "R01"
+    },
+    {
+     "household": "H03",
+     "resource": null
+    },
+    {
+     "household": "H04",
+     "resource": "R02"
+    },
+    {
+     "household": "H05",
+     "resource": null
+    },
+    {
+     "household": "H06",
+     "resource": null
+    },
+    {
+     "household": "H07",
+     "resource": null
+    },
+    {
+     "household": "H08",
+     "resource": "R04"
+    }
+   ],
+   "at": "2026-10-25T21:09:16+09:00"
+  },
+  {
+   "seed": 9,
+   "kind": "small",
+   "model": "claude-haiku-5-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 184,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R02\"},{\"household\":\"H03\",\"resource\":\"R03\"},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null}]",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R01"
+    },
+    {
+     "household": "H02",
+     "resource": "R02"
+    },
+    {
+     "household": "H03",
+     "resource": "R03"
+    },
+    {
+     "household": "H04",
+     "resource": null
+    },
+    {
+     "household": "H05",
+     "resource": null
+    }
+   ],
+   "at": "2026-10-25T21:09:18+09:00"
+  },
+  {
+   "seed": 9,
+   "kind": "small",
+   "model": "claude-sonnet-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 1582,
+   "response": "분석해보겠습니다.\n\n**기기별 요구사항:**\n- 인공호흡기 A계열: 정현파 AC 또는 VENT_A 전용 배터리만. 피크 120W (명시됨)\n- 기침유발기: AC만, 피크 미상 → 정격×1.25 = 150×1.25 = 187.5W\n\n**자원 검토:**\n- R01: 정현파 AC, 1000W, 90% 가용\n- R02: 정현파 AC, 3000W, 88% 가용\n- R03: VENT_A 전용 배터리, 240분분, 86% 가용 (연속 출력 수치 없음이나 전용 배터리이므로 A계열 전용 사용 가능)\n- R04: 출력 파형 미확인 → **사용 불가** (제약 2)\n\n**가구별 배정:**\n\n- **H01** (A계열, 모름/모름): 정보 등급 모름이므로 안전시간 불명확, 그러나 자원 배정 자체는 가능. R03(전용) 또는 R01/R02 중 선택. R03은 전용 자원이므로 H01에 우선 배정 가능하나, R03은 1대만 존재 → 가장 시급한 곳에 배정 필요.\n  \n- **H02** (A계열, 112분): R03 도착 16분, 안전시간 112분으로 여유 있음\n- **H03** (A계열, 모름/모름): 정보 등급 모름 → 가장 위험 간주, 우선순위 높음\n- **H04** (기침유발기, 24분): AC 필요, R01/R02만 가능. 안전시간 24분으로 가장 시급 → 도착 가장 빠른 R01(13분) 배정\n- **H05** (A계열, 55분): R01 또는 R02 배정 가능\n\n**자원 배분 전략 (정보 등급 '모름'은 최우선 긴급으로 간주):**\n\n- H01, H03: 둘 다 모름/모름 → 둘 다 긴급. R03(전용, VENT_A)은 1대뿐이므로 둘 중 하나에만 배정 가능. 도착시간 비교: H01=16분, H03=14분 → **H03에 R03 배정** (더 빠른 도착)\n- H01: R03 외 선택지로 R01 또는 R02(정현파 AC) 사용 가능. 남은 자원 중 H04, H05와 경쟁.\n- 잔여 자원: R01(1000W), R02(3000W) — 두 대. H01, H04, H05 세 가구가 경쟁 → 한 가구는 미배정.\n\n**우선순위 (안전시간 짧은 순, 모름=최우선):**\n1. H01 (모름) - 최우선\n2. H04 (24분)\n3. H05 (55분)\n4. H02 (112분) - 이미 R03 배정 안됨, AC만 가능 → 자원 소진 시 미배정\n\n재검토: H02도 A계열이라 R03 후보였으나 R03은 H03에 배정. H02는 AC(R01/R02)로만 가능.\n\n**최종 배분 (R01, R02 두 대로 H01/H02/H04/H05 중 2곳만 가능):**\n- H01(모름, 최우선) → R02(도착15분)\n- H04(24분) → R01(도착13분)\n- H05(55분), H02(112분) → 자원 부족으로 미배정, 둘 중 H05가 더 시급하나 자원 없음\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R02\"},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":\"R03\"},\n  {\"household\":\"H04\",\"resource\":\"R01\"},\n  {\"household\":\"H05\",\"resource\":null}\n]\n```",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R02"
+    },
+    {
+     "household": "H02",
+     "resource": null
+    },
+    {
+     "household": "H03",
+     "resource": "R03"
+    },
+    {
+     "household": "H04",
+     "resource": "R01"
+    },
+    {
+     "household": "H05",
+     "resource": null
+    }
+   ],
+   "at": "2026-10-25T21:09:32+09:00"
+  },
+  {
+   "seed": 10,
+   "kind": "small",
+   "model": "claude-haiku-5-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 184,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R03\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null}]",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R01"
+    },
+    {
+     "household": "H02",
+     "resource": "R03"
+    },
+    {
+     "household": "H03",
+     "resource": "R02"
+    },
+    {
+     "household": "H04",
+     "resource": null
+    },
+    {
+     "household": "H05",
+     "resource": null
+    }
+   ],
+   "at": "2026-10-25T21:09:34+09:00"
+  },
+  {
+   "seed": 10,
+   "kind": "small",
+   "model": "claude-sonnet-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 2,
+   "call_errors": 1,
+   "error_kinds": [
+    "invalid_output"
+   ],
+   "response_len": 2086,
+   "response": "<think>\n각 가구별로 분석해보겠습니다.\n\n**H01: 휴대용 산소발생기, 잔여 26분, 피크 미상**\n- 정격 120W, 피크 미상 → 120×1.25 = 150W 필요\n- 입력: AC·DC12_24 → 정현파 AC 가능\n- 도착시간: R01=16, R02=18, R03=16\n- 잔여안전시간 26분이므로 도착시간 16~18분이면 도착 가능\n- R04는 사용불가 제외\n\n**H02: 석션기, 잔여 17분, 피크 미상**\n- 정격 60W, 피크 미상 → 60×1.25 = 75W 필요\n- 입력: AC·DC12_24 → 정현파 AC 가능\n- 도착시간: R01=24, R02=28, R03=24\n- 잔여안전시간 17분 < 도착시간(최소 24분) → 모든 자원이 늦음\n- 배정 불가 (null)\n\n**H03: 인공호흡기 A계열, 잔여 458분**\n- 정격 90W, 피크 120W\n- 입력: AC·DC12_24 → 정현파 AC 가능, R04(전용배터리 VENT_A)도 계열 일치하지만 사용불가\n- R04는 사용 불가 상태이므로 제외\n- 도착시간: R01=18, R02=19, R03=18\n- 잔여 458분으로 충분히 도착 가능\n\n**H04: 기기 모름, 잔여 모름**\n- 기기 모름 → 640W 필요 (규정상)\n- 입력 형식 불명 → 의료기기 여부 불명확, 그러나 \"모름\"이므로 안전하게 AC로 간주하되 매우 높은 전력 필요\n- 연속출력 ≥640W 필요: R01,R02,R03 모두 1000W로 충족\n- 그러나 기기/계열을 모르므로 의료기기 전용 배터리 규정 적용 어려움 - 정현파AC 자원 사용\n- 잔여안전시간 모름 → 도착시간 체크 불가, 복구시간(P50=70분) 참고하여 추정 가능하나 명확한 판단 어려움\n- 안전 우선으로 배정 시도: 가장 빨리 도착하는 자원 필요하나 다른 가구와 경합\n\n**H05: 인공호흡기 B계열, 잔여 199분**\n- 정격 100W, 피크 미상 → 100×1.25=125W\n- 입력: AC → 정현파 AC 가능\n- 도착시간: R01=17, R02=22, R03=17\n- 충분한 시간\n\n**자원 배정 (1대=1가구, 최적화)**\n\n사용 가능 자원: R01, R02, R03 (R04는 사용불가)\n필요 가구: H01, H03, H05 (안전시간 내 도착 가능), H04(모름이나 전력 충족 가능)\n\nH02는 배정 불가 확정 (모든 자원 도착시간이 잔여안전시간 초과)\n\n4개 자원 필요 가구 후보: H01, H03, H04, H05 → 4곳인데 자원은 3개뿐\n\n우선순위: 멈추는 가구 수 최소화\n- H02는 이미 멈춤 확정\n- 나머지 H01, H03, H04, H05 중 3곳만 자원 배정 가능, 1곳은 멈춤\n\n가장 긴급한 순서(잔여안전시간 짧은 순): H01(26분) > H05(199분) > H03(458분) > H04(모름, 불확실하므로 후순위)\n\nH04는 정보가 전혀 없어 가장 낮은 우선순위로 판단. H04를 제외하고 H01, H03, H05에 배정.\n\n자원 배정 매칭(도착시간 고려):\n- H01: R01=16, R03=16 (둘 다 16분, 가장 빠름)\n- H03: R01=18, R03=18\n- H05: R01=17, R03=17\n\nR02는 모든 가구에서 느림(18~28분). 3개 가구 중 2개는 R01/R03 사용, 1개는 R02 사용해야 함.\n\n목표: 멈추는 시간 합 최소화(배정되는 가구는 멈춤시간 0이므로, 자원-가구 매칭의 도착시간을 최소화하는 것이 전체 효율)\n\nH01(잔여26)-R01(16), H05(잔여199)-R03(17), H03(잔여458)-R02(19)\n또는 다른 조합도 가능하나 모두 안전시간 내 도착 가능하므로 멈추는 가구는 없음(H04 제외).\n\n최종: H01-R01, H03-R02, H05-R03, H02-null, H04-null\n</think>\n\n```json\n[\n  {\"household\": \"H01\", \"resource\": \"R01\"},\n  {\"household\": \"H02\", \"resource\": null},\n  {\"household\": \"H03\", \"resource\": \"R02\"},\n  {\"household\": \"H04\", \"resource\": null},\n  {\"household\": \"H05\", \"resource\": \"R03\"}\n]\n```",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R01"
+    },
+    {
+     "household": "H02",
+     "resource": null
+    },
+    {
+     "household": "H03",
+     "resource": "R02"
+    },
+    {
+     "household": "H04",
+     "resource": null
+    },
+    {
+     "household": "H05",
+     "resource": "R03"
+    }
+   ],
+   "at": "2026-10-25T21:10:16+09:00"
+  },
+  {
+   "seed": 11,
+   "kind": "small",
+   "model": "claude-haiku-5-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 148,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R04\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":\"R02\"}]",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R04"
+    },
+    {
+     "household": "H02",
+     "resource": "R01"
+    },
+    {
+     "household": "H03",
+     "resource": null
+    },
+    {
+     "household": "H04",
+     "resource": "R02"
+    }
+   ],
+   "at": "2026-10-25T21:09:39+09:00"
+  },
+  {
+   "seed": 11,
+   "kind": "small",
+   "model": "claude-sonnet-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 1129,
+   "response": "먼저 각 가구의 요구사항을 분석합니다.\n\n**H01**: 거치형 산소발생기, 피크 640W, AC 필요\n**H02**: 거치형 산소발생기, 피크 640W, AC 필요 (잔여안전시간 0 → 가장 긴급)\n**H03**: 기기 모름 → 640W 기준 적용, AC 필요(정보 없으므로 정현파 AC 가정)\n**H04**: 거치형 산소발생기, 피크 640W, AC 필요\n\n**자원 검토**\n- R01: 정현파 AC, 1000W, 1000Wh, 99% → 가용, 640W 충족\n- R02: 정현파 AC, 1000W, 1000Wh, 73% → 가용, 640W 충족\n- R03: 정현파 AC, 300W → 640W 미달, 사용 불가\n- R04: 정현파 AC, 3000W, 5000Wh, 71% → 가용, 640W 충족\n- R05: VENT_A 전용 배터리 → 산소발생기(O2 계열)에는 사용 불가\n\n**배정 가능한 자원**: R01, R02, R04 (3대) → 4가구 중 3가구만 배정 가능, 1가구는 미배정\n\n**우선순위 결정 (멈추는 시간 최소화)**\n- H02: 잔여안전시간 0분 → 이미 멈춤 위기, 최우선 배정 필요\n- H04: 잔여안전시간 49분 → 두 번째 우선\n- H01: 잔여안전시간 85분 → 세 번째 우선\n- H03: 정보 모름 → 안전시간 추정 불가, 가장 낮은 우선순위로 처리(정보 등급도 모름)\n\n도착시간은 R01/R02/R04 모두 13분으로 동일(H03은 12분)하므로 자원 간 차이 없음. 에너지량은 모두 20% 초과이며 연속출력 충족.\n\n**배정**:\n- H02 (가장 긴급, 0분) → R01 (1000Wh, 99%, 가장 여유 있음)\n- H04 (49분) → R02 (1000Wh, 73%)\n- H01 (85분) → R04 (5000Wh, 71%, 가장 큰 용량이지만 이미 상위 두 가구에 적합 자원 배정 후 남은 것)\n- H03 (정보 모름, 자원 소진) → 배정 불가 (null)\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R04\"},\n  {\"household\":\"H02\",\"resource\":\"R01\"},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R02\"}\n]\n```",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R04"
+    },
+    {
+     "household": "H02",
+     "resource": "R01"
+    },
+    {
+     "household": "H03",
+     "resource": null
+    },
+    {
+     "household": "H04",
+     "resource": "R02"
+    }
+   ],
+   "at": "2026-10-25T21:09:49+09:00"
+  },
+  {
+   "seed": 12,
+   "kind": "small",
+   "model": "claude-haiku-5-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 1529,
+   "response": "분석 요약:\n\n**자원 필터링 (제약 적용)**\n- R02, R03: 사용 불가 → 제외\n- R05: 전용 배터리(VENT_A 계열) → H01, H05(인공호흡기 A계열)에만 가능. 에너지 240분분, 잔량 60%. 가용.\n- R01, R04: 정현파 AC, 가용. 연속출력 1000W, 3000W.\n\n**기기별 요구 전력(제약 3)**\n- H01 인공호흡기 A: 정격 90, 피크 120 → 120W\n- H02 거치형 산소발생기: 피크 640W\n- H03 인공호흡기 B: 피크 미상 → 100×1.25 = 125W\n- H04 휴대용 산소발생기: 피크 미상 → 120×1.25 = 150W\n- H05 인공호흡기 A: 120W\n- H06 거치형 산소발생기: 피크 640W\n\n**배정 검토**\n- H01, H05 (인공호흡기 A) → R05 전용 배터리 가능. H01 도착 17분, H05 도착 11분. R05 240분분 에너지로 A계열 두 대를 동시에 감당할 수 있는지 불확실하나, 두 가구 중 잔여안전시간이 짧은 H05(82분)를 R05에 배정하는 것이 합리적. H01은 잔여 243분으로 여유가 많아 R01/R04 중 하나 배정 가능.\n- H02 (63분, 피크 640W, 보호자 입력): R04(3000W) 필요. R01(1000W)도 연속출력은 충분하나 에너지·잔량 여건상 R04가 적합. R04 도착 13분.\n- H06 (163분, 피크 640W): R01(1000W) 가능. 도착 20분.\n- H03 (166분, 피크 125W 추정): R01 또는 R04 가능. \n- H04 (154분, 피크 150W 추정): R04 또는 R01 가능.\n\n잔여 자원은 R01, R04 두 대뿐이고 가구는 H02, H03, H04, H06, H01 등 다수이므로 완전 배정은 불가하다. 기기 멈춤 가구 수를 최소화하려면, 잔여 안전시간이 가장 짧은 가구 중 제약을 만족하는 곳부터 채운다.\n\n- H05 → R05 (11분, 잔여 82분)\n- H02 → R04 (13분, 잔여 63분, 640W 필요, R04만 가능)\n- H01 → R01 (잔여 243분, 여유 가장 많으므로 우선순위 낮음 — 그러나 자원 한정)\n\nR01은 H06(163분)과 H03(166분), H04(154분)와 경쟁하지만, 잔여 시간이 가장 짧은 H01·H05·H02에 우선 배정한 뒤 남는 R01은 H04(154분, 피크 추정 150W, R01 도착 16분)에 배정한다. H01은 자원이 없어 멈춤 대상이 되며, 잔여 243분으로 가장 여유가 있어 우선순위 최하.\n\n따라서 R01은 H04에 배정, R04는 H02에 배정, R05는 H05에 배정.\n\n```json\n[{\"household\":\"H01\",\"resource\":null},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":\"R01\"},{\"household\":\"H05\",\"resource\":\"R05\"},{\"household\":\"H06\",\"resource\":null}]\n```",
    "assignment": [
     {
      "household": "H01",
@@ -893,7 +901,24 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:07:53+09:00"
+   "at": "2026-10-25T21:09:56+09:00"
+  },
+  {
+   "seed": 12,
+   "kind": "small",
+   "model": "claude-sonnet-5",
+   "ok": false,
+   "parse_fail": true,
+   "attempts": 2,
+   "call_errors": 2,
+   "error_kinds": [
+    "invalid_output",
+    "invalid_output"
+   ],
+   "response_len": 0,
+   "response": "",
+   "assignment": [],
+   "at": "2026-10-25T21:10:37+09:00"
   },
   {
    "seed": 13,
@@ -903,8 +928,9 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
+   "error_kinds": [],
    "response_len": 293,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R02\"},{\"household\":\"H03\",\"resource\":\"R03\"},{\"household\":\"H04\",\"resource\":\"R04\"},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null}]",
+   "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R03\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R04\"},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
@@ -912,11 +938,11 @@
     },
     {
      "household": "H02",
-     "resource": "R02"
+     "resource": "R03"
     },
     {
      "household": "H03",
-     "resource": "R03"
+     "resource": "R02"
     },
     {
      "household": "H04",
@@ -939,7 +965,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:01:51+09:00"
+   "at": "2026-10-25T21:10:18+09:00"
   },
   {
    "seed": 13,
@@ -952,12 +978,12 @@
    "error_kinds": [
     "invalid_output"
    ],
-   "response_len": 2206,
-   "response": "<think>\n각 가구별 필요 전력과 조건을 분석하겠습니다.\n\n**기기별 필요 연속출력 (피크 × 1.25 규칙 적용, 피크 미상 시 정격×1.25):**\n- 거치형 산소발생기: 피크 640W → 필요 640W\n- 휴대용 산소발생기: 피크 미상 → 정격120×1.25=150W\n- 인공호흡기 B계열: 피크 미상 → 정격100×1.25=125W\n- 인공호흡기 A계열: 피크 120W → 필요 120W\n- 석션기: 피크 미상 → 정격60×1.25=75W\n\n**자원 가용성 체크:**\n- R01: 정현파AC, 1000W, 1000Wh, 90% 가용 → 사용가능 에너지 900Wh\n- R02: 정현파AC, 1000W, 1000Wh, 67% 가용 → 670Wh\n- R03: 정현파AC, 1000W, 1000Wh, 69% 가용 → 690Wh\n- R04: 정현파AC, 300W, 300Wh, 75% 가용 → 225Wh\n- R05: 사용 불가 → 제외\n- R06: 사용 불가 (잔량 80%이지만 '사용 불가' 상태) → 제외\n- R07: 출력 파형 미확인 → 제외 (제약 2)\n\n**의료기기 조건:** 정현파 AC 또는 동일 계열 전용 배터리만 사용 (제약1) → R01~R04는 모두 정현파 AC이므로 모든 기기에 사용 가능 (AC 입력 지원 기기들이므로 OK)\n\n**가구별 우선순위 (안전시간 하한 기준, 0분이 가장 급함):**\n- H01: 거치형 산소발생기, 0분, 640W 필요\n- H03: 거치형 산소발생기, 0분, 640W 필요\n- H07: 인공호흡기 A계열, 47분, 120W 필요\n- H06: 석션기, 8분, 75W 필요\n- H04: 인공호흡기 B계열, 123분, 125W 필요\n- H02: 휴대용 산소발생기, 76분, 150W 필요\n- H05: 인공호흡기 A계열, 252분, 120W 필요\n- H08: 인공호흡기 A계열, 384분, 120W 필요\n\n**자원 배정 (연속출력 ≥ 필요전력, 1대=1가구):**\n\nH01 (640W 필요): R01(1000W), R02(1000W), R03(1000W) 가능. 도착시간 비교: R01=11, R02=13, R03=11 → R01 또는 R03 (가장 빠름 11분)\nH03 (640W 필요): R01, R02, R03 가능. 도착시간: R01=13, R02=13, R03=13 → 동일\n\nH01과 H03 둘 다 긴급(0분)하고 640W 필요하므로 큰 자원(R01,R02,R03) 중 2개 배정 필요.\n- H01: R01 (도착 11분, 가장 빠름)\n- H03: R03 (도착 13분)\n\nR02는 남음(1000W) - 다른 가구에 배정 가능하나 과잉스펙.\n\nH07 (120W 필요, 47분): R04(300W) 적합. 도착시간 R04=11분\nH06 (75W 필요, 8분): R02(1000W, 남음) 또는 R04. R04가 이미 H07에? 1대=1가구이므로 각각 다른 자원 필요.\n\n자원 재배정:\n- H01: R01\n- H03: R03\n- 남은 자원: R02(1000W), R04(300W)\n\nH06(75W, 8분 긴급), H07(120W, 47분), H04(125W, 123분), H02(150W, 76분), H05(120W, 252분), H08(120W, 384분) — 6가구 중 2개만 자원 배정 가능(R02, R04)\n\n우선순위: H06(8분) > H07(47분) > H02(76분) > H04(123분) > H05(252분) > H08(384분)\n\n- H06: R04(300W, 도착15분) 또는 R02(도착17분) → R04 적합, 도착 빠름 아니지만 용량 맞음\n- H07: 남은 자원 R02(1000W, 도착14분)\n\n따라서:\n- H06: R04\n- H07: R02\n\n나머지 H02, H04, H05, H08은 자원 없음 → null\n</think>\n\n```json\n[\n  {\"household\": \"H01\", \"resource\": \"R01\"},\n  {\"household\": \"H02\", \"resource\": null},\n  {\"household\": \"H03\", \"resource\": \"R03\"},\n  {\"household\": \"H04\", \"resource\": null},\n  {\"household\": \"H05\", \"resource\": null},\n  {\"household\": \"H06\", \"resource\": \"R04\"},\n  {\"household\": \"H07\", \"resource\": \"R02\"},\n  {\"household\": \"H08\", \"resource\": null}\n]\n```",
+   "response_len": 1266,
+   "response": "먼저 각 가구의 요구사항을 분석하겠습니다.\n\n**사용 가능 자원 확인:**\n- R05: 사용 불가 → 제외\n- R06: 사용 불가 → 제외\n- R07: 출력 파형 미확인 → 제외 (제약 2)\n- R01, R02, R03, R04: 가용, 정현파 AC, 잔량 20% 초과 → 사용 가능\n\n**가구별 필요 전력 (피크 미상 시 정격×1.25):**\n- H01: 거치형 산소발생기, 피크 640W (명시됨)\n- H02: 휴대용 산소발생기, 피크 미상 → 120×1.25=150W\n- H03: 거치형 산소발생기, 피크 640W\n- H04: 인공호흡기 B계열, 피크 미상 → 100×1.25=125W\n- H05: 인공호흡기 A계열, 피크 120W (명시됨)\n- H06: 석션기, 피크 미상 → 60×1.25=75W\n- H07: 인공호흡기 A계열, 피크 120W\n- H08: 인공호흡기 A계열, 피크 120W\n\n**모든 기기가 AC 입력 가능 → 정현파 AC 자원 사용 가능 (제약 1 충족)**\n\n**자원 연속출력:** R01/R02/R03=1000W, R04=300W → 모두 각 기기 피크 충족 가능\n\n**우선순위: 잔여안전시간 하한이 짧고 위험한 가구부터 배정 (H01=0, H03=0 최우선, H06=8, H07=47 등)**\n\n자원은 4대뿐이므로 4가구만 배정 가능. 가장 긴급한 4곳(H01, H03, H06, H07)에 배정하고, 도착시간이 빠른 자원을 매칭합니다.\n\n- H01(긴급, 0분): R01 또는 R03(11분 도착, 가장 빠름) → R03 배정\n- H03(긴급, 0분): R01(13분) 또는 R02(13분) → R01 배정 (R01이 90% 더 넉넉)\n- H06(8분): R04(15분, 300W>75W 충분) → R04 배정\n- H07(47분): R02(14분) → R02 배정\n\n나머지 H02, H04, H05, H08은 자원 부족으로 배정 불가.\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":\"R03\"},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":\"R01\"},\n  {\"household\":\"H04\",\"resource\":null},\n  {\"household\":\"H05\",\"resource\":null},\n  {\"household\":\"H06\",\"resource\":\"R04\"},\n  {\"household\":\"H07\",\"resource\":\"R02\"},\n  {\"household\":\"H08\",\"resource\":null}\n]\n```",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R01"
+     "resource": "R03"
     },
     {
      "household": "H02",
@@ -965,7 +991,7 @@
     },
     {
      "household": "H03",
-     "resource": "R03"
+     "resource": "R01"
     },
     {
      "household": "H04",
@@ -988,7 +1014,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:08:31+09:00"
+   "at": "2026-10-25T21:10:48+09:00"
   },
   {
    "seed": 14,
@@ -998,6 +1024,7 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
+   "error_kinds": [],
    "response_len": 182,
    "response": "[{\"household\":\"H01\",\"resource\":\"R02\"},{\"household\":\"H02\",\"resource\":null},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null}]",
    "assignment": [
@@ -1022,7 +1049,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:01:53+09:00"
+   "at": "2026-10-25T21:10:39+09:00"
   },
   {
    "seed": 14,
@@ -1032,8 +1059,9 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1231,
-   "response": "분석해보겠습니다.\n\n**가구별 요구사항:**\n- H01: 인공호흡기 B계열 → 정현파 AC 또는 VENT_B 전용 배터리 필요. 피크 미상 → 정격×1.25 = 125W\n- H02: 휴대용 산소발생기 → AC 또는 DC12_24 가능하지만 의료기기 규정(1)은 \"의료기기엔 정현파 AC 또는 같은 계열 전용 배터리\"이므로 AC 자원만 가능. 피크 미상 → 120×1.25 = 150W\n- H03: 석션기 → 정현파 AC 필요. 피크 미상 → 60×1.25 = 75W\n- H04: 거치형 산소발생기 → 정현파 AC 필요. 피크 640W (명시됨)\n- H05: 인공호흡기 B계열 → 정현파 AC 또는 VENT_B 전용 배터리. 125W 필요\n\n**자원 검토:**\n- R01: 사용 불가 → 제외\n- R02: 정현파 AC, 1000W, 97% 가용 → 사용 가능\n- R03: VENT_A 계열 전용 배터리 → H01, H05는 VENT_B 계열이므로 호환 불가 (계열 불일치)\n\n**배정 가능성:**\nR02 하나만 가용한 자원입니다. R03은 VENT_A 전용이라 H01, H05(VENT_B)에는 사용 불가.\n\n따라서 R02를 가장 효율적으로 배정해야 합니다 (멈추는 가구 수 최소화 → 멈추는 시간 최소화).\n\n**R02를 어디에 배정할지 결정:**\n- 잔여안전시간 하한이 가장 짧은 가구(가장 급한 곳)에 배정해야 \"멈추는 시간 합\"을 최소화\n- H03: 13분 (가장 급함, 정보등급 기기 화면 값으로 신뢰도 높음)\n- H02: 80분\n- H04: 58분\n- H05: 125분\n- H01: 204분\n\nR02는 정현파 AC, 1000W로 모든 기기 요구 전력을 충족합니다. 도착시간도 고려:\n- H03에 R02 도착: 14분. H03 안전시간 하한 13분 → 이미 늦을 수 있으나, 다른 자원 R03은 호환 불가이므로 선택지 없음.\n\n가장 시급하고(13분) 멈추면 손실이 큰 H03에 R02를 배정하는 것이 전체 \"멈추는 시간 합\" 최소화에 부합합니다. 나머지 가구는 자원 부족으로 배정 불가.\n\n```json\n[\n  {\"household\": \"H01\", \"resource\": null},\n  {\"household\": \"H02\", \"resource\": null},\n  {\"household\": \"H03\", \"resource\": \"R02\"},\n  {\"household\": \"H04\", \"resource\": null},\n  {\"household\": \"H05\", \"resource\": null}\n]\n```",
+   "error_kinds": [],
+   "response_len": 1241,
+   "response": "각 가구와 기기 요구사항을 분석하겠습니다.\n\n**필요 전력 계산 (피크 미상 → 정격×1.25):**\n- H01 인공호흡기B: 100×1.25=125W, AC 필요\n- H02 휴대용산소: 120×1.25=150W, AC·DC 가능\n- H03 석션기: 60×1.25=75W, AC·DC 가능\n- H04 거치형산소: 320→피크 640W 명시, AC 필요\n- H05 인공호흡기B: 100×1.25=125W, AC 필요\n\n**자원 검토:**\n- R01: 77% 잔량 → 20% 초과이나 \"사용 불가\" 명시 → 제외\n- R02: 정현파 AC, 1000W, 97% → 가용, 모든 AC 기기에 사용 가능\n- R03: VENT_A 계열 전용 배터리 → H01/H05는 VENT_B 계열이라 부적합 (계열 불일치, 제약1 위반)\n\n**배정 가능 자원은 R02 하나뿐 (R01 불가, R03은 VENT_A 전용이라 어떤 가구에도 안 맞음).**\n\nR02를 어느 가구에 배정할지 결정:\n- 모든 가구가 AC 지원하므로 R02(1000W, 정현파AC) 전력 조건은 다 만족\n- 목표: 멈추는 가구 수 최소화 → 1대만 있으므로 4가구는 불가피하게 중단\n- 남은 안전시간이 가장 짧은 가구를 구하는 것이 \"멈추는 시간\" 최소화에 기여\n- H03(13분)이 가장 임박 → 그러나 도착시간도 고려해야 함\n\n**도착시간 대비 안전시간 여유:**\n- H01: 204-13=191\n- H02: 80-11=69\n- H03: 13-14=-1 (이미 늦음, R02라도 14분 소요)\n- H04: 58-15=43\n- H05: 125-15=110\n\nH03은 R02 도착(14분) 전에 안전시간(13분)이 끝나버려 구조 실패 가능성이 높음. 가장 긴급하면서 자원 도착으로 살릴 수 있는 곳은 **H04**(여유 43분, 도착 15분으로 아슬아슬하지만 성공)나 **H02**(여유 69분)입니다.\n\n가장 \"정지 위험이 임박했으면서 자원 도착으로 구제 가능한\" 가구는 **H04**(58분 한도, R02 15분 도착 → 성공, 실패 시 정지시간 길어짐 방지)로 판단하여 배정합니다.\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":null},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R02\"},\n  {\"household\":\"H05\",\"resource\":null}\n]\n```",
    "assignment": [
     {
      "household": "H01",
@@ -1045,18 +1073,18 @@
     },
     {
      "household": "H03",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H04",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H05",
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:02:03+09:00"
+   "at": "2026-10-25T21:10:52+09:00"
   },
   {
    "seed": 15,
@@ -1066,16 +1094,17 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 291,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R02\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null}]",
+   "error_kinds": [],
+   "response_len": 292,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R02\"},{\"household\":\"H02\",\"resource\":null},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":\"R01\"},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":\"R03\"}]",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R01"
+     "resource": "R02"
     },
     {
      "household": "H02",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H03",
@@ -1087,7 +1116,7 @@
     },
     {
      "household": "H05",
-     "resource": null
+     "resource": "R01"
     },
     {
      "household": "H06",
@@ -1099,56 +1128,27 @@
     },
     {
      "household": "H08",
-     "resource": null
+     "resource": "R03"
     }
    ],
-   "at": "2026-10-25T20:01:55+09:00"
+   "at": "2026-10-25T21:10:49+09:00"
   },
   {
    "seed": 15,
    "kind": "small",
    "model": "claude-sonnet-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 1631,
-   "response": "분석해보겠습니다.\n\n**기기별 필요 출력:**\n- 인공호흡기 A계열: 피크 120W, AC·DC12_24, 의료기기 → 정현파 AC 필수\n- 석션기: 피크 미상 → 정격×1.25 = 75W, AC·DC12_24, 의료기기 → 정현파 AC 필수\n- H06: 기기 \"석션기\"는 알지만 정보등급 \"모름\" → 기기 자체는 알려져 있으므로 석션기 규격(75W) 적용\n\n**자원 상태 확인 (가용 + 잔량>20%):**\n- R01: 62%, 가용 → 사용 가능, 1000W\n- R02: 82%, 가용 → 사용 가능, 1000W\n- R03: 57%, 가용 → 사용 가능, 300W\n- 모두 정현파 AC → 의료기기 요건 충족\n\n**자원은 1대당 1가구, 총 3대 → 8가구 중 3가구만 배정 가능**\n\n**긴급도(잔여안전시간) 순으로 우선순위 판단, 도착시간 고려:**\n- H07: 석션기, 8분 (가장 긴급)\n- H04: 석션기, 29분\n- H01: 인공호흡기A, 53분\n- H05: 석션기, 69분\n- H08: 인공호흡기A, 178분\n- H02: 인공호흡기A, 239분\n- H03: 인공호흡기A, 302분\n- H06: 모름 (안전시간 불명 → 즉시 위험 가정, 최우선 취급 필요하나 정보신뢰도 낮음. 그러나 \"모름\"은 최악으로 간주해 긴급 처리)\n\n**목표: 정지 가구 수 최소화 → 정지 시간 합 최소화**\n자원 3대이므로 최대 3가구 구제 가능. 가장 안전시간이 짧은 가구(정전시 기기정지까지 시간이 짧은) 순으로 배정해야 \"총 정지 시간\"이 최소화됩니다 (늦게 배정될수록 정지 시간 길어짐).\n\n안전시간 하한 기준 정렬: H07(8) < H04(29) < H01(53) < H05(69) < H08(178) < H02(239) < H03(302), H06(모름→최악 취급, 0분 가정)\n\n→ H06, H07, H04 가 가장 시급 (안전시간 거의 0)\n\n**도착시간 매칭 (각 자원은 1가구에만):**\n- H06에게 가장 빨리 오는 자원: R01(13), R02(14), R03(13) → R01 또는 R03(13분)\n- H07에게 가장 빨리 오는 자원: R01(11), R02(14), R03(11) → R01 또는 R03(11분)\n- H04에게 가장 빨리 오는 자원: R02(13) (R01:15, R03:15)\n\n**배정 최적화:**\n- H07 → R01 (11분, 석션기 75W ≤ 1000W 충족)\n- H06 → R03 (13분, 석션기 75W ≤ 300W 충족)\n- H04 → R02 (13분, 석션기 75W ≤ 1000W 충족)\n\n나머지(H01, H02, H03, H05, H08)는 자원 부족으로 null 처리.\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":null},\n  {\"household\":\"H02\",\"resource\":null},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R02\"},\n  {\"household\":\"H05\",\"resource\":null},\n  {\"household\":\"H06\",\"resource\":\"R03\"},\n  {\"household\":\"H07\",\"resource\":\"R01\"},\n  {\"household\":\"H08\",\"resource\":null}\n]\n```",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": null
-    },
-    {
-     "household": "H02",
-     "resource": null
-    },
-    {
-     "household": "H03",
-     "resource": null
-    },
-    {
-     "household": "H04",
-     "resource": "R02"
-    },
-    {
-     "household": "H05",
-     "resource": null
-    },
-    {
-     "household": "H06",
-     "resource": "R03"
-    },
-    {
-     "household": "H07",
-     "resource": "R01"
-    },
-    {
-     "household": "H08",
-     "resource": null
-    }
+   "ok": false,
+   "parse_fail": true,
+   "attempts": 2,
+   "call_errors": 2,
+   "error_kinds": [
+    "invalid_output",
+    "invalid_output"
    ],
-   "at": "2026-10-25T20:02:08+09:00"
+   "response_len": 0,
+   "response": "",
+   "assignment": [],
+   "at": "2026-10-25T21:11:33+09:00"
   },
   {
    "seed": 1001,
@@ -1158,16 +1158,17 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1468,
-   "response": "```json\n[\n{\"household\":\"H01\",\"resource\":\"R03\"},\n{\"household\":\"H02\",\"resource\":\"R05\"},\n{\"household\":\"H03\",\"resource\":\"R02\"},\n{\"household\":\"H04\",\"resource\":\"R04\"},\n{\"household\":\"H05\",\"resource\":\"R01\"},\n{\"household\":\"H06\",\"resource\":\"R08\"},\n{\"household\":\"H07\",\"resource\":\"R06\"},\n{\"household\":\"H08\",\"resource\":\"R07\"},\n{\"household\":\"H09\",\"resource\":\"R09\"},\n{\"household\":\"H10\",\"resource\":\"R10\"},\n{\"household\":\"H11\",\"resource\":\"R11\"},\n{\"household\":\"H12\",\"resource\":null},\n{\"household\":\"H13\",\"resource\":null},\n{\"household\":\"H14\",\"resource\":null},\n{\"household\":\"H15\",\"resource\":null},\n{\"household\":\"H16\",\"resource\":null},\n{\"household\":\"H17\",\"resource\":null},\n{\"household\":\"H18\",\"resource\":null},\n{\"household\":\"H19\",\"resource\":null},\n{\"household\":\"H20\",\"resource\":null},\n{\"household\":\"H21\",\"resource\":null},\n{\"household\":\"H22\",\"resource\":null},\n{\"household\":\"H23\",\"resource\":null},\n{\"household\":\"H24\",\"resource\":null},\n{\"household\":\"H25\",\"resource\":null},\n{\"household\":\"H26\",\"resource\":null},\n{\"household\":\"H27\",\"resource\":null},\n{\"household\":\"H28\",\"resource\":null},\n{\"household\":\"H29\",\"resource\":null},\n{\"household\":\"H30\",\"resource\":null},\n{\"household\":\"H31\",\"resource\":null},\n{\"household\":\"H32\",\"resource\":null},\n{\"household\":\"H33\",\"resource\":null},\n{\"household\":\"H34\",\"resource\":null},\n{\"household\":\"H35\",\"resource\":null},\n{\"household\":\"H36\",\"resource\":null},\n{\"household\":\"H37\",\"resource\":null},\n{\"household\":\"H38\",\"resource\":null},\n{\"household\":\"H39\",\"resource\":null}\n]\n```",
+   "error_kinds": [],
+   "response_len": 1452,
+   "response": "```json\n[{\"household\":\"H01\",\"resource\":\"R06\"},{\"household\":\"H02\",\"resource\":null},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R01\"},{\"household\":\"H05\",\"resource\":\"R13\"},{\"household\":\"H06\",\"resource\":\"R05\"},{\"household\":\"H07\",\"resource\":\"R04\"},{\"household\":\"H08\",\"resource\":\"R10\"},{\"household\":\"H09\",\"resource\":\"R03\"},{\"household\":\"H10\",\"resource\":\"R11\"},{\"household\":\"H11\",\"resource\":\"R07\"},{\"household\":\"H12\",\"resource\":\"R08\"},{\"household\":\"H13\",\"resource\":\"R12\"},{\"household\":\"H14\",\"resource\":\"R09\"},{\"household\":\"H15\",\"resource\":\"R12\"},{\"household\":\"H16\",\"resource\":\"R13\"},{\"household\":\"H17\",\"resource\":\"R05\"},{\"household\":\"H18\",\"resource\":\"R10\"},{\"household\":\"H19\",\"resource\":\"R02\"},{\"household\":\"H20\",\"resource\":\"R04\"},{\"household\":\"H21\",\"resource\":\"R07\"},{\"household\":\"H22\",\"resource\":\"R03\"},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":\"R08\"},{\"household\":\"H26\",\"resource\":\"R01\"},{\"household\":\"H27\",\"resource\":\"R06\"},{\"household\":\"H28\",\"resource\":\"R02\"},{\"household\":\"H29\",\"resource\":\"R05\"},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":\"R06\"},{\"household\":\"H32\",\"resource\":\"R11\"},{\"household\":\"H33\",\"resource\":\"R09\"},{\"household\":\"H34\",\"resource\":\"R04\"},{\"household\":\"H35\",\"resource\":\"R03\"},{\"household\":\"H36\",\"resource\":\"R09\"},{\"household\":\"H37\",\"resource\":\"R01\"},{\"household\":\"H38\",\"resource\":\"R10\"},{\"household\":\"H39\",\"resource\":\"R08\"}]\n```",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R03"
+     "resource": "R06"
     },
     {
      "household": "H02",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H03",
@@ -1175,79 +1176,79 @@
     },
     {
      "household": "H04",
-     "resource": "R04"
-    },
-    {
-     "household": "H05",
      "resource": "R01"
     },
     {
+     "household": "H05",
+     "resource": "R13"
+    },
+    {
      "household": "H06",
-     "resource": "R08"
+     "resource": "R05"
     },
     {
      "household": "H07",
-     "resource": "R06"
+     "resource": "R04"
     },
     {
      "household": "H08",
-     "resource": "R07"
-    },
-    {
-     "household": "H09",
-     "resource": "R09"
-    },
-    {
-     "household": "H10",
      "resource": "R10"
     },
     {
-     "household": "H11",
+     "household": "H09",
+     "resource": "R03"
+    },
+    {
+     "household": "H10",
      "resource": "R11"
     },
     {
+     "household": "H11",
+     "resource": "R07"
+    },
+    {
      "household": "H12",
-     "resource": null
+     "resource": "R08"
     },
     {
      "household": "H13",
-     "resource": null
+     "resource": "R12"
     },
     {
      "household": "H14",
-     "resource": null
+     "resource": "R09"
     },
     {
      "household": "H15",
-     "resource": null
+     "resource": "R12"
     },
     {
      "household": "H16",
-     "resource": null
+     "resource": "R13"
     },
     {
      "household": "H17",
-     "resource": null
+     "resource": "R05"
     },
     {
      "household": "H18",
-     "resource": null
+     "resource": "R10"
     },
     {
      "household": "H19",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H20",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H21",
-     "resource": null
+     "resource": "R07"
     },
     {
      "household": "H22",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H23",
@@ -1259,23 +1260,23 @@
     },
     {
      "household": "H25",
-     "resource": null
+     "resource": "R08"
     },
     {
      "household": "H26",
-     "resource": null
+     "resource": "R01"
     },
     {
      "household": "H27",
-     "resource": null
+     "resource": "R06"
     },
     {
      "household": "H28",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H29",
-     "resource": null
+     "resource": "R05"
     },
     {
      "household": "H30",
@@ -1283,42 +1284,42 @@
     },
     {
      "household": "H31",
-     "resource": null
+     "resource": "R06"
     },
     {
      "household": "H32",
-     "resource": null
+     "resource": "R11"
     },
     {
      "household": "H33",
-     "resource": null
+     "resource": "R09"
     },
     {
      "household": "H34",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H35",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H36",
-     "resource": null
+     "resource": "R09"
     },
     {
      "household": "H37",
-     "resource": null
+     "resource": "R01"
     },
     {
      "household": "H38",
-     "resource": null
+     "resource": "R10"
     },
     {
      "household": "H39",
-     "resource": null
+     "resource": "R08"
     }
    ],
-   "at": "2026-10-25T20:02:06+09:00"
+   "at": "2026-10-25T21:10:54+09:00"
   },
   {
    "seed": 1001,
@@ -1335,7 +1336,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:08:50+09:00"
+   "at": "2026-10-25T21:11:34+09:00"
   },
   {
    "seed": 1002,
@@ -1345,40 +1346,41 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1448,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":\"R05\"},{\"household\":\"H04\",\"resource\":\"R02\"},{\"household\":\"H05\",\"resource\":\"R04\"},{\"household\":\"H06\",\"resource\":\"R06\"},{\"household\":\"H07\",\"resource\":\"R07\"},{\"household\":\"H08\",\"resource\":null},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null},{\"household\":\"H33\",\"resource\":null},{\"household\":\"H34\",\"resource\":null},{\"household\":\"H35\",\"resource\":null},{\"household\":\"H36\",\"resource\":null},{\"household\":\"H37\",\"resource\":null},{\"household\":\"H38\",\"resource\":null},{\"household\":\"H39\",\"resource\":null},{\"household\":\"H40\",\"resource\":null}]",
+   "error_kinds": [],
+   "response_len": 3401,
+   "response": "Let me work through the constraints systematically, since there are many.\n\n**Eligibility per device:**\n- VENT_A (인공호흡기 A계열): 정현파 AC or VENT_A 전용 배터리 (R08, R09, 240min each, usable 60%/92%). Peak 120W if known, else 90×1.25 = 112.5 → need continuous ≥120 (A peak known = 120). Portable gens R01–R07 (300W+ AC sine), R10 excluded (파형 미확인).\n- VENT_B: AC only, sine. Peak unknown → 100×1.25 = 125W. R01–R07.\n- O2 (거치형): AC, peak 640W. R01–R07 (300W units fail: 300<640; R01, R02 1000W OK; R05–R07 3000W OK). So R01, R02, R05, R06, R07.\n- O2_PORT (휴대용 산소): peak unknown → 120×1.25=150W. AC or DC. R01–R07.\n- SUCTION: peak unknown → 75W. R01–R07 (R10 excluded).\n- COUGH: AC, peak unknown → 187.5W. R01–R07.\n- Unknown device (H03, H28): 640W rule → R01, R02, R05, R06, R07.\n- Excluded: availability 모두 가용; 잔량 ≥20% all ok.\n\n**Priority:** Households with shortest safe time (0 min) first, since they lose power soonest. Remaining resources must cover the households at risk. Time-to-reach matters for tie-breaking.\n\n**Households with 0 min (urgent):** H04 (O2), H07 (O2), H16 (O2), H18 (O2), H20 (O2), H25, H26, H27 (O2), and H09 (O2_PORT, 0).\n\n**Assignment plan:**\n- O2 homes with 0 min need 640W-capable: R05, R06, R07 (3000W, 94%/76%/66%), R01, R02 (1000W). That's 5 for 8 O2 homes (H04, H07, H16, H18, H20, H25, H26, H27) plus H03/H28 unknowns also need them. Total high-power demand: 10 homes (8 O2 + H03 + H28), only 5 capable units. Non-capable units are not usable for them.\n\nPrioritizing by smallest time-to-failure and proximity, the 5 high-power units go to the 0-min O2 homes with best ETA: H04(R05 12/R06 14 ...), etc. The remaining 0-min O2 homes (3) plus H03, H28 cannot be served by any allowed resource, so they get null.\n\nGiven the constraint set, the assignment below uses each allowed resource once, prioritizing 0-minute homes and then nearest-arrival pairings, with null where no eligible resource remains.\n\n```json\n[{\"household\":\"H01\",\"resource\":\"R08\"},{\"household\":\"H02\",\"resource\":\"R09\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":\"R05\"},{\"household\":\"H05\",\"resource\":\"R03\"},{\"household\":\"H06\",\"resource\":\"R04\"},{\"household\":\"H07\",\"resource\":\"R06\"},{\"household\":\"H08\",\"resource\":\"R01\"},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":\"R02\"},{\"household\":\"H11\",\"resource\":\"R07\"},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":\"R03\"},{\"household\":\"H14\",\"resource\":\"R04\"},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":\"R01\"},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":\"R02\"},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":\"R05\"},{\"household\":\"H22\",\"resource\":\"R06\"},{\"household\":\"H23\",\"resource\":\"R07\"},{\"household\":\"H24\",\"resource\":\"R03\"},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":\"R04\"},{\"household\":\"H30\",\"resource\":\"R08\"},{\"household\":\"H31\",\"resource\":\"R09\"},{\"household\":\"H32\",\"resource\":\"R01\"},{\"household\":\"H33\",\"resource\":\"R02\"},{\"household\":\"H34\",\"resource\":\"R03\"},{\"household\":\"H35\",\"resource\":\"R04\"},{\"household\":\"H36\",\"resource\":\"R05\"},{\"household\":\"H37\",\"resource\":\"R06\"},{\"household\":\"H38\",\"resource\":\"R07\"},{\"household\":\"H39\",\"resource\":null},{\"household\":\"H40\",\"resource\":null}]\n```",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R03"
+     "resource": "R08"
     },
     {
      "household": "H02",
-     "resource": "R01"
+     "resource": "R09"
     },
     {
      "household": "H03",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H04",
-     "resource": "R02"
+     "resource": "R05"
     },
     {
      "household": "H05",
-     "resource": "R04"
+     "resource": "R03"
     },
     {
      "household": "H06",
-     "resource": "R06"
+     "resource": "R04"
     },
     {
      "household": "H07",
-     "resource": "R07"
+     "resource": "R06"
     },
     {
      "household": "H08",
-     "resource": null
+     "resource": "R01"
     },
     {
      "household": "H09",
@@ -1386,11 +1388,11 @@
     },
     {
      "household": "H10",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H11",
-     "resource": null
+     "resource": "R07"
     },
     {
      "household": "H12",
@@ -1398,11 +1400,11 @@
     },
     {
      "household": "H13",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H14",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H15",
@@ -1414,7 +1416,7 @@
     },
     {
      "household": "H17",
-     "resource": null
+     "resource": "R01"
     },
     {
      "household": "H18",
@@ -1422,7 +1424,7 @@
     },
     {
      "household": "H19",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H20",
@@ -1430,19 +1432,19 @@
     },
     {
      "household": "H21",
-     "resource": null
+     "resource": "R05"
     },
     {
      "household": "H22",
-     "resource": null
+     "resource": "R06"
     },
     {
      "household": "H23",
-     "resource": null
+     "resource": "R07"
     },
     {
      "household": "H24",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H25",
@@ -1462,43 +1464,43 @@
     },
     {
      "household": "H29",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H30",
-     "resource": null
+     "resource": "R08"
     },
     {
      "household": "H31",
-     "resource": null
+     "resource": "R09"
     },
     {
      "household": "H32",
-     "resource": null
+     "resource": "R01"
     },
     {
      "household": "H33",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H34",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H35",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H36",
-     "resource": null
+     "resource": "R05"
     },
     {
      "household": "H37",
-     "resource": null
+     "resource": "R06"
     },
     {
      "household": "H38",
-     "resource": null
+     "resource": "R07"
     },
     {
      "household": "H39",
@@ -1509,7 +1511,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:02:10+09:00"
+   "at": "2026-10-25T21:11:41+09:00"
   },
   {
    "seed": 1002,
@@ -1526,7 +1528,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:09:11+09:00"
+   "at": "2026-10-25T21:12:14+09:00"
   },
   {
    "seed": 1003,
@@ -1536,16 +1538,17 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1209,
-   "response": "```json\n[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R01\"},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":\"R05\"},{\"household\":\"H07\",\"resource\":\"R06\"},{\"household\":\"H08\",\"resource\":\"R07\"},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":\"R02\"},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null},{\"household\":\"H33\",\"resource\":null}]\n```",
+   "error_kinds": [],
+   "response_len": 1195,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R06\"},{\"household\":\"H02\",\"resource\":\"R07\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R03\"},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":\"R04\"},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":\"R01\"},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null},{\"household\":\"H33\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R03"
+     "resource": "R06"
     },
     {
      "household": "H02",
-     "resource": "R04"
+     "resource": "R07"
     },
     {
      "household": "H03",
@@ -1553,7 +1556,7 @@
     },
     {
      "household": "H04",
-     "resource": "R01"
+     "resource": "R03"
     },
     {
      "household": "H05",
@@ -1561,15 +1564,15 @@
     },
     {
      "household": "H06",
-     "resource": "R05"
+     "resource": "R04"
     },
     {
      "household": "H07",
-     "resource": "R06"
+     "resource": null
     },
     {
      "household": "H08",
-     "resource": "R07"
+     "resource": "R01"
     },
     {
      "household": "H09",
@@ -1577,7 +1580,7 @@
     },
     {
      "household": "H10",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H11",
@@ -1672,7 +1675,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:02:27+09:00"
+   "at": "2026-10-25T21:11:43+09:00"
   },
   {
    "seed": 1003,
@@ -1689,7 +1692,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:09:37+09:00"
+   "at": "2026-10-25T21:12:28+09:00"
   },
   {
    "seed": 1004,
@@ -1699,199 +1702,200 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1752,
-   "response": "```json\n[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":\"R01\"},{\"household\":\"H04\",\"resource\":\"R02\"},{\"household\":\"H05\",\"resource\":\"R05\"},{\"household\":\"H06\",\"resource\":\"R06\"},{\"household\":\"H07\",\"resource\":\"R07\"},{\"household\":\"H08\",\"resource\":\"R03\"},{\"household\":\"H09\",\"resource\":\"R04\"},{\"household\":\"H10\",\"resource\":\"R02\"},{\"household\":\"H11\",\"resource\":\"R01\"},{\"household\":\"H12\",\"resource\":\"R05\"},{\"household\":\"H13\",\"resource\":\"R06\"},{\"household\":\"H14\",\"resource\":\"R07\"},{\"household\":\"H15\",\"resource\":\"R03\"},{\"household\":\"H16\",\"resource\":\"R04\"},{\"household\":\"H17\",\"resource\":\"R02\"},{\"household\":\"H18\",\"resource\":\"R01\"},{\"household\":\"H19\",\"resource\":\"R05\"},{\"household\":\"H20\",\"resource\":\"R06\"},{\"household\":\"H21\",\"resource\":\"R07\"},{\"household\":\"H22\",\"resource\":\"R03\"},{\"household\":\"H23\",\"resource\":\"R04\"},{\"household\":\"H24\",\"resource\":\"R02\"},{\"household\":\"H25\",\"resource\":\"R01\"},{\"household\":\"H26\",\"resource\":\"R05\"},{\"household\":\"H27\",\"resource\":\"R06\"},{\"household\":\"H28\",\"resource\":\"R07\"},{\"household\":\"H29\",\"resource\":\"R03\"},{\"household\":\"H30\",\"resource\":\"R04\"},{\"household\":\"H31\",\"resource\":\"R02\"},{\"household\":\"H32\",\"resource\":\"R01\"},{\"household\":\"H33\",\"resource\":\"R05\"},{\"household\":\"H34\",\"resource\":\"R06\"},{\"household\":\"H35\",\"resource\":\"R07\"},{\"household\":\"H36\",\"resource\":\"R03\"},{\"household\":\"H37\",\"resource\":\"R04\"},{\"household\":\"H38\",\"resource\":\"R02\"},{\"household\":\"H39\",\"resource\":\"R01\"},{\"household\":\"H40\",\"resource\":\"R05\"},{\"household\":\"H41\",\"resource\":\"R06\"},{\"household\":\"H42\",\"resource\":\"R07\"},{\"household\":\"H43\",\"resource\":\"R03\"},{\"household\":\"H44\",\"resource\":\"R04\"},{\"household\":\"H45\",\"resource\":\"R02\"},{\"household\":\"H46\",\"resource\":\"R01\"},{\"household\":\"H47\",\"resource\":\"R05\"}]\n```",
+   "error_kinds": [],
+   "response_len": 1695,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R06\"},{\"household\":\"H02\",\"resource\":\"R07\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null},{\"household\":\"H33\",\"resource\":null},{\"household\":\"H34\",\"resource\":null},{\"household\":\"H35\",\"resource\":null},{\"household\":\"H36\",\"resource\":null},{\"household\":\"H37\",\"resource\":null},{\"household\":\"H38\",\"resource\":null},{\"household\":\"H39\",\"resource\":null},{\"household\":\"H40\",\"resource\":null},{\"household\":\"H41\",\"resource\":null},{\"household\":\"H42\",\"resource\":null},{\"household\":\"H43\",\"resource\":null},{\"household\":\"H44\",\"resource\":null},{\"household\":\"H45\",\"resource\":null},{\"household\":\"H46\",\"resource\":null},{\"household\":\"H47\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R03"
+     "resource": "R06"
     },
     {
      "household": "H02",
-     "resource": "R04"
+     "resource": "R07"
     },
     {
      "household": "H03",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H04",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H05",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H06",
-     "resource": "R06"
+     "resource": null
     },
     {
      "household": "H07",
-     "resource": "R07"
+     "resource": null
     },
     {
      "household": "H08",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H09",
-     "resource": "R04"
+     "resource": null
     },
     {
      "household": "H10",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H11",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H12",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H13",
-     "resource": "R06"
+     "resource": null
     },
     {
      "household": "H14",
-     "resource": "R07"
+     "resource": null
     },
     {
      "household": "H15",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H16",
-     "resource": "R04"
+     "resource": null
     },
     {
      "household": "H17",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H18",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H19",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H20",
-     "resource": "R06"
+     "resource": null
     },
     {
      "household": "H21",
-     "resource": "R07"
+     "resource": null
     },
     {
      "household": "H22",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H23",
-     "resource": "R04"
+     "resource": null
     },
     {
      "household": "H24",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H25",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H26",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H27",
-     "resource": "R06"
+     "resource": null
     },
     {
      "household": "H28",
-     "resource": "R07"
+     "resource": null
     },
     {
      "household": "H29",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H30",
-     "resource": "R04"
+     "resource": null
     },
     {
      "household": "H31",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H32",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H33",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H34",
-     "resource": "R06"
+     "resource": null
     },
     {
      "household": "H35",
-     "resource": "R07"
+     "resource": null
     },
     {
      "household": "H36",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H37",
-     "resource": "R04"
+     "resource": null
     },
     {
      "household": "H38",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H39",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H40",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H41",
-     "resource": "R06"
+     "resource": null
     },
     {
      "household": "H42",
-     "resource": "R07"
+     "resource": null
     },
     {
      "household": "H43",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H44",
-     "resource": "R04"
+     "resource": null
     },
     {
      "household": "H45",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H46",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H47",
-     "resource": "R05"
+     "resource": null
     }
    ],
-   "at": "2026-10-25T20:02:35+09:00"
+   "at": "2026-10-25T21:12:27+09:00"
   },
   {
    "seed": 1004,
@@ -1908,7 +1912,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:09:57+09:00"
+   "at": "2026-10-25T21:13:08+09:00"
   },
   {
    "seed": 1005,
@@ -1916,14 +1920,15 @@
    "model": "claude-haiku-5-5",
    "ok": true,
    "parse_fail": false,
-   "attempts": 1,
+   "attempts": 2,
    "call_errors": 0,
-   "response_len": 3260,
-   "response": "I'll work through this allocation using the constraints, then output the JSON.\n\nKey assumptions and eligibility filters:\n- Peak power unknown → use rated × 1.25 (or 640 W if device unknown). Applied per device.\n- Medical devices (VENT_A, VENT_B, O2, COUGH) require sine-wave AC or matching dedicated battery.\n- Resources must have sufficient continuous output ≥ required peak.\n- R11 excluded (unverified waveform). R10 is a dedicated battery for VENT_A only.\n- Energy: R01–R05 are 1000 Wh, R06–R07 300 Wh, R08–R09 5000 Wh (3000 W output). R10 240 min capacity for VENT_A.\n\nRequired peak power per device:\n- VENT_A: 120 W (peak listed)\n- VENT_B: 100×1.25 = 125 W\n- O2 stationary: 640 W\n- O2 portable: 120×1.25 = 150 W\n- Suction: 60×1.25 = 75 W\n- COUGH: 150×1.25 = 187.5 W\n\nRemaining time is 117 to 355 min. Households with near-zero safe time (H04, H11, H16, H17) need the earliest arrivals. The allocation below prioritizes households with lowest safe-time margin, matching fast-arriving, compatible resources, and checking energy budgets.\n\nEach household gets one resource, and each resource serves one household. With 34 households and 10 usable resources, the rest must be null. Since only 10 resources exist, I allocate to the 10 highest-priority households and leave the rest null.\n\nPriority (safe time ≤ 3 min or near-zero first, then by compatibility and arrival time):\n- H04 (0 min, O2 stationary, needs R08/R09 for 640 W): R08 arrives 18 min.\n- H11 (0 min, O2 stationary): R09 arrives 26 min.\n- H16 (0 min, O2 stationary): R03 arrives 23 min — but R03 is 1000 W, cannot meet 640 W peak? 1000 ≥ 640, so R03 is compatible; arrival 23.\n- H17 (0 min, suction): R01 arrives 26 min.\n- H30 (2 min, suction): R06 arrives 22 min.\n- H03 (3 min, suction): R02 arrives 22 min.\n- H33 (7 min, suction): R07 arrives 21 min.\n- H25 (18 min, COUGH 187.5 W): R04 arrives 22 min.\n- H14 (10 min, suction): R05 arrives 21 min.\n- H12 (14 min, O2 portable 150 W): R01 is used; R06 used; R10 is VENT_A only; use R07 arrives 19 min.\n\nOutput:\n\n[{\"household\":\"H01\",\"resource\":null},{\"household\":\"H02\",\"resource\":null},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R08\"},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":\"R09\"},{\"household\":\"H12\",\"resource\":\"R07\"},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":\"R05\"},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":\"R03\"},{\"household\":\"H17\",\"resource\":\"R01\"},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":\"R04\"},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":\"R06\"},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null},{\"household\":\"H33\",\"resource\":null},{\"household\":\"H34\",\"resource\":null}]",
+   "error_kinds": [],
+   "response_len": 2823,
+   "response": "I'll compute the assignment under the given constraints. Let me work through the feasibility carefully.\n\n**Eligibility rules applied:**\n- Medical devices need pure sine AC or same-family dedicated battery.\n- Peak power: use stated peak; if unknown, rated × 1.25; if device unknown, 640 W.\n- Continuous output ≥ peak.\n- R10 is 전용 배터리 for VENT_A only; R11 unusable; R01–R09 are sine AC, so compatible with all AC-input devices.\n- Safety-time lower bound: for each household, runtime must be considered. Households with 잔여안전시간 0 (H04, H11, H16, H17) or very low values (H03 3, H30 2, H33 7, H25 18, H12 14, H32 14, H10…) are priority. Only one resource per household.\n\n**Power check per device (peak):**\n- VENT_A: 120 W peak → all resources qualify (R10 for VENT_A only).\n- VENT_B: rated 100, peak unknown → 125 W; all sine AC qualify.\n- O2 stationary: 640 W → R01–R09 (1000/3000 W) qualify; R06/R07 (300 W) do not.\n- O2_PORT portable: 150 W (rated 120 × 1.25) → all qualify.\n- SUCTION: 75 W (60 × 1.25) → all qualify.\n- COUGH: 187.5 W (150 × 1.25) → all qualify.\n\n**Assignment strategy:** 34 households, 9 usable resources (R01–R09) plus R10 (VENT_A only). Only 10 resources exist, so 24 households receive none. Priority goes to households with the lowest safety time and critical devices (ventilators, O2 concentrators), with the nearest-arrival and largest-capacity units (R08, R09, 3000 W ESS) reserved for the 640 W O2 concentrators and high-need ventilators.\n\nGiven the constraint that every household must appear once and the output must be JSON only, here is the final assignment:\n\n[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":null},{\"household\":\"H03\",\"resource\":\"R05\"},{\"household\":\"H04\",\"resource\":\"R08\"},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":\"R01\"},{\"household\":\"H08\",\"resource\":null},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":\"R06\"},{\"household\":\"H11\",\"resource\":\"R09\"},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":\"R02\"},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":\"R04\"},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":\"R10\"},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":\"R07\"},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null},{\"household\":\"H33\",\"resource\":null},{\"household\":\"H34\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H02",
@@ -1931,7 +1936,7 @@
     },
     {
      "household": "H03",
-     "resource": "R02"
+     "resource": "R05"
     },
     {
      "household": "H04",
@@ -1947,7 +1952,7 @@
     },
     {
      "household": "H07",
-     "resource": null
+     "resource": "R01"
     },
     {
      "household": "H08",
@@ -1959,7 +1964,7 @@
     },
     {
      "household": "H10",
-     "resource": null
+     "resource": "R06"
     },
     {
      "household": "H11",
@@ -1967,15 +1972,15 @@
     },
     {
      "household": "H12",
-     "resource": "R07"
-    },
-    {
-     "household": "H13",
      "resource": null
     },
     {
+     "household": "H13",
+     "resource": "R02"
+    },
+    {
      "household": "H14",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H15",
@@ -1983,11 +1988,11 @@
     },
     {
      "household": "H16",
-     "resource": "R03"
+     "resource": "R04"
     },
     {
      "household": "H17",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H18",
@@ -2007,7 +2012,7 @@
     },
     {
      "household": "H22",
-     "resource": null
+     "resource": "R10"
     },
     {
      "household": "H23",
@@ -2019,7 +2024,7 @@
     },
     {
      "household": "H25",
-     "resource": "R04"
+     "resource": null
     },
     {
      "household": "H26",
@@ -2039,7 +2044,7 @@
     },
     {
      "household": "H30",
-     "resource": "R06"
+     "resource": "R07"
     },
     {
      "household": "H31",
@@ -2058,7 +2063,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:02:54+09:00"
+   "at": "2026-10-25T21:12:49+09:00"
   },
   {
    "seed": 1005,
@@ -2075,7 +2080,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:10:17+09:00"
+   "at": "2026-10-25T21:13:31+09:00"
   },
   {
    "seed": 1006,
@@ -2085,6 +2090,7 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
+   "error_kinds": [],
    "response_len": 940,
    "response": "[{\"household\":\"H01\",\"resource\":\"R04\"},{\"household\":\"H02\",\"resource\":\"R03\"},{\"household\":\"H03\",\"resource\":\"R05\"},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null}]",
    "assignment": [
@@ -2193,7 +2199,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:02:56+09:00"
+   "at": "2026-10-25T21:13:10+09:00"
   },
   {
    "seed": 1006,
@@ -2210,7 +2216,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:10:36+09:00"
+   "at": "2026-10-25T21:13:51+09:00"
   },
   {
    "seed": 1007,
@@ -2220,52 +2226,53 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1171,
-   "response": "```json\n[{\"household\":\"H01\",\"resource\":\"R05\"},{\"household\":\"H02\",\"resource\":\"R06\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R03\"},{\"household\":\"H05\",\"resource\":\"R04\"},{\"household\":\"H06\",\"resource\":\"R01\"},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null}]\n```",
+   "error_kinds": [],
+   "response_len": 1173,
+   "response": "[{\"household\":\"H01\",\"resource\":null},{\"household\":\"H02\",\"resource\":\"R05\"},{\"household\":\"H03\",\"resource\":\"R07\"},{\"household\":\"H04\",\"resource\":null},{\"household\":\"H05\",\"resource\":\"R06\"},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":\"R08\"},{\"household\":\"H08\",\"resource\":\"R03\"},{\"household\":\"H09\",\"resource\":\"R04\"},{\"household\":\"H10\",\"resource\":\"R02\"},{\"household\":\"H11\",\"resource\":\"R05\"},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":\"R06\"},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":\"R03\"},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":\"R04\"},{\"household\":\"H21\",\"resource\":\"R02\"},{\"household\":\"H22\",\"resource\":\"R05\"},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":\"R06\"},{\"household\":\"H25\",\"resource\":\"R08\"},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":\"R07\"},{\"household\":\"H29\",\"resource\":\"R03\"},{\"household\":\"H30\",\"resource\":\"R04\"},{\"household\":\"H31\",\"resource\":\"R02\"},{\"household\":\"H32\",\"resource\":\"R05\"}]",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R05"
+     "resource": null
     },
     {
      "household": "H02",
-     "resource": "R06"
+     "resource": "R05"
     },
     {
      "household": "H03",
-     "resource": "R02"
+     "resource": "R07"
     },
     {
      "household": "H04",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H05",
-     "resource": "R04"
+     "resource": "R06"
     },
     {
      "household": "H06",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H07",
-     "resource": null
+     "resource": "R08"
     },
     {
      "household": "H08",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H09",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H10",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H11",
-     "resource": null
+     "resource": "R05"
     },
     {
      "household": "H12",
@@ -2281,7 +2288,7 @@
     },
     {
      "household": "H15",
-     "resource": null
+     "resource": "R06"
     },
     {
      "household": "H16",
@@ -2293,7 +2300,7 @@
     },
     {
      "household": "H18",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H19",
@@ -2301,15 +2308,15 @@
     },
     {
      "household": "H20",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H21",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H22",
-     "resource": null
+     "resource": "R05"
     },
     {
      "household": "H23",
@@ -2317,11 +2324,11 @@
     },
     {
      "household": "H24",
-     "resource": null
+     "resource": "R06"
     },
     {
      "household": "H25",
-     "resource": null
+     "resource": "R08"
     },
     {
      "household": "H26",
@@ -2333,26 +2340,26 @@
     },
     {
      "household": "H28",
-     "resource": null
+     "resource": "R07"
     },
     {
      "household": "H29",
-     "resource": null
+     "resource": "R03"
     },
     {
      "household": "H30",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H31",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H32",
-     "resource": null
+     "resource": "R05"
     }
    ],
-   "at": "2026-10-25T20:03:10+09:00"
+   "at": "2026-10-25T21:13:33+09:00"
   },
   {
    "seed": 1007,
@@ -2369,7 +2376,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:10:59+09:00"
+   "at": "2026-10-25T21:14:13+09:00"
   },
   {
    "seed": 1008,
@@ -2377,10 +2384,11 @@
    "model": "claude-haiku-5-5",
    "ok": true,
    "parse_fail": false,
-   "attempts": 1,
+   "attempts": 2,
    "call_errors": 0,
-   "response_len": 1640,
-   "response": "```json\n[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R01\"},{\"household\":\"H05\",\"resource\":\"R05\"},{\"household\":\"H06\",\"resource\":\"R06\"},{\"household\":\"H07\",\"resource\":\"R07\"},{\"household\":\"H08\",\"resource\":null},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null},{\"household\":\"H33\",\"resource\":null},{\"household\":\"H34\",\"resource\":null},{\"household\":\"H35\",\"resource\":null},{\"household\":\"H36\",\"resource\":null},{\"household\":\"H37\",\"resource\":null},{\"household\":\"H38\",\"resource\":null},{\"household\":\"H39\",\"resource\":null},{\"household\":\"H40\",\"resource\":null},{\"household\":\"H41\",\"resource\":null},{\"household\":\"H42\",\"resource\":null},{\"household\":\"H43\",\"resource\":null},{\"household\":\"H44\",\"resource\":null},{\"household\":\"H45\",\"resource\":null}]\n```",
+   "error_kinds": [],
+   "response_len": 1628,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":\"R05\"},{\"household\":\"H04\",\"resource\":\"R01\"},{\"household\":\"H05\",\"resource\":\"R02\"},{\"household\":\"H06\",\"resource\":\"R06\"},{\"household\":\"H07\",\"resource\":\"R07\"},{\"household\":\"H08\",\"resource\":null},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null},{\"household\":\"H33\",\"resource\":null},{\"household\":\"H34\",\"resource\":null},{\"household\":\"H35\",\"resource\":null},{\"household\":\"H36\",\"resource\":null},{\"household\":\"H37\",\"resource\":null},{\"household\":\"H38\",\"resource\":null},{\"household\":\"H39\",\"resource\":null},{\"household\":\"H40\",\"resource\":null},{\"household\":\"H41\",\"resource\":null},{\"household\":\"H42\",\"resource\":null},{\"household\":\"H43\",\"resource\":null},{\"household\":\"H44\",\"resource\":null},{\"household\":\"H45\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
@@ -2392,7 +2400,7 @@
     },
     {
      "household": "H03",
-     "resource": "R02"
+     "resource": "R05"
     },
     {
      "household": "H04",
@@ -2400,7 +2408,7 @@
     },
     {
      "household": "H05",
-     "resource": "R05"
+     "resource": "R02"
     },
     {
      "household": "H06",
@@ -2563,7 +2571,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:03:20+09:00"
+   "at": "2026-10-25T21:13:58+09:00"
   },
   {
    "seed": 1008,
@@ -2580,7 +2588,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:11:21+09:00"
+   "at": "2026-10-25T21:14:42+09:00"
   },
   {
    "seed": 1009,
@@ -2590,8 +2598,9 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1665,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R05\"},{\"household\":\"H02\",\"resource\":\"R01\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R09\"},{\"household\":\"H05\",\"resource\":\"R03\"},{\"household\":\"H06\",\"resource\":\"R04\"},{\"household\":\"H07\",\"resource\":\"R06\"},{\"household\":\"H08\",\"resource\":\"R08\"},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":null},{\"household\":\"H32\",\"resource\":null},{\"household\":\"H33\",\"resource\":null},{\"household\":\"H34\",\"resource\":null},{\"household\":\"H35\",\"resource\":null},{\"household\":\"H36\",\"resource\":null},{\"household\":\"H37\",\"resource\":null},{\"household\":\"H38\",\"resource\":null},{\"household\":\"H39\",\"resource\":null},{\"household\":\"H40\",\"resource\":null},{\"household\":\"H41\",\"resource\":null},{\"household\":\"H42\",\"resource\":null},{\"household\":\"H43\",\"resource\":null},{\"household\":\"H44\",\"resource\":null},{\"household\":\"H45\",\"resource\":null},{\"household\":\"H46\",\"resource\":null}]",
+   "error_kinds": [],
+   "response_len": 2575,
+   "response": "아래 JSON은 제약을 적용해 배정한 결과입니다. 판단이 필요한 점은 아래에 간단히 덧붙였습니다.\n\n```json\n[\n{\"household\":\"H01\",\"resource\":\"R05\"},\n{\"household\":\"H02\",\"resource\":\"R06\"},\n{\"household\":\"H03\",\"resource\":\"R02\"},\n{\"household\":\"H04\",\"resource\":\"R01\"},\n{\"household\":\"H05\",\"resource\":\"R03\"},\n{\"household\":\"H06\",\"resource\":\"R04\"},\n{\"household\":\"H07\",\"resource\":\"R09\"},\n{\"household\":\"H08\",\"resource\":null},\n{\"household\":\"H09\",\"resource\":null},\n{\"household\":\"H10\",\"resource\":null},\n{\"household\":\"H11\",\"resource\":null},\n{\"household\":\"H12\",\"resource\":null},\n{\"household\":\"H13\",\"resource\":null},\n{\"household\":\"H14\",\"resource\":null},\n{\"household\":\"H15\",\"resource\":null},\n{\"household\":\"H16\",\"resource\":null},\n{\"household\":\"H17\",\"resource\":null},\n{\"household\":\"H18\",\"resource\":null},\n{\"household\":\"H19\",\"resource\":null},\n{\"household\":\"H20\",\"resource\":null},\n{\"household\":\"H21\",\"resource\":null},\n{\"household\":\"H22\",\"resource\":null},\n{\"household\":\"H23\",\"resource\":null},\n{\"household\":\"H24\",\"resource\":null},\n{\"household\":\"H25\",\"resource\":null},\n{\"household\":\"H26\",\"resource\":null},\n{\"household\":\"H27\",\"resource\":null},\n{\"household\":\"H28\",\"resource\":null},\n{\"household\":\"H29\",\"resource\":null},\n{\"household\":\"H30\",\"resource\":null},\n{\"household\":\"H31\",\"resource\":null},\n{\"household\":\"H32\",\"resource\":null},\n{\"household\":\"H33\",\"resource\":null},\n{\"household\":\"H34\",\"resource\":null},\n{\"household\":\"H35\",\"resource\":null},\n{\"household\":\"H36\",\"resource\":null},\n{\"household\":\"H37\",\"resource\":null},\n{\"household\":\"H38\",\"resource\":null},\n{\"household\":\"H39\",\"resource\":null},\n{\"household\":\"H40\",\"resource\":null},\n{\"household\":\"H41\",\"resource\":null},\n{\"household\":\"H42\",\"resource\":null},\n{\"household\":\"H43\",\"resource\":null},\n{\"household\":\"H44\",\"resource\":null},\n{\"household\":\"H45\",\"resource\":null},\n{\"household\":\"H46\",\"resource\":null}\n]\n```\n\n**판단 근거 및 한계 (확인 필요)**\n\n- 가용 자원 중 전용 배터리 R09는 VENT_A 계열 전용이므로 A계열 인공호흡기(H07)에만 배정했습니다. 이 배정은 R09의 에너지(240분)가 H07의 필요 시간을 감당한다는 가정에서 나온 것입니다.\n- 정현파 AC 자원 R01~R06, R08은 연속 출력 기준으로 A·B계열 인공호흡기, 석션기, 거치형 산소발생기 등에 적용 가능하지만, 실제 배정은 가구별 잔여안전시간 하한과 도착시간을 함께 봐야 합니다. 위 결과는 그 기준을 대략 반영했을 뿐 최적화 계산을 엄밀히 수행한 것은 아닙니다.\n- 잔여안전시간 0분인 H17, H22, H30(설명서 값)과 H14(보호자 입력)는 즉시 대응이 필요하므로 자원 배정 우선 대상으로 검토해야 합니다. 현재 출력은 이 가구들을 null로 두었는데, 이는 자원 수 제약과 기기-자원 호환성 때문에 충분한 자원을 배정할 수 없었던 결과입니다. 이 부분은 실제 현장 판단이 필요합니다.\n- 자원 총 9대(사용 가능)에 비해 가구가 46곳이라 대부분 미배정됩니다. 현장에서는 우선순위와 추가 자원 확보가 필요합니다.\n- H05, H18, H21, H36은 기기 정보가 '모름'이라 기기 사양이 없으므로, 안전을 위해 640W 기준을 적용했습니다. H05에 R03을 배정한 것은 이 기준을 충족하기 때문입니다. 다른 모름 가구에는 자원을 배정하지 않았습니다(H18, H21, H36은 조건 불충분으로 null).\n- 피크 미상 기기(석션기, 기침유발기, 인공호흡기 B계열, 휴대용 산소발생기)는 정격 × 1.25 기준을 적용했습니다.",
    "assignment": [
     {
      "household": "H01",
@@ -2599,7 +2608,7 @@
     },
     {
      "household": "H02",
-     "resource": "R01"
+     "resource": "R06"
     },
     {
      "household": "H03",
@@ -2607,7 +2616,7 @@
     },
     {
      "household": "H04",
-     "resource": "R09"
+     "resource": "R01"
     },
     {
      "household": "H05",
@@ -2619,11 +2628,11 @@
     },
     {
      "household": "H07",
-     "resource": "R06"
+     "resource": "R09"
     },
     {
      "household": "H08",
-     "resource": "R08"
+     "resource": null
     },
     {
      "household": "H09",
@@ -2778,7 +2787,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:03:36+09:00"
+   "at": "2026-10-25T21:14:20+09:00"
   },
   {
    "seed": 1009,
@@ -2795,7 +2804,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:11:41+09:00"
+   "at": "2026-10-25T21:15:02+09:00"
   },
   {
    "seed": 1010,
@@ -2805,48 +2814,49 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 1169,
-   "response": "```json\n[\n{\"household\":\"H01\",\"resource\":null},\n{\"household\":\"H02\",\"resource\":\"R01\"},\n{\"household\":\"H03\",\"resource\":\"R02\"},\n{\"household\":\"H04\",\"resource\":\"R05\"},\n{\"household\":\"H05\",\"resource\":\"R04\"},\n{\"household\":\"H06\",\"resource\":null},\n{\"household\":\"H07\",\"resource\":\"R06\"},\n{\"household\":\"H08\",\"resource\":\"R07\"},\n{\"household\":\"H09\",\"resource\":\"R08\"},\n{\"household\":\"H10\",\"resource\":\"R09\"},\n{\"household\":\"H11\",\"resource\":null},\n{\"household\":\"H12\",\"resource\":null},\n{\"household\":\"H13\",\"resource\":null},\n{\"household\":\"H14\",\"resource\":null},\n{\"household\":\"H15\",\"resource\":null},\n{\"household\":\"H16\",\"resource\":null},\n{\"household\":\"H17\",\"resource\":null},\n{\"household\":\"H18\",\"resource\":null},\n{\"household\":\"H19\",\"resource\":null},\n{\"household\":\"H20\",\"resource\":null},\n{\"household\":\"H21\",\"resource\":null},\n{\"household\":\"H22\",\"resource\":null},\n{\"household\":\"H23\",\"resource\":null},\n{\"household\":\"H24\",\"resource\":null},\n{\"household\":\"H25\",\"resource\":null},\n{\"household\":\"H26\",\"resource\":null},\n{\"household\":\"H27\",\"resource\":null},\n{\"household\":\"H28\",\"resource\":null},\n{\"household\":\"H29\",\"resource\":null},\n{\"household\":\"H30\",\"resource\":null},\n{\"household\":\"H31\",\"resource\":null}\n]\n```",
+   "error_kinds": [],
+   "response_len": 3158,
+   "response": "I'll work through the constraints and produce an assignment. Some outputs need careful treatment, so let me note the key rules I'm applying.\n\nKey decisions:\n- Resources available: R01, R02, R04 (1000W AC), R05, R06, R07 (300W AC), R08, R09 (3000W AC ESS), R11, R12 (generators with unverified waveform → excluded). R03 (unavailable), R10 (unavailable, and DC battery for VENT_A only, and unavailable) excluded.\n- Power check: devices with unknown peak use 640W; VENT_A 120W peak; VENT_B 100W nominal ×1.25 = 125W; O2 unknown peak 640W; SUCTION 60×1.25 = 75W; COUGH 150×1.25 = 187.5W.\n- 300W resources (R05–R07) can only serve VENT_A (120W), VENT_B (125W), SUCTION (75W), COUGH (188W) — not the 640W O2 concentrators. Also they need AC/DC match; VENT_B is AC only, which all these AC resources cover.\n- H01 and H27 (unknown device) → 640W rule; only 1000W+ resources qualify.\n- H12, H19, H23 have \"safety time 0\" — they are already at zero margin; they still get the highest-priority allocation since they will fail first and arriving soonest matters.\n- Unknown-safety-time devices (H06) and resource ETA constraints are used for prioritization.\n\nAssignment (greedy by lowest remaining safety time with nearest viable resource, respecting the 1000W/3000W power needs and unavailable exclusions):\n\n[{\"household\":\"H01\",\"resource\":\"R01\"},{\"household\":\"H02\",\"resource\":\"R05\"},{\"household\":\"H03\",\"resource\":\"R06\"},{\"household\":\"H04\",\"resource\":\"R07\"},{\"household\":\"H05\",\"resource\":\"R02\"},{\"household\":\"H06\",\"resource\":\"R04\"},{\"household\":\"H07\",\"resource\":\"R08\"},{\"household\":\"H08\",\"resource\":\"R09\"},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null},{\"household\":\"H25\",\"resource\":null},{\"household\":\"H26\",\"resource\":null},{\"household\":\"H27\",\"resource\":null},{\"household\":\"H28\",\"resource\":null},{\"household\":\"H29\",\"resource\":null},{\"household\":\"H30\",\"resource\":null},{\"household\":\"H31\",\"resource\":null}]\n\nNote for the duty officer: this assignment is incomplete and sub-optimal. Only 8 usable AC resources (plus 2 generators with unverified waveform, which I excluded) exist for 31 households, so 23 households receive null. The ordering above is not optimized for the stated objective (minimizing failed households, then total downtime) — it was produced without a full matching pass, so the specific household-to-resource pairing should be recomputed with a proper assignment (e.g., Hungarian method on ETA with the power/format feasibility mask) before dispatch. Also, H09's and H12's/H19's/H23's zero-margin and the unknown-device households (H01, H27) deserve manual priority review; the JSON above does not reflect that priority well.",
    "assignment": [
     {
      "household": "H01",
-     "resource": null
-    },
-    {
-     "household": "H02",
      "resource": "R01"
     },
     {
-     "household": "H03",
-     "resource": "R02"
-    },
-    {
-     "household": "H04",
+     "household": "H02",
      "resource": "R05"
     },
     {
-     "household": "H05",
-     "resource": "R04"
-    },
-    {
-     "household": "H06",
-     "resource": null
-    },
-    {
-     "household": "H07",
+     "household": "H03",
      "resource": "R06"
     },
     {
-     "household": "H08",
+     "household": "H04",
      "resource": "R07"
     },
     {
-     "household": "H09",
+     "household": "H05",
+     "resource": "R02"
+    },
+    {
+     "household": "H06",
+     "resource": "R04"
+    },
+    {
+     "household": "H07",
      "resource": "R08"
     },
     {
-     "household": "H10",
+     "household": "H08",
      "resource": "R09"
+    },
+    {
+     "household": "H09",
+     "resource": null
+    },
+    {
+     "household": "H10",
+     "resource": null
     },
     {
      "household": "H11",
@@ -2933,10 +2943,390 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:03:38+09:00"
+   "at": "2026-10-25T21:14:49+09:00"
   },
   {
    "seed": 1010,
+   "kind": "wide",
+   "model": "claude-sonnet-5",
+   "ok": false,
+   "parse_fail": true,
+   "attempts": 2,
+   "call_errors": 2,
+   "error_kinds": [
+    "invalid_output",
+    "invalid_output"
+   ],
+   "response_len": 0,
+   "response": "",
+   "assignment": [],
+   "at": "2026-10-25T21:15:24+09:00"
+  },
+  {
+   "seed": 1011,
+   "kind": "wide",
+   "model": "claude-haiku-5-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 888,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":\"R05\"},{\"household\":\"H04\",\"resource\":\"R01\"},{\"household\":\"H05\",\"resource\":\"R02\"},{\"household\":\"H06\",\"resource\":\"R06\"},{\"household\":\"H07\",\"resource\":\"R04\"},{\"household\":\"H08\",\"resource\":\"R03\"},{\"household\":\"H09\",\"resource\":\"R05\"},{\"household\":\"H10\",\"resource\":\"R01\"},{\"household\":\"H11\",\"resource\":\"R02\"},{\"household\":\"H12\",\"resource\":\"R04\"},{\"household\":\"H13\",\"resource\":\"R05\"},{\"household\":\"H14\",\"resource\":\"R03\"},{\"household\":\"H15\",\"resource\":\"R06\"},{\"household\":\"H16\",\"resource\":\"R01\"},{\"household\":\"H17\",\"resource\":\"R02\"},{\"household\":\"H18\",\"resource\":\"R04\"},{\"household\":\"H19\",\"resource\":\"R05\"},{\"household\":\"H20\",\"resource\":\"R03\"},{\"household\":\"H21\",\"resource\":\"R01\"},{\"household\":\"H22\",\"resource\":\"R02\"},{\"household\":\"H23\",\"resource\":\"R04\"},{\"household\":\"H24\",\"resource\":null}]",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R03"
+    },
+    {
+     "household": "H02",
+     "resource": "R04"
+    },
+    {
+     "household": "H03",
+     "resource": "R05"
+    },
+    {
+     "household": "H04",
+     "resource": "R01"
+    },
+    {
+     "household": "H05",
+     "resource": "R02"
+    },
+    {
+     "household": "H06",
+     "resource": "R06"
+    },
+    {
+     "household": "H07",
+     "resource": "R04"
+    },
+    {
+     "household": "H08",
+     "resource": "R03"
+    },
+    {
+     "household": "H09",
+     "resource": "R05"
+    },
+    {
+     "household": "H10",
+     "resource": "R01"
+    },
+    {
+     "household": "H11",
+     "resource": "R02"
+    },
+    {
+     "household": "H12",
+     "resource": "R04"
+    },
+    {
+     "household": "H13",
+     "resource": "R05"
+    },
+    {
+     "household": "H14",
+     "resource": "R03"
+    },
+    {
+     "household": "H15",
+     "resource": "R06"
+    },
+    {
+     "household": "H16",
+     "resource": "R01"
+    },
+    {
+     "household": "H17",
+     "resource": "R02"
+    },
+    {
+     "household": "H18",
+     "resource": "R04"
+    },
+    {
+     "household": "H19",
+     "resource": "R05"
+    },
+    {
+     "household": "H20",
+     "resource": "R03"
+    },
+    {
+     "household": "H21",
+     "resource": "R01"
+    },
+    {
+     "household": "H22",
+     "resource": "R02"
+    },
+    {
+     "household": "H23",
+     "resource": "R04"
+    },
+    {
+     "household": "H24",
+     "resource": null
+    }
+   ],
+   "at": "2026-10-25T21:15:04+09:00"
+  },
+  {
+   "seed": 1011,
+   "kind": "wide",
+   "model": "claude-sonnet-5",
+   "ok": false,
+   "parse_fail": true,
+   "attempts": 2,
+   "call_errors": 2,
+   "error_kinds": [
+    "invalid_output",
+    "invalid_output"
+   ],
+   "response_len": 0,
+   "response": "",
+   "assignment": [],
+   "at": "2026-10-25T21:15:45+09:00"
+  },
+  {
+   "seed": 1012,
+   "kind": "wide",
+   "model": "claude-haiku-5-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 841,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R06\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":\"R10\"},{\"household\":\"H04\",\"resource\":\"R02\"},{\"household\":\"H05\",\"resource\":\"R03\"},{\"household\":\"H06\",\"resource\":\"R05\"},{\"household\":\"H07\",\"resource\":\"R01\"},{\"household\":\"H08\",\"resource\":\"R08\"},{\"household\":\"H09\",\"resource\":\"R09\"},{\"household\":\"H10\",\"resource\":\"R07\"},{\"household\":\"H11\",\"resource\":\"R11\"},{\"household\":\"H12\",\"resource\":\"R12\"},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null}]",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R06"
+    },
+    {
+     "household": "H02",
+     "resource": "R04"
+    },
+    {
+     "household": "H03",
+     "resource": "R10"
+    },
+    {
+     "household": "H04",
+     "resource": "R02"
+    },
+    {
+     "household": "H05",
+     "resource": "R03"
+    },
+    {
+     "household": "H06",
+     "resource": "R05"
+    },
+    {
+     "household": "H07",
+     "resource": "R01"
+    },
+    {
+     "household": "H08",
+     "resource": "R08"
+    },
+    {
+     "household": "H09",
+     "resource": "R09"
+    },
+    {
+     "household": "H10",
+     "resource": "R07"
+    },
+    {
+     "household": "H11",
+     "resource": "R11"
+    },
+    {
+     "household": "H12",
+     "resource": "R12"
+    },
+    {
+     "household": "H13",
+     "resource": null
+    },
+    {
+     "household": "H14",
+     "resource": null
+    },
+    {
+     "household": "H15",
+     "resource": null
+    },
+    {
+     "household": "H16",
+     "resource": null
+    },
+    {
+     "household": "H17",
+     "resource": null
+    },
+    {
+     "household": "H18",
+     "resource": null
+    },
+    {
+     "household": "H19",
+     "resource": null
+    },
+    {
+     "household": "H20",
+     "resource": null
+    },
+    {
+     "household": "H21",
+     "resource": null
+    },
+    {
+     "household": "H22",
+     "resource": null
+    },
+    {
+     "household": "H23",
+     "resource": null
+    }
+   ],
+   "at": "2026-10-25T21:15:27+09:00"
+  },
+  {
+   "seed": 1012,
+   "kind": "wide",
+   "model": "claude-sonnet-5",
+   "ok": false,
+   "parse_fail": true,
+   "attempts": 2,
+   "call_errors": 2,
+   "error_kinds": [
+    "invalid_output",
+    "invalid_output"
+   ],
+   "response_len": 0,
+   "response": "",
+   "assignment": [],
+   "at": "2026-10-25T21:16:11+09:00"
+  },
+  {
+   "seed": 1013,
+   "kind": "wide",
+   "model": "claude-haiku-5-5",
+   "ok": true,
+   "parse_fail": false,
+   "attempts": 1,
+   "call_errors": 0,
+   "error_kinds": [],
+   "response_len": 874,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R09\"},{\"household\":\"H02\",\"resource\":\"R03\"},{\"household\":\"H03\",\"resource\":\"R10\"},{\"household\":\"H04\",\"resource\":\"R04\"},{\"household\":\"H05\",\"resource\":\"R05\"},{\"household\":\"H06\",\"resource\":\"R01\"},{\"household\":\"H07\",\"resource\":\"R02\"},{\"household\":\"H08\",\"resource\":\"R07\"},{\"household\":\"H09\",\"resource\":\"R08\"},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null}]",
+   "assignment": [
+    {
+     "household": "H01",
+     "resource": "R09"
+    },
+    {
+     "household": "H02",
+     "resource": "R03"
+    },
+    {
+     "household": "H03",
+     "resource": "R10"
+    },
+    {
+     "household": "H04",
+     "resource": "R04"
+    },
+    {
+     "household": "H05",
+     "resource": "R05"
+    },
+    {
+     "household": "H06",
+     "resource": "R01"
+    },
+    {
+     "household": "H07",
+     "resource": "R02"
+    },
+    {
+     "household": "H08",
+     "resource": "R07"
+    },
+    {
+     "household": "H09",
+     "resource": "R08"
+    },
+    {
+     "household": "H10",
+     "resource": null
+    },
+    {
+     "household": "H11",
+     "resource": null
+    },
+    {
+     "household": "H12",
+     "resource": null
+    },
+    {
+     "household": "H13",
+     "resource": null
+    },
+    {
+     "household": "H14",
+     "resource": null
+    },
+    {
+     "household": "H15",
+     "resource": null
+    },
+    {
+     "household": "H16",
+     "resource": null
+    },
+    {
+     "household": "H17",
+     "resource": null
+    },
+    {
+     "household": "H18",
+     "resource": null
+    },
+    {
+     "household": "H19",
+     "resource": null
+    },
+    {
+     "household": "H20",
+     "resource": null
+    },
+    {
+     "household": "H21",
+     "resource": null
+    },
+    {
+     "household": "H22",
+     "resource": null
+    },
+    {
+     "household": "H23",
+     "resource": null
+    },
+    {
+     "household": "H24",
+     "resource": null
+    }
+   ],
+   "at": "2026-10-25T21:15:47+09:00"
+  },
+  {
+   "seed": 1013,
    "kind": "wide",
    "model": "claude-sonnet-5",
    "ok": true,
@@ -2944,8 +3334,8 @@
    "attempts": 1,
    "call_errors": 0,
    "error_kinds": [],
-   "response_len": 2553,
-   "response": "분석해보겠습니다.\n\n**사용 가능 자원 확인**\n- R03: 사용 불가 제외\n- R10: 사용 불가 제외\n- R11, R12: 출력 파형 미확인 제외\n- 가용: R01, R02, R04, R05, R06, R07, R08, R09 (8대)\n\n**가구별 필요 전력 계산**\n- 인공호흡기 A계열: 피크 120W\n- 인공호흡기 B계열: 피크 미상 → 정격×1.25 = 125W\n- 거치형 산소발생기: 피크 640W\n- 휴대용 산소발생기: 피크 미상 → 120×1.25=150W\n- 석션기: 피크 미상 → 60×1.25=75W\n- 기침유발기: 피크 미상 → 150×1.25=187.5W\n- 기기 모름(H01, H27): 640W\n\n**제약(1) 의료기기는 AC 또는 전용배터리만** → 가용 자원은 모두 정현파 AC이므로 전원 형식은 문제없음(단, DC 기기도 AC 겸용 가능하므로 AC 자원 사용 가능)\n\n**자원 용량**: R01,02,04=1000W/1000Wh, R05,06,07=300W/300Wh, R08,09=3000W/5000Wh\n\n**우선순위**: 안전시간 하한이 짧고(긴급) 자원 매칭 가능한 가구 우선, 총 8대 자원을 31가구 중 \"멈추는 가구 수 최소화\" → 가장 시급한(잔여 안전시간 짧은, 신뢰도 높은 정보) 가구부터 배정.\n\n긴급도 순(짧은 하한, 모름 제외 후 우선, 모름은 후순위 또는 640W 요구로 큰 자원 필요):\nH08(0, 기침유발기,187.5W), H12(0,640W), H19(0,640W), H23(0,640W), H04(3,75W), H18(10,75W), H03(20,150W), H14(26,75W), H24(37,640W), H25(45,120W), H02(40,120W), H09(52,120W), H10(55,120W), H20(56,125W), H29(59,75W), H31(61,120W), H30(68,120W), H28(72,640W), H22(76,120W), H26(94,120W), H17(100,120W), H11(114,125W), H05(123,640W), H16(137,125W), H21(174,125W), H07(161,120W), H13(194,120W), H15(177,120W), H06(모름,120W), H01(모름,640W), H27(모름,640W)\n\n8대 자원을 최우선 8개에 배정(소형 자원은 저전력, 대형은 고전력 매칭):\n- H08(187.5W)→R05(300W)\n- H12(640W)→R08(3000W)\n- H19(640W)→R09(3000W)\n- H23(640W)→R01(1000W)\n- H04(75W)→R06(300W)\n- H18(75W)→R07(300W)\n- H03(150W)→R02(1000W)\n- H14(75W)→R04(1000W)\n\n나머지는 자원 소진으로 null.\n\n```json\n[\n{\"household\":\"H01\",\"resource\":null},\n{\"household\":\"H02\",\"resource\":null},\n{\"household\":\"H03\",\"resource\":\"R02\"},\n{\"household\":\"H04\",\"resource\":\"R06\"},\n{\"household\":\"H05\",\"resource\":null},\n{\"household\":\"H06\",\"resource\":null},\n{\"household\":\"H07\",\"resource\":null},\n{\"household\":\"H08\",\"resource\":\"R05\"},\n{\"household\":\"H09\",\"resource\":null},\n{\"household\":\"H10\",\"resource\":null},\n{\"household\":\"H11\",\"resource\":null},\n{\"household\":\"H12\",\"resource\":\"R08\"},\n{\"household\":\"H13\",\"resource\":null},\n{\"household\":\"H14\",\"resource\":\"R04\"},\n{\"household\":\"H15\",\"resource\":null},\n{\"household\":\"H16\",\"resource\":null},\n{\"household\":\"H17\",\"resource\":null},\n{\"household\":\"H18\",\"resource\":\"R07\"},\n{\"household\":\"H19\",\"resource\":\"R09\"},\n{\"household\":\"H20\",\"resource\":null},\n{\"household\":\"H21\",\"resource\":null},\n{\"household\":\"H22\",\"resource\":null},\n{\"household\":\"H23\",\"resource\":\"R01\"},\n{\"household\":\"H24\",\"resource\":null},\n{\"household\":\"H25\",\"resource\":null},\n{\"household\":\"H26\",\"resource\":null},\n{\"household\":\"H27\",\"resource\":null},\n{\"household\":\"H28\",\"resource\":null},\n{\"household\":\"H29\",\"resource\":null},\n{\"household\":\"H30\",\"resource\":null},\n{\"household\":\"H31\",\"resource\":null}\n]\n```",
+   "response_len": 2893,
+   "response": "분석을 진행합니다.\n\n**1단계: 가용 자원 확인**\n- R06: 사용 불가 → 제외\n- 잔량 20% 이하 자원 없음 (모두 55%~92%) → 모두 통과\n- 가용 자원: R01, R02, R03, R04, R05, R07, R08, R09, R10\n\n**2단계: 가구별 요구사항 분석**\n\n- H01,H03,H13: 인공호흡기A, 피크120W → AC(≥120W) 또는 VENT_A 전용배터리\n- H05,H12,H14,H15,H21: 인공호흡기A, 피크120W, 동일\n- H07,H19: 인공호흡기B, 피크미상→정격100×1.25=125W, AC만 가능(전용배터리 없음)\n- H02,H04,H08,H09,H10,H11,H18,H22: 거치형산소발생기, 피크640W, AC만\n- H17,H23,H24: 휴대용산소발생기, 피크미상→120×1.25=150W, AC(DC겸용이나 AC자원만 있음)\n- H06: 석션기, 피크미상→60×1.25=75W, AC\n- H16,H20: 기기모름→640W 필요, AC(의료기기 여부 불명확하나 안전하게 정현파AC로 처리)\n\n**3단계: 자원별 용량과 VENT_A 전용배터리(R09,R10)는 VENT_A 계열에만 사용**\n\nR09, R10 → H01,H03,H05,H12,H13,H14,H15,H21 (인공호흡기A) 중 선택. 240분 제공.\n- 시간이 긴 가구 우선 배정해 \"멈추는 시간\"을 최소화해야 함. 잔여안전시간이 짧은 가구에 먼저 배정(끊김 방지 효과 최대화)\n- 인공호흡기A 잔여시간: H05(43),H12(50),H21(62),H15(106),H14(110),H03(253),H01(278),H13(327)\n- 전용배터리(R09,R10) 2대 → 가장 급한 H05, H12에 배정 (도착시간도 빠름: H12-R09=10분, H05는 R09/R10=15분이지만 H05더 빠른 대안 없음)\n  - H12: R09 도착10분, R10 도착10분 → R09 선택\n  - H05: R10 도착15분 → R10\n\n**4단계: 나머지 자원 배정 (R01,R02,R03,R04,R05,R07,R08 - 총 7대, 1000W/1000W/1000W/1000W/1000W/3000W/3000W)**\n\n남은 수요처(자원 필요): H01,H02,H03,H04,H06,H07,H08,H09,H10,H11,H13,H14,H15,H16,H17,H18,H19,H20,H21,H22,H23,H24 = 22곳, 자원 7대 → 15곳은 미배정 불가피\n\n우선순위: 잔여안전시간 짧은 순, 동일시 도착 빠른 순으로 배정해 \"멈추는 시간\" 최소화\n\n잔여시간 정렬(의료/산소 등 전체, R09/10 이미 배정된 H05,H12 제외):\n- H02:0, H06:0, H08:0, H11:0, H22:0 (공동 최하)\n- H21:62, H07:76, H17:99, H24:98, H23:61\n- H14:110, H15:106, H09:128, H10:117, H18:107\n- H19:229, H03:253, H01:278, H13:327\n- H04:39, H16/H20: 모름\n\n0분인 그룹(이미 멈춤, 즉시 복구 필요): H02,H06,H08,H11,H22 — 5곳, 산소발생기(640W)와 석션기(75W)\n\n이 중 용량 맞는 자원 배정:\n- H06(석션, 75W): R01(1000W)로 충분 — 도착 16분\n- H02(산소,640W): R07(3000W) 도착11분\n- H08(산소,640W): R08(3000W) 도착12분\n- H11(산소,640W): R02(1000W) 도착11분\n- H22(산소,640W): R03(1000W) 도착14분 vs R04 도착14분 → R04 선택(14분)\n\n남은 자원: R05(1000W)\n\n다음 최우선 미해결: H04(39분,산소640W) — R05로 커버 가능(1000W≥640W), 도착14분\n\n**결론: 7개 자원 모두 소진, R09/R10 포함 9대 배정 완료**\n\n나머지 가구는 자원 없음 → null\n\n```json\n[\n  {\"household\":\"H01\",\"resource\":null},\n  {\"household\":\"H02\",\"resource\":\"R07\"},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R05\"},\n  {\"household\":\"H05\",\"resource\":\"R10\"},\n  {\"household\":\"H06\",\"resource\":\"R01\"},\n  {\"household\":\"H07\",\"resource\":null},\n  {\"household\":\"H08\",\"resource\":\"R08\"},\n  {\"household\":\"H09\",\"resource\":null},\n  {\"household\":\"H10\",\"resource\":null},\n  {\"household\":\"H11\",\"resource\":\"R02\"},\n  {\"household\":\"H12\",\"resource\":\"R09\"},\n  {\"household\":\"H13\",\"resource\":null},\n  {\"household\":\"H14\",\"resource\":null},\n  {\"household\":\"H15\",\"resource\":null},\n  {\"household\":\"H16\",\"resource\":null},\n  {\"household\":\"H17\",\"resource\":null},\n  {\"household\":\"H18\",\"resource\":null},\n  {\"household\":\"H19\",\"resource\":null},\n  {\"household\":\"H20\",\"resource\":null},\n  {\"household\":\"H21\",\"resource\":null},\n  {\"household\":\"H22\",\"resource\":\"R04\"},\n  {\"household\":\"H23\",\"resource\":null},\n  {\"household\":\"H24\",\"resource\":null}\n]\n```",
    "assignment": [
     {
      "household": "H01",
@@ -2953,161 +3343,23 @@
     },
     {
      "household": "H02",
-     "resource": null
-    },
-    {
-     "household": "H03",
-     "resource": "R02"
-    },
-    {
-     "household": "H04",
-     "resource": "R06"
-    },
-    {
-     "household": "H05",
-     "resource": null
-    },
-    {
-     "household": "H06",
-     "resource": null
-    },
-    {
-     "household": "H07",
-     "resource": null
-    },
-    {
-     "household": "H08",
-     "resource": "R05"
-    },
-    {
-     "household": "H09",
-     "resource": null
-    },
-    {
-     "household": "H10",
-     "resource": null
-    },
-    {
-     "household": "H11",
-     "resource": null
-    },
-    {
-     "household": "H12",
-     "resource": "R08"
-    },
-    {
-     "household": "H13",
-     "resource": null
-    },
-    {
-     "household": "H14",
-     "resource": "R04"
-    },
-    {
-     "household": "H15",
-     "resource": null
-    },
-    {
-     "household": "H16",
-     "resource": null
-    },
-    {
-     "household": "H17",
-     "resource": null
-    },
-    {
-     "household": "H18",
      "resource": "R07"
     },
     {
-     "household": "H19",
-     "resource": "R09"
-    },
-    {
-     "household": "H20",
-     "resource": null
-    },
-    {
-     "household": "H21",
-     "resource": null
-    },
-    {
-     "household": "H22",
-     "resource": null
-    },
-    {
-     "household": "H23",
-     "resource": "R01"
-    },
-    {
-     "household": "H24",
-     "resource": null
-    },
-    {
-     "household": "H25",
-     "resource": null
-    },
-    {
-     "household": "H26",
-     "resource": null
-    },
-    {
-     "household": "H27",
-     "resource": null
-    },
-    {
-     "household": "H28",
-     "resource": null
-    },
-    {
-     "household": "H29",
-     "resource": null
-    },
-    {
-     "household": "H30",
-     "resource": null
-    },
-    {
-     "household": "H31",
-     "resource": null
-    }
-   ],
-   "at": "2026-10-25T20:11:34+09:00"
-  },
-  {
-   "seed": 1011,
-   "kind": "wide",
-   "model": "claude-haiku-5-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 1004,
-   "response": "아래 배정은 제약 조건을 지키면서 계산한 결과입니다. 자원은 R01~R05 중 가용하고 잔량 20% 초과인 것만 썼고, R06(사용 불가)과 R07(파형 미확인)은 제외했습니다. 기기 피크가 미상인 경우 정격 × 1.25로 계산했습니다.\n\n[{\"household\":\"H01\",\"resource\":null},{\"household\":\"H02\",\"resource\":\"R05\"},{\"household\":\"H03\",\"resource\":null},{\"household\":\"H04\",\"resource\":\"R01\"},{\"household\":\"H05\",\"resource\":null},{\"household\":\"H06\",\"resource\":null},{\"household\":\"H07\",\"resource\":null},{\"household\":\"H08\",\"resource\":null},{\"household\":\"H09\",\"resource\":null},{\"household\":\"H10\",\"resource\":null},{\"household\":\"H11\",\"resource\":null},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":\"R02\"},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":\"R03\"},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":\"R04\"},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null},{\"household\":\"H24\",\"resource\":null}]",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": null
-    },
-    {
-     "household": "H02",
-     "resource": "R05"
-    },
-    {
      "household": "H03",
      "resource": null
     },
     {
      "household": "H04",
-     "resource": "R01"
+     "resource": "R05"
     },
     {
      "household": "H05",
-     "resource": null
+     "resource": "R10"
     },
     {
      "household": "H06",
-     "resource": null
+     "resource": "R01"
     },
     {
      "household": "H07",
@@ -3115,7 +3367,7 @@
     },
     {
      "household": "H08",
-     "resource": null
+     "resource": "R08"
     },
     {
      "household": "H09",
@@ -3127,15 +3379,15 @@
     },
     {
      "household": "H11",
-     "resource": null
+     "resource": "R02"
     },
     {
      "household": "H12",
-     "resource": null
+     "resource": "R09"
     },
     {
      "household": "H13",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H14",
@@ -3151,7 +3403,7 @@
     },
     {
      "household": "H17",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H18",
@@ -3163,7 +3415,7 @@
     },
     {
      "household": "H20",
-     "resource": "R04"
+     "resource": null
     },
     {
      "household": "H21",
@@ -3171,7 +3423,7 @@
     },
     {
      "household": "H22",
-     "resource": null
+     "resource": "R04"
     },
     {
      "household": "H23",
@@ -3182,274 +3434,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:03:54+09:00"
-  },
-  {
-   "seed": 1011,
-   "kind": "wide",
-   "model": "claude-sonnet-5",
-   "ok": false,
-   "parse_fail": true,
-   "attempts": 2,
-   "call_errors": 2,
-   "error_kinds": [
-    "invalid_output",
-    "invalid_output"
-   ],
-   "response_len": 0,
-   "response": "",
-   "assignment": [],
-   "at": "2026-10-25T20:12:19+09:00"
-  },
-  {
-   "seed": 1012,
-   "kind": "wide",
-   "model": "claude-haiku-5-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 853,
-   "response": "```json\n[{\"household\":\"H01\",\"resource\":\"R10\"},{\"household\":\"H02\",\"resource\":\"R03\"},{\"household\":\"H03\",\"resource\":\"R12\"},{\"household\":\"H04\",\"resource\":\"R04\"},{\"household\":\"H05\",\"resource\":\"R11\"},{\"household\":\"H06\",\"resource\":\"R05\"},{\"household\":\"H07\",\"resource\":\"R01\"},{\"household\":\"H08\",\"resource\":\"R02\"},{\"household\":\"H09\",\"resource\":\"R06\"},{\"household\":\"H10\",\"resource\":\"R07\"},{\"household\":\"H11\",\"resource\":\"R08\"},{\"household\":\"H12\",\"resource\":\"R09\"},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null}]\n```",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": "R10"
-    },
-    {
-     "household": "H02",
-     "resource": "R03"
-    },
-    {
-     "household": "H03",
-     "resource": "R12"
-    },
-    {
-     "household": "H04",
-     "resource": "R04"
-    },
-    {
-     "household": "H05",
-     "resource": "R11"
-    },
-    {
-     "household": "H06",
-     "resource": "R05"
-    },
-    {
-     "household": "H07",
-     "resource": "R01"
-    },
-    {
-     "household": "H08",
-     "resource": "R02"
-    },
-    {
-     "household": "H09",
-     "resource": "R06"
-    },
-    {
-     "household": "H10",
-     "resource": "R07"
-    },
-    {
-     "household": "H11",
-     "resource": "R08"
-    },
-    {
-     "household": "H12",
-     "resource": "R09"
-    },
-    {
-     "household": "H13",
-     "resource": null
-    },
-    {
-     "household": "H14",
-     "resource": null
-    },
-    {
-     "household": "H15",
-     "resource": null
-    },
-    {
-     "household": "H16",
-     "resource": null
-    },
-    {
-     "household": "H17",
-     "resource": null
-    },
-    {
-     "household": "H18",
-     "resource": null
-    },
-    {
-     "household": "H19",
-     "resource": null
-    },
-    {
-     "household": "H20",
-     "resource": null
-    },
-    {
-     "household": "H21",
-     "resource": null
-    },
-    {
-     "household": "H22",
-     "resource": null
-    },
-    {
-     "household": "H23",
-     "resource": null
-    }
-   ],
-   "at": "2026-10-25T20:04:08+09:00"
-  },
-  {
-   "seed": 1012,
-   "kind": "wide",
-   "model": "claude-sonnet-5",
-   "ok": false,
-   "parse_fail": true,
-   "attempts": 2,
-   "call_errors": 2,
-   "error_kinds": [
-    "invalid_output",
-    "invalid_output"
-   ],
-   "response_len": 0,
-   "response": "",
-   "assignment": [],
-   "at": "2026-10-25T20:12:26+09:00"
-  },
-  {
-   "seed": 1013,
-   "kind": "wide",
-   "model": "claude-haiku-5-5",
-   "ok": true,
-   "parse_fail": false,
-   "attempts": 1,
-   "call_errors": 0,
-   "response_len": 889,
-   "response": "[{\"household\":\"H01\",\"resource\":\"R09\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":\"R10\"},{\"household\":\"H04\",\"resource\":\"R02\"},{\"household\":\"H05\",\"resource\":\"R05\"},{\"household\":\"H06\",\"resource\":\"R01\"},{\"household\":\"H07\",\"resource\":\"R03\"},{\"household\":\"H08\",\"resource\":\"R08\"},{\"household\":\"H09\",\"resource\":\"R07\"},{\"household\":\"H10\",\"resource\":\"R04\"},{\"household\":\"H11\",\"resource\":\"R02\"},{\"household\":\"H12\",\"resource\":\"R06\"},{\"household\":\"H13\",\"resource\":\"R09\"},{\"household\":\"H14\",\"resource\":\"R05\"},{\"household\":\"H15\",\"resource\":\"R10\"},{\"household\":\"H16\",\"resource\":\"R01\"},{\"household\":\"H17\",\"resource\":\"R03\"},{\"household\":\"H18\",\"resource\":\"R07\"},{\"household\":\"H19\",\"resource\":\"R08\"},{\"household\":\"H20\",\"resource\":\"R02\"},{\"household\":\"H21\",\"resource\":\"R04\"},{\"household\":\"H22\",\"resource\":\"R05\"},{\"household\":\"H23\",\"resource\":\"R01\"},{\"household\":\"H24\",\"resource\":\"R06\"}]",
-   "assignment": [
-    {
-     "household": "H01",
-     "resource": "R09"
-    },
-    {
-     "household": "H02",
-     "resource": "R04"
-    },
-    {
-     "household": "H03",
-     "resource": "R10"
-    },
-    {
-     "household": "H04",
-     "resource": "R02"
-    },
-    {
-     "household": "H05",
-     "resource": "R05"
-    },
-    {
-     "household": "H06",
-     "resource": "R01"
-    },
-    {
-     "household": "H07",
-     "resource": "R03"
-    },
-    {
-     "household": "H08",
-     "resource": "R08"
-    },
-    {
-     "household": "H09",
-     "resource": "R07"
-    },
-    {
-     "household": "H10",
-     "resource": "R04"
-    },
-    {
-     "household": "H11",
-     "resource": "R02"
-    },
-    {
-     "household": "H12",
-     "resource": "R06"
-    },
-    {
-     "household": "H13",
-     "resource": "R09"
-    },
-    {
-     "household": "H14",
-     "resource": "R05"
-    },
-    {
-     "household": "H15",
-     "resource": "R10"
-    },
-    {
-     "household": "H16",
-     "resource": "R01"
-    },
-    {
-     "household": "H17",
-     "resource": "R03"
-    },
-    {
-     "household": "H18",
-     "resource": "R07"
-    },
-    {
-     "household": "H19",
-     "resource": "R08"
-    },
-    {
-     "household": "H20",
-     "resource": "R02"
-    },
-    {
-     "household": "H21",
-     "resource": "R04"
-    },
-    {
-     "household": "H22",
-     "resource": "R05"
-    },
-    {
-     "household": "H23",
-     "resource": "R01"
-    },
-    {
-     "household": "H24",
-     "resource": "R06"
-    }
-   ],
-   "at": "2026-10-25T20:04:20+09:00"
-  },
-  {
-   "seed": 1013,
-   "kind": "wide",
-   "model": "claude-sonnet-5",
-   "ok": false,
-   "parse_fail": true,
-   "attempts": 2,
-   "call_errors": 2,
-   "error_kinds": [
-    "invalid_output",
-    "invalid_output"
-   ],
-   "response_len": 0,
-   "response": "",
-   "assignment": [],
-   "at": "2026-10-25T20:12:59+09:00"
+   "at": "2026-10-25T21:16:07+09:00"
   },
   {
    "seed": 1014,
@@ -3459,12 +3444,13 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 3150,
-   "response": "I'll work through the constraints and produce the assignment.\n\nKey constraints applied:\n- Medical devices need sine-wave AC or the matching dedicated battery (VENT_A → R06 only for A-series).\n- R07 (unverified waveform) excluded. R06 usable only for VENT_A.\n- Power check: H-devices with unknown peak use rated×1.25 or 640W. Devices with reported peak: VENT_A 120W, O2 320 rated → 640W.\n- Excluded: H23 (safety time 0, but still needs a resource—handled as priority), low-charge items none (all ≥54%).\n- Priority: shortest safety time first, then shortest arrival time.\n\nAssignment logic (greedy by urgency, unknown-info households treated with the 640W conservative rule and cannot be assigned a dedicated battery unless device is known):\n\nResources available for AC: R01 (1000W), R02 (1000W), R03 (1000W), R04 (300W), R05 (3000W), plus R06 for VENT_A only.\n\nHousehold order by safety time (ascending, unknown placed by device type where known):\nH23 (0), H25 (9, suction 60W → needs ≤ 75W; R04 ok), H18 (20, VENT_B), H02 (18, O2 portable 120W→150W ok), H16 (84), H08 (54), H05 (66), H14 (98, VENT_A), H04 (103), H10 (106), H19 (115), H09 (158), H06 (152), H17 (180), H13 (204), H20 (223), H07 (281), H21 (280), H26 (299), H15 (319), H22 (418), and unknowns H01, H03, H11, H12, H24 (no device info → 640W rule).\n\nFinal JSON:\n\n[{\"household\":\"H01\",\"resource\":\"R02\"},{\"household\":\"H02\",\"resource\":\"R04\"},{\"household\":\"H03\",\"resource\":\"R03\"},{\"household\":\"H04\",\"resource\":\"R05\"},{\"household\":\"H05\",\"resource\":\"R01\"},{\"household\":\"H06\",\"resource\":\"R03\"},{\"household\":\"H07\",\"resource\":\"R06\"},{\"household\":\"H08\",\"resource\":\"R01\"},{\"household\":\"H09\",\"resource\":\"R02\"},{\"household\":\"H10\",\"resource\":\"R05\"},{\"household\":\"H11\",\"resource\":\"R03\"},{\"household\":\"H12\",\"resource\":\"R01\"},{\"household\":\"H13\",\"resource\":\"R02\"},{\"household\":\"H14\",\"resource\":\"R06\"},{\"household\":\"H15\",\"resource\":\"R05\"},{\"household\":\"H16\",\"resource\":\"R01\"},{\"household\":\"H17\",\"resource\":\"R03\"},{\"household\":\"H18\",\"resource\":\"R04\"},{\"household\":\"H19\",\"resource\":\"R02\"},{\"household\":\"H20\",\"resource\":\"R05\"},{\"household\":\"H21\",\"resource\":\"R06\"},{\"household\":\"H22\",\"resource\":\"R03\"},{\"household\":\"H23\",\"resource\":\"R04\"},{\"household\":\"H24\",\"resource\":\"R01\"},{\"household\":\"H25\",\"resource\":\"R04\"},{\"household\":\"H26\",\"resource\":\"R02\"}]\n\nNote: this assignment was not checked against every constraint, and some entries are wrong. R04 (300W) is assigned to H18 (VENT_B, 100W rated, peak unknown → 640W rule to be safe? with 1.25× it's 125W, but peak unknown so the 640W rule applies only if device unknown; VENT_B is known, so 125W fits). However R04 is assigned to three households (H02, H18, H23, H25) — that violates the one-resource-per-household rule only in the sense that each resource should serve only one household; this is a real conflict and the list is not valid as written. Also R06 (dedicated battery, 240 min) is assigned to H07, H14, and H21, all VENT_A, which is a single battery; reusing it is not allowed. And H23 (surface safety 0) has been given a resource that is already committed to others. Treat this output as a draft that needs a feasibility pass, not a deployable plan.",
+   "error_kinds": [],
+   "response_len": 1048,
+   "response": "```json\n[\n  {\"household\":\"H01\",\"resource\":null},\n  {\"household\":\"H02\",\"resource\":\"R04\"},\n  {\"household\":\"H03\",\"resource\":null},\n  {\"household\":\"H04\",\"resource\":\"R02\"},\n  {\"household\":\"H05\",\"resource\":\"R03\"},\n  {\"household\":\"H06\",\"resource\":\"R05\"},\n  {\"household\":\"H07\",\"resource\":\"R01\"},\n  {\"household\":\"H08\",\"resource\":\"R04\"},\n  {\"household\":\"H09\",\"resource\":\"R02\"},\n  {\"household\":\"H10\",\"resource\":\"R03\"},\n  {\"household\":\"H11\",\"resource\":null},\n  {\"household\":\"H12\",\"resource\":null},\n  {\"household\":\"H13\",\"resource\":\"R05\"},\n  {\"household\":\"H14\",\"resource\":\"R01\"},\n  {\"household\":\"H15\",\"resource\":\"R02\"},\n  {\"household\":\"H16\",\"resource\":\"R03\"},\n  {\"household\":\"H17\",\"resource\":\"R04\"},\n  {\"household\":\"H18\",\"resource\":\"R05\"},\n  {\"household\":\"H19\",\"resource\":\"R02\"},\n  {\"household\":\"H20\",\"resource\":\"R05\"},\n  {\"household\":\"H21\",\"resource\":\"R01\"},\n  {\"household\":\"H22\",\"resource\":\"R04\"},\n  {\"household\":\"H23\",\"resource\":null},\n  {\"household\":\"H24\",\"resource\":null},\n  {\"household\":\"H25\",\"resource\":\"R03\"},\n  {\"household\":\"H26\",\"resource\":\"R01\"}\n]\n```",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R02"
+     "resource": null
     },
     {
      "household": "H02",
@@ -3472,27 +3458,27 @@
     },
     {
      "household": "H03",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H04",
-     "resource": "R05"
+     "resource": "R02"
     },
     {
      "household": "H05",
-     "resource": "R01"
-    },
-    {
-     "household": "H06",
      "resource": "R03"
     },
     {
+     "household": "H06",
+     "resource": "R05"
+    },
+    {
      "household": "H07",
-     "resource": "R06"
+     "resource": "R01"
     },
     {
      "household": "H08",
-     "resource": "R01"
+     "resource": "R04"
     },
     {
      "household": "H09",
@@ -3500,39 +3486,39 @@
     },
     {
      "household": "H10",
-     "resource": "R05"
+     "resource": "R03"
     },
     {
      "household": "H11",
-     "resource": "R03"
+     "resource": null
     },
     {
      "household": "H12",
-     "resource": "R01"
+     "resource": null
     },
     {
      "household": "H13",
-     "resource": "R02"
-    },
-    {
-     "household": "H14",
-     "resource": "R06"
-    },
-    {
-     "household": "H15",
      "resource": "R05"
     },
     {
-     "household": "H16",
+     "household": "H14",
      "resource": "R01"
     },
     {
-     "household": "H17",
+     "household": "H15",
+     "resource": "R02"
+    },
+    {
+     "household": "H16",
      "resource": "R03"
     },
     {
-     "household": "H18",
+     "household": "H17",
      "resource": "R04"
+    },
+    {
+     "household": "H18",
+     "resource": "R05"
     },
     {
      "household": "H19",
@@ -3544,30 +3530,30 @@
     },
     {
      "household": "H21",
-     "resource": "R06"
-    },
-    {
-     "household": "H22",
-     "resource": "R03"
-    },
-    {
-     "household": "H23",
-     "resource": "R04"
-    },
-    {
-     "household": "H24",
      "resource": "R01"
     },
     {
-     "household": "H25",
+     "household": "H22",
      "resource": "R04"
     },
     {
+     "household": "H23",
+     "resource": null
+    },
+    {
+     "household": "H24",
+     "resource": null
+    },
+    {
+     "household": "H25",
+     "resource": "R03"
+    },
+    {
      "household": "H26",
-     "resource": "R02"
+     "resource": "R01"
     }
    ],
-   "at": "2026-10-25T20:04:27+09:00"
+   "at": "2026-10-25T21:16:09+09:00"
   },
   {
    "seed": 1014,
@@ -3584,7 +3570,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:13:06+09:00"
+   "at": "2026-10-25T21:16:48+09:00"
   },
   {
    "seed": 1015,
@@ -3594,24 +3580,25 @@
    "parse_fail": false,
    "attempts": 1,
    "call_errors": 0,
-   "response_len": 853,
-   "response": "```json\n[{\"household\":\"H01\",\"resource\":\"R03\"},{\"household\":\"H02\",\"resource\":\"R08\"},{\"household\":\"H03\",\"resource\":\"R12\"},{\"household\":\"H04\",\"resource\":\"R02\"},{\"household\":\"H05\",\"resource\":\"R10\"},{\"household\":\"H06\",\"resource\":\"R01\"},{\"household\":\"H07\",\"resource\":\"R04\"},{\"household\":\"H08\",\"resource\":\"R05\"},{\"household\":\"H09\",\"resource\":\"R09\"},{\"household\":\"H10\",\"resource\":\"R06\"},{\"household\":\"H11\",\"resource\":\"R07\"},{\"household\":\"H12\",\"resource\":\"R13\"},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null}]\n```",
+   "error_kinds": [],
+   "response_len": 840,
+   "response": "[{\"household\":\"H01\",\"resource\":\"R12\"},{\"household\":\"H02\",\"resource\":\"R03\"},{\"household\":\"H03\",\"resource\":\"R02\"},{\"household\":\"H04\",\"resource\":\"R09\"},{\"household\":\"H05\",\"resource\":\"R10\"},{\"household\":\"H06\",\"resource\":\"R05\"},{\"household\":\"H07\",\"resource\":\"R04\"},{\"household\":\"H08\",\"resource\":\"R06\"},{\"household\":\"H09\",\"resource\":\"R01\"},{\"household\":\"H10\",\"resource\":\"R07\"},{\"household\":\"H11\",\"resource\":\"R08\"},{\"household\":\"H12\",\"resource\":null},{\"household\":\"H13\",\"resource\":null},{\"household\":\"H14\",\"resource\":null},{\"household\":\"H15\",\"resource\":null},{\"household\":\"H16\",\"resource\":null},{\"household\":\"H17\",\"resource\":null},{\"household\":\"H18\",\"resource\":null},{\"household\":\"H19\",\"resource\":null},{\"household\":\"H20\",\"resource\":null},{\"household\":\"H21\",\"resource\":null},{\"household\":\"H22\",\"resource\":null},{\"household\":\"H23\",\"resource\":null}]",
    "assignment": [
     {
      "household": "H01",
-     "resource": "R03"
-    },
-    {
-     "household": "H02",
-     "resource": "R08"
-    },
-    {
-     "household": "H03",
      "resource": "R12"
     },
     {
-     "household": "H04",
+     "household": "H02",
+     "resource": "R03"
+    },
+    {
+     "household": "H03",
      "resource": "R02"
+    },
+    {
+     "household": "H04",
+     "resource": "R09"
     },
     {
      "household": "H05",
@@ -3619,7 +3606,7 @@
     },
     {
      "household": "H06",
-     "resource": "R01"
+     "resource": "R05"
     },
     {
      "household": "H07",
@@ -3627,23 +3614,23 @@
     },
     {
      "household": "H08",
-     "resource": "R05"
-    },
-    {
-     "household": "H09",
-     "resource": "R09"
-    },
-    {
-     "household": "H10",
      "resource": "R06"
     },
     {
-     "household": "H11",
+     "household": "H09",
+     "resource": "R01"
+    },
+    {
+     "household": "H10",
      "resource": "R07"
     },
     {
+     "household": "H11",
+     "resource": "R08"
+    },
+    {
      "household": "H12",
-     "resource": "R13"
+     "resource": null
     },
     {
      "household": "H13",
@@ -3690,7 +3677,7 @@
      "resource": null
     }
    ],
-   "at": "2026-10-25T20:04:37+09:00"
+   "at": "2026-10-25T21:16:12+09:00"
   },
   {
    "seed": 1015,
@@ -3707,7 +3694,7 @@
    "response_len": 0,
    "response": "",
    "assignment": [],
-   "at": "2026-10-25T20:13:38+09:00"
+   "at": "2026-10-25T21:16:54+09:00"
   }
  ]
 }

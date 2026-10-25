@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-"""P10 / L2: log-normal AFT restore-time model with interval and right censoring.
+"""P10 / L2: restore-time models with interval and right censoring.
+
+Candidates: M0/M1/M2 log-normal AFT (spec 5-2) + E0 (empirical distribution of exact durations) and
+NP (Turnbull NPMLE by EM), added 2026-10-26 under the pre-registration docs/L2_revision.md.
+Nonparametric fits are piecewise-uniform distributions: list of [a, b, w] (a == b is a point mass).
 
 Spec: E1 implementation spec section 5-2 (and 6-5, 6-10). ASCII source; Korean labels as \\u escapes.
 Usage:
@@ -24,11 +28,20 @@ TAUS = (0.5, 0.8, 0.9)
 Z95 = 1.959963984540054
 MODELS = {"M0": ["intercept"], "M1": ["intercept", "night"], "M2": ["intercept", "G2", "G3", "night"]}
 SPLIT_AT = "2026-07-01T00:00:00+09:00"
+NONPARAM = ("E0", "NP")
+# pre-registered simplicity order (docs/L2_revision.md section 2): ties within 2% go to the earlier one
+SIMPLICITY = ("M0", "M1", "M2", "E0", "NP")
+PREREG_COMMIT = "2b246e4"   # commit of docs/L2_revision.md, made before E0/NP were evaluated
+NP_TOL = 1e-10
+NP_MAXIT = 20000
+NP_DROP = 1e-12
 
 LABELS = {
     "M0": "M0 전체",                              # overall
     "M1": "M1 야간",                              # night
     "M2": "M2 원인군 3+야간",          # cause group 3 + night
+    "E0": "E0 정확 사건 경험분포",  # empirical distribution of exact events
+    "NP": "NP 비모수(Turnbull)",          # nonparametric Turnbull NPMLE
     "B0": "고정 2시간",                    # fixed 2 hours
     "B1": "관측 경험분위",          # empirical quantiles
     "B2": "기관 예고(발생 기준 해석)",   # agency forecast, occurrence-based reading
@@ -117,6 +130,137 @@ def mu_of(m, e):
 
 def q_ln(mu, sigma, p):
     return math.exp(mu + sigma * stats.norm.ppf(p))
+
+
+# ---------------------------------------------------------------- piecewise-uniform distributions (E0, NP)
+def pw_sf(segs, t):
+    """P(T > t)."""
+    s = 0.0
+    for a, b, w in segs:
+        if a > t:
+            s += w
+        elif b > t:
+            s += w * (b - t) / (b - a)
+    return s
+
+
+def pw_quantile(segs, p):
+    """inf{t: F(t) >= p}, linear inside uniform pieces."""
+    if p <= 0:
+        return segs[0][0]
+    cum = 0.0
+    for a, b, w in segs:
+        if cum + w >= p - 1e-15:
+            if b == a or w <= 0:
+                return a
+            return a + min(1.0, max(0.0, (p - cum) / w)) * (b - a)
+        cum += w
+    return segs[-1][1]
+
+
+def pw_cond_quantile(segs, e, p):
+    """Remaining-time p quantile given elapsed e (same definition as the log-normal one)."""
+    se = pw_sf(segs, e)
+    return max(0.0, pw_quantile(segs, 1 - (1 - p) * se) - e)
+
+
+def pw_partial_exp(segs, x):
+    """E[(T - x)+]."""
+    g = 0.0
+    for a, b, w in segs:
+        if b == a:
+            g += w * max(0.0, a - x)
+        elif x <= a:
+            g += w * ((a + b) / 2.0 - x)
+        elif x < b:
+            g += w * (b - x) ** 2 / (2.0 * (b - a))
+    return g
+
+
+def fit_e0(exact_t):
+    x = sorted(float(v) for v in exact_t)
+    n = len(x)
+    if n == 0:
+        return None
+    if n == 1:
+        segs = [[x[0], x[0], 1.0]]
+    else:
+        segs = [[x[k], x[k + 1], 1.0 / (n - 1)] for k in range(n - 1)]
+    return {"segs": segs, "k": n}
+
+
+def obs_intervals(d):
+    """Closed observation intervals [L, R] (R = inf for right censoring)."""
+    L, R = [], []
+    for kind, t, lo, hi in zip(d.kind, d.t, d.lo, d.hi):
+        if kind == "exact":
+            L.append(t); R.append(t)
+        elif kind == "interval":
+            L.append(lo); R.append(hi)
+        else:
+            L.append(lo); R.append(math.inf)
+    return np.array(L, dtype=float), np.array(R, dtype=float)
+
+
+def turnbull_intervals(L, R):
+    pts = sorted([(v, 0) for v in L] + [(v, 1) for v in R])   # ties: left endpoints first (closed intervals)
+    out = []
+    for (v0, k0), (v1, k1) in zip(pts, pts[1:]):
+        if k0 == 0 and k1 == 1 and (not out or out[-1] != (v0, v1)):
+            out.append((v0, v1))
+    return out
+
+
+def fit_np(d, track=False):
+    """Turnbull NPMLE by EM (self-consistency). Deterministic: uniform start."""
+    L, R = obs_intervals(d)
+    iv = turnbull_intervals(L, R)
+    q = np.array([a for a, _ in iv])
+    pr = np.array([b for _, b in iv])
+    n, m = len(L), len(iv)
+    # each observation covers a contiguous run [lo_i, hi_i] of Turnbull intervals
+    lo_i = np.searchsorted(q, L, side="left")
+    hi_i = np.searchsorted(pr, R, side="right") - 1
+    if np.any(hi_i < lo_i):
+        raise RuntimeError("observation covers no Turnbull interval")
+    p = np.full(m, 1.0 / m)
+    lls = []
+    it = 0
+    for it in range(1, NP_MAXIT + 1):
+        C = np.concatenate([[0.0], np.cumsum(p)])
+        den = C[hi_i + 1] - C[lo_i]
+        if track:
+            lls.append(float(np.sum(np.log(den))))
+        acc = np.zeros(m + 1)
+        np.add.at(acc, lo_i, 1.0 / den)
+        np.add.at(acc, hi_i + 1, -1.0 / den)
+        newp = p * np.cumsum(acc)[:m] / n
+        delta = float(np.max(np.abs(newp - p)))
+        p = newp
+        if delta < NP_TOL:
+            break
+    C = np.concatenate([[0.0], np.cumsum(p)])
+    ll = float(np.sum(np.log(C[hi_i + 1] - C[lo_i])))
+    keep = p >= NP_DROP
+    w = p[keep] / p[keep].sum()
+    segs = []
+    for (a, b), wj in zip([iv[j] for j in np.nonzero(keep)[0]], w):
+        b2 = a if math.isinf(b) else b              # unbounded mass -> point mass at its left end (Efron)
+        segs.append([float(a), float(b2), float(wj)])
+    out = {"segs": segs, "k": len(segs), "loglik": ll, "iters": it, "m": m}
+    if track:
+        out["lls"] = lls
+    return out
+
+
+def fit_nonparam(model_id, d):
+    if model_id == "E0":
+        return fit_e0(d.t[d.kind == "exact"])
+    return fit_np(d)
+
+
+def round_segs(segs):
+    return [[round(a, 6), round(b, 6), round(w, 9)] for a, b, w in segs]
 
 
 # ---------------------------------------------------------------- metrics
@@ -220,9 +364,10 @@ def run(args):
 
     # ---- LOO over exact + interval events
     targets = [i for i, e in enumerate(used) if e["_kind"] in ("exact", "interval")]
-    loo_pred = {m: [] for m in MODELS}      # exact: (y, q)
-    loo_int = {m: [] for m in MODELS}       # interval: (lo, hi, q80)
-    loo_params = {m: {} for m in MODELS}
+    CANDS = list(MODELS) + list(NONPARAM)
+    loo_pred = {m: [] for m in CANDS}      # exact: (y, q)
+    loo_int = {m: [] for m in CANDS}       # interval: (lo, hi, q80)
+    loo_params = {m: {} for m in CANDS}
     b0_pred, b1_pred, b2_pred, b2s_pred = [], [], [], []
     exact_all = [(i, used[i]["_t"]) for i in range(len(used)) if used[i]["_kind"] == "exact"]
     for i in targets:
@@ -238,6 +383,14 @@ def run(args):
                 loo_pred[m].append((ei["_t"], q))
             else:
                 loo_int[m].append((ei["_lo"], ei["_hi"], q[0.8]))
+        for m in NONPARAM:
+            fm = fit_nonparam(m, di)
+            loo_params[m][ei["event_id"]] = fm
+            q = {tau: pw_quantile(fm["segs"], tau) for tau in TAUS}
+            if ei["_kind"] == "exact":
+                loo_pred[m].append((ei["_t"], q))
+            else:
+                loo_int[m].append((ei["_lo"], ei["_hi"], q[0.8]))
         if ei["_kind"] == "exact":
             y = ei["_t"]
             b0_pred.append((y, {tau: 2.0 for tau in TAUS}))
@@ -249,19 +402,26 @@ def run(args):
                 b2_pred.append((y, {tau: fc[0] for tau in TAUS}))
                 b2s_pred.append((y, {tau: fc[1] for tau in TAUS}))
 
+    def int_cov(m):
+        h = sum(1 for lo, hi, q in loo_int[m] if q >= hi)
+        mi = sum(1 for lo, hi, q in loo_int[m] if q < lo)
+        return {"hit": h, "miss": mi, "undetermined": len(loo_int[m]) - h - mi}
+
     rows = []
-    for m in MODELS:
+    for m in CANDS:
         s = summarize(loo_pred[m])
         if s:
-            rows.append(dict(id=m, label=LABELS[m], **s))
-    # selection: lowest LOO mean pinball; within 2% -> fewer parameters
-    cand = [r for r in rows if r["id"] in MODELS]
+            rows.append(dict(id=m, label=LABELS[m], candidate=True, interval_p80=int_cov(m), **s))
+    # selection (pre-registered, docs/L2_revision.md): lowest LOO mean pinball; within 2% -> simpler by SIMPLICITY order
+    cand = [r for r in rows if r["id"] in CANDS]
     if cand:
         best = min(r["pinball"]["mean"] for r in cand)
         ok = [r for r in cand if r["pinball"]["mean"] <= best * 1.02]
-        selected = sorted(ok, key=lambda r: (fits[r["id"]]["k"], r["pinball"]["mean"]))[0]["id"]
+        selected = sorted(ok, key=lambda r: (SIMPLICITY.index(r["id"]), r["pinball"]["mean"]))[0]["id"]
     else:
         selected = "M0"
+    nonparam_sel = selected in NONPARAM
+    np_full = {m: fit_nonparam(m, d) for m in NONPARAM}
     s0 = summarize(b0_pred, with_cov=False)
     if s0:
         rows.append(dict(id="B0", label=LABELS["B0"], **s0))
@@ -291,6 +451,11 @@ def run(args):
             preds = [(e["_t"], {tau: q_ln(mu_of(fm, e), fm["sigma"], tau) for tau in TAUS}) for e in test]
             s = summarize(preds)
             ts_rows.append({"id": m, "pinball_mean": s["pinball"]["mean"], "cov80": s["cov80"]})
+        for m in NONPARAM:
+            fm = fit_nonparam(m, dtr)
+            if fm:
+                s = summarize([(e["_t"], {tau: pw_quantile(fm["segs"], tau) for tau in TAUS}) for e in test])
+                ts_rows.append({"id": m, "pinball_mean": s["pinball"]["mean"], "cov80": s["cov80"]})
         s = summarize([(e["_t"], {tau: 2.0 for tau in TAUS}) for e in test], with_cov=False)
         ts_rows.append({"id": "B0", "pinball_mean": s["pinball"]["mean"], "cov80": None})
         tr_exact = np.array([e["_t"] for e in train if e["_kind"] == "exact"])
@@ -299,11 +464,17 @@ def run(args):
             ts_rows.append({"id": "B1", "pinball_mean": s["pinball"]["mean"], "cov80": s["cov80"]})
 
     # ---- cells of the selected model
-    sm = fits[selected]
+    sm = fits[selected] if not nonparam_sel else None
     cells = []
-    groups = ["G1", "G2", "G3"] if "G2" in MODELS[selected] else ["all"]
-    nights = [False, True] if "night" in MODELS[selected] else ["all"]
+    groups = ["G1", "G2", "G3"] if not nonparam_sel and "G2" in MODELS[selected] else ["all"]
+    nights = [False, True] if not nonparam_sel and "night" in MODELS[selected] else ["all"]
     for g in groups:
+        if nonparam_sel:
+            segs = np_full[selected]["segs"]
+            n_cell = sum(1 for e in used if e["_kind"] in ("exact", "interval"))
+            cells.append({"group": "all", "night": "all", "n_cell": n_cell, "small": n_cell < 5, "mu": None, "sigma": None,
+                          "p50_h": round(pw_quantile(segs, 0.5), 4), "p80_h": round(pw_quantile(segs, 0.8), 4), "p90_h": round(pw_quantile(segs, 0.9), 4)})
+            continue
         for nt in nights:
             members = [e for e in used if e["_kind"] in ("exact", "interval")
                        and (g == "all" or e["group"] == g) and (nt == "all" or bool(e["night"]) == nt)]
@@ -332,10 +503,15 @@ def run(args):
     model = {
         "provisional": False, "reviewed": reviewed, "version": "fit-" + fitted_at[:16].replace(":", ""),
         "fitted_at": fitted_at, "data": data_block,
-        "models": {m: rnd_model(fits[m]) for m in MODELS},
+        "models": dict({m: rnd_model(fits[m]) for m in MODELS},
+                       **{m: dict({"segs": round_segs(np_full[m]["segs"]), "k": np_full[m]["k"]},
+                                  **({"loglik": round(np_full[m]["loglik"], 4), "iters": np_full[m]["iters"]} if m == "NP" else {}))
+                          for m in NONPARAM}),
         "selected": selected, "lr_tests": lr, "cells": cells,
-        "loo": [{"event_id": eid, "model": selected, "coef": {k: round(v, 6) for k, v in p["coef"].items()}, "sigma": round(p["sigma"], 6)}
+        "loo": [({"event_id": eid, "model": selected, "segs": round_segs(p["segs"])} if nonparam_sel else
+                 {"event_id": eid, "model": selected, "coef": {k: round(v, 6) for k, v in p["coef"].items()}, "sigma": round(p["sigma"], 6)})
                 for eid, p in loo_params[selected].items()],
+        "revision": {"prereg": "docs/L2_revision.md", "candidates": list(CANDS), "simplicity": list(SIMPLICITY)},
     }
     if not reviewed:
         model["note"] = "사건 검수 전 적합(자동 연결 사건표)"  # fitted before event review
@@ -353,12 +529,15 @@ def run(args):
                 p["upper_h"] = round(e["_hi"], 4)
         ev_plot.append(p)
     mu_all = mu_of(sm, {"night": False, "group": "G1"}) if selected == "M0" else None
+    sel_segs = np_full[selected]["segs"] if nonparam_sel else None
     curve = []
     # selected model, overall cell at elapsed 0: for M0 the single cell; otherwise mixture over observed covariates
     for k in range(0, 121):
         t = k / 10.0
         if t == 0:
             s = 1.0
+        elif sel_segs is not None:
+            s = pw_sf(sel_segs, t)
         elif mu_all is not None:
             s = float(stats.norm.sf((math.log(t) - mu_all) / sm["sigma"]))
         else:
@@ -371,6 +550,8 @@ def run(args):
         "review": {"n_before": n0 or 0, "n_after": n1 if n1 is not None else (n0 or 0),
                    "excluded": sum(1 for e in events if e.get("exclude_reason") == "reviewer")},
         "data": data_block, "selected": selected, "lr_tests": lr, "loo": rows,
+        "revision": {"prereg": "docs/L2_revision.md", "prereg_commit": PREREG_COMMIT, "candidates": list(CANDS), "simplicity": list(SIMPLICITY),
+                     "rule": "LOO mean pinball (q 0.5/0.8/0.9, exact events); within 2% of the best -> simpler"},
         "interval_coverage": {"hit": hit, "miss": miss, "undetermined": und},
         "time_split": {"train_n": len(train), "test_n": len(test), "rows": ts_rows, "split_at": SPLIT_AT},
         "events_plot": ev_plot, "curve": curve,
@@ -384,6 +565,10 @@ def run(args):
         write_fixture(args.fixture_out)
 
     print("fit: n exact=%d interval=%d right=%d excluded=%d reviewed=%s" % (n_exact, n_interval, n_right, n_excluded, reviewed))
+    for m in NONPARAM:
+        f_ = np_full[m]
+        print("  %s k=%d p50=%.3f p80=%.3f p90=%.3f%s" % (m, f_["k"], pw_quantile(f_["segs"], 0.5), pw_quantile(f_["segs"], 0.8), pw_quantile(f_["segs"], 0.9),
+                                                       (" iters=%d m=%d loglik=%.3f" % (f_["iters"], f_["m"], f_["loglik"])) if m == "NP" else ""))
     for m in MODELS:
         f_ = fits[m]
         print("  %s loglik=%.3f sigma=%.3f coef=%s" % (m, f_["loglik"], f_["sigma"], {k: round(v, 3) for k, v in f_["coef"].items() if v}))
@@ -414,8 +599,22 @@ def write_fixture(path):
                 q = float(dist.isf((1 - p) * se)) - e
                 pts.append({"e_h": e, "p": p, "q_h": q})
         cases.append({"mu": mu, "sigma": sigma, "points": pts})
+    # piecewise-uniform cases (E0/NP form): ties, point masses inside, unbounded-tail point mass
+    pw_cases = []
+    for segs in (fit_e0([0.583, 0.75, 1.417, 1.55, 1.55, 1.9, 2.75, 4.267])["segs"],
+                 [[0.0, 0.6, 0.1], [0.75, 0.75, 0.2], [0.9, 1.3, 0.25], [1.9, 1.9, 0.15], [2.0, 3.8, 0.2], [9.089, 9.089, 0.1]]):
+        pts = []
+        for e in (0.0, 0.5, 2.0, 5.0):
+            se = pw_sf(segs, e)
+            if se <= 0:
+                continue
+            for t in (0.25, 1.0, 2.0, 4.0):
+                pts.append({"e_h": e, "t_h": t, "S": pw_sf(segs, e + t) / se, "pe_h": pw_partial_exp(segs, e + t) / se})
+            for p in (0.5, 0.8, 0.9):
+                pts.append({"e_h": e, "p": p, "q_h": pw_cond_quantile(segs, e, p)})
+        pw_cases.append({"segs": segs, "points": pts})
     obj = {"note": "scipy 1.16.3 lognorm: S = P(T-e > t | T > e), pe_h = E[(T-e-t)+ | T > e] (quad), q_h = conditional remaining quantile; hours",
-           "cases": cases}
+           "cases": cases, "pw_cases": pw_cases}
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=1)
@@ -456,7 +655,30 @@ def selftest():
     share_i = float(np.mean(d.kind == "interval"))
     ok = abs(mu_h - 0.8) < 0.05 and abs(s_h - 0.7) < 0.05
     print("selftest: n=%d right=%.2f interval=%.2f mu_hat=%.4f sigma_hat=%.4f -> %s" % (n, share_r, share_i, mu_h, s_h, "PASS" if ok else "FAIL"))
-    return 0 if ok else 1
+
+    # NP (Turnbull) tests, pre-registered in docs/L2_revision.md section 6
+    ex_only = Data([e for e in evs if e["_kind"] == "exact"][:300])
+    f1 = fit_np(ex_only)
+    xs = np.sort(ex_only.t)
+    vals, counts = np.unique(xs, return_counts=True)
+    got = {a: w for a, b, w in f1["segs"]}
+    err1 = max(abs(got.get(v, 0.0) - c / len(xs)) for v, c in zip(vals, counts))
+    ok1 = err1 < 1e-9 and all(a == b for a, b, _ in f1["segs"])
+    f2 = fit_np(d, track=True)
+    true = stats.lognorm(s=0.7, scale=math.exp(0.8))
+    err2 = max(abs((1 - pw_sf(f2["segs"], t)) - float(true.cdf(t))) for t in (1.0, 2.0, 3.0, 4.0, 6.0))
+    ok2 = err2 < 0.04
+    lls = f2["lls"]
+    ok3 = all(b >= a - 1e-9 for a, b in zip(lls, lls[1:]))
+    print("selftest NP: exact-only max|p-ecdf|=%.2e -> %s; sim sup|F-F0|=%.4f (iters %d, intervals %d) -> %s; EM loglik monotone -> %s" % (
+        err1, "PASS" if ok1 else "FAIL", err2, f2["iters"], f2["m"], "PASS" if ok2 else "FAIL", "PASS" if ok3 else "FAIL"))
+    # E0 quantiles equal numpy linear quantiles (B1)
+    xe = [0.583, 0.75, 1.417, 1.55, 1.55, 1.9, 2.75, 4.267]
+    e0 = fit_e0(xe)["segs"]
+    err4 = max(abs(pw_quantile(e0, p) - float(np.quantile(xe, p, method="linear"))) for p in (0.1, 0.5, 0.8, 0.9, 0.95))
+    ok4 = err4 < 1e-12
+    print("selftest E0: max|q - numpy linear|=%.2e -> %s" % (err4, "PASS" if ok4 else "FAIL"))
+    return 0 if (ok and ok1 and ok2 and ok3 and ok4) else 1
 
 
 def main():

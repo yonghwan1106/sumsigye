@@ -4,7 +4,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import type {
-  AllocInput, CauseGroup, DeviceSpec, EngineParams, ExtBatterySpec, OutageEvent, RestoreDist, RestoreModelFile,
+  AllocInput, CauseGroup, DeviceSpec, EngineParams, ExtBatterySpec, LnModel, OutageEvent, RestoreDist, RestoreModelFile,
 } from "@/lib/types";
 import { DEFAULT_PARAMS } from "@/lib/engine/params";
 import { lnSurv, muOf, normInv } from "@/lib/engine/survival";
@@ -80,7 +80,7 @@ export interface EvalScenario {
 }
 
 function smallCell(model: RestoreModelFile, group: CauseGroup, night: boolean): boolean {
-  if (model.selected === "M0") return false;
+  if (model.selected !== "M1" && model.selected !== "M2") return false;   // M0·E0·NP는 칸 없음
   const usesGroup = model.selected === "M2";
   const cell = model.cells.find(
     (c) => (c.group === "all" || !usesGroup || c.group === group) && (c.night === "all" || c.night === night),
@@ -125,10 +125,13 @@ export function buildScenario(ctx: EvalContext, seed: number, kind: "small" | "w
     }
     if (d <= e) d = e + 1;
     const loo = ctx.looById.get(event_id!)!;
-    restore = { kind: "lognormal", mu: muOf(loo.coef, group, night), sigma: loo.sigma, elapsed_min: e, small_cell: smallCell(ctx.model, group, night) };
+    restore = loo.segs
+      ? { kind: "piecewise", segs: loo.segs, elapsed_min: e, small_cell: smallCell(ctx.model, group, night) }
+      : { kind: "lognormal", mu: muOf(loo.coef!, group, night), sigma: loo.sigma!, elapsed_min: e, small_cell: smallCell(ctx.model, group, night) };
   } else {
     // 임시: 사건표·LOO 모수 없음 → 임시 M0에서 참값을 뽑는다(배정기도 같은 M0).
-    const m0 = ctx.model.models[ctx.model.selected] ?? ctx.model.models.M0;
+    const selM = ctx.model.models[ctx.model.selected];
+    const m0 = (selM && "coef" in selM ? selM : ctx.model.models.M0) as LnModel;
     const mu = muOf(m0.coef, "G3", false);
     e = r() < 0.5 ? unif(r, 5, 15) : unif(r, 30, 120);
     d = drawCondLognormal(r, mu, m0.sigma, e / 60) * 60 * world.tail_mult;

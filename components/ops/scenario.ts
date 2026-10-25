@@ -51,7 +51,7 @@ export function effectiveHouseholds(b: ScenarioBundle, s: ScenarioState): Househ
 /** 칸 표본 적음 조회(키 형식이 정해지지 않아 몇 가지 표기를 받는다). M0은 칸을 쓰지 않으므로 false. */
 function cellSmall(b: ScenarioBundle, group: CauseGroup, night: boolean): boolean {
   const rm = b.restore_model;
-  if (rm.model === "M0") return false;
+  if (rm.model !== "M1" && rm.model !== "M2") return false;   // M0·E0·NP는 칸 없음
   const g = rm.model === "M1" ? "all" : group;
   const n = night ? "night" : "day";
   const keys = [`${g}|${n}`, `${g}:${n}`, `${g}_${n}`, `${g}|${night}`, `${g}:${night}`, `${g}_${night}`, `${g}-${n}`];
@@ -72,8 +72,10 @@ export function restoreAt(b: ScenarioBundle, now: ISO, l1: SmsL1, cutoff?: ISO):
   const night = isNight(b.outage_start);
   const small = cellSmall(b, group, night);
   const elapsed = Math.max(0, minutesBetween(b.outage_start, now));
-  const mu = muOf(b.restore_model.coef, group, night);
-  return { d: { kind: "lognormal", mu, sigma: b.restore_model.sigma, elapsed_min: elapsed, small_cell: small }, group, night, small, elapsed_min: elapsed };
+  const rm = b.restore_model;
+  if (rm.segs) return { d: { kind: "piecewise", segs: rm.segs, elapsed_min: elapsed, small_cell: small }, group, night, small, elapsed_min: elapsed };
+  const mu = muOf(rm.coef!, group, night);
+  return { d: { kind: "lognormal", mu, sigma: rm.sigma!, elapsed_min: elapsed, small_cell: small }, group, night, small, elapsed_min: elapsed };
 }
 
 export function weatherAt(b: ScenarioBundle, now: ISO): { precip_mm: number; wind_ms: number; temp_c: number } | null {
