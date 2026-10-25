@@ -1,0 +1,9 @@
+{
+  "status": "measuring",
+  "provisional": true,
+  "meta": { "n_small": 200, "n_wide": 200, "truth_pool": "loo_pair", "boot": 2000 },
+  "methods": [],
+  "diffs": [],
+  "llm": null,
+  "compute_ms_wide": 0
+}

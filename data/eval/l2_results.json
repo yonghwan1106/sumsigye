@@ -1,0 +1,21 @@
+{
+  "status": "measuring",
+  "reviewed": false,
+  "review": { "n_before": 0, "n_after": 0, "excluded": 0 },
+  "data": {
+    "n_exact": 0,
+    "n_interval": 0,
+    "n_right": 0,
+    "n_excluded": 0,
+    "period": ["2026-10-25T18:53:50+09:00", "2026-10-25T18:53:50+09:00"],
+    "corpus_n": 0,
+    "collected_at": "2026-10-25T18:53:50+09:00"
+  },
+  "selected": "M0",
+  "lr_tests": [],
+  "loo": [],
+  "interval_coverage": { "hit": 0, "miss": 0, "undetermined": 0 },
+  "time_split": { "train_n": 0, "test_n": 0, "rows": [] },
+  "events_plot": [],
+  "curve": []
+}

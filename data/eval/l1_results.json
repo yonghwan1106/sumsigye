@@ -1,0 +1,10 @@
+{
+  "status": "measuring",
+  "meta": { "reviewed_n": 0, "total_n": 0, "labeler": "none", "method": "none", "realtime_mode": "llm" },
+  "rows": [
+    { "system": "rule", "relevant_f1": null, "kind_acc": null, "time_exact": { "rate": null, "n": 0 }, "null_correct": { "rate": null, "n": 0 }, "eta_base_acc": null, "cause6_acc": null, "cause3_acc": null, "link_p": null, "link_r": null },
+    { "system": "claude-haiku-5-5", "relevant_f1": null, "kind_acc": null, "time_exact": { "rate": null, "n": 0 }, "null_correct": { "rate": null, "n": 0 }, "eta_base_acc": null, "cause6_acc": null, "cause3_acc": null, "link_p": null, "link_r": null },
+    { "system": "claude-sonnet-5", "relevant_f1": null, "kind_acc": null, "time_exact": { "rate": null, "n": 0 }, "null_correct": { "rate": null, "n": 0 }, "eta_base_acc": null, "cause6_acc": null, "cause3_acc": null, "link_p": null, "link_r": null }
+  ],
+  "auto_checks": []
+}

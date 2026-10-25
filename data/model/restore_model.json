@@ -1,0 +1,38 @@
+{
+  "provisional": true,
+  "reviewed": false,
+  "version": "provisional-c1",
+  "fitted_at": "2026-10-25T18:53:50+09:00",
+  "note": "임시 값(C1): 설계 v1 1차값 P50 1.9시간·P90 4.87시간에서 역산한 모수(mu=ln 1.9, sigma=(ln 4.87 - ln 1.9)/1.2816). 실제 적합값 아님 — A7(fit_restore.py)이 덮어쓴다.",
+  "data": {
+    "n_exact": 0,
+    "n_interval": 0,
+    "n_right": 0,
+    "n_excluded": 0,
+    "period": ["2026-10-25T18:53:50+09:00", "2026-10-25T18:53:50+09:00"],
+    "corpus_n": 0,
+    "collected_at": "2026-10-25T18:53:50+09:00"
+  },
+  "models": {
+    "M0": {
+      "coef": { "intercept": 0.6419, "night": 0, "G2": 0, "G3": 0 },
+      "sigma": 0.7344
+    }
+  },
+  "selected": "M0",
+  "lr_tests": [],
+  "cells": [
+    {
+      "group": "all",
+      "night": "all",
+      "n_cell": 0,
+      "small": true,
+      "mu": 0.6419,
+      "sigma": 0.7344,
+      "p50_h": 1.9001,
+      "p80_h": 3.5254,
+      "p90_h": 4.8699
+    }
+  ],
+  "loo": []
+}

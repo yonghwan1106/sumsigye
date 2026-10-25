@@ -1,0 +1,44 @@
+{
+  "name": "sumsigye",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "data:fetch": "python pipeline/fetch_sms.py --out data/sms",
+    "data:split": "tsx scripts/split-corpus.ts",
+    "data:rule": "tsx scripts/extract-rule.ts",
+    "data:review-sheets": "tsx scripts/make-review-sheets.ts",
+    "data:ingest-review": "tsx scripts/ingest-review.ts",
+    "data:llm": "tsx scripts/extract-llm.ts",
+    "data:events": "tsx scripts/build-events.ts",
+    "data:fit": "python pipeline/fit_restore.py --events data/events/events.json --model-out data/model/restore_model.json --results-out data/eval/l2_results.json --fixture-out data/model/_fixture_survival.json",
+    "data:weather": "python pipeline/weather_snapshot.py --out data/weather",
+    "eval:l1": "tsx scripts/eval-l1.ts",
+    "build:scenarios": "tsx scripts/build-scenarios.ts",
+    "eval:alloc": "tsx scripts/eval-alloc.ts",
+    "eval:llm-baseline": "tsx scripts/eval-llm-baseline.ts",
+    "rebuild:data": "npm run data:events && npm run data:fit && npm run eval:l1 && npm run build:scenarios && npm run eval:alloc",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "check:pii": "node scripts/check-pii.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.124.0",
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  }
+}

@@ -1,0 +1,7 @@
+pipeline/
+data/review/
+scripts/
+tests/
+*.py
+data/l1/
+data/sms/split.json
