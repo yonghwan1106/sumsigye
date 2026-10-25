@@ -1,0 +1,404 @@
+{
+ "seed": 20261026,
+ "rng": "mulberry32",
+ "fixtures": [
+  266510,
+  266511,
+  254509,
+  254510,
+  254516,
+  254517,
+  266838,
+  266843,
+  266844,
+  250936,
+  269705,
+  269706
+ ],
+ "quota": {
+  "restore": 20,
+  "forecast": 15,
+  "unrelated": 10,
+  "other": 15
+ },
+ "note": "공통 추가지시 §4에 따라 골드 60행(층 20·15·10·15). 층 판정은 문안 낱말 정규식만(§4-2).",
+ "strata_counts": {
+  "restore": 46,
+  "forecast": 70,
+  "unrelated": 38,
+  "other": 164
+ },
+ "gold_picked": {
+  "restore": 20,
+  "forecast": 15,
+  "unrelated": 10,
+  "other": 15
+ },
+ "gold_sns": [
+  259197,
+  268720,
+  268833,
+  239764,
+  264963,
+  243116,
+  243676,
+  213266,
+  257646,
+  268849,
+  266949,
+  229327,
+  209917,
+  249864,
+  260230,
+  269311,
+  237095,
+  210338,
+  256394,
+  226598,
+  258794,
+  265948,
+  232285,
+  258565,
+  243432,
+  207255,
+  242493,
+  252863,
+  251916,
+  207260,
+  244842,
+  257397,
+  257997,
+  265203,
+  259195,
+  243415,
+  205326,
+  260014,
+  251057,
+  227311,
+  205708,
+  266157,
+  246089,
+  261139,
+  210595,
+  228458,
+  268081,
+  263119,
+  209998,
+  237096,
+  265942,
+  222858,
+  268835,
+  211758,
+  213147,
+  249877,
+  259337,
+  266132,
+  226934,
+  259196
+ ],
+ "gold_order": [
+  {
+   "order": 1,
+   "sn": 259197,
+   "stratum": "restore"
+  },
+  {
+   "order": 2,
+   "sn": 268720,
+   "stratum": "forecast"
+  },
+  {
+   "order": 3,
+   "sn": 268833,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 4,
+   "sn": 239764,
+   "stratum": "other"
+  },
+  {
+   "order": 5,
+   "sn": 264963,
+   "stratum": "restore"
+  },
+  {
+   "order": 6,
+   "sn": 243116,
+   "stratum": "forecast"
+  },
+  {
+   "order": 7,
+   "sn": 243676,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 8,
+   "sn": 213266,
+   "stratum": "other"
+  },
+  {
+   "order": 9,
+   "sn": 257646,
+   "stratum": "restore"
+  },
+  {
+   "order": 10,
+   "sn": 268849,
+   "stratum": "forecast"
+  },
+  {
+   "order": 11,
+   "sn": 266949,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 12,
+   "sn": 229327,
+   "stratum": "other"
+  },
+  {
+   "order": 13,
+   "sn": 209917,
+   "stratum": "restore"
+  },
+  {
+   "order": 14,
+   "sn": 249864,
+   "stratum": "forecast"
+  },
+  {
+   "order": 15,
+   "sn": 260230,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 16,
+   "sn": 269311,
+   "stratum": "other"
+  },
+  {
+   "order": 17,
+   "sn": 237095,
+   "stratum": "restore"
+  },
+  {
+   "order": 18,
+   "sn": 210338,
+   "stratum": "forecast"
+  },
+  {
+   "order": 19,
+   "sn": 256394,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 20,
+   "sn": 226598,
+   "stratum": "other"
+  },
+  {
+   "order": 21,
+   "sn": 258794,
+   "stratum": "restore"
+  },
+  {
+   "order": 22,
+   "sn": 265948,
+   "stratum": "forecast"
+  },
+  {
+   "order": 23,
+   "sn": 232285,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 24,
+   "sn": 258565,
+   "stratum": "other"
+  },
+  {
+   "order": 25,
+   "sn": 243432,
+   "stratum": "restore"
+  },
+  {
+   "order": 26,
+   "sn": 207255,
+   "stratum": "forecast"
+  },
+  {
+   "order": 27,
+   "sn": 242493,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 28,
+   "sn": 252863,
+   "stratum": "other"
+  },
+  {
+   "order": 29,
+   "sn": 251916,
+   "stratum": "restore"
+  },
+  {
+   "order": 30,
+   "sn": 207260,
+   "stratum": "forecast"
+  },
+  {
+   "order": 31,
+   "sn": 244842,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 32,
+   "sn": 257397,
+   "stratum": "other"
+  },
+  {
+   "order": 33,
+   "sn": 257997,
+   "stratum": "restore"
+  },
+  {
+   "order": 34,
+   "sn": 265203,
+   "stratum": "forecast"
+  },
+  {
+   "order": 35,
+   "sn": 259195,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 36,
+   "sn": 243415,
+   "stratum": "other"
+  },
+  {
+   "order": 37,
+   "sn": 205326,
+   "stratum": "restore"
+  },
+  {
+   "order": 38,
+   "sn": 260014,
+   "stratum": "forecast"
+  },
+  {
+   "order": 39,
+   "sn": 251057,
+   "stratum": "unrelated"
+  },
+  {
+   "order": 40,
+   "sn": 227311,
+   "stratum": "other"
+  },
+  {
+   "order": 41,
+   "sn": 205708,
+   "stratum": "restore"
+  },
+  {
+   "order": 42,
+   "sn": 266157,
+   "stratum": "forecast"
+  },
+  {
+   "order": 43,
+   "sn": 246089,
+   "stratum": "other"
+  },
+  {
+   "order": 44,
+   "sn": 261139,
+   "stratum": "restore"
+  },
+  {
+   "order": 45,
+   "sn": 210595,
+   "stratum": "forecast"
+  },
+  {
+   "order": 46,
+   "sn": 228458,
+   "stratum": "other"
+  },
+  {
+   "order": 47,
+   "sn": 268081,
+   "stratum": "restore"
+  },
+  {
+   "order": 48,
+   "sn": 263119,
+   "stratum": "forecast"
+  },
+  {
+   "order": 49,
+   "sn": 209998,
+   "stratum": "other"
+  },
+  {
+   "order": 50,
+   "sn": 237096,
+   "stratum": "restore"
+  },
+  {
+   "order": 51,
+   "sn": 265942,
+   "stratum": "forecast"
+  },
+  {
+   "order": 52,
+   "sn": 222858,
+   "stratum": "other"
+  },
+  {
+   "order": 53,
+   "sn": 268835,
+   "stratum": "restore"
+  },
+  {
+   "order": 54,
+   "sn": 211758,
+   "stratum": "forecast"
+  },
+  {
+   "order": 55,
+   "sn": 213147,
+   "stratum": "other"
+  },
+  {
+   "order": 56,
+   "sn": 249877,
+   "stratum": "restore"
+  },
+  {
+   "order": 57,
+   "sn": 259337,
+   "stratum": "restore"
+  },
+  {
+   "order": 58,
+   "sn": 266132,
+   "stratum": "restore"
+  },
+  {
+   "order": 59,
+   "sn": 226934,
+   "stratum": "restore"
+  },
+  {
+   "order": 60,
+   "sn": 259196,
+   "stratum": "restore"
+  }
+ ],
+ "gold_count": 60,
+ "dev_count": 270,
+ "created_at": "2026-10-25T19:00:39+09:00"
+}
