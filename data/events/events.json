@@ -1,0 +1,6127 @@
+{
+ "meta": {
+  "built_at": "2026-10-25T19:14:53+09:00",
+  "n_by_outcome": {
+   "exact": 12,
+   "interval": 14,
+   "right": 115,
+   "excluded": 76
+  },
+  "reviewed": false,
+  "n_before_review": 26,
+  "n_after_review": null,
+  "sources": {
+   "rule": 60,
+   "claude-haiku-5-5": 0,
+   "claude-sonnet-5": 270,
+   "gold": 0,
+   "merged": 0
+  }
+ },
+ "events": [
+  {
+   "event_id": "E-207198",
+   "org": "세종시청",
+   "sns": [
+    207198
+   ],
+   "areas": [
+    "대평동",
+    "보람동",
+    "집현동"
+   ],
+   "start_at": "2023-12-09T02:02:00+09:00",
+   "start_sn": 207198,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.52,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 31,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-207249",
+   "org": "자양동",
+   "sns": [
+    207249
+   ],
+   "areas": [
+    "자양동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-207253",
+   "org": "동구",
+   "sns": [
+    207253,
+    207255,
+    207260
+   ],
+   "areas": [
+    "소제동",
+    "자양동",
+    "대동"
+   ],
+   "start_at": "2023-12-11T13:00:00+09:00",
+   "start_sn": 207255,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 25.622,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 1163,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "start_conflict_gt10m"
+   ],
+   "eta": {
+    "eta_at": "2023-12-12T10:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 207253
+   }
+  },
+  {
+   "event_id": "E-208645",
+   "org": "여주시",
+   "sns": [
+    208645
+   ],
+   "areas": [],
+   "start_at": "2024-01-03T15:55:00+09:00",
+   "start_sn": 208645,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.474,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 28,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-208659",
+   "org": "광주시",
+   "sns": [
+    208659,
+    208660
+   ],
+   "areas": [
+    "능평동"
+   ],
+   "start_at": "2024-01-04T01:15:00+09:00",
+   "start_sn": 208659,
+   "outcome": "exact",
+   "duration_h": 2.75,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 124,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-209082",
+   "org": "봉화군",
+   "sns": [
+    209082
+   ],
+   "areas": [
+    "소로리",
+    "의양리"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": "2024-01-15T00:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 209082
+   }
+  },
+  {
+   "event_id": "E-209432",
+   "org": "부산진구",
+   "sns": [
+    209432
+   ],
+   "areas": [],
+   "start_at": "2024-01-22T21:30:00+09:00",
+   "start_sn": 209432,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.514,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 31,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-209914",
+   "org": "울산중구청",
+   "sns": [
+    209914
+   ],
+   "areas": [
+    "태화동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": "2024-02-06T20:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 209914
+   }
+  },
+  {
+   "event_id": "E-209917",
+   "org": "중구",
+   "sns": [
+    209917
+   ],
+   "areas": [
+    "태화동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-209998",
+   "org": "옹진군",
+   "sns": [
+    209998,
+    209999
+   ],
+   "areas": [
+    "영흥면",
+    "보온관리"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-210338",
+   "org": "동대문구청",
+   "sns": [
+    210338
+   ],
+   "areas": [
+    "용신동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": "2024-02-25T14:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 210338
+   }
+  },
+  {
+   "event_id": "E-210365",
+   "org": "달성군청",
+   "sns": [
+    210365
+   ],
+   "areas": [
+    "다사읍"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-210513",
+   "org": "강서구",
+   "sns": [
+    210513
+   ],
+   "areas": [
+    "내발산동"
+   ],
+   "start_at": "2024-03-07T16:13:00+09:00",
+   "start_sn": 210513,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.481,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 29,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-210595",
+   "org": "서울교통공사",
+   "sns": [
+    210595
+   ],
+   "areas": [],
+   "start_at": "2024-03-15T05:30:00+09:00",
+   "start_sn": 210595,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.226,
+   "upper_h": null,
+   "cause6": "work",
+   "group": "G1",
+   "night": true,
+   "wide": false,
+   "first_sms_delay_min": 134,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-210764",
+   "org": "여수시",
+   "sns": [
+    210764
+   ],
+   "areas": [
+    "화양면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-211092",
+   "org": "성남시청",
+   "sns": [
+    211092
+   ],
+   "areas": [
+    "수내동"
+   ],
+   "start_at": "2024-04-08T21:47:00+09:00",
+   "start_sn": 211092,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.359,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 82,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-211501",
+   "org": "김포시청",
+   "sns": [
+    211501
+   ],
+   "areas": [
+    "구래동",
+    "마산동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-211579",
+   "org": "홍성군",
+   "sns": [
+    211579,
+    211580
+   ],
+   "areas": [
+    "대교리",
+    "고암리",
+    "남장리"
+   ],
+   "start_at": "2024-05-05T15:15:00+09:00",
+   "start_sn": 211579,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.887,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 34,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-211592",
+   "org": "홍성군",
+   "sns": [
+    211592
+   ],
+   "areas": [
+    "홍성읍"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-211758",
+   "org": "강북구",
+   "sns": [
+    211758
+   ],
+   "areas": [
+    "수유2동"
+   ],
+   "start_at": "2024-05-14T16:41:00+09:00",
+   "start_sn": 211758,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.282,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 77,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-211823",
+   "org": "안동시",
+   "sns": [
+    211823
+   ],
+   "areas": [],
+   "start_at": "2024-05-15T23:30:00+09:00",
+   "start_sn": 211823,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.228,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": false,
+   "first_sms_delay_min": 14,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-211958",
+   "org": "천안시",
+   "sns": [
+    211958
+   ],
+   "areas": [
+    "구성동"
+   ],
+   "start_at": "2024-05-23T13:20:00+09:00",
+   "start_sn": 211958,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.584,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 35,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2024-05-23T16:20:00+09:00",
+     "2024-05-23T16:55:04+09:00"
+    ],
+    "from_sn": 211958
+   }
+  },
+  {
+   "event_id": "E-212018",
+   "org": "안동시",
+   "sns": [
+    212018
+   ],
+   "areas": [
+    "안막동"
+   ],
+   "start_at": "2024-05-26T18:30:00+09:00",
+   "start_sn": 212018,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.288,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 17,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-212026",
+   "org": "고양시",
+   "sns": [
+    212026
+   ],
+   "areas": [
+    "풍동"
+   ],
+   "start_at": "2024-05-27T08:00:00+09:00",
+   "start_sn": 212026,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.976,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 59,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ],
+   "eta": {
+    "eta_at": "2024-05-27T14:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 212026
+   }
+  },
+  {
+   "event_id": "E-212046",
+   "org": "서대문구",
+   "sns": [
+    212046,
+    212047
+   ],
+   "areas": [
+    "북아현동"
+   ],
+   "start_at": "2024-05-27T22:40:00+09:00",
+   "start_sn": 212046,
+   "outcome": "exact",
+   "duration_h": 0.75,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 42,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-212135",
+   "org": "의정부시",
+   "sns": [
+    212135
+   ],
+   "areas": [
+    "의정부동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": "2024-05-31T22:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 212135
+   }
+  },
+  {
+   "event_id": "E-212247",
+   "org": "강남구",
+   "sns": [
+    212247
+   ],
+   "areas": [
+    "청담동"
+   ],
+   "start_at": "2024-06-07T10:07:00+09:00",
+   "start_sn": 212247,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.558,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 33,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-212270",
+   "org": "영등포구",
+   "sns": [
+    212270
+   ],
+   "areas": [
+    "여의동"
+   ],
+   "start_at": "2024-06-08T14:35:00+09:00",
+   "start_sn": 212270,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.902,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 54,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-212404",
+   "org": "관악구청",
+   "sns": [
+    212404
+   ],
+   "areas": [
+    "봉천동",
+    "중앙동"
+   ],
+   "start_at": "2024-06-12T14:30:00+09:00",
+   "start_sn": 212404,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.014,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 61,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-213147",
+   "org": "창원시",
+   "sns": [
+    213147
+   ],
+   "areas": [
+    "월영동"
+   ],
+   "start_at": "2024-06-30T07:37:00+09:00",
+   "start_sn": 213147,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.113,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 67,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-213266",
+   "org": "영등포구",
+   "sns": [
+    213266
+   ],
+   "areas": [
+    "영등포동"
+   ],
+   "start_at": "2024-07-02T12:00:00+09:00",
+   "start_sn": 213266,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.874,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 52,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-215549",
+   "org": "광양시",
+   "sns": [
+    215549
+   ],
+   "areas": [
+    "중동"
+   ],
+   "start_at": "2024-07-18T10:20:00+09:00",
+   "start_sn": 215549,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.681,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 41,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2024-07-18T11:20:00+09:00",
+     "2024-07-18T12:00:53+09:00"
+    ],
+    "from_sn": 215549
+   }
+  },
+  {
+   "event_id": "E-215705",
+   "org": "수성구",
+   "sns": [
+    215705
+   ],
+   "areas": [
+    "수성동3가",
+    "중동",
+    "만촌동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-215864",
+   "org": "중구",
+   "sns": [
+    215864
+   ],
+   "areas": [
+    "서동"
+   ],
+   "start_at": "2024-07-20T12:00:00+09:00",
+   "start_sn": 215864,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.755,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 105,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-216176",
+   "org": "하동군",
+   "sns": [
+    216176
+   ],
+   "areas": [
+    "하동읍",
+    "화개면",
+    "악양면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-216703",
+   "org": "부산진구",
+   "sns": [
+    216703
+   ],
+   "areas": [
+    "범천1동"
+   ],
+   "start_at": "2024-07-28T03:20:00+09:00",
+   "start_sn": 216703,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.269,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 136,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-216821",
+   "org": "서대문구",
+   "sns": [
+    216821
+   ],
+   "areas": [
+    "북아현동"
+   ],
+   "start_at": "2024-07-29T06:33:00+09:00",
+   "start_sn": 216821,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.87,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 52,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-217301",
+   "org": "수영구",
+   "sns": [
+    217301
+   ],
+   "areas": [
+    "남천동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-218303",
+   "org": "여주시",
+   "sns": [
+    218303
+   ],
+   "areas": [
+    "북내면",
+    "오학동",
+    "세종대왕면"
+   ],
+   "start_at": "2024-08-05T21:00:00+09:00",
+   "start_sn": 218303,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.142,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 9,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-219392",
+   "org": "창원시",
+   "sns": [
+    219392
+   ],
+   "areas": [
+    "용원동"
+   ],
+   "start_at": "2024-08-09T18:00:00+09:00",
+   "start_sn": 219392,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.062,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 64,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-221887",
+   "org": "세종시청",
+   "sns": [
+    221887
+   ],
+   "areas": [],
+   "start_at": "2024-08-19T06:50:00+09:00",
+   "start_sn": 221887,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.241,
+   "upper_h": null,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 14,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-222197",
+   "org": "남해군",
+   "sns": [
+    222197
+   ],
+   "areas": [
+    "조도",
+    "호도"
+   ],
+   "start_at": "2024-08-20T14:53:00+09:00",
+   "start_sn": 222197,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.019,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 121,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-222278",
+   "org": "관악구청",
+   "sns": [
+    222278
+   ],
+   "areas": [
+    "신림동"
+   ],
+   "start_at": "2024-08-21T07:11:00+09:00",
+   "start_sn": 222278,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.111,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 67,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-222858",
+   "org": "부산진구",
+   "sns": [
+    222858
+   ],
+   "areas": [
+    "개금동"
+   ],
+   "start_at": "2024-08-25T11:50:00+09:00",
+   "start_sn": 222858,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 12.601,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 756,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-223348",
+   "org": "은평구",
+   "sns": [
+    223348,
+    223349
+   ],
+   "areas": [
+    "갈현동"
+   ],
+   "start_at": "2024-09-02T04:42:00+09:00",
+   "start_sn": 223348,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 3.513,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": false,
+   "first_sms_delay_min": 110,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": "2024-09-02T13:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 223349
+   }
+  },
+  {
+   "event_id": "E-223875",
+   "org": "한국전력공사태백지사",
+   "sns": [
+    223875
+   ],
+   "areas": [
+    "장성동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-224209",
+   "org": "진천군",
+   "sns": [
+    224209
+   ],
+   "areas": [
+    "광혜원"
+   ],
+   "start_at": "2024-09-16T09:06:00+09:00",
+   "start_sn": 224209,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.313,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 79,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-224263",
+   "org": "부천시청",
+   "sns": [
+    224263
+   ],
+   "areas": [
+    "상동"
+   ],
+   "start_at": "2024-09-16T17:40:00+09:00",
+   "start_sn": 224263,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.227,
+   "upper_h": null,
+   "cause6": "work",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 74,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-224512",
+   "org": "청주시",
+   "sns": [
+    224512
+   ],
+   "areas": [
+    "용암동",
+    "영운동",
+    "금천동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-224787",
+   "org": "광양시",
+   "sns": [
+    224787
+   ],
+   "areas": [
+    "진상면",
+    "옥곡면"
+   ],
+   "start_at": "2024-09-20T19:00:00+09:00",
+   "start_sn": 224787,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.676,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 41,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-225516",
+   "org": "남양주시",
+   "sns": [
+    225516
+   ],
+   "areas": [
+    "금곡동"
+   ],
+   "start_at": "2024-09-25T13:12:00+09:00",
+   "start_sn": 225516,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.555,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 33,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-225640",
+   "org": "부천시",
+   "sns": [
+    225640
+   ],
+   "areas": [
+    "괴안동"
+   ],
+   "start_at": "2024-10-02T06:20:00+09:00",
+   "start_sn": 225640,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.099,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 66,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-225807",
+   "org": "원주시",
+   "sns": [
+    225807
+   ],
+   "areas": [
+    "태장2동"
+   ],
+   "start_at": "2024-10-09T18:30:00+09:00",
+   "start_sn": 225807,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.8,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 108,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-226114",
+   "org": "강북구",
+   "sns": [
+    226114
+   ],
+   "areas": [
+    "수유3동"
+   ],
+   "start_at": "2024-10-21T16:00:00+09:00",
+   "start_sn": 226114,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.12,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 7,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-226555",
+   "org": "영천시",
+   "sns": [
+    226555
+   ],
+   "areas": [
+    "임고면"
+   ],
+   "start_at": "2024-11-11T20:46:00+09:00",
+   "start_sn": 226555,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.018,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 61,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-226598",
+   "org": "춘천시",
+   "sns": [
+    226598
+   ],
+   "areas": [],
+   "start_at": "2024-11-14T17:11:00+09:00",
+   "start_sn": 226598,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.884,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 113,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-226920",
+   "org": "광주시",
+   "sns": [
+    226920
+   ],
+   "areas": [
+    "남종면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-226934",
+   "org": "은평구",
+   "sns": [
+    226934,
+    227009
+   ],
+   "areas": [],
+   "start_at": "2024-11-27T05:41:00+09:00",
+   "start_sn": 226934,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 9.089,
+   "upper_h": null,
+   "cause6": "work",
+   "group": "G1",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 220,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2024-11-27T14:56:22+09:00",
+     "2024-11-27T14:56:22+09:00"
+    ],
+    "from_sn": 227009
+   }
+  },
+  {
+   "event_id": "E-226947",
+   "org": "광주시",
+   "sns": [
+    226947
+   ],
+   "areas": [
+    "퇴촌면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-227022",
+   "org": "창원시",
+   "sns": [
+    227022
+   ],
+   "areas": [
+    "월영동"
+   ],
+   "start_at": "2024-11-27T15:11:00+09:00",
+   "start_sn": 227022,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.378,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 23,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-227100",
+   "org": "천안시",
+   "sns": [
+    227100
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-227111",
+   "org": "화성시",
+   "sns": [
+    227111
+   ],
+   "areas": [
+    "홍범리"
+   ],
+   "start_at": "2024-11-28T04:17:00+09:00",
+   "start_sn": 227111,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.944,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 57,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "same_org_same_day_multi"
+   ]
+  },
+  {
+   "event_id": "E-227112",
+   "org": "화성시",
+   "sns": [
+    227112
+   ],
+   "areas": [
+    "내리"
+   ],
+   "start_at": "2024-11-28T02:40:00+09:00",
+   "start_sn": 227112,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.601,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 156,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start",
+    "same_org_same_day_multi"
+   ]
+  },
+  {
+   "event_id": "E-227195",
+   "org": "마포구청",
+   "sns": [
+    227195
+   ],
+   "areas": [
+    "공덕동",
+    "염리동",
+    "성산동"
+   ],
+   "start_at": "2024-11-28T07:00:00+09:00",
+   "start_sn": 227195,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.854,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 171,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ],
+   "eta": {
+    "eta_at": "2024-11-28T12:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 227195
+   }
+  },
+  {
+   "event_id": "E-227200",
+   "org": "광주시",
+   "sns": [
+    227200
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-227207",
+   "org": "용인시",
+   "sns": [
+    227207
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-227308",
+   "org": "수성구",
+   "sns": [
+    227308
+   ],
+   "areas": [],
+   "start_at": "2024-12-05T12:59:00+09:00",
+   "start_sn": 227308,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.701,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 42,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-227311",
+   "org": "광주시",
+   "sns": [
+    227311
+   ],
+   "areas": [
+    "남한산성면",
+    "남종면",
+    "퇴촌면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-227348",
+   "org": "원주시",
+   "sns": [
+    227348
+   ],
+   "areas": [],
+   "start_at": "2024-12-11T22:19:00+09:00",
+   "start_sn": 227348,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.852,
+   "upper_h": null,
+   "cause6": "fire",
+   "group": "G2",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 51,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-228458",
+   "org": "안산시",
+   "sns": [
+    228458
+   ],
+   "areas": [
+    "고잔동"
+   ],
+   "start_at": "2025-01-13T21:55:00+09:00",
+   "start_sn": 228458,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.559,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 34,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-228504",
+   "org": "여주시",
+   "sns": [
+    228504
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-228530",
+   "org": "중구",
+   "sns": [
+    228530,
+    228531
+   ],
+   "areas": [],
+   "start_at": "2025-01-18T10:19:00+09:00",
+   "start_sn": 228530,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 0.938,
+   "upper_h": 1.306,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 56,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-228583",
+   "org": "양구군",
+   "sns": [
+    228583
+   ],
+   "areas": [
+    "동면",
+    "해안면"
+   ],
+   "start_at": "2025-01-22T14:25:00+09:00",
+   "start_sn": 228583,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.378,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 143,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-228587",
+   "org": "청주시",
+   "sns": [
+    228587
+   ],
+   "areas": [],
+   "start_at": "2025-01-23T20:40:00+09:00",
+   "start_sn": 228587,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.546,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 33,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-229319",
+   "org": "동작구",
+   "sns": [
+    229319
+   ],
+   "areas": [
+    "노량진1동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-229327",
+   "org": "나주시",
+   "sns": [
+    229327
+   ],
+   "areas": [
+    "이창동"
+   ],
+   "start_at": "2025-02-01T06:10:00+09:00",
+   "start_sn": 229327,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.807,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 108,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-230205",
+   "org": "청주시",
+   "sns": [
+    230205
+   ],
+   "areas": [
+    "오창읍"
+   ],
+   "start_at": "2025-02-09T15:51:00+09:00",
+   "start_sn": 230205,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.53,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 32,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-230775",
+   "org": "광주시",
+   "sns": [
+    230775
+   ],
+   "areas": [
+    "신현동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-230790",
+   "org": "중구",
+   "sns": [
+    230790
+   ],
+   "areas": [],
+   "start_at": "2025-03-03T00:00:00+09:00",
+   "start_sn": 230790,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.244,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 15,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-230943",
+   "org": "삼척시",
+   "sns": [
+    230943
+   ],
+   "areas": [
+    "흥전리"
+   ],
+   "start_at": "2025-03-04T19:40:00+09:00",
+   "start_sn": 230943,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.724,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 43,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-231781",
+   "org": "안동시",
+   "sns": [
+    231781
+   ],
+   "areas": [
+    "백자리",
+    "금곡리"
+   ],
+   "start_at": "2025-03-25T14:00:00+09:00",
+   "start_sn": 231781,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.154,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 9,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-232056",
+   "org": "영양군",
+   "sns": [
+    232056
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-232341",
+   "org": "인천중구",
+   "sns": [
+    232341
+   ],
+   "areas": [
+    "소무의도"
+   ],
+   "start_at": "2025-03-27T11:30:00+09:00",
+   "start_sn": 232341,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 3.267,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 196,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-233317",
+   "org": "동대문구청",
+   "sns": [
+    233317
+   ],
+   "areas": [
+    "청량리동"
+   ],
+   "start_at": "2025-04-05T08:35:00+09:00",
+   "start_sn": 233317,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.346,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 81,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2025-04-05T20:35:00+09:00",
+     "2025-04-05T21:55:44+09:00"
+    ],
+    "from_sn": 233317
+   }
+  },
+  {
+   "event_id": "E-233380",
+   "org": "광주시",
+   "sns": [
+    233380
+   ],
+   "areas": [
+    "산성리"
+   ],
+   "start_at": "2025-04-05T17:10:00+09:00",
+   "start_sn": 233380,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.502,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 30,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-234241",
+   "org": "영등포구",
+   "sns": [
+    234241
+   ],
+   "areas": [
+    "영등포동",
+    "당산동"
+   ],
+   "start_at": "2025-04-11T15:00:00+09:00",
+   "start_sn": 234241,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.676,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 41,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-234563",
+   "org": "한국전력공사",
+   "sns": [
+    234563
+   ],
+   "areas": [
+    "삼남읍"
+   ],
+   "start_at": "2025-04-13T07:15:00+09:00",
+   "start_sn": 234563,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.455,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 27,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-234614",
+   "org": "달성군",
+   "sns": [
+    234614
+   ],
+   "areas": [
+    "현풍",
+    "유가"
+   ],
+   "start_at": "2025-04-13T11:00:00+09:00",
+   "start_sn": 234614,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.849,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 51,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-235212",
+   "org": "태백시",
+   "sns": [
+    235212
+   ],
+   "areas": [
+    "소도동"
+   ],
+   "start_at": "2025-04-26T08:00:00+09:00",
+   "start_sn": 235212,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.766,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 46,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-235644",
+   "org": "동대문구청",
+   "sns": [
+    235644
+   ],
+   "areas": [
+    "휘경동"
+   ],
+   "start_at": "2025-04-29T11:50:00+09:00",
+   "start_sn": 235644,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.069,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 64,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-236246",
+   "org": "서대문구",
+   "sns": [
+    236246
+   ],
+   "areas": [
+    "홍은2동",
+    "연희동"
+   ],
+   "start_at": "2025-05-21T14:07:00+09:00",
+   "start_sn": 236246,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.903,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 54,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-236356",
+   "org": "경산시",
+   "sns": [
+    236356
+   ],
+   "areas": [
+    "계양동",
+    "대동",
+    "대정동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-236357",
+   "org": "수성구",
+   "sns": [
+    236357
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-237078",
+   "org": "밀양시",
+   "sns": [
+    237078
+   ],
+   "areas": [
+    "산내면",
+    "단장면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-237095",
+   "org": "구로구",
+   "sns": [
+    237095,
+    237096
+   ],
+   "areas": [
+    "구로1동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": "2025-06-22T23:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 237095
+   }
+  },
+  {
+   "event_id": "E-237103",
+   "org": "양평군청",
+   "sns": [
+    237103
+   ],
+   "areas": [
+    "용문면"
+   ],
+   "start_at": "2025-06-23T14:21:00+09:00",
+   "start_sn": 237103,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.625,
+   "upper_h": null,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 38,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ],
+   "eta": {
+    "eta_at": "2025-06-23T16:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 237103
+   }
+  },
+  {
+   "event_id": "E-237641",
+   "org": "동작구",
+   "sns": [
+    237641
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-239764",
+   "org": "공주시",
+   "sns": [
+    239764
+   ],
+   "areas": [
+    "탄천면"
+   ],
+   "start_at": "2025-07-16T23:06:00+09:00",
+   "start_sn": 239764,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.46,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 28,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-241355",
+   "org": "산청군",
+   "sns": [
+    241355,
+    241542
+   ],
+   "areas": [
+    "신안면",
+    "신등면",
+    "단성면",
+    "금서면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-241927",
+   "org": "가평군",
+   "sns": [
+    241927
+   ],
+   "areas": [
+    "가평군"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-243116",
+   "org": "서대문구청",
+   "sns": [
+    243116
+   ],
+   "areas": [
+    "홍은동"
+   ],
+   "start_at": "2025-07-28T07:07:00+09:00",
+   "start_sn": 243116,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.708,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 42,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-243415",
+   "org": "중구",
+   "sns": [
+    243415
+   ],
+   "areas": [
+    "운서동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-243432",
+   "org": "인천중구청",
+   "sns": [
+    243432
+   ],
+   "areas": [
+    "운서동"
+   ],
+   "start_at": "2025-07-29T11:47:00+09:00",
+   "start_sn": 243432,
+   "outcome": "exact",
+   "duration_h": 1.817,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 131,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-243678",
+   "org": "동작구",
+   "sns": [
+    243678,
+    243679
+   ],
+   "areas": [
+    "상도3동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2025-07-30T22:05:25+09:00",
+     "2025-07-30T22:05:25+09:00"
+    ],
+    "from_sn": 243678
+   }
+  },
+  {
+   "event_id": "E-245513",
+   "org": "군포시",
+   "sns": [
+    245513
+   ],
+   "areas": [
+    "당동"
+   ],
+   "start_at": "2025-08-11T22:35:00+09:00",
+   "start_sn": 245513,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.754,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": true,
+   "wide": false,
+   "first_sms_delay_min": 45,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-245908",
+   "org": "부천시청",
+   "sns": [
+    245908
+   ],
+   "areas": [
+    "원미1동",
+    "춘의동"
+   ],
+   "start_at": "2025-08-13T18:29:00+09:00",
+   "start_sn": 245908,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.619,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 97,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-246089",
+   "org": "무안군",
+   "sns": [
+    246089
+   ],
+   "areas": [
+    "해제면",
+    "남풍리"
+   ],
+   "start_at": "2025-08-15T01:50:00+09:00",
+   "start_sn": 246089,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.146,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 129,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "same_org_same_day_multi"
+   ]
+  },
+  {
+   "event_id": "E-246090",
+   "org": "무안군",
+   "sns": [
+    246090
+   ],
+   "areas": [
+    "만풍리"
+   ],
+   "start_at": "2025-08-15T01:50:00+09:00",
+   "start_sn": 246090,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.261,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 136,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "same_org_same_day_multi"
+   ]
+  },
+  {
+   "event_id": "E-248427",
+   "org": "세종시청",
+   "sns": [
+    248427
+   ],
+   "areas": [
+    "새롬동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-249029",
+   "org": "광산구",
+   "sns": [
+    249029
+   ],
+   "areas": [
+    "선암동"
+   ],
+   "start_at": "2025-09-06T13:50:00+09:00",
+   "start_sn": 249029,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.859,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 52,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-249074",
+   "org": "세종시청",
+   "sns": [
+    249074
+   ],
+   "areas": [
+    "장군면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-249876",
+   "org": "동작구",
+   "sns": [
+    249876,
+    249877
+   ],
+   "areas": [
+    "상도동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "work",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2025-09-23T14:00:18+09:00",
+     "2025-09-23T14:00:18+09:00"
+    ],
+    "from_sn": 249876
+   }
+  },
+  {
+   "event_id": "E-250227",
+   "org": "인제군",
+   "sns": [
+    250227
+   ],
+   "areas": [
+    "남면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-250386",
+   "org": "사하구",
+   "sns": [
+    250386
+   ],
+   "areas": [
+    "장림2동"
+   ],
+   "start_at": "2025-11-18T07:00:00+09:00",
+   "start_sn": 250386,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.122,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 127,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-250936",
+   "org": "동작구",
+   "sns": [
+    250936
+   ],
+   "areas": [
+    "노량진2동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": "2025-12-12T15:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 250936
+   }
+  },
+  {
+   "event_id": "E-251057",
+   "org": "양산시",
+   "sns": [
+    251057
+   ],
+   "areas": [
+    "동면"
+   ],
+   "start_at": "2025-12-15T09:40:00+09:00",
+   "start_sn": 251057,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.574,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 34,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-251638",
+   "org": "수원특례시",
+   "sns": [
+    251638,
+    251653
+   ],
+   "areas": [
+    "연무동",
+    "영화동"
+   ],
+   "start_at": "2025-12-31T12:23:00+09:00",
+   "start_sn": 251638,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 1.318,
+   "upper_h": 3.621,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 79,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-251913",
+   "org": "북구",
+   "sns": [
+    251913
+   ],
+   "areas": [
+    "고성동",
+    "침산동"
+   ],
+   "start_at": "2026-01-02T18:38:00+09:00",
+   "start_sn": 251913,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.793,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 48,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-251916",
+   "org": "북구청",
+   "sns": [
+    251916
+   ],
+   "areas": [
+    "고성동",
+    "침산동"
+   ],
+   "start_at": "2026-01-02T18:38:00+09:00",
+   "start_sn": 251916,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 0,
+   "upper_h": 0.975,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 59,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "no_progress_msg"
+   ]
+  },
+  {
+   "event_id": "E-252264",
+   "org": "음성군",
+   "sns": [
+    252264,
+    252271
+   ],
+   "areas": [
+    "감곡면"
+   ],
+   "start_at": "2026-01-10T13:40:00+09:00",
+   "start_sn": 252264,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 0.618,
+   "upper_h": 0.944,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 37,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-252863",
+   "org": "고양시청",
+   "sns": [
+    252863,
+    252866
+   ],
+   "areas": [
+    "문봉동"
+   ],
+   "start_at": "2026-01-15T20:08:00+09:00",
+   "start_sn": 252863,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.195,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 37,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": "2026-01-16T01:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 252866
+   }
+  },
+  {
+   "event_id": "E-252917",
+   "org": "김포시",
+   "sns": [
+    252917
+   ],
+   "areas": [
+    "구래동"
+   ],
+   "start_at": "2026-01-18T11:00:00+09:00",
+   "start_sn": 252917,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.496,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 30,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-253347",
+   "org": "원주시",
+   "sns": [
+    253347,
+    253348
+   ],
+   "areas": [
+    "반곡동",
+    "개운동",
+    "행구동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-253540",
+   "org": "진도군",
+   "sns": [
+    253540,
+    253545
+   ],
+   "areas": [
+    "진도읍"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-253576",
+   "org": "구로구",
+   "sns": [
+    253576,
+    253577,
+    253633,
+    253681
+   ],
+   "areas": [
+    "구로1동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-254074",
+   "org": "금천구",
+   "sns": [
+    254074
+   ],
+   "areas": [
+    "시흥동"
+   ],
+   "start_at": "2026-01-30T11:27:00+09:00",
+   "start_sn": 254074,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.626,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 38,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-254509",
+   "org": "안성시",
+   "sns": [
+    254509,
+    254510,
+    254516,
+    254517
+   ],
+   "areas": [
+    "고삼면",
+    "대덕면",
+    "양성면"
+   ],
+   "start_at": "2026-02-05T03:20:00+09:00",
+   "start_sn": 254509,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 2.054,
+   "upper_h": 3.81,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 118,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-254922",
+   "org": "삼척시",
+   "sns": [
+    254922
+   ],
+   "areas": [
+    "원당동",
+    "등봉동"
+   ],
+   "start_at": "2026-02-08T14:00:00+09:00",
+   "start_sn": 254922,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.207,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 72,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-255132",
+   "org": "마포구",
+   "sns": [
+    255132
+   ],
+   "areas": [
+    "성산동",
+    "대흥동",
+    "공덕동"
+   ],
+   "start_at": "2026-02-11T22:00:00+09:00",
+   "start_sn": 255132,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 23.832,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 1430,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-255142",
+   "org": "수원특례시",
+   "sns": [
+    255142,
+    255150
+   ],
+   "areas": [
+    "조원동"
+   ],
+   "start_at": "2026-02-13T09:20:00+09:00",
+   "start_sn": 255142,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 0.662,
+   "upper_h": 1.175,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 40,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-255186",
+   "org": "광명시",
+   "sns": [
+    255186
+   ],
+   "areas": [
+    "하안동"
+   ],
+   "start_at": "2026-02-13T22:30:00+09:00",
+   "start_sn": 255186,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.438,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": true,
+   "wide": false,
+   "first_sms_delay_min": 86,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-256394",
+   "org": "의정부시",
+   "sns": [
+    256394
+   ],
+   "areas": [
+    "신곡동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-256440",
+   "org": "태백시",
+   "sns": [
+    256440
+   ],
+   "areas": [
+    "하사미",
+    "상사미"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-03-03T09:50:39+09:00",
+     "2026-03-03T09:50:39+09:00"
+    ],
+    "from_sn": 256440
+   }
+  },
+  {
+   "event_id": "E-256466",
+   "org": "과천시",
+   "sns": [
+    256466,
+    256468
+   ],
+   "areas": [
+    "문원동"
+   ],
+   "start_at": "2026-03-03T17:00:00+09:00",
+   "start_sn": 256466,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 1.909,
+   "upper_h": 3.38,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 115,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": "2026-03-03T19:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 256466
+   }
+  },
+  {
+   "event_id": "E-257313",
+   "org": "전주시",
+   "sns": [
+    257313
+   ],
+   "areas": [],
+   "start_at": "2026-03-28T21:00:00+09:00",
+   "start_sn": 257313,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.407,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 24,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-257397",
+   "org": "강서구",
+   "sns": [
+    257397,
+    257401
+   ],
+   "areas": [
+    "화곡동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-257453",
+   "org": "통영시",
+   "sns": [
+    257453
+   ],
+   "areas": [
+    "죽림리"
+   ],
+   "start_at": "2026-04-02T11:50:00+09:00",
+   "start_sn": 257453,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.669,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 40,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-257639",
+   "org": "원주시",
+   "sns": [
+    257639
+   ],
+   "areas": [
+    "단구동",
+    "관설동"
+   ],
+   "start_at": "2026-04-06T11:15:00+09:00",
+   "start_sn": 257639,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.418,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 25,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-257640",
+   "org": "과천시",
+   "sns": [
+    257640,
+    257646
+   ],
+   "areas": [
+    "문원동"
+   ],
+   "start_at": "2026-04-06T11:30:00+09:00",
+   "start_sn": 257640,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 0.66,
+   "upper_h": 3.801,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 40,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-04-06T14:30:00+09:00",
+     "2026-04-06T15:09:37+09:00"
+    ],
+    "from_sn": 257640
+   }
+  },
+  {
+   "event_id": "E-257994",
+   "org": "구로구",
+   "sns": [
+    257994,
+    257995,
+    257996,
+    257997
+   ],
+   "areas": [
+    "고척1동",
+    "고척2동",
+    "개봉1동",
+    "개봉동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-258565",
+   "org": "달성군",
+   "sns": [
+    258565
+   ],
+   "areas": [
+    "화원읍",
+    "본리리"
+   ],
+   "start_at": "2026-05-06T13:17:00+09:00",
+   "start_sn": 258565,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.973,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 58,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-258643",
+   "org": "동대문구",
+   "sns": [
+    258643
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-258794",
+   "org": "양구군",
+   "sns": [
+    258794
+   ],
+   "areas": [
+    "방산면"
+   ],
+   "start_at": "2026-05-12T19:30:00+09:00",
+   "start_sn": 258794,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 22.989,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 1379,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-258923",
+   "org": "철원군",
+   "sns": [
+    258923
+   ],
+   "areas": [
+    "자등리"
+   ],
+   "start_at": "2026-05-20T13:00:00+09:00",
+   "start_sn": 258923,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.628,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 38,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-258951",
+   "org": "서대문구",
+   "sns": [
+    258951,
+    258952
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-05-21T00:12:29+09:00",
+     "2026-05-21T00:12:29+09:00"
+    ],
+    "from_sn": 258951
+   }
+  },
+  {
+   "event_id": "E-259061",
+   "org": "광주시",
+   "sns": [
+    259061
+   ],
+   "areas": [
+    "능평동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "work",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-259192",
+   "org": "의왕시",
+   "sns": [
+    259192,
+    259195,
+    259196,
+    259197
+   ],
+   "areas": [
+    "교동",
+    "부곡2동",
+    "부곡3동",
+    "부곡동",
+    "삼동"
+   ],
+   "start_at": "2026-06-04T18:43:00+09:00",
+   "start_sn": 259192,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 1.074,
+   "upper_h": 2.549,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 59,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-259202",
+   "org": "창원시",
+   "sns": [
+    259202
+   ],
+   "areas": [
+    "진전면"
+   ],
+   "start_at": "2026-06-05T20:30:00+09:00",
+   "start_sn": 259202,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.108,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 6,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-259222",
+   "org": "은평구",
+   "sns": [
+    259222
+   ],
+   "areas": [
+    "수색동"
+   ],
+   "start_at": "2026-06-07T04:22:00+09:00",
+   "start_sn": 259222,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.712,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 103,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-259259",
+   "org": "한국전력공사",
+   "sns": [
+    259259,
+    259260
+   ],
+   "areas": [
+    "후평동"
+   ],
+   "start_at": "2026-06-09T15:06:00+09:00",
+   "start_sn": 259259,
+   "outcome": "exact",
+   "duration_h": 1.9,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 49,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-259286",
+   "org": "청주시",
+   "sns": [
+    259286
+   ],
+   "areas": [
+    "내덕2동"
+   ],
+   "start_at": "2026-06-11T17:19:00+09:00",
+   "start_sn": 259286,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.136,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 68,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-06-11T19:19:00+09:00",
+     "2026-06-11T20:27:09+09:00"
+    ],
+    "from_sn": 259286
+   }
+  },
+  {
+   "event_id": "E-259327",
+   "org": "고령군",
+   "sns": [
+    259327,
+    259337
+   ],
+   "areas": [
+    "팔산리",
+    "유리",
+    "운수면"
+   ],
+   "start_at": "2026-06-13T10:30:00+09:00",
+   "start_sn": 259327,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 0.251,
+   "upper_h": 4.615,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 15,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-259375",
+   "org": "달성군",
+   "sns": [
+    259375
+   ],
+   "areas": [
+    "화원",
+    "옥포"
+   ],
+   "start_at": "2026-06-15T08:02:00+09:00",
+   "start_sn": 259375,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.817,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 49,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-259432",
+   "org": "수원시",
+   "sns": [
+    259432
+   ],
+   "areas": [
+    "천천동"
+   ],
+   "start_at": "2026-06-19T08:22:00+09:00",
+   "start_sn": 259432,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.48,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 89,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-259468",
+   "org": "연천군",
+   "sns": [
+    259468
+   ],
+   "areas": [
+    "상리",
+    "옥산리"
+   ],
+   "start_at": "2026-06-19T17:50:00+09:00",
+   "start_sn": 259468,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.557,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 93,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-06-19T20:50:00+09:00",
+     "2026-06-19T22:23:26+09:00"
+    ],
+    "from_sn": 259468
+   }
+  },
+  {
+   "event_id": "E-259476",
+   "org": "남구",
+   "sns": [
+    259476
+   ],
+   "areas": [],
+   "start_at": "2026-06-20T02:30:00+09:00",
+   "start_sn": 259476,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 2.74,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": false,
+   "first_sms_delay_min": 164,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-259594",
+   "org": "의정부시",
+   "sns": [
+    259594,
+    259597
+   ],
+   "areas": [
+    "고산동",
+    "신곡1동"
+   ],
+   "start_at": "2026-06-23T10:43:00+09:00",
+   "start_sn": 259594,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 0.671,
+   "upper_h": 2.339,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 40,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-259622",
+   "org": "안산시",
+   "sns": [
+    259622,
+    259623
+   ],
+   "areas": [
+    "선부동",
+    "원곡동"
+   ],
+   "start_at": "2026-06-25T11:30:00+09:00",
+   "start_sn": 259622,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.403,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 15,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-259820",
+   "org": "밀양시",
+   "sns": [
+    259820
+   ],
+   "areas": [
+    "삼문동"
+   ],
+   "start_at": "2026-07-06T08:10:00+09:00",
+   "start_sn": 259820,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.739,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 44,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-260014",
+   "org": "마포구",
+   "sns": [
+    260014,
+    260028
+   ],
+   "areas": [],
+   "start_at": "2026-07-08T17:56:00+09:00",
+   "start_sn": 260014,
+   "outcome": "exact",
+   "duration_h": 1.65,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 39,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-08T20:56:00+09:00",
+     "2026-07-08T21:35:07+09:00"
+    ],
+    "from_sn": 260014
+   }
+  },
+  {
+   "event_id": "E-260230",
+   "org": "영월군",
+   "sns": [
+    260230
+   ],
+   "areas": [
+    "무릉도원면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-260255",
+   "org": "원주시",
+   "sns": [
+    260255
+   ],
+   "areas": [
+    "단계동",
+    "학성동"
+   ],
+   "start_at": "2026-07-09T11:10:00+09:00",
+   "start_sn": 260255,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.545,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 33,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-260812",
+   "org": "은평구",
+   "sns": [
+    260812
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-260954",
+   "org": "인천영종구",
+   "sns": [
+    260954
+   ],
+   "areas": [
+    "중산동"
+   ],
+   "start_at": "2026-07-13T17:25:00+09:00",
+   "start_sn": 260954,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.319,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 79,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-260955",
+   "org": "한전인천지역본부",
+   "sns": [
+    260955
+   ],
+   "areas": [],
+   "start_at": "2026-07-13T17:16:00+09:00",
+   "start_sn": 260955,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.658,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 100,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-260962",
+   "org": "인천영종구",
+   "sns": [
+    260962
+   ],
+   "areas": [
+    "영종구"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-260969",
+   "org": "인천영종구",
+   "sns": [
+    260969,
+    261040,
+    261083
+   ],
+   "areas": [
+    "영종구"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T09:00:48+09:00",
+     "2026-07-17T09:00:48+09:00"
+    ],
+    "from_sn": 260969
+   }
+  },
+  {
+   "event_id": "E-260976",
+   "org": "한전인천지역본부",
+   "sns": [
+    260976
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T09:19:38+09:00",
+     "2026-07-17T09:19:38+09:00"
+    ],
+    "from_sn": 260976
+   }
+  },
+  {
+   "event_id": "E-261115",
+   "org": "인천영종구",
+   "sns": [
+    261115,
+    261122
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T19:02:07+09:00",
+     "2026-07-17T19:02:07+09:00"
+    ],
+    "from_sn": 261115
+   }
+  },
+  {
+   "event_id": "E-261137",
+   "org": "제물포구",
+   "sns": [
+    261137,
+    261139
+   ],
+   "areas": [],
+   "start_at": "2026-07-14T23:03:00+09:00",
+   "start_sn": 261137,
+   "outcome": "exact",
+   "duration_h": 1.55,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": false,
+   "first_sms_delay_min": 74,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-261147",
+   "org": "인천영종구",
+   "sns": [
+    261147
+   ],
+   "areas": [
+    "영종구"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-261318",
+   "org": "이천시",
+   "sns": [
+    261318
+   ],
+   "areas": [
+    "이평리"
+   ],
+   "start_at": "2026-07-17T10:55:00+09:00",
+   "start_sn": 261318,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.498,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 90,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-261720",
+   "org": "청주시",
+   "sns": [
+    261720,
+    261727
+   ],
+   "areas": [
+    "현암동"
+   ],
+   "start_at": "2026-07-19T05:23:00+09:00",
+   "start_sn": 261720,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 1.344,
+   "upper_h": 3.271,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": false,
+   "first_sms_delay_min": 81,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-261764",
+   "org": "검단구청",
+   "sns": [
+    261764,
+    261772
+   ],
+   "areas": [
+    "당하동"
+   ],
+   "start_at": "2026-07-19T12:35:00+09:00",
+   "start_sn": 261764,
+   "outcome": "exact",
+   "duration_h": 0.583,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 19,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-262021",
+   "org": "연천군",
+   "sns": [
+    262021,
+    262022,
+    262023
+   ],
+   "areas": [
+    "군남면",
+    "왕징면",
+    "미산면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": "2026-07-21T22:58:32+09:00",
+    "eta_range": null,
+    "from_sn": 262022
+   }
+  },
+  {
+   "event_id": "E-262025",
+   "org": "충주시",
+   "sns": [
+    262025
+   ],
+   "areas": [
+    "호암동",
+    "용산동",
+    "직동",
+    "대소원면",
+    "수안보면"
+   ],
+   "start_at": "2026-07-21T22:06:00+09:00",
+   "start_sn": 262025,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.449,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 87,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-262336",
+   "org": "옥천군",
+   "sns": [
+    262336
+   ],
+   "areas": [
+    "국원리"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-24T02:20:45+09:00",
+     "2026-07-24T02:20:45+09:00"
+    ],
+    "from_sn": 262336
+   }
+  },
+  {
+   "event_id": "E-263119",
+   "org": "마포구",
+   "sns": [
+    263119,
+    263136
+   ],
+   "areas": [
+    "서교동"
+   ],
+   "start_at": "2026-07-27T17:15:00+09:00",
+   "start_sn": 263119,
+   "outcome": "exact",
+   "duration_h": 2.683,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 60,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-27T20:15:00+09:00",
+     "2026-07-27T21:15:17+09:00"
+    ],
+    "from_sn": 263119
+   }
+  },
+  {
+   "event_id": "E-263730",
+   "org": "여수시",
+   "sns": [
+    263730
+   ],
+   "areas": [
+    "웅남4길"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-30T22:06:54+09:00",
+     "2026-07-30T22:06:54+09:00"
+    ],
+    "from_sn": 263730
+   }
+  },
+  {
+   "event_id": "E-263845",
+   "org": "공주시",
+   "sns": [
+    263845,
+    263847
+   ],
+   "areas": [
+    "신관동"
+   ],
+   "start_at": "2026-07-31T13:17:00+09:00",
+   "start_sn": 263845,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.327,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 19,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-263938",
+   "org": "옹진군",
+   "sns": [
+    263938,
+    263945
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-31T19:32:06+09:00",
+     "2026-07-31T19:32:06+09:00"
+    ],
+    "from_sn": 263938
+   }
+  },
+  {
+   "event_id": "E-263946",
+   "org": "강릉시",
+   "sns": [
+    263946
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "work",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-31T21:04:35+09:00",
+     "2026-07-31T21:04:35+09:00"
+    ],
+    "from_sn": 263946
+   }
+  },
+  {
+   "event_id": "E-263957",
+   "org": "남동구",
+   "sns": [
+    263957
+   ],
+   "areas": [
+    "간석동"
+   ],
+   "start_at": "2026-08-01T09:04:00+09:00",
+   "start_sn": 263957,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.512,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 31,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-08-01T11:04:00+09:00",
+     "2026-08-01T11:34:42+09:00"
+    ],
+    "from_sn": 263957
+   }
+  },
+  {
+   "event_id": "E-264465",
+   "org": "강서구",
+   "sns": [
+    264465,
+    264466
+   ],
+   "areas": [
+    "등촌동"
+   ],
+   "start_at": "2026-08-02T18:16:00+09:00",
+   "start_sn": 264466,
+   "outcome": "exact",
+   "duration_h": 4.267,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 236,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-264715",
+   "org": "무안군",
+   "sns": [
+    264715
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-264963",
+   "org": "강서구",
+   "sns": [
+    264963
+   ],
+   "areas": [
+    "등촌동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-264964",
+   "org": "계양구청",
+   "sns": [
+    264964
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-265203",
+   "org": "수원시",
+   "sns": [
+    265203
+   ],
+   "areas": [
+    "영통동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-265696",
+   "org": "수원시",
+   "sns": [
+    265696
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-265707",
+   "org": "수성구",
+   "sns": [
+    265707
+   ],
+   "areas": [
+    "매호동"
+   ],
+   "start_at": "2026-08-07T23:34:00+09:00",
+   "start_sn": 265707,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.56,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": false,
+   "first_sms_delay_min": 34,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-265942",
+   "org": "당진시",
+   "sns": [
+    265942,
+    265945
+   ],
+   "areas": [
+    "읍내동"
+   ],
+   "start_at": "2026-08-08T16:38:00+09:00",
+   "start_sn": 265942,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.678,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 28,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-265948",
+   "org": "북구",
+   "sns": [
+    265948
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-266132",
+   "org": "달서구",
+   "sns": [
+    266132
+   ],
+   "areas": [
+    "감삼동"
+   ],
+   "start_at": "2026-08-09T13:28:00+09:00",
+   "start_sn": 266132,
+   "outcome": "exact",
+   "duration_h": 1.417,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 117,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-266155",
+   "org": "사상구",
+   "sns": [
+    266155
+   ],
+   "areas": [
+    "덕포"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-266156",
+   "org": "북구",
+   "sns": [
+    266156
+   ],
+   "areas": [
+    "구푸동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-266157",
+   "org": "북구",
+   "sns": [
+    266157
+   ],
+   "areas": [
+    "구포동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-266329",
+   "org": "태안군",
+   "sns": [
+    266329
+   ],
+   "areas": [
+    "동문리"
+   ],
+   "start_at": "2026-08-12T09:01:00+09:00",
+   "start_sn": 266329,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.713,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 43,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-266359",
+   "org": "서산시",
+   "sns": [
+    266359
+   ],
+   "areas": [
+    "화곡리"
+   ],
+   "start_at": "2026-08-12T16:03:00+09:00",
+   "start_sn": 266359,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.798,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 48,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-266510",
+   "org": "마포구",
+   "sns": [
+    266510,
+    266511
+   ],
+   "areas": [
+    "서교동"
+   ],
+   "start_at": "2026-08-14T18:52:00+09:00",
+   "start_sn": 266510,
+   "outcome": "exact",
+   "duration_h": 3.8,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "equipment",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 87,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-08-14T21:52:00+09:00",
+     "2026-08-14T23:18:52+09:00"
+    ],
+    "from_sn": 266510
+   }
+  },
+  {
+   "event_id": "E-266838",
+   "org": "유성구",
+   "sns": [
+    266838,
+    266843,
+    266844
+   ],
+   "areas": [
+    "복용동"
+   ],
+   "start_at": "2026-08-18T14:31:00+09:00",
+   "start_sn": 266838,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 3.936,
+   "upper_h": 4.559,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 145,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ],
+   "eta": {
+    "eta_at": "2026-08-18T18:00:00+09:00",
+    "eta_range": null,
+    "from_sn": 266838
+   }
+  },
+  {
+   "event_id": "E-266949",
+   "org": "세종시청",
+   "sns": [
+    266949
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "fire",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-267003",
+   "org": "세종시청",
+   "sns": [
+    267003,
+    267008
+   ],
+   "areas": [
+    "다정동",
+    "새롬동"
+   ],
+   "start_at": "2026-08-20T18:33:00+09:00",
+   "start_sn": 267003,
+   "outcome": "exact",
+   "duration_h": 2.067,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 85,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-267219",
+   "org": "영천시",
+   "sns": [
+    267219
+   ],
+   "areas": [],
+   "start_at": "2026-08-22T19:26:00+09:00",
+   "start_sn": 267219,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.438,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 26,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-267936",
+   "org": "수성구",
+   "sns": [
+    267936
+   ],
+   "areas": [
+    "수성2.3가동"
+   ],
+   "start_at": "2026-08-27T17:00:00+09:00",
+   "start_sn": 267936,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.835,
+   "upper_h": null,
+   "cause6": "weather",
+   "group": "G2",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 110,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ]
+  },
+  {
+   "event_id": "E-268081",
+   "org": "괴산군",
+   "sns": [
+    268081
+   ],
+   "areas": [
+    "괴산읍",
+    "칠성면"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time",
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-08-29T13:26:01+09:00",
+     "2026-08-29T13:26:01+09:00"
+    ],
+    "from_sn": 268081
+   }
+  },
+  {
+   "event_id": "E-268455",
+   "org": "제주도",
+   "sns": [
+    268455
+   ],
+   "areas": [
+    "연동",
+    "노형동",
+    "이호이동"
+   ],
+   "start_at": "2026-09-01T08:46:00+09:00",
+   "start_sn": 268455,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.449,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 27,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-268533",
+   "org": "영동군",
+   "sns": [
+    268533
+   ],
+   "areas": [
+    "계산리",
+    "설계리",
+    "묘동리",
+    "묵정리"
+   ],
+   "start_at": "2026-09-01T19:20:00+09:00",
+   "start_sn": 268533,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.848,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 51,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-268604",
+   "org": "보령시",
+   "sns": [
+    268604
+   ],
+   "areas": [
+    "남포면",
+    "웅천읍"
+   ],
+   "start_at": "2026-09-03T23:47:00+09:00",
+   "start_sn": 268604,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.481,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": true,
+   "wide": true,
+   "first_sms_delay_min": 29,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-268680",
+   "org": "거제시",
+   "sns": [
+    268680
+   ],
+   "areas": [
+    "사곡리"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-268720",
+   "org": "은평구",
+   "sns": [
+    268720
+   ],
+   "areas": [
+    "갈현동"
+   ],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "vehicle",
+   "group": "G1",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "rule",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-269288",
+   "org": "서산시",
+   "sns": [
+    269288
+   ],
+   "areas": [
+    "화곡리"
+   ],
+   "start_at": "2026-10-06T14:14:00+09:00",
+   "start_sn": 269288,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.782,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 47,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "eta_only_start"
+   ],
+   "eta": {
+    "eta_at": null,
+    "eta_range": [
+     "2026-10-06T16:14:00+09:00",
+     "2026-10-06T17:00:55+09:00"
+    ],
+    "from_sn": 269288
+   }
+  },
+  {
+   "event_id": "E-269310",
+   "org": "음성군",
+   "sns": [
+    269310
+   ],
+   "areas": [
+    "동성리"
+   ],
+   "start_at": "2026-10-08T15:27:00+09:00",
+   "start_sn": 269310,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.436,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 26,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-269311",
+   "org": "진천군",
+   "sns": [
+    269311,
+    269312
+   ],
+   "areas": [
+    "덕산읍",
+    "두촌리"
+   ],
+   "start_at": "2026-10-08T15:30:00+09:00",
+   "start_sn": 269311,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 0.514,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": 24,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-269545",
+   "org": "서산시",
+   "sns": [
+    269545
+   ],
+   "areas": [
+    "대죽리"
+   ],
+   "start_at": "2026-10-18T13:00:00+09:00",
+   "start_sn": 269545,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.118,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 67,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-269564",
+   "org": "안산시",
+   "sns": [
+    269564
+   ],
+   "areas": [
+    "사동"
+   ],
+   "start_at": "2026-10-18T14:30:00+09:00",
+   "start_sn": 269564,
+   "outcome": "right",
+   "duration_h": null,
+   "lower_h": 1.113,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 67,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": []
+  },
+  {
+   "event_id": "E-269705",
+   "org": "은평구",
+   "sns": [
+    269705,
+    269706
+   ],
+   "areas": [],
+   "start_at": null,
+   "start_sn": null,
+   "outcome": "excluded",
+   "duration_h": null,
+   "lower_h": null,
+   "upper_h": null,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": true,
+   "first_sms_delay_min": null,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [],
+   "exclude_reason": "no_start_time"
+  },
+  {
+   "event_id": "E-269712",
+   "org": "광주시",
+   "sns": [
+    269712
+   ],
+   "areas": [
+    "삼동"
+   ],
+   "start_at": "2026-10-23T17:40:00+09:00",
+   "start_sn": 269712,
+   "outcome": "interval",
+   "duration_h": null,
+   "lower_h": 0,
+   "upper_h": 1.22,
+   "cause6": "unknown",
+   "group": "G3",
+   "night": false,
+   "wide": false,
+   "first_sms_delay_min": 73,
+   "field_source": "claude-sonnet-5",
+   "review": {
+    "status": "auto"
+   },
+   "flags": [
+    "no_progress_msg"
+   ]
+  }
+ ]
+}

@@ -101,7 +101,9 @@ export function buildEvent(g: LinkMsg[]): OutageEvent {
     else outcome = "exact";
   } else if (restMsgs.length) {
     const firstRest = restMsgs[0];
-    const prog = msgs.filter((m) => (m.fields.kind === "occurrence" || m.fields.kind === "eta_update") && isoToMs(m.sent_at) <= isoToMs(firstRest.sent_at));
+    // 진행 중 문자 = 첫 복구 문자보다 먼저 발송된, 복구가 아닌 같은 사건 문자(발생·예고·지연·주의 안내).
+    // LLM이 「복구 중이니 유의하세요」를 advisory로 분류해도 그 시각에 정전이 이어지고 있었다는 근거는 같다.
+    const prog = msgs.filter((m) => m.fields.kind !== "restoration" && isoToMs(m.sent_at) <= isoToMs(firstRest.sent_at));
     const lastProg = prog[prog.length - 1];
     upper_h = round3((isoToMs(firstRest.sent_at) - startMs) / H);
     lower_h = lastProg ? round3(Math.max(0, (isoToMs(lastProg.sent_at) - startMs) / H)) : 0;
@@ -109,7 +111,7 @@ export function buildEvent(g: LinkMsg[]): OutageEvent {
     if (upper_h <= 0 || upper_h < lower_h) { flags.push("nonpositive"); outcome = "excluded"; exclude_reason = "invalid"; }
     else outcome = "interval";
   } else {
-    const prog = msgs.filter((m) => m.fields.kind === "occurrence" || m.fields.kind === "eta_update");
+    const prog = msgs.filter((m) => m.fields.kind !== "restoration");
     const lastProg = prog[prog.length - 1] ?? msgs[msgs.length - 1];
     lower_h = round3((isoToMs(lastProg.sent_at) - startMs) / H);
     if (lower_h <= 0) { flags.push("nonpositive"); outcome = "excluded"; exclude_reason = "invalid"; lower_h = null; }
