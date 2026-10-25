@@ -1,0 +1,9380 @@
+{
+ "meta": {
+  "source": "rule",
+  "rule_version": "r1",
+  "built_at": "2026-10-25T19:08:17+09:00",
+  "n": 330
+ },
+ "items": [
+  {
+   "sn": 205322,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "우도면",
+    "areas": [
+     "우도면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전중",
+     "cause": "낙뢰",
+     "place": "우도면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 205326,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "대연동",
+    "areas": [
+     "대연동"
+    ],
+    "occurred_clock": "07:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "07:30경",
+     "kind": "복구되었",
+     "place": "대연동"
+    },
+    "occurred_at": "2023-09-18T07:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 205706,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "한솔동,  새롬동",
+    "areas": [
+     "한솔동",
+     "새롬동"
+    ],
+    "occurred_clock": "19:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "19시 20분경",
+     "kind": "발생",
+     "place": "한솔동,  새롬동"
+    },
+    "occurred_at": "2023-09-24T19:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 205707,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "한솔동, 새롬동",
+    "areas": [
+     "한솔동",
+     "새롬동"
+    ],
+    "occurred_clock": "17:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "17시 20경",
+     "kind": "정전으로",
+     "place": "한솔동, 새롬동"
+    },
+    "occurred_at": "2023-09-24T17:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 205708,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "한솔동, 새롬동",
+    "areas": [
+     "한솔동",
+     "새롬동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 120,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "1~2시간 소요",
+     "kind": "복전 완료",
+     "cause": "설비",
+     "place": "한솔동, 새롬동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2023-09-24T22:42:59+09:00",
+     "2023-09-24T22:42:59+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 205717,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "소사본동 101-1번지",
+    "areas": [
+     "소사본동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "cause": "전도",
+     "place": "소사본동 101-1번지"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 207004,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "중앙동",
+    "areas": [
+     "중앙동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "지역 정전",
+     "place": "중앙동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 207144,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "종촌동",
+    "areas": [
+     "종촌동"
+    ],
+    "occurred_clock": "09:02",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "9시 2분경",
+     "kind": "발생",
+     "cause": "변압기",
+     "place": "종촌동"
+    },
+    "occurred_at": "2023-12-05T09:02:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 207158,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "옥동",
+    "areas": [
+     "옥동"
+    ],
+    "occurred_clock": "15:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "15시 40분경",
+     "kind": "일대 정전",
+     "place": "옥동"
+    },
+    "occurred_at": "2023-12-06T15:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 207198,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "대평동, 보람동, 집현동",
+    "areas": [
+     "대평동",
+     "보람동",
+     "집현동"
+    ],
+    "occurred_clock": "02:02",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "2시 2분경",
+     "kind": "발생",
+     "place": "대평동, 보람동, 집현동"
+    },
+    "occurred_at": "2023-12-09T02:02:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 207249,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "자양동",
+    "areas": [
+     "자양동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "발생",
+     "cause": "충돌",
+     "place": "자양동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 207253,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "10:00"
+    },
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "10시경",
+     "kind": "10시경",
+     "cause": "충돌"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2023-12-12T10:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 207255,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "소제동, 자양동, 대동",
+    "areas": [
+     "소제동",
+     "자양동",
+     "대동"
+    ],
+    "occurred_clock": "13:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "1시경",
+     "kind": "일대 정전",
+     "cause": "충돌",
+     "place": "소제동, 자양동, 대동"
+    },
+    "occurred_at": "2023-12-11T13:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 207260,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "대동",
+    "areas": [
+     "대동"
+    ],
+    "occurred_clock": "16:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "4시경",
+     "kind": "일대 정전",
+     "cause": "충돌",
+     "place": "대동"
+    },
+    "occurred_at": "2023-12-11T16:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 208645,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "15:55",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "15:55경",
+     "kind": "지역 정전"
+    },
+    "occurred_at": "2024-01-03T15:55:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 208659,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "능평동",
+    "areas": [
+     "능평동"
+    ],
+    "occurred_clock": "01:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "01:15경",
+     "kind": "일대 정전",
+     "place": "능평동"
+    },
+    "occurred_at": "2024-01-04T01:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 208660,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "능평동",
+    "areas": [
+     "능평동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "04:00",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "restored": "04시경",
+     "kind": "복구가 완료",
+     "place": "능평동"
+    },
+    "occurred_at": null,
+    "restored_at": "2024-01-04T04:00:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 209082,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "춘양면 소로리, 의양리",
+    "areas": [
+     "춘양면",
+     "소로리",
+     "의양리"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "00:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "eta": "24시",
+     "kind": "24시",
+     "place": "춘양면 소로리, 의양리"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2024-01-15T00:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 209432,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "21:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "21시 30분경",
+     "kind": "일대 정전"
+    },
+    "occurred_at": "2024-01-22T21:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 209792,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "19:22",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "19시 22분경",
+     "kind": "신호등이 정전"
+    },
+    "occurred_at": "2024-02-03T19:22:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 209914,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "태화동",
+    "areas": [
+     "태화동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "20:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "20:00",
+     "kind": "발생",
+     "place": "태화동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2024-02-06T20:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 209917,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "태화동",
+    "areas": [
+     "태화동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "19:34",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "restored": "19:34",
+     "kind": "복구 완료",
+     "place": "태화동"
+    },
+    "occurred_at": null,
+    "restored_at": "2024-02-06T19:34:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 209998,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "영흥면 일대 정전 중입니다. 노약자 등 보온관리",
+    "areas": [
+     "영흥면",
+     "보온관리"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "cause": "화재",
+     "place": "영흥면 일대 정전 중입니다. 노약자 등 보온관리"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 209999,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "영흥면",
+    "areas": [
+     "영흥면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "cause": "화재",
+     "place": "영흥면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 210338,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "용신동",
+    "areas": [
+     "용신동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "14:00"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "14시까지",
+     "kind": "발생",
+     "cause": "변압기",
+     "place": "용신동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2024-02-25T14:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 210365,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "다사읍",
+    "areas": [
+     "다사읍"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "kind": "정전사고",
+     "place": "다사읍"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 210513,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "내발산동",
+    "areas": [
+     "내발산동"
+    ],
+    "occurred_clock": "16:13",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "16:13경",
+     "kind": "발생",
+     "place": "내발산동"
+    },
+    "occurred_at": "2024-03-07T16:13:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 210595,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "05:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "05:30경",
+     "kind": "정전으로",
+     "cause": "공사"
+    },
+    "occurred_at": "2024-03-15T05:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 210600,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전차선",
+     "cause": "공사"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 210764,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "화양면",
+    "areas": [
+     "화양면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전되",
+     "place": "화양면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 211092,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수내동",
+    "areas": [
+     "수내동"
+    ],
+    "occurred_clock": "21:47",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "21:47",
+     "kind": "발생",
+     "place": "수내동"
+    },
+    "occurred_at": "2024-04-08T21:47:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 211501,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "구래동,마산동",
+    "areas": [
+     "구래동",
+     "마산동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전되",
+     "place": "구래동,마산동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 211579,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "홍성읍 대교리",
+    "areas": [
+     "홍성읍",
+     "대교리"
+    ],
+    "occurred_clock": "15:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "15:15경",
+     "kind": "정전되",
+     "cause": "차량",
+     "place": "홍성읍 대교리"
+    },
+    "occurred_at": "2024-05-05T15:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 211580,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "홍성읍 대교리, 고암리, 남장리",
+    "areas": [
+     "홍성읍",
+     "대교리",
+     "고암리",
+     "남장리"
+    ],
+    "occurred_clock": "15:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "15:15경",
+     "kind": "정전되",
+     "cause": "차량",
+     "place": "홍성읍 대교리, 고암리, 남장리"
+    },
+    "occurred_at": "2024-05-05T15:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 211592,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "홍성읍",
+    "areas": [
+     "홍성읍"
+    ],
+    "occurred_clock": "15:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "15:15",
+     "kind": "복구 완료",
+     "place": "홍성읍"
+    },
+    "occurred_at": "2024-05-05T15:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 211758,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수유2동",
+    "areas": [
+     "수유2동"
+    ],
+    "occurred_clock": "16:41",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "16:41",
+     "kind": "발생",
+     "place": "수유2동"
+    },
+    "occurred_at": "2024-05-14T16:41:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 211823,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "23:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "23:30분경",
+     "kind": "정전 되"
+    },
+    "occurred_at": "2024-05-15T23:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 211958,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "구성동",
+    "areas": [
+     "구성동"
+    ],
+    "occurred_clock": "13:20",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "3시간 소요",
+     "occurred": "13:20",
+     "kind": "발생",
+     "cause": "교통사고",
+     "place": "구성동"
+    },
+    "occurred_at": "2024-05-23T13:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2024-05-23T16:20:00+09:00",
+     "2024-05-23T16:55:04+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 212018,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "안막동 일부지역이 정전되어 복구 중이니, 안막동",
+    "areas": [
+     "안막동"
+    ],
+    "occurred_clock": "18:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "18시 30분경",
+     "kind": "정전되",
+     "place": "안막동 일부지역이 정전되어 복구 중이니, 안막동"
+    },
+    "occurred_at": "2024-05-26T18:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 212026,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "풍동",
+    "areas": [
+     "풍동"
+    ],
+    "occurred_clock": "08:00",
+    "eta": {
+     "type": "absolute",
+     "clock": "14:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "14시까지",
+     "occurred": "08:00",
+     "kind": "정전되",
+     "place": "풍동"
+    },
+    "occurred_at": "2024-05-27T08:00:00+09:00",
+    "restored_at": null,
+    "eta_at": "2024-05-27T14:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 212046,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "북아현동 1-538",
+    "areas": [
+     "북아현동"
+    ],
+    "occurred_clock": "22:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "22:40경",
+     "kind": "정전.",
+     "cause": "사다리차",
+     "place": "북아현동 1-538"
+    },
+    "occurred_at": "2024-05-27T22:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 212047,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "북아현동 1-538",
+    "areas": [
+     "북아현동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "23:25",
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {
+     "restored": "23:25",
+     "kind": "복전완료",
+     "cause": "사다리차",
+     "place": "북아현동 1-538"
+    },
+    "occurred_at": null,
+    "restored_at": "2024-05-27T23:25:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 212135,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "의정부동 136-40",
+    "areas": [
+     "의정부동"
+    ],
+    "occurred_clock": "16:10",
+    "eta": {
+     "type": "absolute",
+     "clock": "22:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "22시 경",
+     "occurred": "16:10",
+     "kind": "지역 정전",
+     "place": "의정부동 136-40"
+    },
+    "occurred_at": "2024-05-31T16:10:00+09:00",
+    "restored_at": null,
+    "eta_at": "2024-05-31T22:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 212247,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "청담동 62-6",
+    "areas": [
+     "청담동"
+    ],
+    "occurred_clock": "10:07",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "10:07경",
+     "kind": "일대 정전",
+     "place": "청담동 62-6"
+    },
+    "occurred_at": "2024-06-07T10:07:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 212270,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "여의동 50",
+    "areas": [
+     "여의동"
+    ],
+    "occurred_clock": "14:35",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "14:35경",
+     "kind": "일대 정전",
+     "place": "여의동 50"
+    },
+    "occurred_at": "2024-06-08T14:35:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 212404,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "봉천동41-869(중앙동",
+    "areas": [
+     "봉천동",
+     "중앙동"
+    ],
+    "occurred_clock": "14:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "14:30경",
+     "kind": "일대 정전",
+     "place": "봉천동41-869(중앙동"
+    },
+    "occurred_at": "2024-06-12T14:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 213147,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "월영동",
+    "areas": [
+     "월영동"
+    ],
+    "occurred_clock": "07:37",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "07:37",
+     "kind": "정전되",
+     "place": "월영동"
+    },
+    "occurred_at": "2024-06-30T07:37:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 213266,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "영등포동3",
+    "areas": [
+     "영등포동"
+    ],
+    "occurred_clock": "12:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "12시경",
+     "kind": "발생",
+     "place": "영등포동3"
+    },
+    "occurred_at": "2024-07-02T12:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 215549,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "중동",
+    "areas": [
+     "중동"
+    ],
+    "occurred_clock": "10:20",
+    "eta": {
+     "type": "duration",
+     "minutes": 60,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "1시간 정도 소요",
+     "occurred": "10:20경",
+     "kind": "발생",
+     "place": "중동"
+    },
+    "occurred_at": "2024-07-18T10:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2024-07-18T11:20:00+09:00",
+     "2024-07-18T12:00:53+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 215705,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수성동3가, 중동, 만촌동",
+    "areas": [
+     "중동",
+     "만촌동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "발생",
+     "cause": "고압전선",
+     "place": "수성동3가, 중동, 만촌동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 215864,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "서동",
+    "areas": [
+     "서동"
+    ],
+    "occurred_clock": "12:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "12시경",
+     "kind": "일대 정전",
+     "place": "서동"
+    },
+    "occurred_at": "2024-07-20T12:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 216176,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "하동읍, 화개면, 악양면",
+    "areas": [
+     "하동읍",
+     "화개면",
+     "악양면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "발생",
+     "cause": "단선",
+     "place": "하동읍, 화개면, 악양면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 216703,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "범천1동",
+    "areas": [
+     "범천1동"
+    ],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "03:20",
+     "kind": "정전되",
+     "place": "범천1동"
+    },
+    "occurred_at": "2024-07-28T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 216821,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "북아현동",
+    "areas": [
+     "북아현동"
+    ],
+    "occurred_clock": "06:33",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "전체",
+    "evidence": {
+     "occurred": "06:33경",
+     "kind": "발생",
+     "place": "북아현동"
+    },
+    "occurred_at": "2024-07-29T06:33:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 217301,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "남천동",
+    "areas": [
+     "남천동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "cause": "변압기",
+     "place": "남천동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 218303,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "북내면, 오학동, 세종대왕면",
+    "areas": [
+     "북내면",
+     "오학동",
+     "세종대왕면"
+    ],
+    "occurred_clock": "21:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "21:00경",
+     "kind": "지역 정전",
+     "cause": "낙뢰",
+     "place": "북내면, 오학동, 세종대왕면"
+    },
+    "occurred_at": "2024-08-05T21:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 219392,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "용원동",
+    "areas": [
+     "용원동"
+    ],
+    "occurred_clock": "18:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "18:00경",
+     "kind": "일대 정전",
+     "place": "용원동"
+    },
+    "occurred_at": "2024-08-09T18:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 221887,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "06:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "06:50",
+     "kind": "정전되",
+     "cause": "화재"
+    },
+    "occurred_at": "2024-08-19T06:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 222197,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "미조면",
+    "areas": [
+     "미조면"
+    ],
+    "occurred_clock": "14:53",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "14:53",
+     "kind": "지역 정전",
+     "cause": "태풍",
+     "place": "미조면"
+    },
+    "occurred_at": "2024-08-20T14:53:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 222278,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "07:11",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "07:11경",
+     "kind": "정전사고"
+    },
+    "occurred_at": "2024-08-21T07:11:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 222858,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "개금동",
+    "areas": [
+     "개금동"
+    ],
+    "occurred_clock": "11:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "11:50분경",
+     "kind": "발생",
+     "place": "개금동"
+    },
+    "occurred_at": "2024-08-25T11:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 223348,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "갈현동 415-18",
+    "areas": [
+     "갈현동"
+    ],
+    "occurred_clock": "04:42",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "04:42",
+     "kind": "발생",
+     "place": "갈현동 415-18"
+    },
+    "occurred_at": "2024-09-02T04:42:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 223349,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "갈현동 415-18",
+    "areas": [
+     "갈현동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "13:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "13시",
+     "kind": "13시",
+     "place": "갈현동 415-18"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2024-09-02T13:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 223483,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "갈현2동",
+    "areas": [
+     "갈현2동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로",
+     "place": "갈현2동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 223485,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "복구되어"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 223875,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "장성동",
+    "areas": [
+     "장성동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "cause": "설비교체",
+     "place": "장성동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 224209,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "09:06",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "09:06",
+     "kind": "정전되"
+    },
+    "occurred_at": "2024-09-16T09:06:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 224263,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "17:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "17:40부터",
+     "kind": "발생"
+    },
+    "occurred_at": "2024-09-16T17:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 224512,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "용암동, 영운동, 금천동",
+    "areas": [
+     "용암동",
+     "영운동",
+     "금천동"
+    ],
+    "occurred_clock": "18:43",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "18:43분경",
+     "kind": "일대 정전",
+     "place": "용암동, 영운동, 금천동"
+    },
+    "occurred_at": "2024-09-18T18:43:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 224523,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "수곡동, 분평동, 산남동, 모충동",
+    "areas": [
+     "수곡동",
+     "분평동",
+     "산남동",
+     "모충동"
+    ],
+    "occurred_clock": "18:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "18:30분경",
+     "kind": "정수장",
+     "cause": "낙뢰",
+     "place": "수곡동, 분평동, 산남동, 모충동"
+    },
+    "occurred_at": "2024-09-18T18:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 224787,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "진상면, 옥곡면",
+    "areas": [
+     "진상면",
+     "옥곡면"
+    ],
+    "occurred_clock": "19:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "19:00경",
+     "kind": "지역 정전",
+     "place": "진상면, 옥곡면"
+    },
+    "occurred_at": "2024-09-20T19:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 225516,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "금곡동 전기설비 고장으로 인해 금곡동",
+    "areas": [
+     "금곡동"
+    ],
+    "occurred_clock": "13:12",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "13:12경",
+     "kind": "발생",
+     "cause": "설비",
+     "place": "금곡동 전기설비 고장으로 인해 금곡동"
+    },
+    "occurred_at": "2024-09-25T13:12:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 225640,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "괴안동 188-15",
+    "areas": [
+     "괴안동"
+    ],
+    "occurred_clock": "06:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "06:20경",
+     "kind": "정전되",
+     "cause": "개폐기",
+     "place": "괴안동 188-15"
+    },
+    "occurred_at": "2024-10-02T06:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 225807,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "태장2동 상록프라자 4동, 상가동",
+    "areas": [
+     "태장2동",
+     "상가동"
+    ],
+    "occurred_clock": "18:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "occurred": "18:30경",
+     "kind": "발생",
+     "place": "태장2동 상록프라자 4동, 상가동"
+    },
+    "occurred_at": "2024-10-09T18:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 226114,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수유3동",
+    "areas": [
+     "수유3동"
+    ],
+    "occurred_clock": "16:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "16:00시경",
+     "kind": "정전되",
+     "place": "수유3동"
+    },
+    "occurred_at": "2024-10-21T16:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 226555,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "임고면",
+    "areas": [
+     "임고면"
+    ],
+    "occurred_clock": "20:46",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "20:46경",
+     "kind": "지역 정전",
+     "place": "임고면"
+    },
+    "occurred_at": "2024-11-11T20:46:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 226598,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "17:11",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "17:11",
+     "kind": "정전되"
+    },
+    "occurred_at": "2024-11-14T17:11:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 226920,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "남종면",
+    "areas": [
+     "남종면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "발생",
+     "cause": "전도",
+     "place": "남종면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 226934,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "05:41",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "05:41",
+     "kind": "일대 정전"
+    },
+    "occurred_at": "2024-11-27T05:41:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 226947,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "퇴촌면",
+    "areas": [
+     "퇴촌면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "발생",
+     "cause": "전도",
+     "place": "퇴촌면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227009,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "14:45",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "14:45경",
+     "kind": "발생",
+     "cause": "작업을 위해"
+    },
+    "occurred_at": "2024-11-27T14:45:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227022,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "월영동",
+    "areas": [
+     "월영동"
+    ],
+    "occurred_clock": "15:11",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "15:11",
+     "kind": "정전되",
+     "place": "월영동"
+    },
+    "occurred_at": "2024-11-27T15:11:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227100,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "발생",
+     "cause": "대설"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227111,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "서신면 홍범리",
+    "areas": [
+     "서신면",
+     "홍범리"
+    ],
+    "occurred_clock": "04:17",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "04:17경",
+     "kind": "정전되",
+     "place": "서신면 홍범리"
+    },
+    "occurred_at": "2024-11-28T04:17:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227112,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "봉담읍 내리",
+    "areas": [
+     "봉담읍",
+     "내리"
+    ],
+    "occurred_clock": "02:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "02:40경",
+     "kind": "정전되",
+     "place": "봉담읍 내리"
+    },
+    "occurred_at": "2024-11-28T02:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227195,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "공덕동,염리동,성산동",
+    "areas": [
+     "공덕동",
+     "염리동",
+     "성산동"
+    ],
+    "occurred_clock": "07:00",
+    "eta": {
+     "type": "absolute",
+     "clock": "12:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "12:00",
+     "occurred": "07시경",
+     "kind": "일대 정전",
+     "place": "공덕동,염리동,성산동"
+    },
+    "occurred_at": "2024-11-28T07:00:00+09:00",
+    "restored_at": null,
+    "eta_at": "2024-11-28T12:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227200,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "발생",
+     "cause": "대설"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227207,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전되",
+     "cause": "대설"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227308,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "12:59",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "12:59경",
+     "kind": "발생"
+    },
+    "occurred_at": "2024-12-05T12:59:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227311,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "남한산성면, 남종면, 퇴촌면",
+    "areas": [
+     "남한산성면",
+     "남종면",
+     "퇴촌면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "지역 정전",
+     "place": "남한산성면, 남종면, 퇴촌면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 227348,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "22:19",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "22:19",
+     "kind": "정전되",
+     "cause": "화재"
+    },
+    "occurred_at": "2024-12-11T22:19:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 228458,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "고잔동 535-4번지",
+    "areas": [
+     "고잔동"
+    ],
+    "occurred_clock": "21:55",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "21:55경",
+     "kind": "일대 정전",
+     "place": "고잔동 535-4번지"
+    },
+    "occurred_at": "2025-01-13T21:55:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 228504,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "발생",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 228530,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "10:19",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "10:19경",
+     "kind": "일대 정전"
+    },
+    "occurred_at": "2025-01-18T10:19:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 228531,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구가 완료"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 228583,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "동면 및 해안면",
+    "areas": [
+     "동면",
+     "해안면"
+    ],
+    "occurred_clock": "14:25",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "14:25",
+     "kind": "정전으로",
+     "place": "동면 및 해안면"
+    },
+    "occurred_at": "2025-01-22T14:25:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 228587,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "20:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "20:40경",
+     "kind": "일대 정전"
+    },
+    "occurred_at": "2025-01-23T20:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 229319,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "노량진1동",
+    "areas": [
+     "노량진1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "36세대",
+    "evidence": {
+     "kind": "정전입니다",
+     "cause": "변압기",
+     "place": "노량진1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 229327,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "이창동 761-1(풍물시장 2길 24-2)일대가 정전되어 복구 중이니, 이창동",
+    "areas": [
+     "이창동"
+    ],
+    "occurred_clock": "06:10",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "06:10경",
+     "kind": "정전되",
+     "place": "이창동 761-1(풍물시장 2길 24-2)일대가 정전되어 복구 중이니, 이창동"
+    },
+    "occurred_at": "2025-02-01T06:10:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 230205,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "오창읍",
+    "areas": [
+     "오창읍"
+    ],
+    "occurred_clock": "15:51",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "15:51경",
+     "kind": "일대 정전",
+     "place": "오창읍"
+    },
+    "occurred_at": "2025-02-09T15:51:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 230775,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "신현동",
+    "areas": [
+     "신현동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "place": "신현동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 230790,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "00:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "00시경",
+     "kind": "정전으로"
+    },
+    "occurred_at": "2025-03-03T00:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 230943,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "도계읍 흥전리",
+    "areas": [
+     "도계읍",
+     "흥전리"
+    ],
+    "occurred_clock": "19:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "19:40 분경",
+     "kind": "발생",
+     "place": "도계읍 흥전리"
+    },
+    "occurred_at": "2025-03-04T19:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 231692,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "길안면 금곡리, 백자리",
+    "areas": [
+     "길안면",
+     "금곡리",
+     "백자리"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일원",
+    "evidence": {
+     "kind": "정전(단전)예정",
+     "cause": "산불",
+     "place": "길안면 금곡리, 백자리"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 231781,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "길안면 백자리, 금곡리",
+    "areas": [
+     "길안면",
+     "백자리",
+     "금곡리"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "(정전)이 되오니",
+     "place": "길안면 백자리, 금곡리"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 232056,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "전역",
+    "evidence": {
+     "kind": "불시 정전",
+     "cause": "산불"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 232057,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "일직, 남선, 길안, 임하, 임동",
+    "areas": [
+     "일직",
+     "남선",
+     "길안",
+     "임하",
+     "임동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "가압장",
+     "cause": "산불",
+     "place": "일직, 남선, 길안, 임하, 임동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 232146,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "임하,남후,일직,남선,임동",
+    "areas": [
+     "임하",
+     "남후",
+     "일직",
+     "남선",
+     "임동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "가압장",
+     "cause": "산불",
+     "place": "임하,남후,일직,남선,임동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 232285,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "가압장",
+     "cause": "산불"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 232304,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "가압장",
+     "cause": "산불"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 232341,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "11:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "11:30",
+     "kind": "정전되",
+     "cause": "전도"
+    },
+    "occurred_at": "2025-03-27T11:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 232482,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "전체",
+    "evidence": {
+     "kind": "정전이 우려",
+     "cause": "산불"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 233317,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "청량리동 199-118",
+    "areas": [
+     "청량리동"
+    ],
+    "occurred_clock": "08:35",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "08:35경",
+     "kind": "일대 정전",
+     "cause": "공사",
+     "place": "청량리동 199-118"
+    },
+    "occurred_at": "2025-04-05T08:35:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 233380,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "남한산성면 산성리",
+    "areas": [
+     "남한산성면",
+     "산성리"
+    ],
+    "occurred_clock": "17:10",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "17:10분경",
+     "kind": "일대 정전",
+     "place": "남한산성면 산성리"
+    },
+    "occurred_at": "2025-04-05T17:10:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 234241,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "영등포동, 당산동",
+    "areas": [
+     "영등포동",
+     "당산동"
+    ],
+    "occurred_clock": "15:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "15시경",
+     "kind": "일대 정전",
+     "cause": "전도",
+     "place": "영등포동, 당산동"
+    },
+    "occurred_at": "2025-04-11T15:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 234300,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "일직동, 소하동",
+    "areas": [
+     "일직동",
+     "소하동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "불시 정전",
+     "place": "일직동, 소하동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 234563,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "삼남읍",
+    "areas": [
+     "삼남읍"
+    ],
+    "occurred_clock": "07:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "07:15분경",
+     "kind": "발생",
+     "cause": "강풍",
+     "place": "삼남읍"
+    },
+    "occurred_at": "2025-04-13T07:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 234614,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "11:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "11:00",
+     "kind": "정전되"
+    },
+    "occurred_at": "2025-04-13T11:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 235212,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "소도동",
+    "areas": [
+     "소도동"
+    ],
+    "occurred_clock": "08:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "08:00경",
+     "kind": "정전되",
+     "place": "소도동"
+    },
+    "occurred_at": "2025-04-26T08:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 235644,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "휘경동 308-144",
+    "areas": [
+     "휘경동"
+    ],
+    "occurred_clock": "11:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "11:50경",
+     "kind": "정전사고",
+     "cause": "고압선",
+     "place": "휘경동 308-144"
+    },
+    "occurred_at": "2025-04-29T11:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 236246,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "홍은2동과 연희동",
+    "areas": [
+     "홍은2동",
+     "연희동"
+    ],
+    "occurred_clock": "14:07",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "14:07경",
+     "kind": "발생",
+     "cause": "교통사고",
+     "place": "홍은2동과 연희동"
+    },
+    "occurred_at": "2025-05-21T14:07:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 236356,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "계양동,대동,대정동",
+    "areas": [
+     "계양동",
+     "대동",
+     "대정동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "발생",
+     "cause": "낙뢰",
+     "place": "계양동,대동,대정동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 236357,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "지역 정전",
+     "cause": "낙뢰"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 237078,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "산내면, 단장면",
+    "areas": [
+     "산내면",
+     "단장면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정전되",
+     "place": "산내면, 단장면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 237095,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "구로1동",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "23:00"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "eta": "23:00",
+     "kind": "복전",
+     "cause": "전도",
+     "place": "구로1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2025-06-22T23:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 237096,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "구로1동",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "복전",
+     "place": "구로1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 237103,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "용문면",
+    "areas": [
+     "용문면"
+    ],
+    "occurred_clock": "14:21",
+    "eta": {
+     "type": "absolute",
+     "clock": "16:00"
+    },
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일원",
+    "evidence": {
+     "eta": "16시",
+     "occurred": "14:21",
+     "kind": "정전되",
+     "cause": "화재",
+     "place": "용문면"
+    },
+    "occurred_at": "2025-06-23T14:21:00+09:00",
+    "restored_at": null,
+    "eta_at": "2025-06-23T16:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 237641,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "19:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "19시경",
+     "kind": "복구 완료"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2025-07-01T19:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 237644,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "복구되었"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 239764,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "탄천면",
+    "areas": [
+     "탄천면"
+    ],
+    "occurred_clock": "23:06",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "23:06경",
+     "kind": "일대 정전",
+     "place": "탄천면"
+    },
+    "occurred_at": "2025-07-16T23:06:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 241355,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "신안면, 신등면",
+    "areas": [
+     "신안면",
+     "신등면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "발생",
+     "cause": "호우",
+     "place": "신안면, 신등면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 241542,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "단성면, 신안면, 신등면, 금서면",
+    "areas": [
+     "단성면",
+     "신안면",
+     "신등면",
+     "금서면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "발생",
+     "cause": "호우",
+     "place": "단성면, 신안면, 신등면, 금서면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 241927,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전 상황",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 242493,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "무더위 대비",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 242715,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "무더위 대비",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 242893,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "무더위 대비",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 243116,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "홍은동 11-300",
+    "areas": [
+     "홍은동"
+    ],
+    "occurred_clock": "07:07",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "07:07경",
+     "kind": "발생",
+     "cause": "전선",
+     "place": "홍은동 11-300"
+    },
+    "occurred_at": "2025-07-28T07:07:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 243273,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "무더위 대비",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 243415,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "운서동 일부 정전에 따라 정전 세대에서는 인근 무더위 쉼터(운서동",
+    "areas": [
+     "운서동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "place": "운서동 일부 정전에 따라 정전 세대에서는 인근 무더위 쉼터(운서동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 243432,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "운서동",
+    "areas": [
+     "운서동"
+    ],
+    "occurred_clock": "11:47",
+    "eta": null,
+    "restored_clock": "13:36",
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "occurred": "11:47경",
+     "restored": "13:36경",
+     "kind": "복구되었",
+     "place": "운서동"
+    },
+    "occurred_at": "2025-07-29T11:47:00+09:00",
+    "restored_at": "2025-07-29T13:36:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 243676,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "무더위 대비",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 243678,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "상도3동",
+    "areas": [
+     "상도3동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 60,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "1시간 소요",
+     "kind": "발생",
+     "place": "상도3동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2025-07-30T22:05:25+09:00",
+     "2025-07-30T22:05:25+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 243679,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "상도3동) 정전, 한전의 복구지연. 상도3동",
+    "areas": [
+     "상도3동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전,",
+     "place": "상도3동) 정전, 한전의 복구지연. 상도3동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 244842,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "무더위 대비",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 245513,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "당동 425-3",
+    "areas": [
+     "당동"
+    ],
+    "occurred_clock": "22:35",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "22:35",
+     "kind": "발생",
+     "cause": "충돌",
+     "place": "당동 425-3"
+    },
+    "occurred_at": "2025-08-11T22:35:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 245908,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "원미1동~춘의동",
+    "areas": [
+     "원미1동",
+     "춘의동"
+    ],
+    "occurred_clock": "18:29",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "occurred": "18:29분경",
+     "kind": "정전되",
+     "place": "원미1동~춘의동"
+    },
+    "occurred_at": "2025-08-13T18:29:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 246089,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "해제면 남풍리",
+    "areas": [
+     "해제면",
+     "남풍리"
+    ],
+    "occurred_clock": "01:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "01:50",
+     "kind": "정전되",
+     "cause": "전압기",
+     "place": "해제면 남풍리"
+    },
+    "occurred_at": "2025-08-15T01:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 246090,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "해제면 만풍리",
+    "areas": [
+     "해제면",
+     "만풍리"
+    ],
+    "occurred_clock": "01:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "01:50",
+     "kind": "정전되",
+     "cause": "전압기",
+     "place": "해제면 만풍리"
+    },
+    "occurred_at": "2025-08-15T01:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 248427,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "새롬동",
+    "areas": [
+     "새롬동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "kind": "정전되",
+     "place": "새롬동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 249029,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "선암동",
+    "areas": [
+     "선암동"
+    ],
+    "occurred_clock": "13:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "13:50경",
+     "kind": "일대 정전",
+     "place": "선암동"
+    },
+    "occurred_at": "2025-09-06T13:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 249074,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "장군면",
+    "areas": [
+     "장군면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "place": "장군면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 249864,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "가압장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 249876,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "상도1동",
+    "areas": [
+     "상도1동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "3시간 예상",
+     "kind": "3시간 예상",
+     "place": "상도1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2025-09-23T14:00:18+09:00",
+     "2025-09-23T14:00:18+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 249877,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구 완료",
+     "cause": "공사"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 250227,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "남면",
+    "areas": [
+     "남면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "kind": "발생",
+     "place": "남면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 250386,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "장림2동",
+    "areas": [
+     "장림2동"
+    ],
+    "occurred_clock": "07:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "07:00경",
+     "kind": "정전되",
+     "place": "장림2동"
+    },
+    "occurred_at": "2025-11-18T07:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 250936,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "노량진2동 223-2일대 120가구 3시까지 정전예상. 노량진2동",
+    "areas": [
+     "노량진2동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "03:00"
+    },
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "3시까지",
+     "kind": "정전예상",
+     "cause": "교통사고",
+     "place": "노량진2동 223-2일대 120가구 3시까지 정전예상. 노량진2동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2025-12-12T15:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 251057,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "동면",
+    "areas": [
+     "동면"
+    ],
+    "occurred_clock": "09:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "09:40경",
+     "kind": "일대 정전",
+     "cause": "차량",
+     "place": "동면"
+    },
+    "occurred_at": "2025-12-15T09:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 251638,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "연무동 및 영화동",
+    "areas": [
+     "연무동",
+     "영화동"
+    ],
+    "occurred_clock": "12:23",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "12:23경",
+     "kind": "정전되",
+     "place": "연무동 및 영화동"
+    },
+    "occurred_at": "2025-12-31T12:23:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 251653,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "연무동 및 영화동",
+    "areas": [
+     "연무동",
+     "영화동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구가 완료",
+     "place": "연무동 및 영화동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 251913,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "고성동, 침산동",
+    "areas": [
+     "고성동",
+     "침산동"
+    ],
+    "occurred_clock": "18:38",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "18:38경",
+     "kind": "발생",
+     "place": "고성동, 침산동"
+    },
+    "occurred_at": "2026-01-02T18:38:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 251916,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고성동, 침산동",
+    "areas": [
+     "고성동",
+     "침산동"
+    ],
+    "occurred_clock": "18:38",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "18:38경",
+     "kind": "복구 완료",
+     "place": "고성동, 침산동"
+    },
+    "occurred_at": "2026-01-02T18:38:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 252264,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "감곡면",
+    "areas": [
+     "감곡면"
+    ],
+    "occurred_clock": "13:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "13:40경",
+     "kind": "발생",
+     "place": "감곡면"
+    },
+    "occurred_at": "2026-01-10T13:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 252271,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "감곡면",
+    "areas": [
+     "감곡면"
+    ],
+    "occurred_clock": "13:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "13:40경",
+     "kind": "복구 완료",
+     "place": "감곡면"
+    },
+    "occurred_at": "2026-01-10T13:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 252863,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "문봉동 167-1번지",
+    "areas": [
+     "문봉동"
+    ],
+    "occurred_clock": "20:08",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "20:08경",
+     "kind": "발생",
+     "cause": "교통사고",
+     "place": "문봉동 167-1번지"
+    },
+    "occurred_at": "2026-01-15T20:08:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 252866,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "문봉동 167-1번지",
+    "areas": [
+     "문봉동"
+    ],
+    "occurred_clock": "20:08",
+    "eta": {
+     "type": "absolute",
+     "clock": "01:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "01:00",
+     "occurred": "20:08",
+     "kind": "발생",
+     "place": "문봉동 167-1번지"
+    },
+    "occurred_at": "2026-01-15T20:08:00+09:00",
+    "restored_at": null,
+    "eta_at": "2026-01-16T01:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 252917,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "구래동 6871-47",
+    "areas": [
+     "구래동"
+    ],
+    "occurred_clock": "11:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "11:00",
+     "kind": "정전되",
+     "place": "구래동 6871-47"
+    },
+    "occurred_at": "2026-01-18T11:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 253347,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "반곡동1373-22 국과수사거리 교통사고로 인한 전력 단선으로 반곡동, 개운동, 행구동",
+    "areas": [
+     "반곡동",
+     "개운동",
+     "행구동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "지역 정전",
+     "cause": "교통사고",
+     "place": "반곡동1373-22 국과수사거리 교통사고로 인한 전력 단선으로 반곡동, 개운동, 행구동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 253348,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "반곡동1373-22 국과수사거리 교통사고로 인한 전력 단선으로 반곡동, 개운동, 행구동",
+    "areas": [
+     "반곡동",
+     "개운동",
+     "행구동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "지역 정전",
+     "cause": "교통사고",
+     "place": "반곡동1373-22 국과수사거리 교통사고로 인한 전력 단선으로 반곡동, 개운동, 행구동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 253540,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "진도읍",
+    "areas": [
+     "진도읍"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "정전 알림",
+     "place": "진도읍"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 253545,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "진도읍",
+    "areas": [
+     "진도읍"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "kind": "복구가 완료",
+     "place": "진도읍"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 253576,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "구로1동",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전사고",
+     "place": "구로1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 253577,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "구로1동",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전사고",
+     "cause": "누수",
+     "place": "구로1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 253633,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "구로1동",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "place": "구로1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 253681,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "구로1동",
+    "areas": [
+     "구로1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "16:54",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "restored": "16:54분",
+     "kind": "복구가 모두 완료",
+     "place": "구로1동"
+    },
+    "occurred_at": null,
+    "restored_at": "2026-01-24T16:54:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 254074,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "시흥동 산100-46",
+    "areas": [
+     "시흥동"
+    ],
+    "occurred_clock": "11:27",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "전체",
+    "evidence": {
+     "occurred": "11:27 시",
+     "kind": "발생",
+     "cause": "차량",
+     "place": "시흥동 산100-46"
+    },
+    "occurred_at": "2026-01-30T11:27:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 254509,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "고삼,대덕,양성면",
+    "areas": [
+     "고삼",
+     "대덕",
+     "양성면"
+    ],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "03:20",
+     "kind": "정전되",
+     "place": "고삼,대덕,양성면"
+    },
+    "occurred_at": "2026-02-05T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 254510,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "03:20",
+     "kind": "정전되"
+    },
+    "occurred_at": "2026-02-05T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 254516,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고삼면,대덕면,양성면",
+    "areas": [
+     "고삼면",
+     "대덕면",
+     "양성면"
+    ],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "03시 20분경",
+     "kind": "복구되었",
+     "place": "고삼면,대덕면,양성면"
+    },
+    "occurred_at": "2026-02-05T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 254517,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고삼면,대덕면,양성면",
+    "areas": [
+     "고삼면",
+     "대덕면",
+     "양성면"
+    ],
+    "occurred_clock": "03:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "03시 20분경",
+     "kind": "복구되었",
+     "place": "고삼면,대덕면,양성면"
+    },
+    "occurred_at": "2026-02-05T03:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 254922,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "원당동~등봉동",
+    "areas": [
+     "원당동",
+     "등봉동"
+    ],
+    "occurred_clock": "14:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "14시경",
+     "kind": "일대 정전",
+     "place": "원당동~등봉동"
+    },
+    "occurred_at": "2026-02-08T14:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 255132,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "성산동 533-1, 대흥동 12-41, 공덕동 255-16",
+    "areas": [
+     "성산동",
+     "대흥동",
+     "공덕동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전이 예상",
+     "cause": "전력설비 교체",
+     "place": "성산동 533-1, 대흥동 12-41, 공덕동 255-16"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 255142,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "조원동",
+    "areas": [
+     "조원동"
+    ],
+    "occurred_clock": "09:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "09시20분경",
+     "kind": "정전되",
+     "place": "조원동"
+    },
+    "occurred_at": "2026-02-13T09:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 255150,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "조원동",
+    "areas": [
+     "조원동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구완료",
+     "place": "조원동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 255186,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "하안동 11",
+    "areas": [
+     "하안동"
+    ],
+    "occurred_clock": "22:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "22:30경",
+     "kind": "22:30경",
+     "cause": "변압기",
+     "place": "하안동 11"
+    },
+    "occurred_at": "2026-02-13T22:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 256394,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "신곡동",
+    "areas": [
+     "신곡동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "place": "신곡동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 256440,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "3시간 소요",
+     "kind": "일대 정전",
+     "cause": "폭설"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-03-03T09:50:39+09:00",
+     "2026-03-03T09:50:39+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 256466,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "문원동 맨홀 화재발생. 긴급점검으로 문원동 일대 19시경 정전예정. 문원동",
+    "areas": [
+     "문원동"
+    ],
+    "occurred_clock": "17:00",
+    "eta": {
+     "type": "absolute",
+     "clock": "19:00"
+    },
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "19시경",
+     "occurred": "17시경",
+     "kind": "발생",
+     "cause": "화재",
+     "place": "문원동 맨홀 화재발생. 긴급점검으로 문원동 일대 19시경 정전예정. 문원동"
+    },
+    "occurred_at": "2026-03-03T17:00:00+09:00",
+    "restored_at": null,
+    "eta_at": "2026-03-03T19:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 256468,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "문원동",
+    "areas": [
+     "문원동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "정상화",
+     "place": "문원동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257313,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "21:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "21:00",
+     "kind": "지역 정전"
+    },
+    "occurred_at": "2026-03-28T21:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257397,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "화곡동 1159",
+    "areas": [
+     "화곡동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "place": "화곡동 1159"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257401,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "화곡동 1159",
+    "areas": [
+     "화곡동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "복구가 완료",
+     "place": "화곡동 1159"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257453,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "광도면 죽림리",
+    "areas": [
+     "광도면",
+     "죽림리"
+    ],
+    "occurred_clock": "11:50",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "11:50경",
+     "kind": "발생",
+     "cause": "화재",
+     "place": "광도면 죽림리"
+    },
+    "occurred_at": "2026-04-02T11:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257639,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "단구, 관설동",
+    "areas": [
+     "단구",
+     "관설동"
+    ],
+    "occurred_clock": "11:15",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "11:15",
+     "kind": "정전으로",
+     "place": "단구, 관설동"
+    },
+    "occurred_at": "2026-04-06T11:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257640,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "문원동",
+    "areas": [
+     "문원동"
+    ],
+    "occurred_clock": "11:30",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "eta": "2~3시간 이상 소요",
+     "occurred": "11:30분경",
+     "kind": "발생",
+     "cause": "고압선",
+     "place": "문원동"
+    },
+    "occurred_at": "2026-04-06T11:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-04-06T14:30:00+09:00",
+     "2026-04-06T15:09:37+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257646,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "문원동",
+    "areas": [
+     "문원동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구 완료",
+     "place": "문원동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257650,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "가로등",
+     "cause": "단선"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257994,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "고척1.2동,개봉1동",
+    "areas": [
+     "고척1.2동",
+     "개봉1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "59세대",
+    "evidence": {
+     "kind": "발생",
+     "place": "고척1.2동,개봉1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257995,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "고척1,2동,개봉동",
+    "areas": [
+     "고척1",
+     "개봉동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "59세대",
+    "evidence": {
+     "kind": "발생",
+     "place": "고척1,2동,개봉동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257996,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고척1,2동,개봉동",
+    "areas": [
+     "고척1",
+     "개봉동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구완료",
+     "place": "고척1,2동,개봉동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 257997,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고척1,2동,개봉동",
+    "areas": [
+     "고척1",
+     "개봉동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구완료",
+     "place": "고척1,2동,개봉동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 258565,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "화원읍 본리리 일대 지역이 정전되어 복구 중이니, 본리리",
+    "areas": [
+     "화원읍",
+     "본리리"
+    ],
+    "occurred_clock": "13:17",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "13:17",
+     "kind": "정전되",
+     "place": "화원읍 본리리 일대 지역이 정전되어 복구 중이니, 본리리"
+    },
+    "occurred_at": "2026-05-06T13:17:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 258643,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "발생",
+     "cause": "차량"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 258794,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "방산면",
+    "areas": [
+     "방산면"
+    ],
+    "occurred_clock": "19:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "19시30분",
+     "kind": "지역 정전",
+     "place": "방산면"
+    },
+    "occurred_at": "2026-05-12T19:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 258923,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "서면 자등리",
+    "areas": [
+     "서면",
+     "자등리"
+    ],
+    "occurred_clock": "13:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "13:00경",
+     "kind": "지역 정전",
+     "place": "서면 자등리"
+    },
+    "occurred_at": "2026-05-20T13:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 258951,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 40,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "30~40분 예정",
+     "kind": "30~40분 예정",
+     "cause": "작업으로"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-05-21T00:12:29+09:00",
+     "2026-05-21T00:12:29+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 258952,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 40,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "30~40분 예정",
+     "kind": "30~40분 예정",
+     "cause": "작업으로"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-05-21T00:13:33+09:00",
+     "2026-05-21T00:13:33+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 259061,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "능평동 261-3번지",
+    "areas": [
+     "능평동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "발생",
+     "cause": "설치 작업",
+     "place": "능평동 261-3번지"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259192,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "교동 부곡2동 부곡3동",
+    "areas": [
+     "교동",
+     "부곡2동",
+     "부곡3동"
+    ],
+    "occurred_clock": "18:43",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "18:43",
+     "kind": "18:43",
+     "place": "교동 부곡2동 부곡3동"
+    },
+    "occurred_at": "2026-06-04T18:43:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259195,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "교동 부곡2동 부곡3동",
+    "areas": [
+     "교동",
+     "부곡2동",
+     "부곡3동"
+    ],
+    "occurred_clock": "18:43",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "18:43",
+     "kind": "18:43",
+     "place": "교동 부곡2동 부곡3동"
+    },
+    "occurred_at": "2026-06-04T18:43:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259196,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "부곡동(교동,이동,삼동",
+    "areas": [
+     "부곡동",
+     "교동",
+     "삼동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "복구 완료",
+     "place": "부곡동(교동,이동,삼동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259197,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "부곡동(교동,이동,삼동",
+    "areas": [
+     "부곡동",
+     "교동",
+     "삼동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "복구 완료",
+     "place": "부곡동(교동,이동,삼동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259202,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "진전면",
+    "areas": [
+     "진전면"
+    ],
+    "occurred_clock": "20:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "20시30분경",
+     "kind": "발생",
+     "place": "진전면"
+    },
+    "occurred_at": "2026-06-05T20:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259222,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "수색동 314-1",
+    "areas": [
+     "수색동"
+    ],
+    "occurred_clock": "04:22",
+    "eta": {
+     "type": "duration",
+     "minutes": 600,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "10시간 이상) 소요",
+     "occurred": "04:22",
+     "kind": "일대 정전",
+     "cause": "차량",
+     "place": "수색동 314-1"
+    },
+    "occurred_at": "2026-06-07T04:22:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-06-07T14:22:00+09:00",
+     "2026-06-07T16:04:43+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259259,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "현재, 후평동",
+    "areas": [
+     "후평동"
+    ],
+    "occurred_clock": "15:06",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "15:06",
+     "kind": "지역 정전",
+     "place": "현재, 후평동"
+    },
+    "occurred_at": "2026-06-09T15:06:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259260,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "후평동",
+    "areas": [
+     "후평동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "17:00",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "restored": "17시",
+     "kind": "복구 완료",
+     "place": "후평동"
+    },
+    "occurred_at": null,
+    "restored_at": "2026-06-09T17:00:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259286,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "내덕2동",
+    "areas": [
+     "내덕2동"
+    ],
+    "occurred_clock": "17:19",
+    "eta": {
+     "type": "duration",
+     "minutes": 120,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "2시간 소요",
+     "occurred": "17:19경",
+     "kind": "일대 정전",
+     "place": "내덕2동"
+    },
+    "occurred_at": "2026-06-11T17:19:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-06-11T19:19:00+09:00",
+     "2026-06-11T20:27:09+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259327,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "운수면 팔산리 499-2 전신주 화재로 인하여 운수면 팔산리, 유리",
+    "areas": [
+     "운수면",
+     "팔산리",
+     "유리"
+    ],
+    "occurred_clock": "10:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일부",
+    "evidence": {
+     "occurred": "10:30경",
+     "kind": "발생",
+     "cause": "화재",
+     "place": "운수면 팔산리 499-2 전신주 화재로 인하여 운수면 팔산리, 유리"
+    },
+    "occurred_at": "2026-06-13T10:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259328,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "운수면 팔산리499-2 전신주 화재로 정전이 발생, 팔산리",
+    "areas": [
+     "운수면",
+     "팔산리"
+    ],
+    "occurred_clock": "10:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일부",
+    "evidence": {
+     "occurred": "10:30경",
+     "kind": "발생",
+     "cause": "화재",
+     "place": "운수면 팔산리499-2 전신주 화재로 정전이 발생, 팔산리"
+    },
+    "occurred_at": "2026-06-13T10:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259337,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "운수면 팔산리, 유리",
+    "areas": [
+     "운수면",
+     "팔산리",
+     "유리"
+    ],
+    "occurred_clock": "10:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "10:30경",
+     "kind": "복구 완료",
+     "place": "운수면 팔산리, 유리"
+    },
+    "occurred_at": "2026-06-13T10:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259375,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "08:02",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "occurred": "08:02",
+     "kind": "정전되"
+    },
+    "occurred_at": "2026-06-15T08:02:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259432,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "천천동",
+    "areas": [
+     "천천동"
+    ],
+    "occurred_clock": "08:22",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "08:22경",
+     "kind": "발생",
+     "cause": "교통사고",
+     "place": "천천동"
+    },
+    "occurred_at": "2026-06-19T08:22:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259468,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "연천읍 상리, 옥산리",
+    "areas": [
+     "연천읍",
+     "상리",
+     "옥산리"
+    ],
+    "occurred_clock": "17:50",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "3시간 소요",
+     "occurred": "17:50경",
+     "kind": "발생",
+     "place": "연천읍 상리, 옥산리"
+    },
+    "occurred_at": "2026-06-19T17:50:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-06-19T20:50:00+09:00",
+     "2026-06-19T22:23:26+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259476,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "02:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "02:30경",
+     "kind": "발생"
+    },
+    "occurred_at": "2026-06-20T02:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259594,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "고산동~신곡1동",
+    "areas": [
+     "고산동",
+     "신곡1동"
+    ],
+    "occurred_clock": "10:43",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "10:43경",
+     "kind": "정전되",
+     "place": "고산동~신곡1동"
+    },
+    "occurred_at": "2026-06-23T10:43:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259597,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "고산동~신곡1동",
+    "areas": [
+     "고산동",
+     "신곡1동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구 완료",
+     "place": "고산동~신곡1동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259622,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "11:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "11시30분",
+     "kind": "정전되"
+    },
+    "occurred_at": "2026-06-25T11:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259623,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "선부동 131-1, 원곡동 993-7",
+    "areas": [
+     "선부동",
+     "원곡동"
+    ],
+    "occurred_clock": "11:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "11시30분",
+     "kind": "정전되",
+     "place": "선부동 131-1, 원곡동 993-7"
+    },
+    "occurred_at": "2026-06-25T11:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 259820,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "삼문동",
+    "areas": [
+     "삼문동"
+    ],
+    "occurred_clock": "08:10",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "08:10경",
+     "kind": "일대 정전",
+     "place": "삼문동"
+    },
+    "occurred_at": "2026-07-06T08:10:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 260014,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "17:56",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "3시간 소요",
+     "occurred": "17:56경",
+     "kind": "발생"
+    },
+    "occurred_at": "2026-07-08T17:56:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-08T20:56:00+09:00",
+     "2026-07-08T21:35:07+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 260028,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "17:56",
+    "eta": null,
+    "restored_clock": "19:35",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "17:56경",
+     "restored": "19:35경",
+     "kind": "복구완료"
+    },
+    "occurred_at": "2026-07-08T17:56:00+09:00",
+    "restored_at": "2026-07-08T19:35:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 260230,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "무릉도원면",
+    "areas": [
+     "무릉도원면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "place": "무릉도원면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 260255,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "단계동, 학성동",
+    "areas": [
+     "단계동",
+     "학성동"
+    ],
+    "occurred_clock": "11:10",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "11:10경",
+     "kind": "정전되",
+     "place": "단계동, 학성동"
+    },
+    "occurred_at": "2026-07-09T11:10:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 260812,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "발생",
+     "cause": "변압기"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 260954,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "중산동",
+    "areas": [
+     "중산동"
+    ],
+    "occurred_clock": "17:25",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "occurred": "17:25 경",
+     "kind": "정전되",
+     "place": "중산동"
+    },
+    "occurred_at": "2026-07-13T17:25:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 260955,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "17:16",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "17:16",
+     "kind": "일대 정전"
+    },
+    "occurred_at": "2026-07-13T17:16:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 260962,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로",
+     "cause": "전력사용 급증"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 260969,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "eta": "2~3일 소요",
+     "kind": "발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T09:00:48+09:00",
+     "2026-07-17T09:00:48+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 260976,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "2~3일 소요",
+     "kind": "2~3일 소요"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T09:19:38+09:00",
+     "2026-07-17T09:19:38+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 261040,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "eta": "2-3일 소요",
+     "kind": "복구됐"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T13:56:08+09:00",
+     "2026-07-17T13:56:08+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 261047,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {},
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 261083,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "eta": "2-3일 소요",
+     "kind": "복구됐"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T17:00:24+09:00",
+     "2026-07-17T17:00:24+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 261115,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "eta": "2-3일 소요",
+     "kind": "복구됐"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T19:02:07+09:00",
+     "2026-07-17T19:02:07+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 261122,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "eta": "2-3일 소요",
+     "kind": "복구됐"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-17T20:00:21+09:00",
+     "2026-07-17T20:00:21+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 261137,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "23:03",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "23:03",
+     "kind": "정전되"
+    },
+    "occurred_at": "2026-07-14T23:03:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 261139,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "23:03",
+    "eta": null,
+    "restored_clock": "00:36",
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "23:03",
+     "restored": "00:36경",
+     "kind": "복구 완료"
+    },
+    "occurred_at": "2026-07-14T23:03:00+09:00",
+    "restored_at": "2026-07-15T00:36:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 261147,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 4320,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "eta": "2-3일 소요",
+     "kind": "복구됐"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-18T08:04:46+09:00",
+     "2026-07-18T08:04:46+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 261318,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "마장면 이평리 368-7",
+    "areas": [
+     "마장면",
+     "이평리"
+    ],
+    "occurred_clock": "10:55",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "10:55경",
+     "kind": "발생",
+     "cause": "교통사고",
+     "place": "마장면 이평리 368-7"
+    },
+    "occurred_at": "2026-07-17T10:55:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 261720,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "현암동 100-32",
+    "areas": [
+     "현암동"
+    ],
+    "occurred_clock": "05:23",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "05:23",
+     "kind": "지역 정전",
+     "place": "현암동 100-32"
+    },
+    "occurred_at": "2026-07-19T05:23:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 261727,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "현암동 100-32",
+    "areas": [
+     "현암동"
+    ],
+    "occurred_clock": "05:23",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "05:23",
+     "kind": "복구 완료",
+     "place": "현암동 100-32"
+    },
+    "occurred_at": "2026-07-19T05:23:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 261764,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "당하동",
+    "areas": [
+     "당하동"
+    ],
+    "occurred_clock": "12:35",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "12:35경",
+     "kind": "발생",
+     "cause": "변압기",
+     "place": "당하동"
+    },
+    "occurred_at": "2026-07-19T12:35:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 261772,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "당하동",
+    "areas": [
+     "당하동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "13:10",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "restored": "13:10",
+     "kind": "복구되어",
+     "place": "당하동"
+    },
+    "occurred_at": null,
+    "restored_at": "2026-07-19T13:10:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 262021,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "군남면 일부, 왕징면, 미산면",
+    "areas": [
+     "군남면",
+     "왕징면",
+     "미산면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "발생",
+     "cause": "호우",
+     "place": "군남면 일부, 왕징면, 미산면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 262022,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 30,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "30분 이내 완료",
+     "kind": "30분 이내 완료"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-21T22:58:32+09:00",
+     "2026-07-21T22:58:32+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 262023,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "군남면 일부, 왕징면, 미산면",
+    "areas": [
+     "군남면",
+     "왕징면",
+     "미산면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부",
+    "evidence": {
+     "kind": "복구완료",
+     "place": "군남면 일부, 왕징면, 미산면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 262025,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "호암동, 용산동, 직동, 대소원면, 수안보면",
+    "areas": [
+     "호암동",
+     "용산동",
+     "직동",
+     "대소원면",
+     "수안보면"
+    ],
+    "occurred_clock": "22:06",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "22:06경",
+     "kind": "일대 정전",
+     "place": "호암동, 용산동, 직동, 대소원면, 수안보면"
+    },
+    "occurred_at": "2026-07-21T22:06:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 262336,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "군북면 국원리",
+    "areas": [
+     "군북면",
+     "국원리"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 300,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "4~5시간이 소요",
+     "kind": "발생",
+     "place": "군북면 국원리"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-24T02:20:45+09:00",
+     "2026-07-24T02:20:45+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 263119,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "서교동 473-12",
+    "areas": [
+     "서교동"
+    ],
+    "occurred_clock": "17:15",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "3시간 소요",
+     "occurred": "17:15경",
+     "kind": "발생",
+     "cause": "고압선",
+     "place": "서교동 473-12"
+    },
+    "occurred_at": "2026-07-27T17:15:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-27T20:15:00+09:00",
+     "2026-07-27T21:15:17+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 263136,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "서교동 473-12",
+    "areas": [
+     "서교동"
+    ],
+    "occurred_clock": "17:15",
+    "eta": null,
+    "restored_clock": "19:56",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "17:15경",
+     "restored": "19:56경",
+     "kind": "복구완료",
+     "place": "서교동 473-12"
+    },
+    "occurred_at": "2026-07-27T17:15:00+09:00",
+    "restored_at": "2026-07-27T19:56:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 263730,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "cause": "변압기"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 263845,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "신관동 658",
+    "areas": [
+     "신관동"
+    ],
+    "occurred_clock": "13:17",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "13:17경",
+     "kind": "발생",
+     "place": "신관동 658"
+    },
+    "occurred_at": "2026-07-31T13:17:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 263847,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "신관동 658",
+    "areas": [
+     "신관동"
+    ],
+    "occurred_clock": "13:17",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "13:17경",
+     "kind": "발생",
+     "place": "신관동 658"
+    },
+    "occurred_at": "2026-07-31T13:17:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 263938,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 60,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": "일부",
+    "evidence": {
+     "eta": "1시간 내 복구",
+     "kind": "발생",
+     "cause": "과열"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-07-31T19:32:06+09:00",
+     "2026-07-31T19:32:06+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 263945,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {},
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 263946,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전될 예정",
+     "cause": "작업으로"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 263957,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "간석동 173-6",
+    "areas": [
+     "간석동"
+    ],
+    "occurred_clock": "09:04",
+    "eta": {
+     "type": "duration",
+     "minutes": 120,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "2시간 소요",
+     "occurred": "09:04경",
+     "kind": "발생",
+     "place": "간석동 173-6"
+    },
+    "occurred_at": "2026-08-01T09:04:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-08-01T11:04:00+09:00",
+     "2026-08-01T11:34:42+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 264465,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "등촌동 690",
+    "areas": [
+     "등촌동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로",
+     "place": "등촌동 690"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 264466,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "등촌동 690",
+    "areas": [
+     "등촌동"
+    ],
+    "occurred_clock": "18:16",
+    "eta": null,
+    "restored_clock": "22:32",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "18:16경",
+     "restored": "22:32경",
+     "kind": "복구완료",
+     "place": "등촌동 690"
+    },
+    "occurred_at": "2026-08-02T18:16:00+09:00",
+    "restored_at": "2026-08-02T22:32:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 264715,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 264963,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "등촌동 638",
+    "areas": [
+     "등촌동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "복구 완료",
+     "place": "등촌동 638"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 264964,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 264965,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정전으로"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265189,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265203,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "영통동 956-2번지",
+    "areas": [
+     "영통동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "place": "영통동 956-2번지"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265432,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265458,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265683,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265696,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265707,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "매호동",
+    "areas": [
+     "매호동"
+    ],
+    "occurred_clock": "23:34",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "23:34",
+     "kind": "정전되",
+     "place": "매호동"
+    },
+    "occurred_at": "2026-08-07T23:34:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265929,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265942,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "읍내동",
+    "areas": [
+     "읍내동"
+    ],
+    "occurred_clock": "16:38",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "16:38",
+     "kind": "발생",
+     "place": "읍내동"
+    },
+    "occurred_at": "2026-08-08T16:38:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265945,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "발생",
+     "cause": "돌풍"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 265948,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "지역 정전"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266034,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "무더위 지속",
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266132,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "감삼동",
+    "areas": [
+     "감삼동"
+    ],
+    "occurred_clock": "13:28",
+    "eta": null,
+    "restored_clock": "14:53",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "13:28경",
+     "restored": "14:53경",
+     "kind": "복구 완료",
+     "place": "감삼동"
+    },
+    "occurred_at": "2026-08-09T13:28:00+09:00",
+    "restored_at": "2026-08-09T14:53:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266135,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266155,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "지역 정전"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266156,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "구푸동",
+    "areas": [
+     "구푸동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "지역 정전",
+     "place": "구푸동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266157,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "구포동",
+    "areas": [
+     "구포동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "지역 정전",
+     "place": "구포동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266265,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266318,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266329,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "태안읍 동문리",
+    "areas": [
+     "태안읍",
+     "동문리"
+    ],
+    "occurred_clock": "09:01",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "09:01",
+     "kind": "정전되",
+     "place": "태안읍 동문리"
+    },
+    "occurred_at": "2026-08-12T09:01:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266359,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "대산읍 화곡리",
+    "areas": [
+     "대산읍",
+     "화곡리"
+    ],
+    "occurred_clock": "16:03",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "16:03",
+     "kind": "발생",
+     "cause": "고압선",
+     "place": "대산읍 화곡리"
+    },
+    "occurred_at": "2026-08-12T16:03:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266361,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266443,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "overload",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "전기 사용 집중",
+     "cause": "전기 사용 집중"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266510,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "서교동 325-25",
+    "areas": [
+     "서교동"
+    ],
+    "occurred_clock": "18:52",
+    "eta": {
+     "type": "duration",
+     "minutes": 180,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "3시간 소요",
+     "occurred": "18:52경",
+     "kind": "발생",
+     "cause": "고압선",
+     "place": "서교동 325-25"
+    },
+    "occurred_at": "2026-08-14T18:52:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-08-14T21:52:00+09:00",
+     "2026-08-14T23:18:52+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266511,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "서교동 325-25",
+    "areas": [
+     "서교동"
+    ],
+    "occurred_clock": "18:50",
+    "eta": null,
+    "restored_clock": "22:40",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "18:50경",
+     "restored": "22:40경",
+     "kind": "복구완료",
+     "place": "서교동 325-25"
+    },
+    "occurred_at": "2026-08-14T18:50:00+09:00",
+    "restored_at": "2026-08-14T22:40:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266838,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "복용동",
+    "areas": [
+     "복용동"
+    ],
+    "occurred_clock": "14:31",
+    "eta": {
+     "type": "absolute",
+     "clock": "18:00"
+    },
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": "일대",
+    "evidence": {
+     "eta": "18:00",
+     "occurred": "14:31",
+     "kind": "정전되",
+     "cause": "화재",
+     "place": "복용동"
+    },
+    "occurred_at": "2026-08-18T14:31:00+09:00",
+    "restored_at": null,
+    "eta_at": "2026-08-18T18:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266843,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "복용동",
+    "areas": [
+     "복용동"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "absolute",
+     "clock": "19:00"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "eta": "19:00",
+     "kind": "지연",
+     "place": "복용동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": "2026-08-18T19:00:00+09:00",
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266844,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "복용동",
+    "areas": [
+     "복용동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "복구 완료",
+     "place": "복용동"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 266949,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "fire",
+    "scale_hint": null,
+    "evidence": {
+     "cause": "화재"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 267003,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "다정동 새롬동",
+    "areas": [
+     "다정동",
+     "새롬동"
+    ],
+    "occurred_clock": "18:33",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "18:33경",
+     "kind": "일대 정전",
+     "place": "다정동 새롬동"
+    },
+    "occurred_at": "2026-08-20T18:33:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 267008,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": "다정동, 새롬동",
+    "areas": [
+     "다정동",
+     "새롬동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "20:37",
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "restored": "20:37",
+     "kind": "복구 완료",
+     "place": "다정동, 새롬동"
+    },
+    "occurred_at": null,
+    "restored_at": "2026-08-20T20:37:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 267219,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "19:26",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "19:26경",
+     "kind": "정전되",
+     "cause": "낙뢰"
+    },
+    "occurred_at": "2026-08-22T19:26:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 267936,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "2.3가동",
+    "areas": [
+     "2.3가동"
+    ],
+    "occurred_clock": "17:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "weather",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "occurred": "17:00",
+     "kind": "정전되",
+     "cause": "낙뢰",
+     "place": "2.3가동"
+    },
+    "occurred_at": "2026-08-27T17:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268081,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "eta_update",
+    "place_text": "괴산읍, 칠성면",
+    "areas": [
+     "괴산읍",
+     "칠성면"
+    ],
+    "occurred_clock": null,
+    "eta": {
+     "type": "duration",
+     "minutes": 90,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일원",
+    "evidence": {
+     "eta": "1시간 30분 이내",
+     "kind": "1시간 30분 이내",
+     "place": "괴산읍, 칠성면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-08-29T13:26:01+09:00",
+     "2026-08-29T13:26:01+09:00"
+    ],
+    "warnings": [
+     "eta_unknown_base_without_occurred"
+    ]
+   }
+  },
+  {
+   "sn": 268455,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "연동, 노형동, 이호이동",
+    "areas": [
+     "연동",
+     "노형동",
+     "이호이동"
+    ],
+    "occurred_clock": "08:46",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "08시46분",
+     "kind": "일대 정전",
+     "place": "연동, 노형동, 이호이동"
+    },
+    "occurred_at": "2026-09-01T08:46:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268533,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "영동읍 계산리, 설계리 및 양강면 묘동리, 묵정리",
+    "areas": [
+     "영동읍",
+     "계산리",
+     "설계리",
+     "양강면",
+     "묘동리",
+     "묵정리"
+    ],
+    "occurred_clock": "19:20",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "19:20",
+     "kind": "일대 정전",
+     "place": "영동읍 계산리, 설계리 및 양강면 묘동리, 묵정리"
+    },
+    "occurred_at": "2026-09-01T19:20:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268604,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "남포면 및 웅천읍",
+    "areas": [
+     "남포면",
+     "웅천읍"
+    ],
+    "occurred_clock": "23:47",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "23:47",
+     "kind": "일대 정전",
+     "place": "남포면 및 웅천읍"
+    },
+    "occurred_at": "2026-09-03T23:47:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268680,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "사등면 사곡리",
+    "areas": [
+     "사등면",
+     "사곡리"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "일대 정전",
+     "place": "사등면 사곡리"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268720,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "advisory",
+    "place_text": "갈현동 394-22",
+    "areas": [
+     "갈현동"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "vehicle",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "정전 될 예정",
+     "cause": "추돌",
+     "place": "갈현동 394-22"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268828,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "지수,사봉,진성,일반성,이반성,금곡면",
+    "areas": [
+     "지수",
+     "사봉",
+     "진성",
+     "일반성",
+     "이반성",
+     "금곡면"
+    ],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일부지역",
+    "evidence": {
+     "kind": "정수장",
+     "cause": "공사",
+     "place": "지수,사봉,진성,일반성,이반성,금곡면"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268829,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "정촌면, 충무공동, 가호동, 문산읍",
+    "areas": [
+     "정촌면",
+     "충무공동",
+     "가호동",
+     "문산읍"
+    ],
+    "occurred_clock": "19:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "19시",
+     "kind": "정수장",
+     "cause": "공사",
+     "place": "정촌면, 충무공동, 가호동, 문산읍"
+    },
+    "occurred_at": "2026-09-11T19:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268833,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "20:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "20:30",
+     "kind": "정수장",
+     "cause": "공사"
+    },
+    "occurred_at": "2026-09-12T20:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268835,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정수장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268836,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정수장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268837,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정수장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268840,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정수장"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268841,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": "02:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": null,
+    "evidence": {
+     "occurred": "02:00부터",
+     "kind": "정수장"
+    },
+    "occurred_at": "2026-09-12T02:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268847,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정수장",
+     "cause": "설비"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 268849,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "equipment",
+    "scale_hint": null,
+    "evidence": {
+     "kind": "정수장",
+     "cause": "설비"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 269288,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "대산읍 화곡리",
+    "areas": [
+     "대산읍",
+     "화곡리"
+    ],
+    "occurred_clock": "14:14",
+    "eta": {
+     "type": "duration",
+     "minutes": 120,
+     "base": "unknown"
+    },
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "eta": "2시간이 소요",
+     "occurred": "14:14경",
+     "kind": "발생",
+     "place": "대산읍 화곡리"
+    },
+    "occurred_at": "2026-10-06T14:14:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": [
+     "2026-10-06T16:14:00+09:00",
+     "2026-10-06T17:00:55+09:00"
+    ],
+    "warnings": []
+   }
+  },
+  {
+   "sn": 269310,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "맹동면 동성리",
+    "areas": [
+     "맹동면",
+     "동성리"
+    ],
+    "occurred_clock": "15:27",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "15:27 경",
+     "kind": "발생",
+     "place": "맹동면 동성리"
+    },
+    "occurred_at": "2026-10-08T15:27:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 269311,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "덕산읍 두촌리",
+    "areas": [
+     "덕산읍",
+     "두촌리"
+    ],
+    "occurred_clock": "15:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "15:30",
+     "kind": "일대 정전",
+     "place": "덕산읍 두촌리"
+    },
+    "occurred_at": "2026-10-08T15:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 269312,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "두촌리",
+    "areas": [
+     "두촌리"
+    ],
+    "occurred_clock": "15:27",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "15:27경",
+     "kind": "발생",
+     "place": "두촌리"
+    },
+    "occurred_at": "2026-10-08T15:27:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 269545,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "대산읍 대죽리",
+    "areas": [
+     "대산읍",
+     "대죽리"
+    ],
+    "occurred_clock": "13:00",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일부 지역",
+    "evidence": {
+     "occurred": "13:00경",
+     "kind": "발생",
+     "place": "대산읍 대죽리"
+    },
+    "occurred_at": "2026-10-18T13:00:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 269564,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": "사동 1420-17번지",
+    "areas": [
+     "사동"
+    ],
+    "occurred_clock": "14:30",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일대",
+    "evidence": {
+     "occurred": "14:30경",
+     "kind": "발생",
+     "cause": "작업 중",
+     "place": "사동 1420-17번지"
+    },
+    "occurred_at": "2026-10-18T14:30:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 269705,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "occurrence",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "kind": "발생"
+    },
+    "occurred_at": null,
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 269706,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": true,
+    "kind": "restoration",
+    "place_text": null,
+    "areas": [],
+    "occurred_clock": null,
+    "eta": null,
+    "restored_clock": "15:39",
+    "cause6": "unknown",
+    "scale_hint": "일대",
+    "evidence": {
+     "restored": "15:39부로",
+     "kind": "복전 완료"
+    },
+    "occurred_at": null,
+    "restored_at": "2026-10-23T15:39:00+09:00",
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  },
+  {
+   "sn": 269712,
+   "source": "rule",
+   "rule_version": "r1",
+   "fields": {
+    "relevant": false,
+    "kind": "other",
+    "place_text": "삼동 산50-2",
+    "areas": [
+     "삼동"
+    ],
+    "occurred_clock": "17:40",
+    "eta": null,
+    "restored_clock": null,
+    "cause6": "work",
+    "scale_hint": "일원",
+    "evidence": {
+     "occurred": "17:40경",
+     "kind": "이토작업",
+     "cause": "작업 중",
+     "place": "삼동 산50-2"
+    },
+    "occurred_at": "2026-10-23T17:40:00+09:00",
+    "restored_at": null,
+    "eta_at": null,
+    "eta_range": null,
+    "warnings": []
+   }
+  }
+ ]
+}
