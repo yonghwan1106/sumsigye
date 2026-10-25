@@ -1,6 +1,6 @@
 # 숨시계 | 정전 골든타임 AI
 
-숨시계 | 정전 골든타임 AI — 2026 AI 라이프 솔루션 챌린지 아이디어 후보작 「전력안심망 AI」(제안자 아이디어)를 이번 대회를 위해 새로 구현한 시제품입니다. 가구·기기 상태·비상전원은 합성 데이터이고, 재난문자는 행정안전부 재난안전데이터공유플랫폼 실제 공공 데이터, 기상은 Open-Meteo 재분석 자료(CC BY 4.0)입니다. 전력 사용 패턴(AMI) 분석은 쓰지 않습니다.
+숨시계 | 정전 골든타임 AI — 2026 AI 라이프 아이디어 챌린지 후보작 「전력안심망 AI」(제안자 아이디어)를 2026 AI 라이프 솔루션 챌린지를 위해 새로 구현한 시제품입니다. 가구·기기 상태·비상전원은 합성 데이터이고, 재난문자는 행정안전부 재난안전데이터공유플랫폼 실제 공공 데이터, 기상은 Open-Meteo 재분석 자료(CC BY 4.0)입니다. 전력 사용 패턴(AMI) 분석은 쓰지 않습니다.
 
 - 시제품: **https://sumsigye.vercel.app**
 - 정전 때 지자체 담당자가 인공호흡기·산소발생기를 쓰는 집에 비상전원을 보낼 순서를 정하도록 돕습니다. AI는 재난문자를 읽고 설명 문장을 쓰며, 순위·배정·시간 계산은 코드가 하고, 배정은 담당자가 한 집씩 승인해야 확정됩니다.
@@ -44,7 +44,7 @@ npm run build
 
 ## 평가 요약 (값은 `data/eval/*.json`, 2026-10-25 20:00 동결 · 복구시간 후보 확장 2026-10-26)
 
-**정답 라벨 검수 전 — 규칙 추출기 대비 일치율.** 정답 라벨은 AI가 만들지 않습니다. 규칙을 만들기 전에 골드 60건을 따로 떼어 두었고(커밋 `E1-A2: split` < `E1-A3: freeze rule extractor r1`), 동결한 규칙 추출기 출력으로 초벌한 검수 시트(`data/review/`)를 응모자가 원문을 보며 검수합니다. 지금은 응모자 검수 전(0/60)이라 정답 대비 정확도는 싣지 않았습니다.
+**정답 라벨 검수 전 — 규칙 추출기 대비 일치율.** 정답 라벨은 AI가 만들지 않습니다. 규칙을 만들기 전에 골드 60건을 따로 떼어 두었고(분할 커밋 `8b5786b`이 규칙 추출기 r1 동결 커밋 `7a97e8e`보다 먼저), 동결한 규칙 추출기 출력으로 초벌한 검수 시트(`data/review/`)를 응모자가 원문을 보며 검수합니다. 지금은 응모자 검수 전(0/60)이라 정답 대비 정확도는 싣지 않았습니다.
 
 1. **재난문자 읽기** (`l1_results.json`, 개발용 문자에서 규칙 r1 출력과 견준 일치율 — 정확도가 아님)
    - claude-sonnet-5(270건): 시각 일치 93.7%(190칸) · 값 없음 일치 98.9% · 관련 문자 F1 0.979 · 원인 6분류 일치 91.3%
@@ -65,8 +65,8 @@ npm run build
 ## 응모자 검수가 오면 (한 줄로 다시 만들기)
 
 1. 검수한 CSV 3개(`data/review/gold_review.csv` · `link_review.csv` · `events_review.csv`)를 같은 이름으로 둔다.
-2. `npm run data:ingest-review` → 커밋 `E1-A9: gold labels reviewed by applicant (g=NN)`.
-3. (키) `node scripts/with-key.mjs --key-file <키> -- npm run data:llm -- --model claude-haiku-5-5 --split gold,fixtures` · `... --model claude-sonnet-5 --split gold` → 커밋 `E1-A9b`.
+2. `npm run data:ingest-review` → 커밋(예: `gold labels reviewed by applicant (g=NN)`).
+3. (키) `node scripts/with-key.mjs --key-file <키> -- npm run data:llm -- --model claude-haiku-5-5 --split gold,fixtures` · `... --model claude-sonnet-5 --split gold` → 커밋.
 4. `npm run rebuild:data` — 사건표·복구시간 모형·재난문자 평가·시나리오·배정 평가를 다시 만든다. 화면 문구는 `l1_results.json`의 `meta.reviewed_n`에 따라 「응모자 검수 g건」으로 자동으로 바뀐다(정확도 표는 g ≥ 40일 때).
 5. 모형 값이 바뀌었으면 `data/eval/llm_baseline_runs.json`을 지우고 `npm run eval:llm-baseline`(키, 60회) → `npm run eval:alloc -- --merge-llm`, 메모는 `npm run build:scenarios -- --llm`(키) — 키 없이 돌리면 바뀐 상태의 메모가 템플릿으로 떨어진다. 그다음 키를 넣어 다시 배포.
 
