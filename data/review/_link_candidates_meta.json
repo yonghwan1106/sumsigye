@@ -1,0 +1,128 @@
+{
+ "seed": 20261026,
+ "n_candidates": 116,
+ "n_linked_candidates": 88,
+ "n_unlinked_candidates": 28,
+ "pairs": [
+  {
+   "pair_id": "L01",
+   "sn_a": 254509,
+   "sn_b": 254510,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L02",
+   "sn_a": 265948,
+   "sn_b": 266157,
+   "rule_linked": false
+  },
+  {
+   "pair_id": "L03",
+   "sn_a": 227111,
+   "sn_b": 227112,
+   "rule_linked": false
+  },
+  {
+   "pair_id": "L04",
+   "sn_a": 260962,
+   "sn_b": 261122,
+   "rule_linked": false
+  },
+  {
+   "pair_id": "L05",
+   "sn_a": 260954,
+   "sn_b": 261115,
+   "rule_linked": false
+  },
+  {
+   "pair_id": "L06",
+   "sn_a": 253633,
+   "sn_b": 253681,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L07",
+   "sn_a": 265948,
+   "sn_b": 266156,
+   "rule_linked": false
+  },
+  {
+   "pair_id": "L08",
+   "sn_a": 253576,
+   "sn_b": 253633,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L09",
+   "sn_a": 261122,
+   "sn_b": 261147,
+   "rule_linked": false
+  },
+  {
+   "pair_id": "L10",
+   "sn_a": 226920,
+   "sn_b": 226947,
+   "rule_linked": false
+  },
+  {
+   "pair_id": "L11",
+   "sn_a": 211579,
+   "sn_b": 211580,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L12",
+   "sn_a": 262022,
+   "sn_b": 262023,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L13",
+   "sn_a": 259195,
+   "sn_b": 259197,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L14",
+   "sn_a": 260962,
+   "sn_b": 261083,
+   "rule_linked": false
+  },
+  {
+   "pair_id": "L15",
+   "sn_a": 207253,
+   "sn_b": 207260,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L16",
+   "sn_a": 253576,
+   "sn_b": 253577,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L17",
+   "sn_a": 259195,
+   "sn_b": 259196,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L18",
+   "sn_a": 255142,
+   "sn_b": 255150,
+   "rule_linked": true
+  },
+  {
+   "pair_id": "L19",
+   "sn_a": 260954,
+   "sn_b": 260969,
+   "rule_linked": false
+  },
+  {
+   "pair_id": "L20",
+   "sn_a": 226947,
+   "sn_b": 227200,
+   "rule_linked": false
+  }
+ ]
+}
