@@ -20,7 +20,7 @@ import PriorityPanel from "./PriorityPanel";
 import { arrivedSms, compute, type SmsL1 } from "./scenario";
 import { emptyStateFor, timeRange } from "./stateInit";
 
-export default function OpsClient(props: { bundle: ScenarioBundle; smsL1: SmsL1; stub: boolean }) {
+export default function OpsClient(props: { bundle: ScenarioBundle; smsL1: SmsL1 }) {
   const { bundle: b, smsL1 } = props;
   const [state, setState] = useState<ScenarioState>(() => emptyStateFor(b));
 
@@ -73,7 +73,6 @@ export default function OpsClient(props: { bundle: ScenarioBundle; smsL1: SmsL1;
         <button type="button" data-testid="btn-next-event" disabled={!nextEvent} onClick={() => nextEvent && setNow(nextEvent)}
           className="rounded-md bg-[#1D4ED8] px-3 py-1 text-sm font-semibold text-white disabled:opacity-40">{OPS.nextEvent}</button>
         <button type="button" data-testid="btn-reset" onClick={onReset} className="rounded-md border border-[#D0D5DD] bg-white px-3 py-1 text-sm font-semibold">{OPS.reset}</button>
-        {props.stub && <span className="rounded bg-[#F2F4F7] px-2 py-0.5 text-xs text-[#475467]">{OPS_B.stubBadge}</span>}
         <span className="text-xs text-[#475467]">{b.title}</span>
       </div>
 

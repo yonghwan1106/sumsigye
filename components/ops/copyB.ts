@@ -26,7 +26,6 @@ export const OPS_B = {
   legendDevice: { vent: "● 인공호흡기", o2: "▲ 산소발생기", other: "■ 그 밖·모름" },
   legendProb: { high: "먼저 끝날 가능성 50% 이상", mid: "10~50%", low: "10% 미만", unknown: "모름" },
   legendLines: { proposed: "점선 = 승인 전 제안", approved: "실선 = 승인됨" },
-  stubBadge: "임시 시나리오 묶음(사전계산 묶음 준비 전)",
   homeLink: "보호자 화면",
   homeSubmit: "입력 보내기",
 } as const;

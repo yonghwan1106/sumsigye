@@ -9,6 +9,6 @@ export const metadata: Metadata = { title: `${OPS.priorityTitle} · ${COMMON.log
 export default async function OpsPage(props: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const sp = await props.searchParams;
   const id = parseScenarioId(sp.s);
-  const { bundle, smsL1, stub } = loadScenario(id);
-  return <OpsClient key={id} bundle={bundle} smsL1={smsL1} stub={stub} />;
+  const { bundle, smsL1 } = loadScenario(id);
+  return <OpsClient key={id} bundle={bundle} smsL1={smsL1} />;
 }
