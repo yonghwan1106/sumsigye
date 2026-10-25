@@ -1,36 +1,30 @@
-// GET /api/health — 구현명세 §7-1
-// C1b 최소판: 키 유무로 mode만 판단한다(키 값·길이·앞자리는 응답에 넣지 않는다).
-// daily_used는 C2b(lib/llm/limit.ts)가 붙기 전까지 0.
+// GET /api/health — 구현명세 §7-1. 키 값·길이·앞자리는 응답에 넣지 않는다.
 import restoreModel from "@/data/model/restore_model.json";
+import fetchLog from "@/data/sms/fetch_log.json";
 import type { RestoreModelFile } from "@/lib/types";
+import { apiKeyPresent, fallbackModel, realtimeModel } from "@/lib/llm/client";
+import { INPUT_MAX_CHARS, sharedLimiter } from "@/lib/llm/limit";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
 
-function intEnv(name: string, dflt: number): number {
-  const v = Number.parseInt(process.env[name] ?? "", 10);
-  return Number.isFinite(v) && v > 0 ? v : dflt;
-}
-
 export async function GET() {
   try {
     const m = restoreModel as unknown as RestoreModelFile;
-    const hasKey = (process.env.ANTHROPIC_API_KEY ?? "").trim().length > 0;
+    const log = fetchLog as unknown as { n_unique: number; fetched_at: string };
+    const lim = sharedLimiter();
     const sha = process.env.VERCEL_GIT_COMMIT_SHA;
     return Response.json({
-      mode: hasKey ? "ai" : "demo",
-      model: process.env.ANTHROPIC_MODEL || "claude-haiku-5-5",
-      fallback_model: process.env.ANTHROPIC_FALLBACK_MODEL || "claude-haiku-4-5",
+      mode: apiKeyPresent() ? "ai" : "demo",
+      model: realtimeModel(),
+      fallback_model: fallbackModel(),
       limits: {
-        rpm_per_ip: intEnv("AI_RPM_PER_IP", 6),
-        daily_cap: intEnv("AI_DAILY_CAP", 300),
-        daily_used: 0,
-        input_max_chars: 1000,
+        rpm_per_ip: lim.config().rpm,
+        daily_cap: lim.config().dailyCap,
+        daily_used: lim.dailyUsed(),
+        input_max_chars: INPUT_MAX_CHARS,
       },
-      corpus: {
-        n: m.data.corpus_n,
-        collected_at: m.data.corpus_n > 0 ? m.data.collected_at : null,
-      },
+      corpus: { n: log.n_unique, collected_at: log.fetched_at },
       model_file: { selected: m.selected, provisional: m.provisional, reviewed: m.reviewed },
       build: sha ? sha.slice(0, 7) : "local",
     });

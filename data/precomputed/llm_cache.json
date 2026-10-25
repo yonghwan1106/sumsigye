@@ -1,0 +1,4 @@
+{
+  "meta": { "built_at": "2026-10-25T19:10:00+09:00", "n": 0, "note": "offline LLM call cache (scripts only). key = sha256(model + normalized text/prompt + sent_at or tag)" },
+  "items": {}
+}

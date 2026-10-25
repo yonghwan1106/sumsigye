@@ -139,6 +139,14 @@ export const OPS = {
   close: "닫기",
 } as const;
 
+// ───────── §7-3 운영자 메모 템플릿(LLM 없을 때·검사 실패 때) ─────────
+export const BRIEF = {
+  withResource: "{alias}: 배터리 {safe}, 복구가 늦어질 가능성 {prob} → {resource} {arrival} 도착 제안",
+  noResource: "{alias}: 배터리 {safe}, 복구가 늦어질 가능성 {prob} → 배정 가능한 전원 없음 — 119 연계 검토",
+  manual: "{alias}: {safe} — 전화 확인 먼저(확인 전에는 즉시 필요로 계산)",
+  none: "표시할 가구가 없습니다",
+} as const;
+
 // ───────── §8-3 보호자 `/home/[hid]` (B가 사용) ─────────
 export const GUARDIAN = {
   head: "{alias} 가구 · 보호자 화면(가상)",
