@@ -22,7 +22,7 @@ function ModeBadge() {
   return (
     <span
       data-testid="mode-badge"
-      className={`whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-semibold ${
+      className={`rounded-full sm:whitespace-nowrap px-2.5 py-0.5 text-sm font-semibold ${
         mode === "ai" ? "bg-[#ECFDF3] text-[#067647]" : "bg-[#F2F4F7] text-[#344054]"
       }`}
     >
@@ -43,9 +43,9 @@ export default function SiteHeader() {
           <span className="text-sm font-medium text-[#475467]">| {COMMON.tagline}</span>
         </Link>
         {!isHome && <p className="min-w-0 flex-1 text-sm leading-snug text-[#475467]">{COMMON.syntheticBand}</p>}
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex min-w-0 flex-wrap items-center justify-end gap-2">
           <ModeBadge />
-          <span className="whitespace-nowrap text-sm text-[#667085]">{COMMON.reference}</span>
+          <span className="text-sm text-[#667085] sm:whitespace-nowrap">{COMMON.reference}</span>
         </div>
       </div>
     </header>

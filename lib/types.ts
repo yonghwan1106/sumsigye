@@ -125,7 +125,9 @@ export interface PlanRow { hid: string; safe: SafeTime; rid: string|null; arriva
   p_int: number; ei_min: number; p_int0: number; ei0_min: number;
   rq_min: number; a_min_min: number|null; margin_min: number; priority: number;
   lane: "119"|"manual"|"main"; lane_reason?: "no_compatible"|"late_arrival"|"unknown"|"conflict";
-  excluded: { rid: string; reason: ExclusionReason; need_w?: number }[]; fixed: boolean; }
+  excluded: { rid: string; reason: ExclusionReason; need_w?: number }[]; fixed: boolean;
+  /** 승인 배정의 도착 시각(승인 + 도착 분)이 now를 지났을 때(가정): 남은 시간 = 남은 공급 + 도착 때 기기 배터리. 선택 필드(QA 수정). */
+  arrived?: { at: ISO; supply_left_min: number; battery_min: number }; }
 export interface Plan { method: Method; rows: PlanRow[]; expected_interrupted: number; total_ei_min: number; solve_ms: number; violations: number; }
 export interface ScoreRow { interrupted: number; interruption_min: number; violations: number; energy_short: number; unknown_share: number; }
 
@@ -207,7 +209,9 @@ export interface L4Results {
   status: EvalStatus; provisional: boolean; meta: { n_small: 200; n_wide: 200; truth_pool: "loo_pair"; boot: 2000 };
   methods: { id: Method; label: string; small: Agg; wide: Agg; all: Agg }[];
   diffs: { a: Method; b: Method; scope: "small"|"wide"|"all"; mean: number; ci: [number, number] }[];
-  llm: { subset_seeds: number[]; rows: { id: Method|"ours"|"R1"; n: number; parse_fail: number; interrupted_mean: number; ci: [number,number]; violations_total: number }[] } | null;
+  llm: { subset_seeds: number[]; rows: { id: Method|"ours"|"R1"; n: number; parse_fail: number; interrupted_mean: number; ci: [number,number]; violations_total: number }[];
+         /** 선택 필드(QA 수정): 그 모델이 응답에 성공한 시나리오만 놓고 같은 시나리오의 숨시계·단순 규칙과 견준 평균 */
+         ok_only?: { id: Method; n: number; llm: number; ours: number; r1: number }[] } | null;
   compute_ms_wide: number;
 }
 

@@ -18,7 +18,7 @@ export interface GuideRequest {
 export const GUIDE_SYSTEM_PROMPT = `너는 정전 중인 집의 보호자에게 보여 줄 「지금 할 일」 5줄을 쉬운 말로 다시 쓴다.
 
 규칙
-1. 주어진 체크리스트 5항목을 순서대로 한 줄씩, 뜻을 바꾸지 않고 더 쉬운 말로 쓴다. 각 항목의 핵심 낱말(배터리 경고·외장배터리·예비 산소통·전원선·휴대전화)은 그대로 둔다.
+1. 주어진 체크리스트 5항목을 순서대로 한 줄씩, 뜻을 바꾸지 않고 더 쉬운 말로 쓴다. 각 항목의 핵심 낱말(배터리 경고·외장배터리·예비 산소통·전원선·휴대전화)은 그대로 둔다. 괄호 안 출처 구절(예: 「(인공호흡기 A계열 설명서 기준)」)은 글자 그대로 그 줄 끝에 남긴다.
 2. 5번째 줄은 주어진 문장을 글자 그대로 쓴다.
 3. 의학적 처치·약·기기 설정을 바꾸라는 말을 하지 않는다. 병을 판단하지 않는다.
 4. 체크리스트와 상황에 없는 숫자를 만들지 않는다.
@@ -37,8 +37,11 @@ export function guideChecklist(device: DeviceId | null): string[] {
 }
 
 /** 항목별 핵심 낱말. */
+export const GUIDE_SOURCE_VENT_A = "(인공호흡기 A계열 설명서 기준)";
+
 export function guideKeywords(device: DeviceId | null): string[][] {
-  return [["배터리 경고"], ["외장배터리"], [device === "O2_STAT" ? "예비 산소통" : "전원선"], ["휴대전화"], ["119"]];
+  // ①의 출처 구절도 핵심 낱말로 검사한다(바꿔 쓰며 출처가 빠지면 체크리스트 원문으로)
+  return [device === "VENT_A" ? ["배터리 경고", GUIDE_SOURCE_VENT_A] : ["배터리 경고"], ["외장배터리"], [device === "O2_STAT" ? "예비 산소통" : "전원선"], ["휴대전화"], ["119"]];
 }
 
 export function guideContext(req: GuideRequest): string[] {

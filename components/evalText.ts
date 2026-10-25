@@ -66,16 +66,36 @@ export function l4Headline(l4: L4Results = L4): { b: string; a: string } | null 
   return { b: fmt1(r1.all.interrupted_mean), a: fmt1(ours.all.interrupted_mean) };
 }
 
+/** 효과 범위 한 줄: 「광역(가구 20~50곳)에서 0.76곳 적음(95% 구간 0.51~1.02) · 소규모(가구 4~8곳)은 차이 없음(…)」. 값은 diffs(R1 − 숨시계). */
+export function l4ScopeNote(l4: L4Results = L4): string | null {
+  if (!l4Headline(l4)) return null;
+  const f2 = (x: number) => (Math.round(x * 100) / 100).toFixed(2);
+  const part = (scope: "wide" | "small") => {
+    const x = l4.diffs.find((d) => d.a === "R1" && d.b === "ours" && d.scope === scope);
+    if (!x) return null;
+    const name = EVAL_BAND.scopeNames[scope];
+    const v = { name, lo: f2(x.ci[0]), hi: f2(x.ci[1]) };
+    if (x.ci[0] > 0) return fill(EVAL_BAND.scopeFewer, { ...v, v: f2(x.mean) });
+    if (x.ci[1] < 0) return fill(EVAL_BAND.scopeMore, { ...v, v: f2(-x.mean) });
+    return fill(EVAL_BAND.scopeNone, { ...v, v: f2(x.mean) });
+  };
+  const parts = [part("wide"), part("small")].filter((p): p is string => !!p);
+  return parts.length ? parts.join(" · ") : null;
+}
+
 export function l4Band(l4: L4Results = L4): BandItem {
   const h = l4Headline(l4);
   if (!h) return { key: "l4", text: `합성 시나리오 400개: ${COMMON.measuring}`, measuring: true };
-  return { key: "l4", text: fill(EVAL_BAND.l4, h), measuring: false };
+  const scope = l4ScopeNote(l4);
+  return { key: "l4", text: fill(EVAL_BAND.l4, h) + (scope ? ` — ${scope}` : ""), measuring: false };
 }
 
-/** 두 막대 경주 아래 400개 띠 문장. */
+/** 두 막대 경주 아래 400개 띠 문장(효과 범위 포함). */
 export function raceBand(l4: L4Results = L4): string {
   const h = l4Headline(l4);
-  return h ? fill(RACE.band, h) : `가상 시나리오 400개 평균: ${COMMON.measuring}`;
+  if (!h) return `가상 시나리오 400개 평균: ${COMMON.measuring}`;
+  const scope = l4ScopeNote(l4);
+  return fill(RACE.band, h) + (scope ? ` — ${scope}` : "");
 }
 
 /** 표 칸용: 임시면 숫자 옆에 「측정 중(임시)」. */

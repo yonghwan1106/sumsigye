@@ -257,6 +257,7 @@ async function precompute(b: ScenarioBundle) {
     const s: ScenarioState = emptyState(b.id, b.decision_points[i]);
     const hash = await stateHash({ scenario: b.id, decision_index: i, approvals: s.approvals, overrides: s.overrides });
     const c = compute(b, s, smsL1);
+    if (c.restored) continue; // 복구된 판단 시점은 행·메모를 보이지 않는다(배정 재계산 멈춤)
     const alias = new Map(c.households.map((h) => [h.id, h] as const));
     const changedAliases = [...c.changed].map((hid) => alias.get(hid)?.alias ?? hid);
     const rows = c.plan.rows.map((r) => factRow(r, alias.get(r.hid)!.alias, alias.get(r.hid)!.observed.device_id, b.resources));

@@ -11,7 +11,7 @@ export default function EventsPlot({ l2 }: { l2: L2Results }) {
     .filter((e) => e.outcome in order)
     .sort((a, b) => order[a.outcome] - order[b.outcome] || (a.t_h ?? a.lower_h ?? 0) - (b.t_h ?? b.lower_h ?? 0));
   const W = 760, L = 44, R = 16, T = 12, rowH = 2.6;
-  const H = T + ev.length * rowH + 34;
+  const H = T + ev.length * rowH + 44;
   const plotW = W - L - R;
   const x = (h: number) => L + (Math.min(h, MAX_H) / MAX_H) * plotW;
   const yRow = (i: number) => T + i * rowH + rowH / 2;
@@ -24,10 +24,10 @@ export default function EventsPlot({ l2 }: { l2: L2Results }) {
         {Array.from({ length: MAX_H / 2 + 1 }, (_, i) => i * 2).map((h) => (
           <g key={h}>
             <line x1={x(h)} x2={x(h)} y1={T} y2={T + ev.length * rowH} stroke="#EAECF0" />
-            <text x={x(h)} y={H - 18} fontSize="11" textAnchor="middle" fill="#475467">{fill(LAB_PAGE.plotHour, { h })}</text>
+            <text x={x(h)} y={H - 24} fontSize="14" textAnchor="middle" fill="#475467">{fill(LAB_PAGE.plotHour, { h })}</text>
           </g>
         ))}
-        <text x={L + plotW / 2} y={H - 4} fontSize="11" textAnchor="middle" fill="#475467">{LAB_PAGE.plotAxis}</text>
+        <text x={L + plotW / 2} y={H - 4} fontSize="14" textAnchor="middle" fill="#475467">{LAB_PAGE.plotAxis}</text>
         {ev.map((e, i) => {
           const y = yRow(i);
           if (e.outcome === "exact" && e.t_h != null) return <circle key={e.event_id} cx={x(e.t_h)} cy={y} r={2.6} fill="#101828" />;

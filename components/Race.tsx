@@ -61,7 +61,7 @@ function Lane(props: {
 
       <div className="flex flex-col gap-1">
         <p className={`${label} text-[#344054]`}>{RACE.barSafe}</p>
-        <div className={`relative ${barH} w-full rounded bg-[#F2F4F7] ${big ? "mb-11" : "mb-6"}`}>
+        <div className={`relative ${barH} w-full rounded bg-[#F2F4F7] ${big ? "mb-11" : "mb-8"}`}>
           <div className="absolute inset-y-0 left-0 rounded bg-[#1D4ED8]" style={{ width: show ? pct(safe) : "0%", transition: t }} />
           {red > 0 && (
             <div
@@ -77,7 +77,7 @@ function Lane(props: {
           )}
           {arrival !== null && !empty && (
             <div className="absolute -top-2 -bottom-2 w-1 bg-[#101828]" style={{ left: pct(arrival), opacity: show ? 1 : 0, transition: t }}>
-              <span className={`absolute top-full ${big ? "mt-1 text-xl" : "mt-0.5 text-xs"} ${arrival / scale < 0.1 ? "translate-x-0" : arrival / scale > 0.9 ? "-translate-x-full" : "-translate-x-1/2"} whitespace-nowrap rounded bg-[#101828] px-1.5 py-0.5 font-semibold text-white`}>
+              <span className={`absolute top-full ${big ? "mt-1 text-xl" : "mt-0.5 text-sm"} ${arrival / scale < 0.1 ? "translate-x-0" : arrival / scale > 0.9 ? "-translate-x-full" : "-translate-x-1/2"} whitespace-nowrap rounded bg-[#101828] px-1.5 py-0.5 font-semibold text-white`}>
                 {RACE.marker}
               </span>
             </div>

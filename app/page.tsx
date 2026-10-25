@@ -59,21 +59,38 @@ export default function Home() {
   });
 
   return (
-    <main className="mx-auto flex w-full max-w-[1200px] flex-1 flex-col gap-10 px-6 py-8">
+    <main className="mx-auto flex w-full max-w-[1200px] flex-1 flex-col gap-6 px-6 py-5">
       {/* 히어로 */}
-      <section className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
-        <div className="flex flex-col gap-4">
-          <h1 className="flex flex-wrap items-baseline gap-3 text-6xl font-extrabold tracking-tight text-[#101828]">
+      <section className="grid items-center gap-6 md:grid-cols-[1fr_auto]">
+        <div className="flex flex-col gap-2">
+          <p data-testid="hero-who" className="text-lg font-semibold text-[#1D4ED8]">{HOME.heroWho}</p>
+          <h1 className="flex flex-wrap items-baseline gap-3 text-5xl font-extrabold tracking-tight text-[#101828]">
             {HOME.heroTitle}
             <span className="text-2xl font-semibold text-[#475467]">{COMMON.tagline}</span>
           </h1>
-          <p data-testid="hero-oneliner" className="max-w-[44rem] text-2xl font-medium leading-relaxed text-[#101828]">
+          <p data-testid="hero-oneliner" className="max-w-[44rem] text-xl font-medium leading-relaxed text-[#101828]">
             {HOME.heroOneliner}
           </p>
           <p className="text-base text-[#475467]">{HOME.implNote}</p>
         </div>
-        <DeviceIllustration width={320} />
+        <DeviceIllustration width={280} />
       </section>
+
+      {/* 두 막대 경주 */}
+      {race && (
+        <section className="rounded-2xl border border-[#D0D5DD] bg-[#F9FAFB] p-4">
+          <Race
+            safe_min={race.safe_min}
+            r80_min={race.r80_min}
+            arrival_rule_min={race.arrival_rule_min}
+            arrival_ours_min={race.arrival_ours_min}
+            alias={race.alias}
+            source={race.source}
+            eval_seed={race.eval_seed}
+            band={raceBand()}
+          />
+        </section>
+      )}
 
       {/* 실제로 있었던 일 */}
       <section className="flex flex-col gap-3">
@@ -105,22 +122,6 @@ export default function Home() {
           </article>
         </div>
       </section>
-
-      {/* 두 막대 경주 */}
-      {race && (
-        <section className="rounded-2xl border border-[#D0D5DD] bg-[#F9FAFB] p-5">
-          <Race
-            safe_min={race.safe_min}
-            r80_min={race.r80_min}
-            arrival_rule_min={race.arrival_rule_min}
-            arrival_ours_min={race.arrival_ours_min}
-            alias={race.alias}
-            source={race.source}
-            eval_seed={race.eval_seed}
-            band={raceBand()}
-          />
-        </section>
-      )}
 
       {/* 가상 인물·시나리오 */}
       <section className="flex flex-col gap-3">

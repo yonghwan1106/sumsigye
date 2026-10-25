@@ -6,8 +6,8 @@ import { COLORS, COMMON, GUARDIAN, OPS, fill } from "@/lib/copy";
 import { fmtClock, fmtMin, fmtProb, fmtSignedMin, parseHm } from "@/lib/format";
 import type { DeviceId, Household, HouseholdObserved, Plan, PlanRow, Resource, ScenarioBundle, ScenarioState } from "@/lib/types";
 import { OPS_B } from "./copyB";
-import { arrivalText, deviceLabel, exclusionText, factRow, gradeBadges, safeText } from "./display";
-import { SPECS, stateHash } from "./scenario";
+import { arrivedText, deviceLabel, exclusionText, factRow, gradeBadges, lane119Reason, resourceText, restoredText, safeText } from "./display";
+import { SPECS, stateHash, type RestoredInfo } from "./scenario";
 
 type Update = (fn: (s: ScenarioState) => ScenarioState) => void;
 const DEVICE_IDS: (DeviceId | "unknown")[] = ["VENT_A", "VENT_B", "O2_STAT", "O2_PORT", "SUCTION", "COUGH", "unknown"];
@@ -18,7 +18,7 @@ function Chip({ text, tone = "gray" }: { text: string; tone?: "gray" | "blue" | 
     yellow: { background: COLORS.changedBg, color: COLORS.changedText }, red: { background: "#FEE4E2", color: COLORS.stop },
     green: { background: "#DCFAE6", color: COLORS.ok },
   };
-  return <span className="whitespace-nowrap rounded px-1.5 py-0.5 text-xs font-semibold" style={st[tone]}>{text}</span>;
+  return <span className="whitespace-nowrap rounded px-1.5 py-0.5 text-sm font-semibold" style={st[tone]}>{text}</span>;
 }
 
 function PhoneForm({ h, onSave, onCancel }: { h: Household; onSave: (o: Partial<HouseholdObserved>) => void; onCancel: () => void }) {
@@ -81,9 +81,9 @@ function Brief({ bundle, state, row, h, plan, changedAliases }: { bundle: Scenar
   void plan;
   return (
     <div className="mt-1">
-      <button type="button" onClick={toggle} className="text-xs font-semibold text-[#1D4ED8] underline">{open ? "▾" : "▸"} {OPS.whyTitle}</button>
+      <button type="button" onClick={toggle} className="text-sm font-semibold text-[#1D4ED8] underline">{open ? "▾" : "▸"} {OPS.whyTitle}</button>
       {open && (
-        <ul data-testid={`brief-${row.hid}`} className="mt-1 flex flex-col gap-0.5 text-xs text-[#344054]">
+        <ul data-testid={`brief-${row.hid}`} className="mt-1 flex flex-col gap-0.5 text-sm text-[#344054]">
           {(lines ?? []).map((l, i) => <li key={i}>{l} <Chip text={COMMON.referenceTag} /></li>)}
           {lines && lines.length === 0 && <li><Chip text={COMMON.referenceTag} /></li>}
         </ul>
@@ -104,7 +104,8 @@ function Row(props: { bundle: ScenarioBundle; state: ScenarioState; plan: Plan; 
   const okCands = res.filter((r) => !row.excluded.some((e) => e.rid === r.id) && !usedByOthers.has(r.id));
 
   let status: { text: string; tone: "gray" | "blue" | "yellow" | "green" };
-  if (approval) status = { text: fill(OPS.status.approved, { "HH:MM": fmtClock(approval.approved_at) }), tone: "green" };
+  if (approval && row.arrived) status = { text: OPS.status.arrived, tone: "green" };
+  else if (approval) status = { text: fill(OPS.status.approved, { "HH:MM": fmtClock(approval.approved_at) }), tone: "green" };
   else if (held) status = { text: OPS.status.held, tone: "gray" };
   else if (changed) status = { text: OPS.status.reapprove, tone: "yellow" };
   else status = { text: OPS.status.proposed, tone: "blue" };
@@ -130,27 +131,27 @@ function Row(props: { bundle: ScenarioBundle; state: ScenarioState; plan: Plan; 
         {changed && <Chip text={OPS_B.changed} tone="yellow" />}
         <span className="ml-auto"><Chip text={status.text} tone={status.tone} /></span>
       </div>
-      <dl className="mt-1 grid grid-cols-[auto_1fr] gap-x-2 gap-y-0.5 text-[13px] leading-snug">
+      <dl className="mt-1 grid grid-cols-[auto_1fr] gap-x-2 gap-y-0.5 text-sm leading-snug">
         <dt className="text-[#475467]">{OPS.tableHead[3]}</dt>
-        <dd className="font-semibold" style={{ color: row.safe.status === "unknown" ? COLORS.muted : "#101828" }}>{safeText(row.safe)}</dd>
+        <dd className="font-semibold" style={{ color: row.safe.status === "unknown" ? COLORS.muted : "#101828" }}>{safeText(row.safe)}{row.arrived && <span className="ml-1 font-normal text-[#475467]">({OPS.arrivedSafeNote})</span>}</dd>
         <dt className="text-[#475467]">{OPS.tableHead[4]}</dt><dd>{fmtProb(row.p_int0)}</dd>
         <dt className="text-[#475467]">{OPS.tableHead[5]}</dt><dd>{fmtSignedMin(row.margin_min)}</dd>
-        <dt className="text-[#475467]">{OPS.tableHead[6]}</dt><dd>{arrivalText(row, res)}</dd>
+        <dt className="text-[#475467]">{OPS.tableHead[6]}</dt><dd>{arrivedText(row, res)}</dd>
         <dt className="text-[#475467]">{OPS.tableHead[7]}</dt><dd>{fill(OPS_B.eiArrow, { a: fmtMin(row.ei0_min), b: fmtMin(row.ei_min) })}</dd>
       </dl>
       {row.safe.ext_excluded_min != null && (
-        <p className="text-xs" style={{ color: COLORS.muted }}>{fill(OPS.extExcluded, { h: fmtMin(row.safe.ext_excluded_min) })}</p>
+        <p className="text-sm" style={{ color: COLORS.muted }}>{fill(OPS.extExcluded, { h: fmtMin(row.safe.ext_excluded_min) })}</p>
       )}
-      {row.lane === "manual" && <p className="text-xs text-[#475467]">{OPS.manualNote}</p>}
+      {row.lane === "manual" && <p className="text-sm text-[#475467]">{OPS.manualNote}</p>}
 
       <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
         <button type="button" data-testid={`btn-approve-${row.hid}`} disabled={!row.rid || !!approval} onClick={() => row.rid && approve(row.rid, "기본")}
-          className="rounded bg-[#1D4ED8] px-2 py-1 text-xs font-semibold text-white disabled:opacity-40">{OPS.btnApprove}</button>
+          className="rounded bg-[#1D4ED8] px-2 py-1 text-sm font-semibold text-white disabled:opacity-40">{OPS.btnApprove}</button>
         <div className="relative">
           <button type="button" data-testid={`btn-change-${row.hid}`} disabled={okCands.length === 0} onClick={() => setPick((v) => !v)}
-            className="rounded border border-[#D0D5DD] bg-white px-2 py-1 text-xs font-semibold disabled:opacity-40">{OPS.btnChange}</button>
+            className="rounded border border-[#D0D5DD] bg-white px-2 py-1 text-sm font-semibold disabled:opacity-40">{OPS.btnChange}</button>
           {pick && (
-            <ul className="absolute left-0 top-7 z-20 w-64 rounded border border-[#D0D5DD] bg-white p-1 text-xs shadow">
+            <ul className="absolute left-0 top-7 z-20 w-64 rounded border border-[#D0D5DD] bg-white p-1 text-sm shadow">
               <li className="px-1 py-0.5 text-[#475467]">{OPS_B.changePick}</li>
               {okCands.map((r) => (
                 <li key={r.id}><button type="button" className="w-full rounded px-1 py-1 text-left hover:bg-[#F2F4F7]" onClick={() => { setPick(false); approve(r.id, r.id === row.rid ? "기본" : "다른 호환 자원"); }}>{r.id} · {r.label}({r.base_label})</button></li>
@@ -158,16 +159,16 @@ function Row(props: { bundle: ScenarioBundle; state: ScenarioState; plan: Plan; 
             </ul>
           )}
         </div>
-        <button type="button" data-testid={`btn-hold-${row.hid}`} onClick={hold} className="rounded border border-[#D0D5DD] bg-white px-2 py-1 text-xs font-semibold">{OPS.btnHold}</button>
+        <button type="button" data-testid={`btn-hold-${row.hid}`} onClick={hold} className="rounded border border-[#D0D5DD] bg-white px-2 py-1 text-sm font-semibold">{OPS.btnHold}</button>
         {row.lane === "manual" && (
-          <button type="button" data-testid={`btn-phone-${row.hid}`} onClick={() => setPhone((v) => !v)} className="rounded border border-[#B54708] bg-white px-2 py-1 text-xs font-semibold text-[#B54708]">{OPS.btnPhone}</button>
+          <button type="button" data-testid={`btn-phone-${row.hid}`} onClick={() => setPhone((v) => !v)} className="rounded border border-[#B54708] bg-white px-2 py-1 text-sm font-semibold text-[#B54708]">{OPS.btnPhone}</button>
         )}
         {row.lane === "119" && (
           <button type="button" data-testid={`btn-119-${row.hid}`} disabled={card119}
             onClick={() => update((x) => ({ ...x, card119_approved: x.card119_approved.includes(row.hid) ? x.card119_approved : [...x.card119_approved, row.hid] }))}
-            className="rounded px-2 py-1 text-xs font-semibold text-white disabled:opacity-50" style={{ background: COLORS.stop }}>{OPS.btn119}</button>
+            className="rounded px-2 py-1 text-sm font-semibold text-white disabled:opacity-50" style={{ background: COLORS.stop }}>{OPS.btn119}</button>
         )}
-        <button type="button" onClick={() => setShowMore((v) => !v)} className="ml-auto text-xs text-[#475467] underline">{showMore ? "▾" : "▸"} {OPS_B.excludedHead}</button>
+        <button type="button" onClick={() => setShowMore((v) => !v)} className="ml-auto text-sm text-[#475467] underline">{showMore ? "▾" : "▸"} {OPS_B.excludedHead}</button>
       </div>
       {phone && <PhoneForm h={h} onCancel={() => setPhone(false)} onSave={(o) => { setPhone(false); saveOverride(o); }} />}
       {card119 && (
@@ -179,7 +180,7 @@ function Row(props: { bundle: ScenarioBundle; state: ScenarioState; plan: Plan; 
         </div>
       )}
       {showMore && (
-        <div className="mt-1 text-xs text-[#475467]">
+        <div className="mt-1 text-sm text-[#475467]">
           <ul className="flex flex-col gap-0.5">{row.excluded.map((e) => <li key={e.rid}>{exclusionText(e, res)}</li>)}</ul>
           {row.supply_min != null && <p className="mt-1">{fill(OPS_B.supplyLine, { t: fmtMin(row.supply_min) })} · {OPS.supplyFootnote}</p>}
         </div>
@@ -189,9 +190,41 @@ function Row(props: { bundle: ScenarioBundle; state: ScenarioState; plan: Plan; 
   );
 }
 
-export default function PriorityPanel(props: { bundle: ScenarioBundle; state: ScenarioState; plan: Plan; households: Household[]; changed: Set<string>; update: Update }) {
+function RestoredView({ bundle: b, state: s, households, restored, frozenAt }: { bundle: ScenarioBundle; state: ScenarioState; households: Household[]; restored: RestoredInfo; frozenAt: string | null }) {
+  const outMin = Math.max(0, (Date.parse(restored.at) - Date.parse(b.outage_start)) / 60000);
+  return (
+    <div className="flex flex-col gap-3 p-3">
+      <h2 className="pr-24 text-base font-bold text-[#101828]">{OPS.priorityTitle}</h2>
+      <section data-testid="restored-banner" className="flex flex-col gap-1 rounded-lg border-2 p-3" style={{ borderColor: COLORS.ok, background: "#ECFDF3" }}>
+        <p className="text-lg font-bold" style={{ color: COLORS.ok }}>{restoredText(restored)}</p>
+        <p className="text-sm text-[#101828]">{fill(OPS.restoredDuration, { d: fmtMin(outMin) })}</p>
+        <p className="text-sm text-[#101828]">{OPS.restoredNote}</p>
+        {frozenAt && <p className="text-sm text-[#475467]">{fill(OPS.restoredFrozen, { "HH:MM": fmtClock(frozenAt) })}</p>}
+      </section>
+      <ul className="flex flex-col gap-2">
+        {households.map((h) => {
+          const a = s.approvals.find((x) => x.hid === h.id);
+          const r = a ? b.resources.find((x) => x.id === a.rid) : null;
+          return (
+            <li key={h.id} data-testid={`restored-row-${h.id}`} className="rounded-lg border border-[#EAECF0] bg-white p-2 text-sm">
+              <div className="flex flex-wrap items-center gap-1.5">
+                <span className="font-bold text-[#101828]">{h.alias}</span>
+                <span className="text-[#344054]">{deviceLabel(h.observed.device_id)}</span>
+                <span className="ml-auto"><Chip text={OPS.timelineRestored} tone="green" /></span>
+              </div>
+              <p className="mt-1 text-[#475467]">{r ? fill(OPS.restoredRowApproved, { r: resourceText(r) }) : OPS.restoredRowNone}</p>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+export default function PriorityPanel(props: { bundle: ScenarioBundle; state: ScenarioState; plan: Plan; households: Household[]; changed: Set<string>; update: Update; restored?: RestoredInfo | null; frozenAt?: string | null }) {
   const { plan, households, changed } = props;
   const hOf = (hid: string) => households.find((h) => h.id === hid)!;
+  if (props.restored) return <RestoredView bundle={props.bundle} state={props.state} households={households} restored={props.restored} frozenAt={props.frozenAt ?? null} />;
   const lane119 = plan.rows.filter((r) => r.lane === "119");
   const laneManual = plan.rows.filter((r) => r.lane === "manual");
   const main = plan.rows.filter((r) => r.lane === "main");
@@ -205,7 +238,7 @@ export default function PriorityPanel(props: { bundle: ScenarioBundle; state: Sc
         <div className="flex flex-col gap-2">
           {lane119.map((r) => (
             <div key={r.hid} className="flex flex-col gap-1">
-              <Chip text={r.lane_reason === "late_arrival" ? OPS.lane119Reason.late_arrival : OPS.lane119Reason.no_compatible} tone="red" />
+              <Chip text={lane119Reason(r)} tone="red" />
               {R(r)}
             </div>
           ))}
@@ -223,7 +256,7 @@ export default function PriorityPanel(props: { bundle: ScenarioBundle; state: Sc
         </div>
       </section>
       <section className="flex flex-col gap-1">
-        <p className="text-xs text-[#475467]">{OPS.tableHead.join(" · ")}</p>
+        <p className="text-sm text-[#475467]">{OPS.tableHead.join(" · ")}</p>
         <div className="flex flex-col gap-2">{main.map(R)}</div>
       </section>
     </div>

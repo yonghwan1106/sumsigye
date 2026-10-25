@@ -7,7 +7,7 @@ import { COMMON, HOME, LAB, LAB_PAGE, fill } from "@/lib/copy";
 import EvalBand from "@/components/EvalBand";
 import EventsPlot from "@/components/lab/EventsPlot";
 import L4Table from "@/components/lab/L4Table";
-import { L1, L2, L4, L1_MIN_REVIEWED } from "@/components/evalText";
+import { L1, L2, L4, L1_MIN_REVIEWED, l4ScopeNote } from "@/components/evalText";
 import { fmtMin } from "@/components/_fmt";
 import { ALLOC_MAX_TOKENS } from "@/lib/llm/allocPrompt";
 
@@ -65,9 +65,34 @@ export default function LabPage() {
   const notConfirmed = (lrNight?.p ?? 1) >= 0.05 && (lrCause?.p ?? 1) >= 0.05;
   const nInt = L2.interval_coverage.hit + L2.interval_coverage.miss + L2.interval_coverage.undetermined;
 
+  // L2 해석: 선택 모형의 분위 오차가 단순 기준선보다 크면 그대로 적는다
+  const sel = L2.loo.find((r) => r.id === L2.selected);
+  const bl = (id: string) => L2.loo.find((r) => r.id === id);
+  const b0 = bl("B0"), b1 = bl("B1"), b2 = bl("B2");
+  const baseMin = Math.min(...[b0, b1, b2].filter((x) => !!x).map((x) => x!.pinball.mean));
+  const l2Interpret = sel && b0 && b1 && b2 && sel.cov80 && sel.p80_mean_h != null && sel.pinball.mean > baseMin
+    ? fill(LAB.l2Interpret, {
+        m: LAB_PAGE.l2Labels[sel.id] ?? sel.id, mv: fmtMin(sel.pinball.mean * 60),
+        b0: fmtMin(b0.pinball.mean * 60), b1: fmtMin(b1.pinball.mean * 60), b2: fmtMin(b2.pinball.mean * 60), n2: b2.n,
+        w: fmtMin(sel.p80_mean_h * 60), a: sel.cov80.a, n: sel.cov80.n,
+      })
+    : null;
+
   // L4
   const d = (a: string, b: string, scope: string) => L4.diffs.find((x) => x.a === a && x.b === b && x.scope === scope);
   const ladder = d("A1", "ours", "all");
+  const mOf = (id: string) => L4.methods.find((m) => m.id === id);
+  const oursM = mOf("ours"), r1M = mOf("R1");
+  const scopeNote = l4ScopeNote(L4);
+  const nonOracle = L4.methods.filter((m) => m.id !== "ORACLE");
+  const lowestAll = (k: "energy_short_mean" | "unknown_share") => !!oursM && nonOracle.every((m) => m.id === "ours" || oursM.all[k] < m.all[k]);
+  const l4Interpret: string[] = [];
+  if (scopeNote) l4Interpret.push(fill(LAB.l4Scope, { scope: scopeNote }));
+  if (ladder && ladder.ci[1] < 0) l4Interpret.push(fill(LAB.l4Ladder, { d: n2(-ladder.mean) }));
+  if (oursM && r1M && oursM.all.ei_mean > r1M.all.ei_mean) l4Interpret.push(fill(LAB.l4Lex, { o: fmtMin(oursM.all.ei_mean), r: fmtMin(r1M.all.ei_mean) }));
+  if (oursM && lowestAll("energy_short_mean") && lowestAll("unknown_share")) {
+    l4Interpret.push(fill(LAB.l4Conservative, { e: n2(oursM.all.energy_short_mean), u: pct(oursM.all.unknown_share) }));
+  }
   const diffRow = (a: string, b: string) => [
     LAB_PAGE.diffLabels[`${a}-${b}`],
     ...(["small", "wide", "all"] as const).map((s) => {
@@ -147,6 +172,7 @@ export default function LabPage() {
             <p className="text-[15px] text-[#101828]">
               {fill(LAB_PAGE.intervalLine, { n: nInt, hit: L2.interval_coverage.hit, miss: L2.interval_coverage.miss, und: L2.interval_coverage.undetermined })}
             </p>
+            {l2Interpret && <p data-testid="lab-l2-interpret" className="rounded-lg border border-[#FEC84B] bg-[#FFFAEB] p-3 text-[15px] text-[#101828]">{l2Interpret}</p>}
             <EventsPlot l2={L2} />
             <p className="text-[15px] text-[#101828]">
               {fill(LAB.reviewLine, { n0: L2.review.n_before, n1: L2.review.n_after, k: L2.review.excluded })}
@@ -176,6 +202,11 @@ export default function LabPage() {
                 {tempMark(fill(LAB.ladder, { d: n2(ladder.mean), lo: n2(ladder.ci[0]), hi: n2(ladder.ci[1]) }), l4Temp)}
               </p>
             )}
+            {l4Interpret.length > 0 && (
+              <ul data-testid="lab-l4-interpret" className="flex flex-col gap-1 rounded-lg border border-[#FEC84B] bg-[#FFFAEB] p-3 text-[15px] text-[#101828]">
+                {l4Interpret.map((t) => <li key={t}>{t}</li>)}
+              </ul>
+            )}
             <h3 className="text-base font-semibold text-[#101828]">{LAB_PAGE.diffTitle}</h3>
             <Table cols={LAB_PAGE.diffCols} rows={[diffRow("R1", "ours"), diffRow("A1", "ours"), diffRow("ours", "ORACLE")]} />
             <p className="text-sm text-[#475467]">{fill(LAB_PAGE.computeLine, { ms: n2(L4.compute_ms_wide) })}</p>
@@ -197,6 +228,11 @@ export default function LabPage() {
           {L4.llm && (
             <p className="text-sm text-[#475467]">{fill(LAB_PAGE.llmFailNote, { t: ALLOC_MAX_TOKENS.toLocaleString("ko-KR") })}</p>
           )}
+          {L4.llm?.ok_only?.filter((o) => o.n < L4.llm!.subset_seeds.length).map((o) => (
+            <p key={o.id} data-testid={`lab-llm-okonly-${o.id}`} className="text-[15px] text-[#101828]">
+              {fill(LAB_PAGE.llmOkOnly, { model: o.id === "LLM_SONNET" ? "claude-sonnet-5" : o.id === "LLM_HAIKU" ? "claude-haiku-5-5" : o.id, n: o.n, llm: n2(o.llm), ours: n2(o.ours), r1: n2(o.r1) })}
+            </p>
+          ))}
           <a href={`${GH}/blob/main/prompts/llm_alloc_baseline.md`} target="_blank" rel="noreferrer" className="text-sm text-[#1D4ED8] underline">
             {LAB_PAGE.promptLink}
           </a>

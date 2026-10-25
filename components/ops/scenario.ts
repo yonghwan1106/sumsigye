@@ -98,14 +98,59 @@ export function baselineR1(input: AllocInput): Plan {
   return baseline("R1", input);
 }
 
+/** 복구 확인: 각본의 복구 사건(실제 복구) 또는 복구 문자(L1 kind = restoration)가 now 이전에 왔는가. */
+export interface RestoredInfo {
+  /** 복구 시각(문자에 시각이 있으면 그 시각, 없으면 복구 문자 수신 시각) */
+  at: ISO;
+  basis: "sms_time" | "sms_received";
+  /** 화면이 복구를 알게 된 시각 */
+  known_at: ISO;
+}
+
+export function restoredInfo(b: ScenarioBundle, now: ISO, l1: SmsL1): RestoredInfo | null {
+  let best: RestoredInfo | null = null;
+  const take = (x: RestoredInfo) => { if (!best || ms(x.known_at) < ms(best.known_at)) best = x; };
+  for (const e of b.timeline) {
+    if (ms(e.at) > ms(now)) continue;
+    if (e.type === "restored") {
+      if (b.actual.kind === "exact") take({ at: b.actual.restored_at, basis: "sms_time", known_at: e.at });
+      else take({ at: e.at, basis: "sms_received", known_at: e.at });
+    } else if (e.type === "sms") {
+      const f = l1[String(e.sn)]?.fields;
+      if (f && f.relevant && f.kind === "restoration") {
+        take(f.restored_at && ms(f.restored_at) <= ms(e.at)
+          ? { at: f.restored_at, basis: "sms_time", known_at: e.at }
+          : { at: e.at, basis: "sms_received", known_at: e.at });
+      }
+    }
+  }
+  return best;
+}
+
 export interface Computed {
   households: Household[]; dist: DistInfo; plan: Plan; r1: Plan;
   /** 가장 최근 문자 도착으로 제안이 바뀐 가구(승인 안 된 행만) */
   changed: Set<string>;
   r80: number; p50: number; p90: number;
+  /** 복구됨이면 배정 재계산·복구 예측을 멈추고, plan·r1·분포는 복구 전 마지막 판단 시점(frozen_at) 값으로 둔다. */
+  restored: RestoredInfo | null;
+  frozen_at: ISO | null;
 }
 
 export function compute(b: ScenarioBundle, s: ScenarioState, l1: SmsL1): Computed {
+  const rest = restoredInfo(b, s.now, l1);
+  if (rest) {
+    const before = b.decision_points.filter((t) => ms(t) < ms(rest.at));
+    const firstReport = b.timeline.find((e) => e.type === "report")?.at ?? b.outage_start;
+    const anchor = before.length ? before[before.length - 1] : firstReport;
+    const sF: ScenarioState = { ...s, now: anchor, approvals: s.approvals.filter((a) => ms(a.approved_at) <= ms(anchor)) };
+    const c = computeOpen(b, sF, l1);
+    return { ...c, changed: new Set<string>(), restored: rest, frozen_at: anchor };
+  }
+  return computeOpen(b, s, l1);
+}
+
+function computeOpen(b: ScenarioBundle, s: ScenarioState, l1: SmsL1): Computed {
   const dist = restoreAt(b, s.now, l1);
   const input = allocInput(b, s, dist.d);
   const plan = allocate(input);
@@ -128,6 +173,7 @@ export function compute(b: ScenarioBundle, s: ScenarioState, l1: SmsL1): Compute
   return {
     households: input.households, dist, plan, r1, changed,
     r80: quantileRemaining(dist.d, 0.8), p50: quantileRemaining(dist.d, 0.5), p90: quantileRemaining(dist.d, 0.9),
+    restored: null, frozen_at: null,
   };
 }
 

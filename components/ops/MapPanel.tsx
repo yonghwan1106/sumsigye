@@ -25,8 +25,8 @@ function Marker({ x, y, kind, color, size }: { x: number; y: number; kind: "vent
   return <rect x={x - size * 0.9} y={y - size * 0.9} width={size * 1.8} height={size * 1.8} fill={color} stroke="#fff" strokeWidth={1.5} />;
 }
 
-export default function MapPanel(props: { bundle: ScenarioBundle; state: ScenarioState; plan: Plan; households: Household[] }) {
-  const { bundle: b, state: s, plan, households } = props;
+export default function MapPanel(props: { bundle: ScenarioBundle; state: ScenarioState; plan: Plan; households: Household[]; restored?: boolean }) {
+  const { bundle: b, state: s, plan, households, restored } = props;
   const A = b.region.area_km;
   const W = 600, H = 600, pad = 24;
   const sc = (W - 2 * pad) / A;
@@ -54,11 +54,11 @@ export default function MapPanel(props: { bundle: ScenarioBundle; state: Scenari
         {geos.map((g) => (
           <g key={g.name}>
             <circle cx={X(g.cx)} cy={Y(g.cy)} r={g.r * sc} fill="#F2F4F7" stroke="#98A2B3" strokeDasharray="6 4" />
-            <text x={X(g.cx)} y={Y(g.cy - g.r) + 18} textAnchor="middle" fontSize={16} fontWeight={700} fill="#475467">{g.name}</text>
+            <text x={X(g.cx)} y={Y(g.cy - g.r) + 18} textAnchor="middle" fontSize={22} fontWeight={700} fill="#475467">{g.name}</text>
           </g>
         ))}
         {/* 배정 선: 승인 전 = 점선, 승인 후 = 실선 */}
-        {plan.rows.filter((r) => r.rid).map((r) => {
+        {plan.rows.filter((r) => r.rid && (!restored || approved.get(r.hid) === r.rid)).map((r) => {
           const h = households.find((x) => x.id === r.hid);
           const res = resById.get(r.rid!);
           if (!h || !res) return null;
@@ -73,23 +73,23 @@ export default function MapPanel(props: { bundle: ScenarioBundle; state: Scenari
         </defs>
         {[...bases.values()].map((g) => (
           <g key={`b-${g.label}-${g.x}-${g.y}`}>
-            <rect x={X(g.x) - 11} y={Y(g.y) - 11} width={22} height={22} rx={4} fill="#fff" stroke="#1D4ED8" strokeWidth={2} />
-            <text x={X(g.x)} y={Y(g.y) + 5} textAnchor="middle" fontSize={13} fontWeight={700} fill="#1D4ED8">{g.res.length}</text>
-            <text x={X(g.x)} y={Y(g.y) + 28} textAnchor="middle" fontSize={many ? 11 : 13} fill="#1D4ED8">{g.label}</text>
-            <text x={X(g.x)} y={Y(g.y) + 42} textAnchor="middle" fontSize={10} fill="#475467">{g.res.map((r) => r.id).join(" ")}</text>
+            <rect x={X(g.x) - 13} y={Y(g.y) - 13} width={26} height={26} rx={4} fill="#fff" stroke="#1D4ED8" strokeWidth={2} />
+            <text x={X(g.x)} y={Y(g.y) + 6} textAnchor="middle" fontSize={20} fontWeight={700} fill="#1D4ED8">{g.res.length}</text>
+            <text x={X(g.x)} y={Y(g.y) + 32} textAnchor="middle" fontSize={20} fill="#1D4ED8">{g.label}</text>
+            <text x={X(g.x)} y={Y(g.y) + 52} textAnchor="middle" fontSize={20} fill="#475467">{g.res.map((r) => r.id).join(" ")}</text>
           </g>
         ))}
         {households.map((h) => {
           const row = byHid.get(h.id);
           return (
             <g key={h.id} data-hid={h.id}>
-              <Marker x={X(h.x_km)} y={Y(h.y_km)} kind={family(h.observed.device_id)} color={probColor(row)} size={size} />
-              <text x={X(h.x_km) + size + 3} y={Y(h.y_km) + 4} fontSize={many ? 11 : 14} fontWeight={700} fill="#101828">{h.alias}</text>
+              <Marker x={X(h.x_km)} y={Y(h.y_km)} kind={family(h.observed.device_id)} color={restored ? COLORS.ok : probColor(row)} size={size} />
+              <text x={X(h.x_km) + size + 3} y={Y(h.y_km) + 4} fontSize={20} fontWeight={700} fill="#101828">{h.alias}</text>
             </g>
           );
         })}
       </svg>
-      <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-[#344054]">
+      <ul className="flex flex-wrap gap-x-3 gap-y-1 text-sm text-[#344054]">
         <li>{OPS_B.legendDevice.vent}</li><li>{OPS_B.legendDevice.o2}</li><li>{OPS_B.legendDevice.other}</li>
         <li><span style={{ color: COLORS.stop }}>■</span> {OPS_B.legendProb.high}</li>
         <li><span style={{ color: AMBER }}>■</span> {OPS_B.legendProb.mid}</li>

@@ -30,7 +30,7 @@ export default function DeviceIllustration({ width = 320 }: { width?: number }) 
         <circle cx="160" cy="196" r="7" fill="#475467" />
         <circle cx="250" cy="196" r="7" fill="#475467" />
       </svg>
-      <figcaption className="absolute right-3 top-2 rounded bg-white/85 px-1.5 text-xs font-medium text-[#475467]">
+      <figcaption className="absolute right-3 top-2 rounded bg-white/85 px-1.5 text-sm font-medium text-[#475467]">
         {HOME.deviceIllustration.corner}
       </figcaption>
     </figure>

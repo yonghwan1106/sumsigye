@@ -1,9 +1,9 @@
 // 엔진 출력 → 화면 표시 문자열(/ops·/home·운영자 메모 facts 공용). 숫자는 lib/format.ts 규칙만 쓴다.
 import { GUARDIAN, OPS, fill } from "@/lib/copy";
-import { fmtMin, fmtProb, fmtSignedMin } from "@/lib/format";
+import { fmtClock, fmtMin, fmtProb, fmtSignedMin } from "@/lib/format";
 import type { DeviceId, PlanRow, Resource, SafeTime } from "@/lib/types";
 import { OPS_B } from "./copyB";
-import { SPECS } from "./scenario";
+import { SPECS, type RestoredInfo } from "./scenario";
 
 export function deviceLabel(id: DeviceId | null): string {
   if (!id) return OPS_B.unknownValue;
@@ -55,4 +55,22 @@ export function factRow(row: PlanRow, alias: string, device: DeviceId | null, re
     resource: r ? resourceText(r) : null, arrival: row.arrival_min != null && r ? fmtMin(row.arrival_min) : null,
     lane: row.lane, excluded: row.excluded.map((e) => exclusionText(e, res)),
   };
+}
+
+/** 복구 상태 문구: 「복구됨(재난문자 기준 22:40)」 · 시각 없는 복구 문자면 수신 시각 기준. */
+export function restoredText(r: RestoredInfo): string {
+  return fill(r.basis === "sms_time" ? OPS.restoredStatus : OPS.restoredStatusReceived, { "HH:MM": fmtClock(r.at) });
+}
+
+/** 도착한 승인 전원 줄(가정). */
+export function arrivedText(row: PlanRow, res: Resource[]): string {
+  if (!row.arrived) return arrivalText(row, res);
+  const r = res.find((x) => x.id === row.rid);
+  return fill(OPS.arrivedLine, { r: resourceText(r), "HH:MM": fmtClock(row.arrived.at), s: fmtMin(row.arrived.supply_left_min), b: fmtMin(row.arrived.battery_min) });
+}
+
+/** 119 레인 사유: 호환 전원은 있는데 다른 가구에 배정돼 남은 것이 없으면 그 사실대로. */
+export function lane119Reason(row: PlanRow): string {
+  if (row.lane_reason === "late_arrival") return OPS.lane119Reason.late_arrival;
+  return row.a_min_min != null ? OPS.lane119Reason.taken : OPS.lane119Reason.no_compatible;
 }

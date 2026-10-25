@@ -141,10 +141,12 @@ function mergeLlm(ctx: EvalContext): L4Results["llm"] {
   for (const m of ["ours", "R1"] as const) {
     rows.push({ id: m, n: LLM_SEEDS.length, parse_fail: 0, interrupted_mean: r3(mean(base[m])), ci: bootCI(base[m], idx), violations_total: baseViol[m] });
   }
+  const okOnly: NonNullable<NonNullable<L4Results["llm"]>["ok_only"]> = [];
   for (const [model, id] of [["claude-haiku-5-5", "LLM_HAIKU"], ["claude-sonnet-5", "LLM_SONNET"]] as const) {
     const xs: number[] = [];
+    const ok = { llm: [] as number[], ours: [] as number[], r1: [] as number[] };
     let fail = 0, viol = 0, n = 0;
-    for (const seed of LLM_SEEDS) {
+    for (const [si, seed] of LLM_SEEDS.entries()) {
       const run = runs.find((r) => r.seed === seed && r.model === model);
       if (!run) continue;
       n++;
@@ -154,11 +156,13 @@ function mergeLlm(ctx: EvalContext): L4Results["llm"] {
       const s = scoreTruth(plan, sc.input, sc.truthR, world.truth);
       xs.push(s.interrupted);
       viol += s.violations + dropped;
+      if (!run.parse_fail) { ok.llm.push(s.interrupted); ok.ours.push(base.ours[si]); ok.r1.push(base.R1[si]); }
     }
     if (n === 0) continue;
+    okOnly.push({ id, n: ok.llm.length, llm: r3(mean(ok.llm)), ours: r3(mean(ok.ours)), r1: r3(mean(ok.r1)) });
     rows.push({ id, n, parse_fail: fail, interrupted_mean: r3(mean(xs)), ci: n === LLM_SEEDS.length ? bootCI(xs, idx) : bootCI(xs, bootIndex(n, BOOT, 7)), violations_total: viol });
   }
-  return { subset_seeds: LLM_SEEDS, rows };
+  return { subset_seeds: LLM_SEEDS, rows, ok_only: okOnly };
 }
 
 function main() {

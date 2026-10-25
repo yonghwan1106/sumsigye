@@ -148,6 +148,26 @@ describe("승인 고정", () => {
   });
 });
 
+describe("승인 전원 도착(QA 수정)", () => {
+  it("도착 시각이 지난 승인 배정은 공급 중 — 남은 시간 = 남은 공급 + 도착 때 배터리, 119 레인·위험 순위에서 빠짐", () => {
+    const hs = [hh("H01", 0, 0, { screen: screen(70) }), hh("H02", 0.2, 0.2, { screen: screen(60) })];
+    const rs = [res("R01", "PS_L", 0.1, 0.1)];
+    const before = allocate(input(hs, rs, { fixed: [{ hid: "H01", rid: "R01", approved_at: NOW }], now: "2026-08-14T19:05:00+09:00" }));
+    const b1 = before.rows.find((r) => r.hid === "H01")!;
+    expect(b1.arrived).toBeUndefined(); // 도착 전(약 10분 걸림)
+    const later = allocate(input(hs, rs, { fixed: [{ hid: "H01", rid: "R01", approved_at: NOW }], now: "2026-08-14T20:30:00+09:00" }));
+    const r = later.rows.find((x) => x.hid === "H01")!;
+    expect(r.arrived).toBeDefined();
+    expect(r.lane).toBe("main");
+    expect(r.arrival_min).toBe(0);
+    expect(r.arrived!.supply_left_min).toBeGreaterThan(0);
+    expect(r.safe.s_low_engine_min).toBeCloseTo(r.arrived!.supply_left_min + r.arrived!.battery_min, 6);
+    expect(r.arrived!.battery_min).toBeGreaterThan(0); // 70분 − 경보 여유 10분 − 도착까지 경과
+    expect(r.p_int0).toBe(r.p_int);
+    expect(r.priority).toBe(2); // H02(배정 없음)가 먼저
+  });
+});
+
 describe("호환 제약", () => {
   it("발전기 파형 미확인 제외 · 잔량 20% 이하 제외 · 사용 불가 제외", () => {
     const vent = specs.devices.find((d) => d.id === "VENT_A")!;

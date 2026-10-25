@@ -14,7 +14,7 @@
   "n_small_run": 200,
   "n_wide_run": 200,
   "boot_run": 2000,
-  "built_at": "2026-10-25T20:13:55+09:00"
+  "built_at": "2026-10-25T20:44:52+09:00"
  },
  "methods": [
   {
@@ -410,7 +410,23 @@
     ],
     "violations_total": 0
    }
+  ],
+  "ok_only": [
+   {
+    "id": "LLM_HAIKU",
+    "n": 30,
+    "llm": 5.733,
+    "ours": 4.867,
+    "r1": 5.2
+   },
+   {
+    "id": "LLM_SONNET",
+    "n": 13,
+    "llm": 2.231,
+    "ours": 2.231,
+    "r1": 2.462
+   }
   ]
  },
- "compute_ms_wide": 0.727
+ "compute_ms_wide": 0.739
 }

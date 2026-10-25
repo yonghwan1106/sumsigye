@@ -73,7 +73,7 @@ export default function OpsClient(props: { bundle: ScenarioBundle; smsL1: SmsL1 
         <button type="button" data-testid="btn-next-event" disabled={!nextEvent} onClick={() => nextEvent && setNow(nextEvent)}
           className="rounded-md bg-[#1D4ED8] px-3 py-1 text-sm font-semibold text-white disabled:opacity-40">{OPS.nextEvent}</button>
         <button type="button" data-testid="btn-reset" onClick={onReset} className="rounded-md border border-[#D0D5DD] bg-white px-3 py-1 text-sm font-semibold">{OPS.reset}</button>
-        <span className="text-xs text-[#475467]">{b.title}</span>
+        <span className="text-sm text-[#475467]">{b.title}</span>
       </div>
 
       <div className="grid grid-cols-1 gap-2 lg:grid-cols-[340px_minmax(0,1fr)_440px]">
@@ -81,21 +81,22 @@ export default function OpsClient(props: { bundle: ScenarioBundle; smsL1: SmsL1 
           <EventPanel bundle={b} state={state} smsL1={smsL1} comp={comp} />
         </Expandable>
         <Expandable testId="btn-expand-map" panelTestId="panel-map" title={OPS.mapTitle} className="rounded-lg border border-[#EAECF0] bg-white lg:h-[calc(100vh-150px)] lg:overflow-hidden">
-          <MapPanel bundle={b} state={state} plan={comp.plan} households={comp.households} />
-          <p className="px-3 pb-2 text-xs text-[#475467]">
+          <MapPanel bundle={b} state={state} plan={comp.plan} households={comp.households} restored={!!comp.restored} />
+          <p className="px-3 pb-2 text-sm text-[#475467]">
             {comp.households.map((h) => (
               <Link key={h.id} href={`/home/${h.id}?s=${b.id}&frame=1`} className="mr-2 underline" target="_blank">{OPS_B.homeLink} {h.alias}</Link>
             ))}
           </p>
         </Expandable>
         <Expandable testId="btn-expand-priority" panelTestId="panel-priority" title={OPS.priorityTitle} className="rounded-lg border border-[#EAECF0] bg-white lg:h-[calc(100vh-150px)] lg:overflow-y-auto">
-          <PriorityPanel bundle={b} state={state} plan={comp.plan} households={comp.households} changed={comp.changed} update={update} />
+          <PriorityPanel bundle={b} state={state} plan={comp.plan} households={comp.households} changed={comp.changed} update={update} restored={comp.restored} frozenAt={comp.frozen_at} />
         </Expandable>
       </div>
 
       <Expandable testId="btn-expand-compare" panelTestId="panel-compare" title={OPS.compareTitle} className="rounded-lg border border-[#EAECF0] bg-white">
         <div className="flex flex-col gap-3 p-3">
           <h2 className="pr-24 text-base font-bold">{OPS.compareTitle}</h2>
+          {comp.restored && comp.frozen_at && <p data-testid="compare-frozen" className="text-sm font-semibold text-[#475467]">{fill(OPS.restoredFrozen, { "HH:MM": fmtClock(comp.frozen_at) })}</p>}
           <p className="text-lg font-bold">{fill(OPS.compareBig, { r: stopCount(comp.r1.rows), o: stopCount(comp.plan.rows) })}</p>
           {oRow && rRow && showH ? (
             <Race safe_min={oRow.safe.s_low_engine_min} r80_min={comp.r80} arrival_rule_min={rRow.arrival_min} arrival_ours_min={oRow.arrival_min}

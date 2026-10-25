@@ -9,7 +9,7 @@ import { load, reset, save, subscribe } from "@/lib/state/store";
 import type { DeviceId, HouseholdObserved, ScenarioBundle, ScenarioState } from "@/lib/types";
 import { compute, SPECS, type SmsL1 } from "@/components/ops/scenario";
 import { emptyStateFor } from "@/components/ops/stateInit";
-import { resourceText, safeText } from "@/components/ops/display";
+import { resourceText, restoredText, safeText } from "@/components/ops/display";
 
 const DEVICE_IDS: (DeviceId | "unknown")[] = ["VENT_A", "VENT_B", "O2_STAT", "O2_PORT", "SUCTION", "COUGH", "unknown"];
 
@@ -174,7 +174,12 @@ export default function HomeClient(props: { bundle: ScenarioBundle; smsL1: SmsL1
       </section>
 
       <section data-testid="home-card" className="flex flex-col gap-1 rounded-xl border-2 border-[#1D4ED8] bg-[#F5F8FF] p-3">
-        {row.safe.status === "unknown" ? (
+        {comp.restored ? (
+          <>
+            <p className="text-lg font-bold" style={{ color: COLORS.ok }}>{restoredText(comp.restored)}</p>
+            <p>{GUARDIAN.cardRestored}</p>
+          </>
+        ) : row.safe.status === "unknown" ? (
           <p className="font-semibold">{GUARDIAN.cardUnknown}</p>
         ) : (
           <>
@@ -190,8 +195,12 @@ export default function HomeClient(props: { bundle: ScenarioBundle; smsL1: SmsL1
       </section>
 
       <section data-testid="home-status" className="rounded-xl border border-[#D0D5DD] p-3 font-semibold">
-        {status === "approved" ? fill(GUARDIAN.support.approved, { 자원: resourceText(res), t: fmtMin(arrivalMin ?? 0) })
-          : status === "pending" ? GUARDIAN.support.pending : GUARDIAN.support.none}
+        {comp.restored ? fill(GUARDIAN.support.restored, { 상태: restoredText(comp.restored) })
+          : status === "approved" && row.arrived ? fill(GUARDIAN.support.arrived, { 자원: resourceText(res), t: fmtMin(row.arrived.supply_left_min) })
+          : status === "approved" ? fill(GUARDIAN.support.approved, { 자원: resourceText(res), t: fmtMin(arrivalMin ?? 0) })
+          : status === "pending" ? GUARDIAN.support.pending
+          : row.lane === "main" ? GUARDIAN.support.noNeed
+          : row.a_min_min != null ? GUARDIAN.support.noneTaken : GUARDIAN.support.none}
       </section>
 
       <p className="text-[#475467]">{GUARDIAN.bottomLine}</p>

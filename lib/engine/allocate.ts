@@ -6,7 +6,7 @@ import { cost, INFEASIBLE, type CostOut } from "./cost";
 import { hungarian } from "./hungarian";
 import { laneOf, marginMin, priorityCompare, rqMin } from "./priority";
 import { findDevice, safeTime } from "./safeTime";
-import { minutesBetween } from "./time";
+import { addMinutes, minutesBetween } from "./time";
 
 export const nowMs = (): number => (typeof performance !== "undefined" ? performance.now() : Date.now());
 
@@ -42,14 +42,32 @@ export function buildPlan(method: Plan["method"], input: AllocInput, prep: Prepa
     const cand = rid ? x.cands.find((k) => k.r.id === rid) ?? null : null;
     let arr: number | null = null, sup: number | null = null;
     let p_int = x.none.p_int, ei = x.none.ei_min;
+    let arrived: PlanRow["arrived"] | undefined;
+    let safe = x.safe;
     if (cand) {
       if (!cand.c.ok) violations++;
       arr = cand.arrival;
-      const at = fixedAt.get(x.h.id);
-      if (at && fixedSet.has(x.h.id)) arr = Math.max(0, arr - Math.max(0, minutesBetween(at, now))); // 승인 뒤 이미 달려온 만큼
       sup = cand.supply;
+      const at = fixedAt.get(x.h.id);
+      if (at && fixedSet.has(x.h.id)) {
+        const since = minutesBetween(at, now);
+        if (cand.c.ok && since >= cand.arrival) {
+          // 도착한 승인 전원(가정): 기기는 비상전원으로 돌고, 도착 때 남아 있던 기기 배터리는 공급이 끝난 뒤 쓴다.
+          const atArr = addMinutes(at, cand.arrival);
+          const battery = Math.max(0, safeTime(x.h, input.specs, atArr, params, input.weather).s_low_engine_min);
+          const left = Math.max(0, cand.supply - (since - cand.arrival));
+          arrived = { at: atArr, supply_left_min: left, battery_min: battery };
+          arr = 0; sup = left;
+          const eff = left + battery;
+          safe = { ...x.safe, status: "value", s_low_min: eff, s_low_engine_min: eff };
+        } else {
+          arr = Math.max(0, arr - Math.max(0, since)); // 승인 뒤 이미 달려온 만큼
+        }
+      }
       if (cand.c.ok) {
-        const k = cost({ s_low: s, arrival: arr, supply: sup }, d);
+        const k = arrived
+          ? cost({ s_low: safe.s_low_engine_min, arrival: null, supply: null }, d)
+          : cost({ s_low: s, arrival: arr, supply: sup }, d);
         p_int = k.p_int; ei = k.ei_min;
       }
     }
@@ -59,11 +77,12 @@ export function buildPlan(method: Plan["method"], input: AllocInput, prep: Prepa
       rid: k.r.id, reason: k.c.reason as ExclusionReason, ...(k.c.need_w != null ? { need_w: k.c.need_w } : {}),
     }));
     const base = {
-      hid: x.h.id, safe: x.safe, rid: cand ? cand.r.id : null, arrival_min: arr, supply_min: sup,
-      p_int, ei_min: ei, p_int0: x.none.p_int, ei0_min: x.none.ei_min,
-      rq_min: rq, a_min_min: a_min, margin_min: marginMin(s, rq, a_min), priority: 0,
+      hid: x.h.id, safe, rid: cand ? cand.r.id : null, arrival_min: arr, supply_min: sup,
+      p_int, ei_min: ei, p_int0: arrived ? p_int : x.none.p_int, ei0_min: x.none.ei_min,
+      rq_min: rq, a_min_min: a_min, margin_min: marginMin(safe.s_low_engine_min, rq, a_min), priority: 0,
       excluded, fixed: fixedSet.has(x.h.id),
     };
+    if (arrived) return { ...base, lane: "main", arrived } as PlanRow;
     return { ...base, ...laneOf(base, d, params) } as PlanRow;
   });
   rows.sort(priorityCompare);

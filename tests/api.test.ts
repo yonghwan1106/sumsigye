@@ -108,6 +108,8 @@ describe("lib/llm/guard.ts", () => {
     const c = guideChecklist("VENT_A");
     const k = guideKeywords("VENT_A");
     expect(guideOk(c, c, k, [])).toBe(true);
+    const noSource = [c[0].replace("(인공호흡기 A계열 설명서 기준)", ""), ...c.slice(1)];
+    expect(guideOk(noSource, c, k, [])).toBe(false); // ① 출처 구절 빠짐 → 폐기
     const missing = [...c];
     missing[1] = "다른 배터리를 연결하세요.";
     expect(guideOk(missing, c, k, [])).toBe(false);
