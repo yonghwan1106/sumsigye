@@ -1,9 +1,337 @@
 {
-  "status": "measuring",
-  "provisional": true,
-  "meta": { "n_small": 200, "n_wide": 200, "truth_pool": "loo_pair", "boot": 2000 },
-  "methods": [],
-  "diffs": [],
-  "llm": null,
-  "compute_ms_wide": 0
+ "status": "final",
+ "provisional": false,
+ "meta": {
+  "n_small": 200,
+  "n_wide": 200,
+  "truth_pool": "loo_pair",
+  "boot": 2000,
+  "truth_source": "events_loo",
+  "pool_n": 26,
+  "model_selected": "M0",
+  "model_version": "fit-2026-10-25T1918",
+  "quick": false,
+  "n_small_run": 200,
+  "n_wide_run": 200,
+  "boot_run": 2000,
+  "built_at": "2026-10-25T19:19:00+09:00"
+ },
+ "methods": [
+  {
+   "id": "R1",
+   "label": "단순하게 보내면(남은 시간 짧은 집부터, 가까운 전원)",
+   "small": {
+    "interrupted_mean": 1.255,
+    "ci": [
+     1.08,
+     1.435
+    ],
+    "ei_mean": 54.277,
+    "violations_mean": 0,
+    "energy_short_mean": 0.175,
+    "unknown_share": 0.165
+   },
+   "wide": {
+    "interrupted_mean": 9.17,
+    "ci": [
+     8.235,
+     10.21
+    ],
+    "ei_mean": 445.016,
+    "violations_mean": 0,
+    "energy_short_mean": 0.575,
+    "unknown_share": 0.291
+   },
+   "all": {
+    "interrupted_mean": 5.213,
+    "ci": [
+     4.625,
+     5.825
+    ],
+    "ei_mean": 249.646,
+    "violations_mean": 0,
+    "energy_short_mean": 0.375,
+    "unknown_share": 0.257
+   }
+  },
+  {
+   "id": "R2",
+   "label": "가까운 순",
+   "small": {
+    "interrupted_mean": 1.36,
+    "ci": [
+     1.19,
+     1.535
+    ],
+    "ei_mean": 88.493,
+    "violations_mean": 0,
+    "energy_short_mean": 0.105,
+    "unknown_share": 0.093
+   },
+   "wide": {
+    "interrupted_mean": 9.43,
+    "ci": [
+     8.555,
+     10.395
+    ],
+    "ei_mean": 598.902,
+    "violations_mean": 0,
+    "energy_short_mean": 0.15,
+    "unknown_share": 0.063
+   },
+   "all": {
+    "interrupted_mean": 5.395,
+    "ci": [
+     4.825,
+     6.008
+    ],
+    "ei_mean": 343.698,
+    "violations_mean": 0,
+    "energy_short_mean": 0.128,
+    "unknown_share": 0.071
+   }
+  },
+  {
+   "id": "R3",
+   "label": "호환 무시",
+   "small": {
+    "interrupted_mean": 1.32,
+    "ci": [
+     1.145,
+     1.51
+    ],
+    "ei_mean": 72.003,
+    "violations_mean": 0.86,
+    "energy_short_mean": 0.115,
+    "unknown_share": 0.148
+   },
+   "wide": {
+    "interrupted_mean": 9.345,
+    "ci": [
+     8.405,
+     10.405
+    ],
+    "ei_mean": 510.619,
+    "violations_mean": 2.645,
+    "energy_short_mean": 0.415,
+    "unknown_share": 0.296
+   },
+   "all": {
+    "interrupted_mean": 5.333,
+    "ci": [
+     4.735,
+     5.958
+    ],
+    "ei_mean": 291.311,
+    "violations_mean": 1.753,
+    "energy_short_mean": 0.265,
+    "unknown_share": 0.254
+   }
+  },
+  {
+   "id": "A1",
+   "label": "고정 2시간 가정",
+   "small": {
+    "interrupted_mean": 1.19,
+    "ci": [
+     1.035,
+     1.35
+    ],
+    "ei_mean": 74.425,
+    "violations_mean": 0,
+    "energy_short_mean": 0.1,
+    "unknown_share": 0.081
+   },
+   "wide": {
+    "interrupted_mean": 8.16,
+    "ci": [
+     7.355,
+     9.045
+    ],
+    "ei_mean": 550.933,
+    "violations_mean": 0,
+    "energy_short_mean": 0.09,
+    "unknown_share": 0.008
+   },
+   "all": {
+    "interrupted_mean": 4.675,
+    "ci": [
+     4.177,
+     5.225
+    ],
+    "ei_mean": 312.679,
+    "violations_mean": 0,
+    "energy_short_mean": 0.095,
+    "unknown_share": 0.028
+   }
+  },
+  {
+   "id": "ours",
+   "label": "숨시계",
+   "small": {
+    "interrupted_mean": 1.265,
+    "ci": [
+     1.105,
+     1.425
+    ],
+    "ei_mean": 100.287,
+    "violations_mean": 0,
+    "energy_short_mean": 0.03,
+    "unknown_share": 0.028
+   },
+   "wide": {
+    "interrupted_mean": 8.41,
+    "ci": [
+     7.615,
+     9.295
+    ],
+    "ei_mean": 564.128,
+    "violations_mean": 0,
+    "energy_short_mean": 0.045,
+    "unknown_share": 0
+   },
+   "all": {
+    "interrupted_mean": 4.838,
+    "ci": [
+     4.322,
+     5.395
+    ],
+    "ei_mean": 332.208,
+    "violations_mean": 0,
+    "energy_short_mean": 0.038,
+    "unknown_share": 0.007
+   }
+  },
+  {
+   "id": "ORACLE",
+   "label": "실제 복구시간을 아는 경우(오라클)",
+   "small": {
+    "interrupted_mean": 1.115,
+    "ci": [
+     0.97,
+     1.27
+    ],
+    "ei_mean": 74.538,
+    "violations_mean": 0,
+    "energy_short_mean": 0.055,
+    "unknown_share": 0.093
+   },
+   "wide": {
+    "interrupted_mean": 7.87,
+    "ci": [
+     7.065,
+     8.765
+    ],
+    "ei_mean": 535.648,
+    "violations_mean": 0,
+    "energy_short_mean": 0.005,
+    "unknown_share": 0.08
+   },
+   "all": {
+    "interrupted_mean": 4.493,
+    "ci": [
+     4.002,
+     5.035
+    ],
+    "ei_mean": 305.093,
+    "violations_mean": 0,
+    "energy_short_mean": 0.03,
+    "unknown_share": 0.083
+   }
+  }
+ ],
+ "diffs": [
+  {
+   "a": "R1",
+   "b": "ours",
+   "scope": "small",
+   "mean": -0.01,
+   "ci": [
+    -0.09,
+    0.07
+   ]
+  },
+  {
+   "a": "R1",
+   "b": "ours",
+   "scope": "wide",
+   "mean": 0.76,
+   "ci": [
+    0.51,
+    1.02
+   ]
+  },
+  {
+   "a": "R1",
+   "b": "ours",
+   "scope": "all",
+   "mean": 0.375,
+   "ci": [
+    0.243,
+    0.513
+   ]
+  },
+  {
+   "a": "A1",
+   "b": "ours",
+   "scope": "small",
+   "mean": -0.075,
+   "ci": [
+    -0.13,
+    -0.02
+   ]
+  },
+  {
+   "a": "A1",
+   "b": "ours",
+   "scope": "wide",
+   "mean": -0.25,
+   "ci": [
+    -0.345,
+    -0.16
+   ]
+  },
+  {
+   "a": "A1",
+   "b": "ours",
+   "scope": "all",
+   "mean": -0.162,
+   "ci": [
+    -0.22,
+    -0.107
+   ]
+  },
+  {
+   "a": "ours",
+   "b": "ORACLE",
+   "scope": "small",
+   "mean": 0.15,
+   "ci": [
+    0.095,
+    0.21
+   ]
+  },
+  {
+   "a": "ours",
+   "b": "ORACLE",
+   "scope": "wide",
+   "mean": 0.54,
+   "ci": [
+    0.43,
+    0.655
+   ]
+  },
+  {
+   "a": "ours",
+   "b": "ORACLE",
+   "scope": "all",
+   "mean": 0.345,
+   "ci": [
+    0.283,
+    0.413
+   ]
+  }
+ ],
+ "llm": null,
+ "compute_ms_wide": 1.195
 }

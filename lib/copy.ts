@@ -217,6 +217,32 @@ export const LAB = {
   reviewLine: "사람 검수: 자동 연결 {n0}건 → 검수 후 {n1}건(제외 {k}건)",
   scenarioHoldout: "시나리오 사건(마포 2026-08-14·유성 2026-08-18)은 시험 구간에 있으며, 시나리오 화면은 그 사건을 뺀 모형으로 그렸습니다",
   ladder: "복구시간 모형의 몫 = 고정 2시간 가정과 숨시계의 차이 {d}곳(95% 구간 {lo}~{hi})",
+  /** l4_results.json methods[].label (scripts/eval-alloc.ts가 넣는다) */
+  methods: {
+    R1: "단순하게 보내면(남은 시간 짧은 집부터, 가까운 전원)",
+    R2: "가까운 순",
+    R3: "호환 무시",
+    A1: "고정 2시간 가정",
+    ours: "숨시계",
+    ORACLE: "실제 복구시간을 아는 경우(오라클)",
+    LLM_HAIKU: "AI 챗봇에게만 맡기면(claude-haiku-5-5)",
+    LLM_SONNET: "AI 챗봇에게만 맡기면(claude-sonnet-5)",
+  },
+  /** l4_sensitivity.json rows[].label */
+  sens: {
+    base: "기본 가정값",
+    tail15: "복구시간 꼬리 ×1.5(참값 지속시간 × 1.5)",
+    test_only: "시험 구간(2026-07-01 이후) 사건만",
+    self_lo: "보호자 입력 감가 15% → 7.5%",
+    self_hi: "보호자 입력 감가 15% → 22.5%",
+    age_lo: "노후 감가 연 10% → 5%",
+    age_hi: "노후 감가 연 10% → 15%",
+    speed_lo: "이동 속도 ×0.5",
+    speed_hi: "이동 속도 ×1.5",
+    prep_lo: "출동 준비 10분 → 5분",
+    prep_hi: "출동 준비 10분 → 15분",
+    mismatch: "불일치: 엔진은 25km/h, 실제 속도만 ×0.5",
+  },
 } as const;
 
 // ───────── §8-5 데이터·원칙 `/about` ─────────

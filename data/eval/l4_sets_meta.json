@@ -1,0 +1,7140 @@
+{
+ "built_at": "2026-10-25T19:19:00+09:00",
+ "truth_source": "events_loo",
+ "provisional": false,
+ "pool_n": 26,
+ "pool_event_ids": [
+  "E-208659",
+  "E-212046",
+  "E-228530",
+  "E-243432",
+  "E-251638",
+  "E-251916",
+  "E-252264",
+  "E-254509",
+  "E-255142",
+  "E-256466",
+  "E-257640",
+  "E-259192",
+  "E-259259",
+  "E-259327",
+  "E-259594",
+  "E-260014",
+  "E-261137",
+  "E-261720",
+  "E-261764",
+  "E-263119",
+  "E-264465",
+  "E-266132",
+  "E-266510",
+  "E-266838",
+  "E-267003",
+  "E-269712"
+ ],
+ "showcase_first": {
+  "seed": 1,
+  "kind": "small",
+  "hid": "H05",
+  "alias": "H05",
+  "safe_min": 12.338,
+  "r80_min": 245.348,
+  "arrival_rule_min": null,
+  "arrival_ours_min": 10.736
+ },
+ "sets": [
+  {
+   "seed": 1,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 81,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 30.494,
+   "draws": 2
+  },
+  {
+   "seed": 2,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-266510",
+   "elapsed_min": 12.913,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 215.087,
+   "draws": 1
+  },
+  {
+   "seed": 3,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-266132",
+   "elapsed_min": 10.125,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 74.895,
+   "draws": 2
+  },
+  {
+   "seed": 4,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 13.81,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 79.19,
+   "draws": 1
+  },
+  {
+   "seed": 5,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 11.292,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 87.708,
+   "draws": 1
+  },
+  {
+   "seed": 6,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-252264",
+   "elapsed_min": 37,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 2.977,
+   "draws": 1
+  },
+  {
+   "seed": 7,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 14.699,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 256.035,
+   "draws": 1
+  },
+  {
+   "seed": 8,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-261764",
+   "elapsed_min": 19,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 15.98,
+   "draws": 1
+  },
+  {
+   "seed": 9,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 11.954,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 216.046,
+   "draws": 1
+  },
+  {
+   "seed": 10,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-208659",
+   "elapsed_min": 124,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 41,
+   "draws": 2
+  },
+  {
+   "seed": 11,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 6.177,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 28.803,
+   "draws": 1
+  },
+  {
+   "seed": 12,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-251638",
+   "elapsed_min": 79,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 32.552,
+   "draws": 1
+  },
+  {
+   "seed": 13,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259259",
+   "elapsed_min": 49,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 65,
+   "draws": 2
+  },
+  {
+   "seed": 14,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 15,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1
+   },
+   "urban": true,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 91.393,
+   "draws": 2
+  },
+  {
+   "seed": 16,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-261720",
+   "elapsed_min": 7.032,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 170.378,
+   "draws": 1
+  },
+  {
+   "seed": 17,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 1
+  },
+  {
+   "seed": 18,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 14.693,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 94.327,
+   "draws": 1
+  },
+  {
+   "seed": 19,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 8.935,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 107.173,
+   "draws": 1
+  },
+  {
+   "seed": 20,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 1
+  },
+  {
+   "seed": 21,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2
+   },
+   "urban": true,
+   "event_id": "E-259192",
+   "elapsed_min": 10.713,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 139.048,
+   "draws": 1
+  },
+  {
+   "seed": 22,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-259327",
+   "elapsed_min": 15,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 180.911,
+   "draws": 1
+  },
+  {
+   "seed": 23,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 6.586,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 102.434,
+   "draws": 1
+  },
+  {
+   "seed": 24,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 5.689,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 87.311,
+   "draws": 1
+  },
+  {
+   "seed": 25,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-228530",
+   "elapsed_min": 6.002,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 68.268,
+   "draws": 1
+  },
+  {
+   "seed": 26,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 3.132,
+   "draws": 1
+  },
+  {
+   "seed": 27,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-267003",
+   "elapsed_min": 14.491,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 109.529,
+   "draws": 1
+  },
+  {
+   "seed": 28,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 19,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 15.98,
+   "draws": 1
+  },
+  {
+   "seed": 29,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 42,
+   "group": "G1",
+   "night": true,
+   "truth_remaining_min": 3,
+   "draws": 1
+  },
+  {
+   "seed": 30,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 19,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 15.98,
+   "draws": 1
+  },
+  {
+   "seed": 31,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 15,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 155.743,
+   "draws": 2
+  },
+  {
+   "seed": 32,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-251638",
+   "elapsed_min": 79,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 54.983,
+   "draws": 1
+  },
+  {
+   "seed": 33,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 34.836,
+   "draws": 1
+  },
+  {
+   "seed": 34,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-259327",
+   "elapsed_min": 9.134,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 143.566,
+   "draws": 1
+  },
+  {
+   "seed": 35,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-264465",
+   "elapsed_min": 6.475,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 249.545,
+   "draws": 1
+  },
+  {
+   "seed": 36,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 14.019,
+   "draws": 1
+  },
+  {
+   "seed": 37,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 11.539,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 131.658,
+   "draws": 1
+  },
+  {
+   "seed": 38,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 54.152,
+   "draws": 1
+  },
+  {
+   "seed": 39,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 11.866,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 129.226,
+   "draws": 1
+  },
+  {
+   "seed": 40,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 6.491,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 95.607,
+   "draws": 1
+  },
+  {
+   "seed": 41,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-212046",
+   "elapsed_min": 8.544,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 36.456,
+   "draws": 2
+  },
+  {
+   "seed": 42,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-251638",
+   "elapsed_min": 12.777,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 134.393,
+   "draws": 1
+  },
+  {
+   "seed": 43,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-259192",
+   "elapsed_min": 12.896,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 91.388,
+   "draws": 1
+  },
+  {
+   "seed": 44,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-251638",
+   "elapsed_min": 79,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 123.901,
+   "draws": 2
+  },
+  {
+   "seed": 45,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-267003",
+   "elapsed_min": 6.605,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 117.415,
+   "draws": 1
+  },
+  {
+   "seed": 46,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-264465",
+   "elapsed_min": 8.525,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 247.495,
+   "draws": 1
+  },
+  {
+   "seed": 47,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 48,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 108.139,
+   "draws": 1
+  },
+  {
+   "seed": 49,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-261720",
+   "elapsed_min": 7.184,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 128.942,
+   "draws": 1
+  },
+  {
+   "seed": 50,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 51,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-263119",
+   "elapsed_min": 5.632,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 155.348,
+   "draws": 1
+  },
+  {
+   "seed": 52,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 1
+  },
+  {
+   "seed": 53,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-243432",
+   "elapsed_min": 13.654,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 95.366,
+   "draws": 1
+  },
+  {
+   "seed": 54,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 19,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 15.98,
+   "draws": 1
+  },
+  {
+   "seed": 55,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2
+   },
+   "urban": false,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 56,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 38.966,
+   "draws": 1
+  },
+  {
+   "seed": 57,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 8.131,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 147.282,
+   "draws": 1
+  },
+  {
+   "seed": 58,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-259259",
+   "elapsed_min": 49,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 65,
+   "draws": 1
+  },
+  {
+   "seed": 59,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-269712",
+   "elapsed_min": 13.785,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 4.784,
+   "draws": 1
+  },
+  {
+   "seed": 60,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-255142",
+   "elapsed_min": 13.171,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.763,
+   "draws": 1
+  },
+  {
+   "seed": 61,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 145,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 124.715,
+   "draws": 1
+  },
+  {
+   "seed": 62,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-267003",
+   "elapsed_min": 9.753,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 114.267,
+   "draws": 1
+  },
+  {
+   "seed": 63,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-261137",
+   "elapsed_min": 14.597,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 78.403,
+   "draws": 1
+  },
+  {
+   "seed": 64,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-267003",
+   "elapsed_min": 12.029,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 111.991,
+   "draws": 1
+  },
+  {
+   "seed": 65,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-212046",
+   "elapsed_min": 42,
+   "group": "G1",
+   "night": true,
+   "truth_remaining_min": 3,
+   "draws": 1
+  },
+  {
+   "seed": 66,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-263119",
+   "elapsed_min": 60,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 100.98,
+   "draws": 1
+  },
+  {
+   "seed": 67,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-261764",
+   "elapsed_min": 11.865,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 23.115,
+   "draws": 1
+  },
+  {
+   "seed": 68,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 5.078,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 222.922,
+   "draws": 1
+  },
+  {
+   "seed": 69,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 6.999,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 261.148,
+   "draws": 1
+  },
+  {
+   "seed": 70,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-259327",
+   "elapsed_min": 10.589,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 88.178,
+   "draws": 1
+  },
+  {
+   "seed": 71,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 76.007,
+   "draws": 1
+  },
+  {
+   "seed": 72,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 145,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 93.777,
+   "draws": 1
+  },
+  {
+   "seed": 73,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 11.946,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 216.054,
+   "draws": 1
+  },
+  {
+   "seed": 74,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 5.25,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 222.75,
+   "draws": 1
+  },
+  {
+   "seed": 75,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-208659",
+   "elapsed_min": 124,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 41,
+   "draws": 1
+  },
+  {
+   "seed": 76,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 47.459,
+   "draws": 1
+  },
+  {
+   "seed": 77,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1
+   },
+   "urban": false,
+   "event_id": "E-259594",
+   "elapsed_min": 13.285,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 116.893,
+   "draws": 1
+  },
+  {
+   "seed": 78,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 9.773,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 238.841,
+   "draws": 1
+  },
+  {
+   "seed": 79,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 80,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 11.161,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 87.839,
+   "draws": 1
+  },
+  {
+   "seed": 81,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 10.054,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 34.946,
+   "draws": 1
+  },
+  {
+   "seed": 82,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 1
+   },
+   "urban": true,
+   "event_id": "E-251638",
+   "elapsed_min": 8.717,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 153.38,
+   "draws": 1
+  },
+  {
+   "seed": 83,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 10.608,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 24.372,
+   "draws": 1
+  },
+  {
+   "seed": 84,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-263119",
+   "elapsed_min": 12.762,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 148.218,
+   "draws": 1
+  },
+  {
+   "seed": 85,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-261764",
+   "elapsed_min": 11.319,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 23.661,
+   "draws": 1
+  },
+  {
+   "seed": 86,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 6.618,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 181.806,
+   "draws": 1
+  },
+  {
+   "seed": 87,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-263119",
+   "elapsed_min": 8.777,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 152.203,
+   "draws": 1
+  },
+  {
+   "seed": 88,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 6.366,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 155.586,
+   "draws": 2
+  },
+  {
+   "seed": 89,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 111.998,
+   "draws": 1
+  },
+  {
+   "seed": 90,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-256466",
+   "elapsed_min": 115,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 60.666,
+   "draws": 1
+  },
+  {
+   "seed": 91,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-263119",
+   "elapsed_min": 11.364,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 149.616,
+   "draws": 1
+  },
+  {
+   "seed": 92,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 93,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 120.578,
+   "draws": 1
+  },
+  {
+   "seed": 94,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 7.135,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 240.436,
+   "draws": 1
+  },
+  {
+   "seed": 95,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-266510",
+   "elapsed_min": 13.968,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 214.032,
+   "draws": 1
+  },
+  {
+   "seed": 96,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 8.675,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 164.187,
+   "draws": 1
+  },
+  {
+   "seed": 97,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-252264",
+   "elapsed_min": 12.06,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 29.605,
+   "draws": 1
+  },
+  {
+   "seed": 98,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-259259",
+   "elapsed_min": 5.815,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 108.185,
+   "draws": 1
+  },
+  {
+   "seed": 99,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 100,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 9.659,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 153.272,
+   "draws": 1
+  },
+  {
+   "seed": 101,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 84.372,
+   "draws": 1
+  },
+  {
+   "seed": 102,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-255142",
+   "elapsed_min": 13.179,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 29.491,
+   "draws": 2
+  },
+  {
+   "seed": 103,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-259259",
+   "elapsed_min": 8.988,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 105.012,
+   "draws": 1
+  },
+  {
+   "seed": 104,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 1
+   },
+   "urban": true,
+   "event_id": "E-212046",
+   "elapsed_min": 42,
+   "group": "G1",
+   "night": true,
+   "truth_remaining_min": 3,
+   "draws": 1
+  },
+  {
+   "seed": 105,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 9.618,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 83.382,
+   "draws": 1
+  },
+  {
+   "seed": 106,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 8.401,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 155.88,
+   "draws": 1
+  },
+  {
+   "seed": 107,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-266510",
+   "elapsed_min": 8.524,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 219.476,
+   "draws": 1
+  },
+  {
+   "seed": 108,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-255142",
+   "elapsed_min": 9.248,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 57.442,
+   "draws": 1
+  },
+  {
+   "seed": 109,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-269712",
+   "elapsed_min": 14.475,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 11.105,
+   "draws": 2
+  },
+  {
+   "seed": 110,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-251638",
+   "elapsed_min": 8.843,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 81.681,
+   "draws": 1
+  },
+  {
+   "seed": 111,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-264465",
+   "elapsed_min": 10.983,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 245.037,
+   "draws": 1
+  },
+  {
+   "seed": 112,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1
+   },
+   "urban": true,
+   "event_id": "E-251638",
+   "elapsed_min": 12.506,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 74.309,
+   "draws": 1
+  },
+  {
+   "seed": 113,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-208659",
+   "elapsed_min": 14.019,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 150.981,
+   "draws": 1
+  },
+  {
+   "seed": 114,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 7.251,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 101.769,
+   "draws": 1
+  },
+  {
+   "seed": 115,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-254509",
+   "elapsed_min": 8.287,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 160.882,
+   "draws": 1
+  },
+  {
+   "seed": 116,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 5.118,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 103.902,
+   "draws": 1
+  },
+  {
+   "seed": 117,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-251638",
+   "elapsed_min": 79,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 37.963,
+   "draws": 1
+  },
+  {
+   "seed": 118,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-228530",
+   "elapsed_min": 56,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 4.525,
+   "draws": 1
+  },
+  {
+   "seed": 119,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-251916",
+   "elapsed_min": 11.486,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 32.196,
+   "draws": 1
+  },
+  {
+   "seed": 120,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 78.567,
+   "draws": 1
+  },
+  {
+   "seed": 121,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 5.515,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 156.832,
+   "draws": 1
+  },
+  {
+   "seed": 122,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 135.139,
+   "draws": 1
+  },
+  {
+   "seed": 123,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-255142",
+   "elapsed_min": 12.058,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.527,
+   "draws": 2
+  },
+  {
+   "seed": 124,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 1
+  },
+  {
+   "seed": 125,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-256466",
+   "elapsed_min": 13.935,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 167.706,
+   "draws": 1
+  },
+  {
+   "seed": 126,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-261137",
+   "elapsed_min": 8.013,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 84.987,
+   "draws": 2
+  },
+  {
+   "seed": 127,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-257640",
+   "elapsed_min": 14.511,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 193.597,
+   "draws": 1
+  },
+  {
+   "seed": 128,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259192",
+   "elapsed_min": 10.153,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 134.301,
+   "draws": 1
+  },
+  {
+   "seed": 129,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 130,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 10.342,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 24.638,
+   "draws": 1
+  },
+  {
+   "seed": 131,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 5.935,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 145.795,
+   "draws": 1
+  },
+  {
+   "seed": 132,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 7.257,
+   "draws": 1
+  },
+  {
+   "seed": 133,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 2
+  },
+  {
+   "seed": 134,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1
+   },
+   "urban": false,
+   "event_id": "E-228530",
+   "elapsed_min": 56,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 8.378,
+   "draws": 1
+  },
+  {
+   "seed": 135,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 14.862,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 76.597,
+   "draws": 1
+  },
+  {
+   "seed": 136,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-255142",
+   "elapsed_min": 10.232,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 54.24,
+   "draws": 1
+  },
+  {
+   "seed": 137,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 4.83,
+   "draws": 1
+  },
+  {
+   "seed": 138,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 139,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-251638",
+   "elapsed_min": 79,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 19.857,
+   "draws": 1
+  },
+  {
+   "seed": 140,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 11.746,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 112.274,
+   "draws": 1
+  },
+  {
+   "seed": 141,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259259",
+   "elapsed_min": 10.939,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 103.061,
+   "draws": 1
+  },
+  {
+   "seed": 142,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 6.124,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 173.542,
+   "draws": 1
+  },
+  {
+   "seed": 143,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-261137",
+   "elapsed_min": 13.154,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 79.846,
+   "draws": 1
+  },
+  {
+   "seed": 144,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1
+   },
+   "urban": false,
+   "event_id": "E-259259",
+   "elapsed_min": 11.397,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 102.603,
+   "draws": 1
+  },
+  {
+   "seed": 145,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1
+   },
+   "urban": true,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 83.243,
+   "draws": 1
+  },
+  {
+   "seed": 146,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 1
+  },
+  {
+   "seed": 147,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 145,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 91.378,
+   "draws": 1
+  },
+  {
+   "seed": 148,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 1
+  },
+  {
+   "seed": 149,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 42,
+   "group": "G1",
+   "night": true,
+   "truth_remaining_min": 3,
+   "draws": 1
+  },
+  {
+   "seed": 150,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 6.237,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 144.338,
+   "draws": 1
+  },
+  {
+   "seed": 151,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-259192",
+   "elapsed_min": 6.75,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 61.207,
+   "draws": 1
+  },
+  {
+   "seed": 152,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 7.461,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 101.559,
+   "draws": 1
+  },
+  {
+   "seed": 153,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 11.301,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 112.719,
+   "draws": 1
+  },
+  {
+   "seed": 154,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 6.484,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 149.996,
+   "draws": 1
+  },
+  {
+   "seed": 155,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-254509",
+   "elapsed_min": 12.345,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 150.276,
+   "draws": 1
+  },
+  {
+   "seed": 156,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3
+   },
+   "urban": true,
+   "event_id": "E-252264",
+   "elapsed_min": 13.195,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 29.726,
+   "draws": 1
+  },
+  {
+   "seed": 157,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 19,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 15.98,
+   "draws": 1
+  },
+  {
+   "seed": 158,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 1
+  },
+  {
+   "seed": 159,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 1
+  },
+  {
+   "seed": 160,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 145,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 117.4,
+   "draws": 1
+  },
+  {
+   "seed": 161,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 10.562,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 88.438,
+   "draws": 1
+  },
+  {
+   "seed": 162,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-263119",
+   "elapsed_min": 60,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 100.98,
+   "draws": 1
+  },
+  {
+   "seed": 163,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-266838",
+   "elapsed_min": 6.638,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 246.512,
+   "draws": 1
+  },
+  {
+   "seed": 164,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-252264",
+   "elapsed_min": 37,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 9.305,
+   "draws": 1
+  },
+  {
+   "seed": 165,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 166,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 7.83,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 132.658,
+   "draws": 1
+  },
+  {
+   "seed": 167,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 168,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-256466",
+   "elapsed_min": 6.025,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 173.989,
+   "draws": 1
+  },
+  {
+   "seed": 169,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-264465",
+   "elapsed_min": 14.543,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 241.477,
+   "draws": 1
+  },
+  {
+   "seed": 170,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-228530",
+   "elapsed_min": 7.767,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 54.23,
+   "draws": 2
+  },
+  {
+   "seed": 171,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 12.894,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 256.283,
+   "draws": 1
+  },
+  {
+   "seed": 172,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 173,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 155.854,
+   "draws": 1
+  },
+  {
+   "seed": 174,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 15,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 205.112,
+   "draws": 1
+  },
+  {
+   "seed": 175,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 2.234,
+   "draws": 1
+  },
+  {
+   "seed": 176,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 1
+  },
+  {
+   "seed": 177,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-269712",
+   "elapsed_min": 11.124,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 48.502,
+   "draws": 1
+  },
+  {
+   "seed": 178,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-208659",
+   "elapsed_min": 124,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 41,
+   "draws": 1
+  },
+  {
+   "seed": 179,
+   "kind": "small",
+   "n_households": 7,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 10.261,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 34.739,
+   "draws": 1
+  },
+  {
+   "seed": 180,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 14.766,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 213.234,
+   "draws": 1
+  },
+  {
+   "seed": 181,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 11.799,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 241.516,
+   "draws": 1
+  },
+  {
+   "seed": 182,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 8.469,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 100.551,
+   "draws": 1
+  },
+  {
+   "seed": 183,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 9.839,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 218.161,
+   "draws": 1
+  },
+  {
+   "seed": 184,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1
+   },
+   "urban": false,
+   "event_id": "E-263119",
+   "elapsed_min": 60,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 100.98,
+   "draws": 1
+  },
+  {
+   "seed": 185,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-251916",
+   "elapsed_min": 5.628,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 21.984,
+   "draws": 1
+  },
+  {
+   "seed": 186,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-252264",
+   "elapsed_min": 13.091,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 25.018,
+   "draws": 1
+  },
+  {
+   "seed": 187,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 59.345,
+   "draws": 1
+  },
+  {
+   "seed": 188,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 189,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 8.614,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 84.386,
+   "draws": 1
+  },
+  {
+   "seed": 190,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 5.143,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 228.856,
+   "draws": 1
+  },
+  {
+   "seed": 191,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 10.369,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 95.285,
+   "draws": 1
+  },
+  {
+   "seed": 192,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 85.33,
+   "draws": 3
+  },
+  {
+   "seed": 193,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 24.121,
+   "draws": 1
+  },
+  {
+   "seed": 194,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-208659",
+   "elapsed_min": 14.186,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 150.814,
+   "draws": 1
+  },
+  {
+   "seed": 195,
+   "kind": "small",
+   "n_households": 5,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-256466",
+   "elapsed_min": 6.829,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 180.108,
+   "draws": 1
+  },
+  {
+   "seed": 196,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 1,
+    "PS_S": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-255142",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 29.88,
+   "draws": 1
+  },
+  {
+   "seed": 197,
+   "kind": "small",
+   "n_households": 8,
+   "resources": {
+    "PS_L": 3,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 17.817,
+   "draws": 2
+  },
+  {
+   "seed": 198,
+   "kind": "small",
+   "n_households": 4,
+   "resources": {
+    "PS_L": 3,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 7.268,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 81.18,
+   "draws": 1
+  },
+  {
+   "seed": 199,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 2,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 15,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 131.653,
+   "draws": 1
+  },
+  {
+   "seed": 200,
+   "kind": "small",
+   "n_households": 6,
+   "resources": {
+    "PS_L": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 6.931,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 28.049,
+   "draws": 1
+  },
+  {
+   "seed": 1001,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-269712",
+   "elapsed_min": 8.162,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 41.24,
+   "draws": 1
+  },
+  {
+   "seed": 1002,
+   "kind": "wide",
+   "n_households": 40,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-208659",
+   "elapsed_min": 8.753,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 156.247,
+   "draws": 1
+  },
+  {
+   "seed": 1003,
+   "kind": "wide",
+   "n_households": 33,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 2
+  },
+  {
+   "seed": 1004,
+   "kind": "wide",
+   "n_households": 47,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 5.803,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 223.071,
+   "draws": 1
+  },
+  {
+   "seed": 1005,
+   "kind": "wide",
+   "n_households": 34,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 1
+  },
+  {
+   "seed": 1006,
+   "kind": "wide",
+   "n_households": 26,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 1
+  },
+  {
+   "seed": 1007,
+   "kind": "wide",
+   "n_households": 32,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-212046",
+   "elapsed_min": 42,
+   "group": "G1",
+   "night": true,
+   "truth_remaining_min": 3,
+   "draws": 1
+  },
+  {
+   "seed": 1008,
+   "kind": "wide",
+   "n_households": 45,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 42,
+   "group": "G1",
+   "night": true,
+   "truth_remaining_min": 3,
+   "draws": 1
+  },
+  {
+   "seed": 1009,
+   "kind": "wide",
+   "n_households": 46,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-252264",
+   "elapsed_min": 8.371,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 47.03,
+   "draws": 1
+  },
+  {
+   "seed": 1010,
+   "kind": "wide",
+   "n_households": 31,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 12.929,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 215.071,
+   "draws": 1
+  },
+  {
+   "seed": 1011,
+   "kind": "wide",
+   "n_households": 24,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 2,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-261720",
+   "elapsed_min": 81,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 107.025,
+   "draws": 1
+  },
+  {
+   "seed": 1012,
+   "kind": "wide",
+   "n_households": 23,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 1
+  },
+  {
+   "seed": 1013,
+   "kind": "wide",
+   "n_households": 24,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 10.797,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 32.216,
+   "draws": 1
+  },
+  {
+   "seed": 1014,
+   "kind": "wide",
+   "n_households": 26,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 1015,
+   "kind": "wide",
+   "n_households": 23,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-263119",
+   "elapsed_min": 9.08,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 151.9,
+   "draws": 1
+  },
+  {
+   "seed": 1016,
+   "kind": "wide",
+   "n_households": 34,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 1017,
+   "kind": "wide",
+   "n_households": 22,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 1018,
+   "kind": "wide",
+   "n_households": 33,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-269712",
+   "elapsed_min": 9.617,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 38.304,
+   "draws": 1
+  },
+  {
+   "seed": 1019,
+   "kind": "wide",
+   "n_households": 48,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 3
+   },
+   "urban": false,
+   "event_id": "E-243432",
+   "elapsed_min": 10.124,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 98.896,
+   "draws": 1
+  },
+  {
+   "seed": 1020,
+   "kind": "wide",
+   "n_households": 49,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 7.968,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 197.897,
+   "draws": 1
+  },
+  {
+   "seed": 1021,
+   "kind": "wide",
+   "n_households": 31,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 11.11,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 112.91,
+   "draws": 2
+  },
+  {
+   "seed": 1022,
+   "kind": "wide",
+   "n_households": 50,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 1023,
+   "kind": "wide",
+   "n_households": 50,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-252264",
+   "elapsed_min": 7.895,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 40.595,
+   "draws": 1
+  },
+  {
+   "seed": 1024,
+   "kind": "wide",
+   "n_households": 43,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 82.611,
+   "draws": 1
+  },
+  {
+   "seed": 1025,
+   "kind": "wide",
+   "n_households": 43,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-259192",
+   "elapsed_min": 7.196,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 84.592,
+   "draws": 2
+  },
+  {
+   "seed": 1026,
+   "kind": "wide",
+   "n_households": 20,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-264465",
+   "elapsed_min": 7.464,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 248.556,
+   "draws": 1
+  },
+  {
+   "seed": 1027,
+   "kind": "wide",
+   "n_households": 21,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 1,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-261720",
+   "elapsed_min": 81,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 26.682,
+   "draws": 1
+  },
+  {
+   "seed": 1028,
+   "kind": "wide",
+   "n_households": 20,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 58.225,
+   "draws": 1
+  },
+  {
+   "seed": 1029,
+   "kind": "wide",
+   "n_households": 43,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 37.733,
+   "draws": 1
+  },
+  {
+   "seed": 1030,
+   "kind": "wide",
+   "n_households": 28,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-256466",
+   "elapsed_min": 6.254,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 171.391,
+   "draws": 1
+  },
+  {
+   "seed": 1031,
+   "kind": "wide",
+   "n_households": 41,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-208659",
+   "elapsed_min": 6.503,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 158.497,
+   "draws": 1
+  },
+  {
+   "seed": 1032,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 12.327,
+   "draws": 2
+  },
+  {
+   "seed": 1033,
+   "kind": "wide",
+   "n_households": 38,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 1034,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 9.27,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 158.5,
+   "draws": 1
+  },
+  {
+   "seed": 1035,
+   "kind": "wide",
+   "n_households": 34,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 13.671,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 31.329,
+   "draws": 1
+  },
+  {
+   "seed": 1036,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-259327",
+   "elapsed_min": 15,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 222.412,
+   "draws": 1
+  },
+  {
+   "seed": 1037,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 1038,
+   "kind": "wide",
+   "n_households": 42,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 1039,
+   "kind": "wide",
+   "n_households": 23,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-256466",
+   "elapsed_min": 11.871,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 106.452,
+   "draws": 1
+  },
+  {
+   "seed": 1040,
+   "kind": "wide",
+   "n_households": 50,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-251638",
+   "elapsed_min": 79,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 109.471,
+   "draws": 1
+  },
+  {
+   "seed": 1041,
+   "kind": "wide",
+   "n_households": 34,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 1
+  },
+  {
+   "seed": 1042,
+   "kind": "wide",
+   "n_households": 26,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 1043,
+   "kind": "wide",
+   "n_households": 47,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 11.716,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 87.284,
+   "draws": 1
+  },
+  {
+   "seed": 1044,
+   "kind": "wide",
+   "n_households": 25,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-208659",
+   "elapsed_min": 124,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 41,
+   "draws": 1
+  },
+  {
+   "seed": 1045,
+   "kind": "wide",
+   "n_households": 50,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-269712",
+   "elapsed_min": 12.719,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 10.883,
+   "draws": 1
+  },
+  {
+   "seed": 1046,
+   "kind": "wide",
+   "n_households": 32,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 5.456,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 93.544,
+   "draws": 1
+  },
+  {
+   "seed": 1047,
+   "kind": "wide",
+   "n_households": 20,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-252264",
+   "elapsed_min": 37,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 17.657,
+   "draws": 1
+  },
+  {
+   "seed": 1048,
+   "kind": "wide",
+   "n_households": 26,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 14.934,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 78.066,
+   "draws": 1
+  },
+  {
+   "seed": 1049,
+   "kind": "wide",
+   "n_households": 26,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 1050,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-252264",
+   "elapsed_min": 37,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 4.264,
+   "draws": 1
+  },
+  {
+   "seed": 1051,
+   "kind": "wide",
+   "n_households": 37,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-266132",
+   "elapsed_min": 13.017,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 72.003,
+   "draws": 1
+  },
+  {
+   "seed": 1052,
+   "kind": "wide",
+   "n_households": 46,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 6.582,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 221.418,
+   "draws": 1
+  },
+  {
+   "seed": 1053,
+   "kind": "wide",
+   "n_households": 44,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-252264",
+   "elapsed_min": 37,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 18.825,
+   "draws": 1
+  },
+  {
+   "seed": 1054,
+   "kind": "wide",
+   "n_households": 40,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-251638",
+   "elapsed_min": 9.644,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 121.951,
+   "draws": 1
+  },
+  {
+   "seed": 1055,
+   "kind": "wide",
+   "n_households": 34,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 145,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 121.526,
+   "draws": 1
+  },
+  {
+   "seed": 1056,
+   "kind": "wide",
+   "n_households": 24,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-263119",
+   "elapsed_min": 5.43,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 155.55,
+   "draws": 1
+  },
+  {
+   "seed": 1057,
+   "kind": "wide",
+   "n_households": 43,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 1
+  },
+  {
+   "seed": 1058,
+   "kind": "wide",
+   "n_households": 20,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-255142",
+   "elapsed_min": 5.744,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 61.79,
+   "draws": 1
+  },
+  {
+   "seed": 1059,
+   "kind": "wide",
+   "n_households": 44,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 5.19,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 118.83,
+   "draws": 1
+  },
+  {
+   "seed": 1060,
+   "kind": "wide",
+   "n_households": 23,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-261137",
+   "elapsed_min": 5.246,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 87.754,
+   "draws": 1
+  },
+  {
+   "seed": 1061,
+   "kind": "wide",
+   "n_households": 46,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 7.128,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 101.892,
+   "draws": 1
+  },
+  {
+   "seed": 1062,
+   "kind": "wide",
+   "n_households": 23,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 81,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 24.037,
+   "draws": 1
+  },
+  {
+   "seed": 1063,
+   "kind": "wide",
+   "n_households": 40,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 181.228,
+   "draws": 2
+  },
+  {
+   "seed": 1064,
+   "kind": "wide",
+   "n_households": 23,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 109.604,
+   "draws": 1
+  },
+  {
+   "seed": 1065,
+   "kind": "wide",
+   "n_households": 37,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 6.628,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 28.352,
+   "draws": 1
+  },
+  {
+   "seed": 1066,
+   "kind": "wide",
+   "n_households": 20,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-255142",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 16.494,
+   "draws": 1
+  },
+  {
+   "seed": 1067,
+   "kind": "wide",
+   "n_households": 40,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-255142",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 9.371,
+   "draws": 1
+  },
+  {
+   "seed": 1068,
+   "kind": "wide",
+   "n_households": 48,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 12.069,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 195.224,
+   "draws": 1
+  },
+  {
+   "seed": 1069,
+   "kind": "wide",
+   "n_households": 27,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-228530",
+   "elapsed_min": 10.879,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 49.634,
+   "draws": 1
+  },
+  {
+   "seed": 1070,
+   "kind": "wide",
+   "n_households": 48,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-251638",
+   "elapsed_min": 12.98,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 166.921,
+   "draws": 1
+  },
+  {
+   "seed": 1071,
+   "kind": "wide",
+   "n_households": 36,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-243432",
+   "elapsed_min": 5.082,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 103.938,
+   "draws": 2
+  },
+  {
+   "seed": 1072,
+   "kind": "wide",
+   "n_households": 21,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-251638",
+   "elapsed_min": 79,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 11.047,
+   "draws": 1
+  },
+  {
+   "seed": 1073,
+   "kind": "wide",
+   "n_households": 26,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-254509",
+   "elapsed_min": 5.462,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 145.476,
+   "draws": 1
+  },
+  {
+   "seed": 1074,
+   "kind": "wide",
+   "n_households": 34,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 10.477,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 98.543,
+   "draws": 1
+  },
+  {
+   "seed": 1075,
+   "kind": "wide",
+   "n_households": 25,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-251638",
+   "elapsed_min": 7.478,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 131.122,
+   "draws": 1
+  },
+  {
+   "seed": 1076,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 13.19,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 214.81,
+   "draws": 1
+  },
+  {
+   "seed": 1077,
+   "kind": "wide",
+   "n_households": 41,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-269712",
+   "elapsed_min": 14.669,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 56.843,
+   "draws": 1
+  },
+  {
+   "seed": 1078,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 8.876,
+   "draws": 1
+  },
+  {
+   "seed": 1079,
+   "kind": "wide",
+   "n_households": 31,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 8.206,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 90.794,
+   "draws": 1
+  },
+  {
+   "seed": 1080,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-269712",
+   "elapsed_min": 14.172,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 52.549,
+   "draws": 1
+  },
+  {
+   "seed": 1081,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-208659",
+   "elapsed_min": 124,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 41,
+   "draws": 1
+  },
+  {
+   "seed": 1082,
+   "kind": "wide",
+   "n_households": 35,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-261764",
+   "elapsed_min": 13.834,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 21.146,
+   "draws": 1
+  },
+  {
+   "seed": 1083,
+   "kind": "wide",
+   "n_households": 50,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 84.307,
+   "draws": 1
+  },
+  {
+   "seed": 1084,
+   "kind": "wide",
+   "n_households": 40,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-252264",
+   "elapsed_min": 37,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 15.575,
+   "draws": 1
+  },
+  {
+   "seed": 1085,
+   "kind": "wide",
+   "n_households": 34,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-251638",
+   "elapsed_min": 11.952,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 192.021,
+   "draws": 1
+  },
+  {
+   "seed": 1086,
+   "kind": "wide",
+   "n_households": 42,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 7.179,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 91.821,
+   "draws": 1
+  },
+  {
+   "seed": 1087,
+   "kind": "wide",
+   "n_households": 37,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 0.519,
+   "draws": 2
+  },
+  {
+   "seed": 1088,
+   "kind": "wide",
+   "n_households": 38,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-266838",
+   "elapsed_min": 12.947,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 239.79,
+   "draws": 1
+  },
+  {
+   "seed": 1089,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-252264",
+   "elapsed_min": 37,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 17.864,
+   "draws": 1
+  },
+  {
+   "seed": 1090,
+   "kind": "wide",
+   "n_households": 42,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-266132",
+   "elapsed_min": 9.655,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 75.365,
+   "draws": 1
+  },
+  {
+   "seed": 1091,
+   "kind": "wide",
+   "n_households": 20,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-261764",
+   "elapsed_min": 19,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 15.98,
+   "draws": 1
+  },
+  {
+   "seed": 1092,
+   "kind": "wide",
+   "n_households": 22,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-228530",
+   "elapsed_min": 56,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 21.39,
+   "draws": 1
+  },
+  {
+   "seed": 1093,
+   "kind": "wide",
+   "n_households": 31,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-269712",
+   "elapsed_min": 10.26,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 6.261,
+   "draws": 1
+  },
+  {
+   "seed": 1094,
+   "kind": "wide",
+   "n_households": 45,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-257640",
+   "elapsed_min": 6.396,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 160.774,
+   "draws": 1
+  },
+  {
+   "seed": 1095,
+   "kind": "wide",
+   "n_households": 44,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 99.475,
+   "draws": 1
+  },
+  {
+   "seed": 1096,
+   "kind": "wide",
+   "n_households": 28,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-263119",
+   "elapsed_min": 60,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 100.98,
+   "draws": 1
+  },
+  {
+   "seed": 1097,
+   "kind": "wide",
+   "n_households": 32,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 46.265,
+   "draws": 1
+  },
+  {
+   "seed": 1098,
+   "kind": "wide",
+   "n_households": 47,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 1
+  },
+  {
+   "seed": 1099,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 74,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 19,
+   "draws": 1
+  },
+  {
+   "seed": 1100,
+   "kind": "wide",
+   "n_households": 50,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 48.56,
+   "draws": 1
+  },
+  {
+   "seed": 1101,
+   "kind": "wide",
+   "n_households": 45,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 1102,
+   "kind": "wide",
+   "n_households": 42,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 41.075,
+   "draws": 1
+  },
+  {
+   "seed": 1103,
+   "kind": "wide",
+   "n_households": 24,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 2
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 11.782,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 87.218,
+   "draws": 1
+  },
+  {
+   "seed": 1104,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-256466",
+   "elapsed_min": 115,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 17.106,
+   "draws": 1
+  },
+  {
+   "seed": 1105,
+   "kind": "wide",
+   "n_households": 50,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 1
+  },
+  {
+   "seed": 1106,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 145,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 128.359,
+   "draws": 1
+  },
+  {
+   "seed": 1107,
+   "kind": "wide",
+   "n_households": 43,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 110.096,
+   "draws": 1
+  },
+  {
+   "seed": 1108,
+   "kind": "wide",
+   "n_households": 49,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 13.162,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 95.858,
+   "draws": 1
+  },
+  {
+   "seed": 1109,
+   "kind": "wide",
+   "n_households": 20,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-252264",
+   "elapsed_min": 12.018,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 37.059,
+   "draws": 2
+  },
+  {
+   "seed": 1110,
+   "kind": "wide",
+   "n_households": 21,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 12.207,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 80.128,
+   "draws": 1
+  },
+  {
+   "seed": 1111,
+   "kind": "wide",
+   "n_households": 47,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 81,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 3.397,
+   "draws": 1
+  },
+  {
+   "seed": 1112,
+   "kind": "wide",
+   "n_households": 32,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 66.022,
+   "draws": 1
+  },
+  {
+   "seed": 1113,
+   "kind": "wide",
+   "n_households": 27,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 3,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-266838",
+   "elapsed_min": 145,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 118.096,
+   "draws": 1
+  },
+  {
+   "seed": 1114,
+   "kind": "wide",
+   "n_households": 21,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-228530",
+   "elapsed_min": 56,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 17.066,
+   "draws": 1
+  },
+  {
+   "seed": 1115,
+   "kind": "wide",
+   "n_households": 45,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 12.223,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 96.797,
+   "draws": 1
+  },
+  {
+   "seed": 1116,
+   "kind": "wide",
+   "n_households": 36,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 8.179,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 90.821,
+   "draws": 1
+  },
+  {
+   "seed": 1117,
+   "kind": "wide",
+   "n_households": 44,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 24.661,
+   "draws": 1
+  },
+  {
+   "seed": 1118,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 3
+   },
+   "urban": true,
+   "event_id": "E-254509",
+   "elapsed_min": 5.883,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 143.555,
+   "draws": 1
+  },
+  {
+   "seed": 1119,
+   "kind": "wide",
+   "n_households": 31,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-263119",
+   "elapsed_min": 60,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 100.98,
+   "draws": 1
+  },
+  {
+   "seed": 1120,
+   "kind": "wide",
+   "n_households": 42,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 9.185,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 35.815,
+   "draws": 1
+  },
+  {
+   "seed": 1121,
+   "kind": "wide",
+   "n_households": 32,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-228530",
+   "elapsed_min": 11.863,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 49.664,
+   "draws": 1
+  },
+  {
+   "seed": 1122,
+   "kind": "wide",
+   "n_households": 27,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 2
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 6.303,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 243.772,
+   "draws": 1
+  },
+  {
+   "seed": 1123,
+   "kind": "wide",
+   "n_households": 40,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 1124,
+   "kind": "wide",
+   "n_households": 40,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-228530",
+   "elapsed_min": 56,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 15.687,
+   "draws": 1
+  },
+  {
+   "seed": 1125,
+   "kind": "wide",
+   "n_households": 30,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-255142",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 0.285,
+   "draws": 1
+  },
+  {
+   "seed": 1126,
+   "kind": "wide",
+   "n_households": 38,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 22.28,
+   "draws": 1
+  },
+  {
+   "seed": 1127,
+   "kind": "wide",
+   "n_households": 23,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-252264",
+   "elapsed_min": 37,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 10.645,
+   "draws": 1
+  },
+  {
+   "seed": 1128,
+   "kind": "wide",
+   "n_households": 48,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259259",
+   "elapsed_min": 49,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 65,
+   "draws": 1
+  },
+  {
+   "seed": 1129,
+   "kind": "wide",
+   "n_households": 45,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-254509",
+   "elapsed_min": 118,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 76.541,
+   "draws": 1
+  },
+  {
+   "seed": 1130,
+   "kind": "wide",
+   "n_households": 37,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-256466",
+   "elapsed_min": 115,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 52.328,
+   "draws": 1
+  },
+  {
+   "seed": 1131,
+   "kind": "wide",
+   "n_households": 49,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-255142",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 7.911,
+   "draws": 1
+  },
+  {
+   "seed": 1132,
+   "kind": "wide",
+   "n_households": 28,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-228530",
+   "elapsed_min": 56,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 6.334,
+   "draws": 1
+  },
+  {
+   "seed": 1133,
+   "kind": "wide",
+   "n_households": 23,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-243432",
+   "elapsed_min": 10.506,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 98.514,
+   "draws": 2
+  },
+  {
+   "seed": 1134,
+   "kind": "wide",
+   "n_households": 29,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 2
+   },
+   "urban": true,
+   "event_id": "E-252264",
+   "elapsed_min": 8.938,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 46.437,
+   "draws": 1
+  },
+  {
+   "seed": 1135,
+   "kind": "wide",
+   "n_households": 26,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 7.232,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 107.479,
+   "draws": 1
+  },
+  {
+   "seed": 1136,
+   "kind": "wide",
+   "n_households": 31,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-261720",
+   "elapsed_min": 81,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 17.985,
+   "draws": 2
+  },
+  {
+   "seed": 1137,
+   "kind": "wide",
+   "n_households": 48,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-255142",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 16.003,
+   "draws": 1
+  },
+  {
+   "seed": 1138,
+   "kind": "wide",
+   "n_households": 48,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 42,
+   "group": "G1",
+   "night": true,
+   "truth_remaining_min": 3,
+   "draws": 1
+  },
+  {
+   "seed": 1139,
+   "kind": "wide",
+   "n_households": 32,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 2
+   },
+   "urban": true,
+   "event_id": "E-256466",
+   "elapsed_min": 115,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 31.505,
+   "draws": 1
+  },
+  {
+   "seed": 1140,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 13.506,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 85.494,
+   "draws": 1
+  },
+  {
+   "seed": 1141,
+   "kind": "wide",
+   "n_households": 31,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 10.847,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 126.887,
+   "draws": 1
+  },
+  {
+   "seed": 1142,
+   "kind": "wide",
+   "n_households": 49,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 1
+   },
+   "urban": false,
+   "event_id": "E-257640",
+   "elapsed_min": 12.942,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 176.579,
+   "draws": 1
+  },
+  {
+   "seed": 1143,
+   "kind": "wide",
+   "n_households": 43,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-261137",
+   "elapsed_min": 8.89,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 84.11,
+   "draws": 1
+  },
+  {
+   "seed": 1144,
+   "kind": "wide",
+   "n_households": 20,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-266132",
+   "elapsed_min": 13.951,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 71.069,
+   "draws": 1
+  },
+  {
+   "seed": 1145,
+   "kind": "wide",
+   "n_households": 35,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 1146,
+   "kind": "wide",
+   "n_households": 20,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-259327",
+   "elapsed_min": 15,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 186.803,
+   "draws": 2
+  },
+  {
+   "seed": 1147,
+   "kind": "wide",
+   "n_households": 37,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-261764",
+   "elapsed_min": 19,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 15.98,
+   "draws": 1
+  },
+  {
+   "seed": 1148,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-259259",
+   "elapsed_min": 6.636,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 107.364,
+   "draws": 1
+  },
+  {
+   "seed": 1149,
+   "kind": "wide",
+   "n_households": 46,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-251638",
+   "elapsed_min": 79,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.122,
+   "draws": 1
+  },
+  {
+   "seed": 1150,
+   "kind": "wide",
+   "n_households": 44,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 8.843,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 142.239,
+   "draws": 1
+  },
+  {
+   "seed": 1151,
+   "kind": "wide",
+   "n_households": 38,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 2
+   },
+   "urban": true,
+   "event_id": "E-257640",
+   "elapsed_min": 40,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 145.286,
+   "draws": 1
+  },
+  {
+   "seed": 1152,
+   "kind": "wide",
+   "n_households": 31,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 81,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 99.167,
+   "draws": 1
+  },
+  {
+   "seed": 1153,
+   "kind": "wide",
+   "n_households": 49,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 1,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-261720",
+   "elapsed_min": 14.171,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 176.08,
+   "draws": 1
+  },
+  {
+   "seed": 1154,
+   "kind": "wide",
+   "n_households": 31,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 3
+   },
+   "urban": true,
+   "event_id": "E-266838",
+   "elapsed_min": 145,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 112.396,
+   "draws": 1
+  },
+  {
+   "seed": 1155,
+   "kind": "wide",
+   "n_households": 24,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 10.078,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 34.922,
+   "draws": 1
+  },
+  {
+   "seed": 1156,
+   "kind": "wide",
+   "n_households": 25,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 1157,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 3,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 1
+  },
+  {
+   "seed": 1158,
+   "kind": "wide",
+   "n_households": 33,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-269712",
+   "elapsed_min": 9.378,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 0.682,
+   "draws": 1
+  },
+  {
+   "seed": 1159,
+   "kind": "wide",
+   "n_households": 37,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 2
+   },
+   "urban": false,
+   "event_id": "E-266132",
+   "elapsed_min": 14.655,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 70.365,
+   "draws": 1
+  },
+  {
+   "seed": 1160,
+   "kind": "wide",
+   "n_households": 45,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 1161,
+   "kind": "wide",
+   "n_households": 50,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-264465",
+   "elapsed_min": 10.175,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 245.845,
+   "draws": 1
+  },
+  {
+   "seed": 1162,
+   "kind": "wide",
+   "n_households": 36,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-251916",
+   "elapsed_min": 10.806,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 17.946,
+   "draws": 1
+  },
+  {
+   "seed": 1163,
+   "kind": "wide",
+   "n_households": 35,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 3,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 1164,
+   "kind": "wide",
+   "n_households": 24,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-255142",
+   "elapsed_min": 6.41,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 53.996,
+   "draws": 1
+  },
+  {
+   "seed": 1165,
+   "kind": "wide",
+   "n_households": 37,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 11.791,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 33.209,
+   "draws": 1
+  },
+  {
+   "seed": 1166,
+   "kind": "wide",
+   "n_households": 25,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 2
+  },
+  {
+   "seed": 1167,
+   "kind": "wide",
+   "n_households": 43,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-212046",
+   "elapsed_min": 42,
+   "group": "G1",
+   "night": true,
+   "truth_remaining_min": 3,
+   "draws": 1
+  },
+  {
+   "seed": 1168,
+   "kind": "wide",
+   "n_households": 45,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-259259",
+   "elapsed_min": 49,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 65,
+   "draws": 1
+  },
+  {
+   "seed": 1169,
+   "kind": "wide",
+   "n_households": 47,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-251638",
+   "elapsed_min": 13.737,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 149.907,
+   "draws": 1
+  },
+  {
+   "seed": 1170,
+   "kind": "wide",
+   "n_households": 43,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-208659",
+   "elapsed_min": 5.915,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 159.085,
+   "draws": 1
+  },
+  {
+   "seed": 1171,
+   "kind": "wide",
+   "n_households": 25,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-261137",
+   "elapsed_min": 12.315,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 80.685,
+   "draws": 1
+  },
+  {
+   "seed": 1172,
+   "kind": "wide",
+   "n_households": 35,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 13.135,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 85.865,
+   "draws": 1
+  },
+  {
+   "seed": 1173,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-251916",
+   "elapsed_min": 11.839,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 18.475,
+   "draws": 1
+  },
+  {
+   "seed": 1174,
+   "kind": "wide",
+   "n_households": 33,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-257640",
+   "elapsed_min": 12.621,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 129.656,
+   "draws": 1
+  },
+  {
+   "seed": 1175,
+   "kind": "wide",
+   "n_households": 28,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 67.435,
+   "draws": 1
+  },
+  {
+   "seed": 1176,
+   "kind": "wide",
+   "n_households": 36,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-266838",
+   "elapsed_min": 13.036,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 258.498,
+   "draws": 2
+  },
+  {
+   "seed": 1177,
+   "kind": "wide",
+   "n_households": 27,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 1,
+    "ESS": 3,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-263119",
+   "elapsed_min": 8.838,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 152.142,
+   "draws": 1
+  },
+  {
+   "seed": 1178,
+   "kind": "wide",
+   "n_households": 29,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-261764",
+   "elapsed_min": 19,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 15.98,
+   "draws": 1
+  },
+  {
+   "seed": 1179,
+   "kind": "wide",
+   "n_households": 25,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 2,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 9.92,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 110.402,
+   "draws": 1
+  },
+  {
+   "seed": 1180,
+   "kind": "wide",
+   "n_households": 36,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-254509",
+   "elapsed_min": 8.043,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 175.939,
+   "draws": 1
+  },
+  {
+   "seed": 1181,
+   "kind": "wide",
+   "n_households": 35,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 85,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 39.02,
+   "draws": 1
+  },
+  {
+   "seed": 1182,
+   "kind": "wide",
+   "n_households": 37,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-252264",
+   "elapsed_min": 7.235,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 46.818,
+   "draws": 1
+  },
+  {
+   "seed": 1183,
+   "kind": "wide",
+   "n_households": 35,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-259192",
+   "elapsed_min": 59,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 47.934,
+   "draws": 1
+  },
+  {
+   "seed": 1184,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 1
+   },
+   "urban": true,
+   "event_id": "E-261137",
+   "elapsed_min": 12.618,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 80.382,
+   "draws": 1
+  },
+  {
+   "seed": 1185,
+   "kind": "wide",
+   "n_households": 38,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-261720",
+   "elapsed_min": 9.843,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 183.011,
+   "draws": 1
+  },
+  {
+   "seed": 1186,
+   "kind": "wide",
+   "n_households": 32,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 3
+   },
+   "urban": false,
+   "event_id": "E-252264",
+   "elapsed_min": 37,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 15.95,
+   "draws": 1
+  },
+  {
+   "seed": 1187,
+   "kind": "wide",
+   "n_households": 24,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": true,
+   "event_id": "E-260014",
+   "elapsed_min": 10.782,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 88.218,
+   "draws": 1
+  },
+  {
+   "seed": 1188,
+   "kind": "wide",
+   "n_households": 43,
+   "resources": {
+    "PS_L": 2,
+    "PS_S": 3,
+    "ESS": 3,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-212046",
+   "elapsed_min": 7.72,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 37.28,
+   "draws": 1
+  },
+  {
+   "seed": 1189,
+   "kind": "wide",
+   "n_households": 48,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 3,
+    "RB": 2,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-260014",
+   "elapsed_min": 39,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 60,
+   "draws": 1
+  },
+  {
+   "seed": 1190,
+   "kind": "wide",
+   "n_households": 28,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 2,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-252264",
+   "elapsed_min": 10.167,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 37.433,
+   "draws": 1
+  },
+  {
+   "seed": 1191,
+   "kind": "wide",
+   "n_households": 39,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 2
+   },
+   "urban": false,
+   "event_id": "E-228530",
+   "elapsed_min": 5.987,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 68.97,
+   "draws": 1
+  },
+  {
+   "seed": 1192,
+   "kind": "wide",
+   "n_households": 49,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": false,
+   "event_id": "E-208659",
+   "elapsed_min": 124,
+   "group": "G3",
+   "night": true,
+   "truth_remaining_min": 41,
+   "draws": 2
+  },
+  {
+   "seed": 1193,
+   "kind": "wide",
+   "n_households": 21,
+   "resources": {
+    "PS_L": 4,
+    "PS_S": 1,
+    "ESS": 1,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-256466",
+   "elapsed_min": 115,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 41.121,
+   "draws": 1
+  },
+  {
+   "seed": 1194,
+   "kind": "wide",
+   "n_households": 50,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 1,
+    "RB": 1
+   },
+   "urban": false,
+   "event_id": "E-266838",
+   "elapsed_min": 145,
+   "group": "G2",
+   "night": false,
+   "truth_remaining_min": 113.134,
+   "draws": 1
+  },
+  {
+   "seed": 1195,
+   "kind": "wide",
+   "n_households": 23,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 2,
+    "ESS": 2
+   },
+   "urban": true,
+   "event_id": "E-266510",
+   "elapsed_min": 87,
+   "group": "G1",
+   "night": false,
+   "truth_remaining_min": 141,
+   "draws": 1
+  },
+  {
+   "seed": 1196,
+   "kind": "wide",
+   "n_households": 29,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 2,
+    "RB": 1,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-264465",
+   "elapsed_min": 236,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.02,
+   "draws": 2
+  },
+  {
+   "seed": 1197,
+   "kind": "wide",
+   "n_households": 46,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 3,
+    "ESS": 2,
+    "RB": 2
+   },
+   "urban": true,
+   "event_id": "E-228530",
+   "elapsed_min": 56,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 20.258,
+   "draws": 1
+  },
+  {
+   "seed": 1198,
+   "kind": "wide",
+   "n_households": 40,
+   "resources": {
+    "PS_L": 3,
+    "PS_S": 2,
+    "ESS": 2,
+    "RB": 2
+   },
+   "urban": false,
+   "event_id": "E-267003",
+   "elapsed_min": 7.683,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 116.337,
+   "draws": 1
+  },
+  {
+   "seed": 1199,
+   "kind": "wide",
+   "n_households": 42,
+   "resources": {
+    "PS_L": 6,
+    "PS_S": 1,
+    "ESS": 2,
+    "GEN": 1
+   },
+   "urban": true,
+   "event_id": "E-259594",
+   "elapsed_min": 40,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 3.839,
+   "draws": 1
+  },
+  {
+   "seed": 1200,
+   "kind": "wide",
+   "n_households": 44,
+   "resources": {
+    "PS_L": 5,
+    "PS_S": 1,
+    "ESS": 3
+   },
+   "urban": false,
+   "event_id": "E-251638",
+   "elapsed_min": 11.003,
+   "group": "G3",
+   "night": false,
+   "truth_remaining_min": 143.659,
+   "draws": 3
+  }
+ ]
+}
