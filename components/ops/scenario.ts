@@ -2,7 +2,8 @@
 // 순위·배정·시간 계산은 lib/engine이 하고, 여기서는 각본 사건·운영자/보호자 입력을 엔진 입력으로 옮길 뿐이다.
 import devicesJson from "@/data/specs/devices.json";
 import extJson from "@/data/specs/ext_batteries.json";
-import { allocate, buildPlan, nowMs, prepare } from "@/lib/engine/allocate";
+import { allocate } from "@/lib/engine/allocate";
+import { baseline } from "@/lib/engine/baselines";
 import { DEFAULT_PARAMS } from "@/lib/engine/params";
 import { muOf, quantileRemaining, survRemaining } from "@/lib/engine/survival";
 import { minutesBetween } from "@/lib/engine/time";
@@ -92,22 +93,9 @@ export function allocInput(b: ScenarioBundle, s: ScenarioState, dist: RestoreDis
   };
 }
 
-/**
- * 임시 단순 규칙(R1): S_low(engine) 오름차순(같으면 가구 ID)으로 가장 빨리 닿는 호환 자원.
- * TODO(owner C): lib/engine/baselines.ts의 baseline("R1", input)이 생기면 그 함수로 바꾼다.
- */
-export function baselineR1Temp(input: AllocInput): Plan {
-  const t0 = nowMs();
-  const prep = prepare(input);
-  const order = [...prep].sort((a, b) => a.safe.s_low_engine_min - b.safe.s_low_engine_min || (a.h.id < b.h.id ? -1 : 1));
-  const used = new Set<string>();
-  const assign = new Map<string, string | null>();
-  for (const x of order) {
-    const c = x.cands.filter((k) => k.c.ok && !used.has(k.r.id)).sort((a, b) => a.arrival - b.arrival)[0];
-    assign.set(x.h.id, c ? c.r.id : null);
-    if (c) used.add(c.r.id);
-  }
-  return buildPlan("R1", input, prep, assign, t0);
+/** 단순 규칙(R1) — C의 lib/engine/baselines.ts baseline("R1")을 그대로 쓴다. */
+export function baselineR1(input: AllocInput): Plan {
+  return baseline("R1", input);
 }
 
 export interface Computed {
@@ -121,7 +109,7 @@ export function compute(b: ScenarioBundle, s: ScenarioState, l1: SmsL1): Compute
   const dist = restoreAt(b, s.now, l1);
   const input = allocInput(b, s, dist.d);
   const plan = allocate(input);
-  const r1 = baselineR1Temp(allocInput(b, s, dist.d, false));
+  const r1 = baselineR1(allocInput(b, s, dist.d, false));
   // 바뀐 행: 가장 최근에 도착한 문자 직전의 판단 시점(없으면 첫 신고 시각)에 같은 승인·입력으로 낸 제안과 비교
   const changed = new Set<string>();
   const arr = arrivedSms(b, s.now);

@@ -11,7 +11,7 @@ import { allocate } from "@/lib/engine/allocate";
 import { pickShowcase } from "@/lib/engine/showcase";
 import type { Household, ISO, RestoreModelFile, ScenarioBundle, ScenarioState, SmsRow } from "@/lib/types";
 import { HOME } from "@/lib/copy";
-import { SPECS, allocInput, baselineR1Temp, restoreAt } from "./scenario";
+import { SPECS, allocInput, baselineR1, restoreAt } from "./scenario";
 import { emptyStateFor } from "./stateInit";
 
 const corpus = (corpusJson as unknown as { items: SmsRow[] }).items;
@@ -114,7 +114,7 @@ export function buildStubScenario(id: "sc1" | "sc2" | "sc3"): ScenarioBundle {
   const s0: ScenarioState = emptyStateFor(bundle);
   const dist = restoreAt(bundle, s0.now, {});
   const ours = allocate(allocInput(bundle, s0, dist.d));
-  const r1 = baselineR1Temp(allocInput(bundle, s0, dist.d, false));
+  const r1 = baselineR1(allocInput(bundle, s0, dist.d, false));
   bundle.showcase = { hid: pickShowcase(ours, r1, dist.d), source: "scenario" };
   cache.set(id, bundle);
   return bundle;
