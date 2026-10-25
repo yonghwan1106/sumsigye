@@ -3,7 +3,8 @@
 // C1a 뼈대: §8의 확정 문구를 옮겨 두었다. 이후 추가·수정은 C 묶음이 한다(다른 묶음은 Advisor 경유 요청).
 
 export function fill(template: string, values: Record<string, string | number>): string {
-  return template.replace(/\{(\w+)\}/g, (m, k: string) => (k in values ? String(values[k]) : m));
+  // 자리 이름에 한글·콜론이 들어간다({경과}·{HH:MM}·{자원}) → \w가 아니라 중괄호 안 전부를 이름으로 본다.
+  return template.replace(/\{([^{}]+)\}/g, (m, k: string) => (k in values ? String(values[k]) : m));
 }
 
 // ───────── §8-0 용어 대응 (정식 용어 → 쉬운 말) ─────────
@@ -95,6 +96,7 @@ export const OPS = {
   badgeRule: "규칙 추출(데모 모드)",
   distTicks: { p50: "보통은 {P50}", p80: "10번 중 8번 {P80}", p90: "10번 중 9번 {P90}" },
   distCaption: "실제 재난문자 사건 {n}건(발생·복구 확인 {n_exact} · 시각 없는 복구 {n_int} · 진행 중 {n_cens})으로 추정 · 한전 예측 아님",
+  distCaptionMeasuring: "실제 재난문자 사건 수 측정 중 · 한전 예측 아님",
   etaLine: "기관 예고 {HH:MM}",
   etaProb: "예고 시각을 넘길 확률: {p}",
   etaProbUnknownBase: "발생 기준 {p1} · 발송 기준 {p2}",
