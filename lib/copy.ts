@@ -2,6 +2,8 @@
 // `{name}` 자리는 fill()로 채운다. 숫자는 lib/format.ts에서 만든 표시 문자열만 넣는다.
 // C1a 뼈대: §8의 확정 문구를 옮겨 두었다. 이후 추가·수정은 C 묶음이 한다(다른 묶음은 Advisor 경유 요청).
 
+import type { Cause6 } from "@/lib/types";
+
 export function fill(template: string, values: Record<string, string | number>): string {
   // 자리 이름에 한글·콜론이 들어간다({경과}·{HH:MM}·{자원}) → \w가 아니라 중괄호 안 전부를 이름으로 본다.
   return template.replace(/\{([^{}]+)\}/g, (m, k: string) => (k in values ? String(values[k]) : m));
@@ -167,6 +169,35 @@ export const BRIEF = {
   rowExcluded: "제외: {list}",
   rowNoExcluded: "제외된 전원 없음",
   rowChanged: "새 재난문자로 제안이 바뀜",
+} as const;
+
+// ───────── B 화면 보조 문구(/ops·/home, components/ops/copyB.ts에서 옮김) ─────────
+export const CAUSE_LABEL: Record<Cause6, string> = {
+  vehicle: "차량", equipment: "설비", fire: "화재", weather: "기상", overload: "과부하", work: "공사", unknown: "미상",
+};
+
+export const OPS_B = {
+  zeroConfirmed: "0시간(사양 확인)",
+  unknownValue: "모름 — 전화로 확인",
+  arrivalLine: "{r} · 약 {t} 뒤 도착",
+  supplyLine: "공급 약 {t}",
+  noResource: "배정 전원 없음",
+  eiArrow: "{a} → {b}",
+  changed: "바뀜",
+  excludedHead: "후보에서 뺀 전원",
+  changePick: "다른 호환 전원 고르기",
+  phoneMinutes: "남은 시간(시:분)",
+  phonePercent: "배터리 %",
+  phoneDevice: "기기",
+  phoneSave: "저장",
+  phoneCancel: "취소",
+  phoneBad: "시:분(예: 1:30) 또는 0~100 사이 %를 넣어 주세요",
+  timelineLabels: { occurred: "발생", report: "신고", sms: "문자", restored: "복구" },
+  legendDevice: { vent: "● 인공호흡기", o2: "▲ 산소발생기", other: "■ 그 밖·모름" },
+  legendProb: { high: "먼저 끝날 가능성 50% 이상", mid: "10~50%", low: "10% 미만", unknown: "모름" },
+  legendLines: { proposed: "점선 = 승인 전 제안", approved: "실선 = 승인됨" },
+  homeLink: "보호자 화면",
+  homeSubmit: "입력 보내기",
 } as const;
 
 // ───────── §8-3 보호자 `/home/[hid]` (B가 사용) ─────────

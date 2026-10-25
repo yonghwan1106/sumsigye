@@ -174,11 +174,17 @@ export interface WilsonCov { a: number; n: number; lo: number; hi: number; }
 // l1_results.json
 export interface L1Results {
   status: EvalStatus;
-  meta: { reviewed_n: number; total_n: number; labeler: "applicant"|"none"; method: string; realtime_mode: "llm"|"merged" };
+  meta: { reviewed_n: number; total_n: number; labeler: "applicant"|"none"; method: string; realtime_mode: "llm"|"merged";
+          // 선택 칸(A의 eval-l1.ts가 더함 — 2026-10-25 C가 타입에 반영)
+          reference?: "gold"|"none"; min_reviewed?: number; label_line?: string; link_reviewed_n?: number; built_at?: ISO };
   rows: { system: "rule"|"claude-haiku-5-5"|"claude-sonnet-5"; relevant_f1: number|null; kind_acc: number|null;
           time_exact: { rate: number|null; n: number }; null_correct: { rate: number|null; n: number };
           eta_base_acc: number|null; cause6_acc: number|null; cause3_acc: number|null; link_p: number|null; link_r: number|null }[];
-  auto_checks: { system: string; evidence_in_text: number; time_format_ok: number }[];
+  auto_checks: { system: string; evidence_in_text: number; time_format_ok: number; n?: number; evidence_n?: number; time_n?: number }[];
+  /** 검수 전(g < min_reviewed): 개발용 문자에서 동결 규칙 r1 대비 일치율 */
+  vs_rule?: { label: string; set: string; reference: string;
+    rows: { system: string; n: number; relevant_agree_f1: number|null; kind_agree: number|null; time_agree: { rate: number|null; n: number };
+            null_agree: { rate: number|null; n: number }; eta_base_agree: number|null; cause6_agree: number|null; cause3_agree: number|null }[] };
 }
 
 // l2_results.json
@@ -187,9 +193,10 @@ export interface L2Results {
   data: RestoreModelFile["data"]; selected: string; lr_tests: RestoreModelFile["lr_tests"];
   loo: { id: "M0"|"M1"|"M2"|"B0"|"B1"|"B2"; label: string; n: number;
          pinball: { t50: number; t80: number; t90: number; mean: number }; p80_mean_h: number|null;
-         cov80: WilsonCov|null; cov90: WilsonCov|null }[];
+         cov80: WilsonCov|null; cov90: WilsonCov|null;
+         alt?: { label: string; n: number; pinball: { t50: number; t80: number; t90: number; mean: number }; p80_mean_h: number|null; cov80: WilsonCov|null; cov90: WilsonCov|null } }[];
   interval_coverage: { hit: number; miss: number; undetermined: number };
-  time_split: { train_n: number; test_n: number; rows: { id: string; pinball_mean: number; cov80: WilsonCov|null }[] };
+  time_split: { train_n: number; test_n: number; rows: { id: string; pinball_mean: number; cov80: WilsonCov|null }[]; split_at?: ISO };
   events_plot: { event_id: string; outcome: string; t_h?: number; lower_h?: number; upper_h?: number; org: string; date: string }[];
   curve: { t_h: number; s: number }[];       // 선택 모형 전체 칸(경과 0) 0~12시간 0.1 간격
 }
