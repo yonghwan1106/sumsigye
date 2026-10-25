@@ -28,4 +28,5 @@ export const OPS_B = {
   legendLines: { proposed: "점선 = 승인 전 제안", approved: "실선 = 승인됨" },
   stubBadge: "임시 시나리오 묶음(사전계산 묶음 준비 전)",
   homeLink: "보호자 화면",
+  homeSubmit: "입력 보내기",
 } as const;

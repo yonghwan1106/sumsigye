@@ -6,6 +6,7 @@ import { allocate, buildPlan, nowMs, prepare } from "@/lib/engine/allocate";
 import { DEFAULT_PARAMS } from "@/lib/engine/params";
 import { muOf, quantileRemaining, survRemaining } from "@/lib/engine/survival";
 import { minutesBetween } from "@/lib/engine/time";
+import { stateHash as stateHashC } from "@/lib/llm/stateHash";
 import { GROUP_OF, type AllocInput, type CauseGroup, type Household, type HouseholdObserved, type ISO, type L1Resolved, type Plan, type RestoreDist, type ScenarioBundle, type ScenarioState } from "@/lib/types";
 
 export const SPECS = { devices: devicesJson.devices, ext: extJson.ext } as unknown as AllocInput["specs"];
@@ -157,20 +158,8 @@ export function probBeyond(d: RestoreDist, now: ISO, at: ISO): number {
   return survRemaining(d, Math.max(0, minutesBetween(now, at)));
 }
 
-/** 정렬된 키로 JSON 문자열(상태 해시용). */
-export function stableStringify(v: unknown): string {
-  if (v === null || typeof v !== "object") return JSON.stringify(v);
-  if (Array.isArray(v)) return `[${v.map(stableStringify).join(",")}]`;
-  const o = v as Record<string, unknown>;
-  return `{${Object.keys(o).filter((k) => o[k] !== undefined).sort().map((k) => `${JSON.stringify(k)}:${stableStringify(o[k])}`).join(",")}}`;
-}
-
-/** 상태 해시 = sha256(정렬 JSON {scenario, decision_index, approvals, overrides}) 앞 16자(구현명세 §6-9). */
+/** 상태 해시 = sha256(정렬 JSON {scenario, decision_index, approvals, overrides}) 앞 16자(구현명세 §6-9) — C의 lib/llm/stateHash와 같은 함수. */
 export async function stateHash(b: ScenarioBundle, s: ScenarioState): Promise<string> {
   const decision_index = b.decision_points.findIndex((t) => ms(t) === ms(s.now));
-  const txt = stableStringify({ scenario: b.id, decision_index, approvals: s.approvals, overrides: s.overrides });
-  try {
-    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(txt));
-    return Array.from(new Uint8Array(buf)).map((x) => x.toString(16).padStart(2, "0")).join("").slice(0, 16);
-  } catch { return ""; }
+  try { return await stateHashC({ scenario: b.id, decision_index, approvals: s.approvals, overrides: s.overrides }); } catch { return ""; }
 }

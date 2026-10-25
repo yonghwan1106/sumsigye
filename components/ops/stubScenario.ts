@@ -3,6 +3,9 @@
 // TODO(owner C): data/scenarios/sc*.json이 생기면 loadScenario.ts가 그 파일을 쓰고 이 파일은 지운다.
 import corpusJson from "@/data/sms/corpus.json";
 import restoreJson from "@/data/model/restore_model.json";
+import w1 from "@/data/weather/sc1.json";
+import w2 from "@/data/weather/sc2.json";
+import w3 from "@/data/weather/sc3.json";
 import { generate } from "@/lib/synth/generate";
 import { allocate } from "@/lib/engine/allocate";
 import { pickShowcase } from "@/lib/engine/showcase";
@@ -52,6 +55,8 @@ const DEFS: Def[] = [
   },
 ];
 
+const WEATHER: Record<string, { attribution: string; note: string; hourly: { at: ISO; temp_c: number; precip_mm: number; wind_ms: number }[] }> = { sc1: w1, sc2: w2, sc3: w3 };
+
 const cache = new Map<string, ScenarioBundle>();
 
 export function buildStubScenario(id: "sc1" | "sc2" | "sc3"): ScenarioBundle {
@@ -100,7 +105,7 @@ export function buildStubScenario(id: "sc1" | "sc2" | "sc3"): ScenarioBundle {
   const card = HOME.scenarioCards[id];
   const bundle: ScenarioBundle = {
     id, title: card.title, card_line: card.line, region: def.region,
-    outage_start: T(def.day, def.start), event_id, actual: def.actual, restore_model, weather: null,
+    outage_start: T(def.day, def.start), event_id, actual: def.actual, restore_model, weather: WEATHER[id] ? { attribution: WEATHER[id].attribution, note: WEATHER[id].note, hourly: WEATHER[id].hourly } : null,
     households, resources, seed: def.seed, timeline, decision_points: def.decisions.map((d) => T(def.day, d)),
     precomputed: { l1: {}, briefs: {}, guides: {} },
     showcase: { hid: null, source: "scenario" }, built_at: new Date().toISOString(), provisional: true,

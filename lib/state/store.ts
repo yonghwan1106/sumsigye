@@ -24,7 +24,7 @@ function storage(): Storage | null {
 }
 function readRaw(k: string): string | null {
   const ls = storage();
-  if (ls) { try { const v = ls.getItem(k); if (v != null) return v; } catch { /* 메모리로 */ } }
+  if (ls) { try { return ls.getItem(k); } catch { /* 저장소 접근 실패 → 메모리로 */ } }
   return mem.get(k) ?? null;
 }
 function writeRaw(k: string, v: string | null) {
